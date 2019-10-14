@@ -64,6 +64,17 @@ diff_abs <-
 # Note that this is the most developed plot in terms of format
 # having removed the space between axes, making it the smallest possible, etc
 
+# Add facet Label
+coh <- paste0(c(1950, 1999), " birth cohort")
+
+f_lab <- data.frame(
+  x = rep(90, 4)
+  , y = c(0.105, 2.75, 0.105, 2.75)
+  , label = LETTERS[1:4]
+  , source = rep(sources, 2)
+  , cohort2 = sort(rep(coh, 2))
+)
+
 p_diff_abs <-
   diff_abs %>% 
   # na.omit() %>% 
@@ -92,6 +103,8 @@ p_diff_abs <-
     , size = point_size
     , data = . %>% filter(age %in% age_br)
   ) +
+  # Add facet numbers
+  geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_x_continuous("Woman's age") +
   scale_y_continuous(
     # expression(Delta*"(child death)")

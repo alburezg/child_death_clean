@@ -76,6 +76,17 @@ cl_cs <-
 # Note that this is the most developed plot in terms of format
 # having removed the space between axes, making it the smallest possible, etc
 
+# Add facet Label
+coh <- paste0(c(1950, 1999), " birth cohort")
+
+f_lab <- data.frame(
+  x = rep(20, 4)
+  , y = rep(4.9, 4)
+  , label = LETTERS[1:4]
+  , source = rep(sources, 2)
+  , cohort2 = sort(rep(coh, 2))
+)
+
 p_cl_cs_facet <-
   cl_cs %>% 
   filter(cohort %in% c(1950, 1999)) %>% 
@@ -101,6 +112,8 @@ p_cl_cs_facet <-
     , size = point_size
     , data = . %>% filter(age %in% age_br)
   ) +
+  # Add facet numbers
+  geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_x_continuous("Woman's age") +
   scale_y_continuous(
     "Number of children who"
@@ -134,17 +147,7 @@ p_cl_cs_facet <-
     # , panel.spacing.x=unit(0.07, "cm")
     # , panel.spacing.y=unit(0.07, "cm")
     )
-
-# Add facet Label
-# f_lab <- data.frame(
-#   x = (rep(20, 4))
-#   , y = c(rep(3.8, 4))
-#   , label = LETTERS[1:4]
-# )
-# 
-# p_cl_cs_facet + 
-#   geom_text(aes(x = x, y = y, label = label), data = f_lab)
-
+  
 p_cl_cs_facet
 
 ggsave(paste0("../../Output/fig2.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")

@@ -157,6 +157,16 @@ tally_share_con <-
 
 # ! 4. Plot with facets ----
 
+# Add facet Label
+coh <- paste0(c(1950, 1999), " birth cohort")
+
+f_lab <- data.frame(
+  x = 1952
+  , y = c(5.2, 0.97)
+  , label = LETTERS[1:2]
+  , level = levels
+)
+
 p_cs_number_share <-
   tally_share %>% 
   filter(!region %in% regions_to_remove) %>% 
@@ -181,6 +191,8 @@ p_cs_number_share <-
     , size = point_size
     , data = . %>% filter(cohort %in% c(1950, 1975, 1999))
   ) +
+  # Add facet numbers
+  geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   # SWE and ZWE lines
   # geom_line(
   #   aes(x = cohort, y = value, group = region)
