@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 # Folders with large datasets
-Data/derived/
+Data/derived/*.csv
+Data/derived/*.RDS
