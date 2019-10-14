@@ -19,8 +19,9 @@ UN World Population Prospect data was downloaded by hand before running the scri
 Data/wpp_data. All data come from: https://population.un.org/wpp/Download/, downloaded on 14 October 2019. See the *Supporting Information*
 for more details about the data and estimation.
 
+In order to run the code, please download this repository as a zip file, extract it and run in R.
 The scripts in all three folders needs to be executed in order for the figures and tables to be produced and stored 
-in the folder Output. All analyses were conducted in R. 
+in the folder Output.
 
 `> sessionInfo()`
 

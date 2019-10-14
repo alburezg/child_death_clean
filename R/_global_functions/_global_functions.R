@@ -1,24 +1,5 @@
 
-# Unique functions curated on
-# 20190612
-
 # Add new functions alphabetically to this file
-
-# IN abridged life tables, nMx refer to 5-year groups it is not appropriate to simply interpolate 
-# using those values since the values do not refer to the central points of the intervals
-# IF we follow Kenneth W. Wachter, Essential Demographic Methods
-# we can get the central value for the interval as:
-# (1 - (1 - 5_q_10)^(1/5)) * 5
-
-# add_qx_mid_values <- function(LT) {
-#   qx <- LT$qx
-#   qx_mid <- (1 - (1-qx)^(1/5)) * 5
-#   qx_mid[1] <- qx[1]
-#   qx_mid[length(qx_mid)] <- 1
-#   
-#   LT$qx_mid <- qx_mid
-#   LT
-# }
 
 age_at_death <- function(death_l, p, parallel = T, numCores = 8) {
   
