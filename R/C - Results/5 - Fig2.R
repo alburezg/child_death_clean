@@ -1,0 +1,152 @@
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Data requirements: 
+# sum_cl (3.2_ECL_by_country.R)
+# sum_cs (4.2_CS_plot_by_country.R)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# 0. Plotting params ----
+
+point_br <- c(seq(1950, 1999, 10) , 1999)
+col_lab <- ""
+age_br <- c(seq(5, 100, 20), 100)
+
+# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# medium (regular draft) or large (presentation)
+
+# 0.1. PNAS plotting params (small)
+# width <- 8
+# height <- 6
+# base_size <- 9
+# region_line_size <- 0.4
+# point_size <- 1.5
+
+# 0.2. Draft paper and presentation format (large)
+
+width <- 16
+height <- 12
+base_size <- 15
+region_line_size <- 0.6
+point_size <- 2.5
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# A. Plot CL, CS conditional on survival ~~~~ ----
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# 20190916: PLot Median with 40, 60 percentile bands
+
+# 1. Merge dfs ----
+
+sources <- c("died", "survived")
+sources <- factor(sources, levels = sources)
+
+sum_cl2 <- sum_cl %>% filter(cohort %in% c(1950, 1999)) 
+sum_cs2 <- sum_cs %>% filter(cohort %in% c(1950, 1999)) 
+
+cl_cs <-
+  rbind(
+    # Child loss
+    sum_cl2 %>% mutate(source = levels(sources)[1]) 
+    # Child survival
+    , sum_cs2 %>% mutate(source = levels(sources)[2])
+    # Survived - died
+    , sum_cs2 %>%
+      # select(region, cohort) %>%
+      mutate(
+        median = sum_cs2$median - sum_cl2$median
+        , low_iqr = NA
+        , high_iqr = NA
+        , source = 'Survived - died'
+      )
+    # died/Survived
+    , sum_cs2 %>%
+      # select(region, cohort) %>%
+      mutate(
+        median = sum_cl2$median/sum_cs2$median
+        , low_iqr = NA
+        , high_iqr = NA
+        , source = 'Died/Survived'
+        # , region = factor(plyr::mapvalues(region, from = new_sdg8, to = new_sdg8_short), levels = new_sdg8_short)
+      )
+  ) %>% 
+  mutate(cohort2 = paste0(cohort, " birth cohort"))
+
+# ! 2. Plot with facets ----
+
+# Note that this is the most developed plot in terms of format
+# having removed the space between axes, making it the smallest possible, etc
+
+p_cl_cs_facet <-
+  cl_cs %>% 
+  filter(cohort %in% c(1950, 1999)) %>% 
+  filter(!region %in% regions_to_remove) %>% 
+  filter(source %in% sources) %>% 
+  mutate(source = factor(source, levels = sources)) %>% 
+  ggplot() +
+  geom_line(
+    aes(x = age, y = median, group = region, colour = region)
+    , size = region_line_size
+  ) +
+  # Plot ECL quantiles as bands
+  geom_ribbon(
+    aes(x = age, ymin = low_iqr, ymax = high_iqr, group = region, fill = region)
+    , alpha = 0.4, show.legend = F
+  ) +
+  # Plot ECL shapes to help distinguish regions
+  geom_point(
+    aes(x = age, y = median, group = region, colour = region
+        # , size = share
+        , shape = region
+    )
+    , size = point_size
+    , data = . %>% filter(age %in% age_br)
+  ) +
+  scale_x_continuous("Woman's age") +
+  scale_y_continuous(
+    "Number of children who"
+    # "Cumulative number of children who"
+    , position = "left"
+    , sec.axis = dup_axis()
+  ) +
+  scale_color_discrete(col_lab, br = regions_long, labels = regions_short) +
+  scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
+  scale_shape_discrete(col_lab, br = regions_long, labels = regions_short) +
+  # scale_size_continuous("Population share") +
+  facet_grid(source ~ cohort2, scales = 'fixed', switch = "y") +
+  # Use with four measures
+  theme_bw(base_size = base_size) +
+  theme(
+    legend.position = "bottom"
+    # Remove space over legend
+    , legend.margin=margin(t=-0.25, r=0, b=0, l=0, unit="cm")
+    # Remove space between legends
+    , legend.key.size = unit(0.1, "cm")
+    # Remove title on left
+    , axis.text.y.left = element_blank()
+    , axis.ticks.y.left = element_blank()
+    , axis.title.y.right = element_blank()
+    # get rid of facet boxes
+    , strip.background = element_blank()
+    # , strip.text.y = element_blank()
+    # Move y axis closer to the plot
+    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+    # Remove spacing between facets
+    # , panel.spacing.x=unit(0.07, "cm")
+    # , panel.spacing.y=unit(0.07, "cm")
+    )
+
+# Add facet Label
+# f_lab <- data.frame(
+#   x = (rep(20, 4))
+#   , y = c(rep(3.8, 4))
+#   , label = LETTERS[1:4]
+# )
+# 
+# p_cl_cs_facet + 
+#   geom_text(aes(x = x, y = y, label = label), data = f_lab)
+
+p_cl_cs_facet
+
+ggsave(paste0("../../Output/fig2.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")
+
+print("5 - Figure 2 saved to ../../Output")
