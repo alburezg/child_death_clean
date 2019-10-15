@@ -25,7 +25,7 @@
 # 0.2. Draft paper and presentation format (large)
 
 base_size <- 17
-width <- 16
+width <- 20
 height <- 14
 region_line_size <- 1
 country_line_size <- 1
