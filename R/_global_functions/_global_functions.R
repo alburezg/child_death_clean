@@ -2289,11 +2289,6 @@ lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)),
     , ex = c(ex[-length(ex)], NA)
   )
   
-  # data.frame(
-  #   o = nmx
-  #   , n = lt$mx
-  # ) %>% View
-  
   lt.top.age <- min(which(nqx == 1))
   lt <- lt[1:lt.top.age, ]
   return(lt)
@@ -2328,7 +2323,6 @@ ltdf<-function(nMx, years){
 }
 
 LT_period_to_cohort <- function(df, years, ages, parallel = F, numCores = 4) {
-  # browser()
   # Constructs pseud-cohort life tables from period life tables
   
   # where df is a period life table with columns mx, qx, and ax
@@ -3245,23 +3239,6 @@ worker_expand_LT_year_by_mx <- function(df, method, y_range_length, years) {
     val <- predict(spline_mx, 1:150)$y
   }
   
-  # Plot temporary
-  # rbind(
-  #   data.frame(
-  #     x = seq(1, 150, 5)
-  #     , y = df$mx
-  #     , source = "old"
-  #   )
-  #   , data.frame(
-  #     x = 1:150
-  #     , y = val
-  #     , source = "new"
-  #   )
-  # ) %>%
-  #   ggplot(aes(x, y, colour = source)) +
-  #   geom_point() +
-  #   theme_bw()
-  # 
   data.frame(
     country = unique(df$country)
     , year = years

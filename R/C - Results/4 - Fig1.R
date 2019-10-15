@@ -1,6 +1,6 @@
 # For background section, 
 # one plot with ex in x axis and tfr in y axis for all regions
-# and a line showing progress in 1950-1999 cohort
+# and a line showing progress in 1950-2000 cohort
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 
@@ -32,11 +32,16 @@ country_line_size <- 1
 point_size <- 5
 text_size <- 4
 
+
+lower_year <- 1950
+upper_year <- 1999
+# upper_year <- 2000
+
 # 1. Cohort ex ----
 
 ex_df <- 
   LTCB %>% 
-  filter(dplyr::between(Cohort, 1950, 1999)) %>%
+  filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
   filter(Age == 0) %>% 
   select(country = Country, cohort = Cohort, ex)
 # filter(age < 100)
@@ -45,7 +50,7 @@ ex_df <-
 
 ctfr <- 
   ASFRC %>% 
-  filter(dplyr::between(Cohort, 1950, 1999)) %>%
+  filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
   group_by(country, Cohort) %>% 
   summarise(tfr = sum(ASFR)/1000) %>% 
   ungroup %>% 

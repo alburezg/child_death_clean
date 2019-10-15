@@ -27,7 +27,11 @@
 
 # 0. Plotting params ----
 
-point_br <- c(seq(1950, 1999, 10) , 1999)
+lower_year <- 1950
+upper_year <- 1999
+# upper_year <- 2000
+
+point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""
 
 # Choose size options depending on whether image is intended for small format (e.g. PNAS).
@@ -158,7 +162,7 @@ tally_share_con <-
 # ! 4. Plot with facets ----
 
 # Add facet Label
-coh <- paste0(c(1950, 1999), " birth cohort")
+coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = 1953
@@ -190,7 +194,7 @@ p_cs_number_share <-
         , shape = region
     )
     , size = point_size
-    , data = . %>% filter(cohort %in% c(1950, 1975, 1999))
+    , data = . %>% filter(cohort %in% c(lower_year, 1975, upper_year))
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
@@ -205,10 +209,8 @@ p_cs_number_share <-
   
   scale_x_continuous(
     "Woman's birth cohort"
-    , breaks = seq(1950, 2000, 10)
-    # , labels = c(1950, 60, "", 80, "", 2000)
-    , labels = c(1950, "", 1975 ,"", "", 2000)
-    # , labels = c(1950, "", 70, 80, "", 2000)
+    , breaks = seq(lower_year, 2000, 10)
+    , labels = c(lower_year, "", 1975 ,"", "", 2000)
     ) +
   scale_y_continuous(
     "Children outlive mother"

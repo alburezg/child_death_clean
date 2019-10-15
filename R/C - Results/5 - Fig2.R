@@ -1,13 +1,17 @@
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 
-# sum_cl (3.2_ECL_by_country.R)
-# sum_cs (4.2_CS_plot_by_country.R)
+# sum_cl 
+# sum_cs 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # 0. Plotting params ----
 
-point_br <- c(seq(1950, 1999, 10) , 1999)
+lower_year <- 1950
+upper_year <- 1999
+# upper_year <- 2000
+
+point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""
 age_br <- c(seq(5, 100, 20), 100)
 
@@ -40,8 +44,8 @@ point_size <- 2.5
 sources <- c("died", "survived")
 sources <- factor(sources, levels = sources)
 
-sum_cl2 <- sum_cl %>% filter(cohort %in% c(1950, 1999)) 
-sum_cs2 <- sum_cs %>% filter(cohort %in% c(1950, 1999)) 
+sum_cl2 <- sum_cl %>% filter(cohort %in% c(lower_year, upper_year)) 
+sum_cs2 <- sum_cs %>% filter(cohort %in% c(lower_year, upper_year)) 
 
 cl_cs <-
   rbind(
@@ -79,7 +83,7 @@ cl_cs <-
 # having removed the space between axes, making it the smallest possible, etc
 
 # Add facet Label
-coh <- paste0(c(1950, 1999), " birth cohort")
+coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = rep(20, 4)
@@ -91,7 +95,7 @@ f_lab <- data.frame(
 
 p_cl_cs_facet <-
   cl_cs %>% 
-  filter(cohort %in% c(1950, 1999)) %>% 
+  filter(cohort %in% c(lower_year, upper_year)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(source %in% sources) %>% 
   mutate(source = factor(source, levels = sources)) %>% 

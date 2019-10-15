@@ -11,7 +11,11 @@
 
 # 0. Plotting params ----
 
-point_br <- c(seq(1950, 1999, 10) , 1999)
+lower_year <- 1950
+upper_year <- 1999
+# upper_year <- 2000
+
+point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 age_br <- c(seq(5, 100, 20), 100)
 col_lab <- ""
 
@@ -65,7 +69,7 @@ diff_abs <-
 # having removed the space between axes, making it the smallest possible, etc
 
 # Add facet Label
-coh <- paste0(c(1950, 1999), " birth cohort")
+coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = rep(90, 4)
@@ -78,7 +82,7 @@ f_lab <- data.frame(
 p_diff_abs <-
   diff_abs %>% 
   # na.omit() %>% 
-  filter(cohort %in% c(1950, 1999)) %>% 
+  filter(cohort %in% c(lower_year, upper_year)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(source %in% sources) %>% 
   mutate(region = factor(as.character(region), levels = regions_long)) %>% 
