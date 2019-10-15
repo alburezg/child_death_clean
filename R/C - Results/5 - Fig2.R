@@ -69,7 +69,9 @@ cl_cs <-
         # , region = factor(plyr::mapvalues(region, from = new_sdg8, to = new_sdg8_short), levels = new_sdg8_short)
       )
   ) %>% 
-  mutate(cohort2 = paste0(cohort, " birth cohort"))
+  mutate(
+    cohort2 = paste0(cohort, " birth cohort")
+    )
 
 # ! 2. Plot with facets ----
 
@@ -93,6 +95,7 @@ p_cl_cs_facet <-
   filter(!region %in% regions_to_remove) %>% 
   filter(source %in% sources) %>% 
   mutate(source = factor(source, levels = sources)) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() +
   geom_line(
     aes(x = age, y = median, group = region, colour = region)

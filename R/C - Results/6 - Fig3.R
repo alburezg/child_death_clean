@@ -81,7 +81,7 @@ p_diff_abs <-
   filter(cohort %in% c(1950, 1999)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(source %in% sources) %>% 
-  mutate(source = factor(source, levels = sources)) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() +
   geom_line(
     aes(x = age, y = value, group = region, colour = region)

@@ -161,8 +161,8 @@ tally_share_con <-
 coh <- paste0(c(1950, 1999), " birth cohort")
 
 f_lab <- data.frame(
-  x = 1952
-  , y = c(5.2, 0.97)
+  x = 1953
+  , y = c(5.15, 0.959)
   , label = LETTERS[1:2]
   , level = levels
 )
@@ -171,6 +171,7 @@ p_cs_number_share <-
   tally_share %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(measure %in% measures[2]) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() +
   # Region summary lines
   geom_line(

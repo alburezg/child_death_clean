@@ -135,7 +135,7 @@ lab_df <- data.frame(
 
 p_ex_ctfr <- 
   ex_ctfr_sum %>% 
-  mutate(region = factor(region, levels = regions_long)) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() + 
   # Region lines
   geom_line(

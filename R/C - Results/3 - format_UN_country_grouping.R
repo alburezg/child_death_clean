@@ -17,16 +17,42 @@ un_reg <-
 
 # Define labels for using in plots later on
 
+# regions_long <- c(
+#   "sub-saharan africa"
+#   , "northern africa and western asia"
+# 
+#   , "latin america and the caribbean"
+#   , "europe and northern america"
+#   
+#   , "eastern and south-eastern asia"
+#   , "central and southern asia"
+#   
+#   , "australia_new zealand"
+#   , "oceania (excluding australia and new zealand)"
+# )
+# 
+# regions_short <- c(
+#   "Sub-Sah Africa"
+#   , "N Africa & W Asia"
+#   
+#   , "LATAM & Caribbean"
+#   , "Europe & N America"
+#   
+#   , "E & SE Asia"
+#   , "C & S Asia"
+#   
+#   , "AUS & NZ"
+#   , "Oceania (other)"
+# )
+
 regions_long <- c(
   "sub-saharan africa"
-  , "northern africa and western asia"
-  
   , "eastern and south-eastern asia"
-  , "central and southern asia"
   
-  
-  
+  , "northern africa and western asia"
   , "latin america and the caribbean"
+  
+  , "central and southern asia"
   , "europe and northern america"
   
   , "australia_new zealand"
@@ -34,13 +60,13 @@ regions_long <- c(
 )
 
 regions_short <- c(
-  "Sub-Sah Africa"
-  , "N Africa & W Asia"
+  "Sub-Saharan Africa"
+  , "East & SE Asia"
   
-  , "E & SE Asia"
-  , "C & S Asia"
-  
+  , "North Africa & West Asia"
   , "LATAM & Caribbean"
+  
+  , "Central & South Asia"
   , "Europe & N America"
   
   , "AUS & NZ"
