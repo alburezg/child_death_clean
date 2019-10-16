@@ -24,8 +24,8 @@ The scripts in all three folders needs to be executed in order for the figures a
 in the `Output` directory. The scripts `__source_all.R`, included in each of the three sub-directories, can be used
 for this purpose.
 
-The final results are stored in the `Output` directory, including the figures as .pdf files and .csv files with the full country and regional estimates of the 
-six main measures included in the paper.
+The final results are stored in the `Output` directory, including the figures as .pdf files.  The full country and regional estimates of the 
+six main measures included in the paper are stored in tabular format in several .csv files in the same directory.
 
 `> sessionInfo()`
 
