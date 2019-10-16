@@ -246,26 +246,26 @@ out_regions <-
 
 # 7.1. Country-level estimates ====
 
-write.csv(cl_countries, "../../Output/Fig1_countries_child_death_cumulative.csv", row.names = F)
-write.csv(cs_countries, "../../Output/Fig1_countries_child_survival_cumulative.csv", row.names = F)
+write.csv(cl_countries, "../../Output/Fig2_countries_child_death_cumulative.csv", row.names = F)
+write.csv(cs_countries, "../../Output/Fig2_countries_child_survival_cumulative.csv", row.names = F)
 
-write.csv(diff_countries, "../../Output/Fig2_countries_child_death_first_difference.csv", row.names = F)
-write.csv(abs_countries, "../../Output/Fig2_countries_child_death_burden.csv", row.names = F)
+write.csv(diff_countries, "../../Output/Fig3_countries_child_death_first_difference.csv", row.names = F)
+write.csv(abs_countries, "../../Output/Fig3_countries_child_death_burden.csv", row.names = F)
 
-write.csv(csex_countries, "../../Output/Fig3_countries_outlive_mother_number.csv", row.names = F)
-write.csv(out_countries, "../../Output/Fig3_countries_outlive_mother_share.csv", row.names = F)
+write.csv(csex_countries, "../../Output/Fig4_countries_outlive_mother_number.csv", row.names = F)
+write.csv(out_countries, "../../Output/Fig4_countries_outlive_mother_share.csv", row.names = F)
 
 print("8 - complete country-level estimates saved to ../../Output")
 
 # 7.2. Regional estimates ====
 
-write.csv(cl_regions, "../../Output/Fig1_regions_child_death_cumulative.csv", row.names = F)
-write.csv(cs_regions, "../../Output/Fig1_regions_child_survival_cumulative.csv", row.names = F)
+write.csv(cl_regions, "../../Output/Fig2_regions_child_death_cumulative.csv", row.names = F)
+write.csv(cs_regions, "../../Output/Fig2_regions_child_survival_cumulative.csv", row.names = F)
 
-write.csv(diff_regions, "../../Output/Fig2_regions_child_death_first_difference.csv", row.names = F)
-write.csv(abs_regions, "../../Output/Fig2_regions_child_death_burden.csv", row.names = F)
+write.csv(diff_regions, "../../Output/Fig3_regions_child_death_first_difference.csv", row.names = F)
+write.csv(abs_regions, "../../Output/Fig3_regions_child_death_burden.csv", row.names = F)
 
-write.csv(csex_regions, "../../Output/Fig3_regions_outlive_mother_number.csv", row.names = F)
-write.csv(out_regions, "../../Output/Fig3_regions_outlive_mother_share.csv", row.names = F)
+write.csv(csex_regions, "../../Output/Fig4_regions_outlive_mother_number.csv", row.names = F)
+write.csv(out_regions, "../../Output/Fig4_regions_outlive_mother_share.csv", row.names = F)
 
 print("8 - complete regional estimates saved to ../../Output")
