@@ -1,0 +1,271 @@
+
+# This scipt generates complete tables of child death and child survival estimates
+# for supplementary materials.
+# This script basically generates the underlying data used to produce 
+# Figures 2-4 in the main text, plus data on all other cohorts (1950-1999) 
+# which are not included in the figures, but whose values were estimated.
+
+
+# The tables are exported as csv files in long format, which is easier to manipulate.
+# The tables include estimates for all countries and regions, including 
+# Australia and NZ, which are not included in the figures in the main text.
+# The regional estimates include  median and IQR values, computed from the 
+# individual-country estimates. Details of the estimation can be found in the main 
+# text and in the Supporting Information.
+
+
+
+# One table is generated for each different region and for country and regional-level
+# estimates. Ttables follow the following naming convention:
+# [Figure to which the data corresponds in the main text]
+# [whether country or regional estimates]
+# [type of measure]
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Data required for this script: 
+# Child death: 
+# df_cl_m_full
+# Child survival
+# df_cs_m_full
+# cs_pop
+# df_cl_diff
+# abs_df
+# cs_ex_pop_country
+# cl_ex_pop_country
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# 2. Data from Fig 2 ~~~~ ----
+
+# 2.1	Child death (CD) ====
+# ~~~~~~~~~~~~~
+
+# Full country results for the (cumulative) number of child deaths 
+# for a woman surviving to selected ages (median and IQR).
+
+cl_full <- merge(
+  df_cl_m_full %>% 
+    filter(type == "country")
+  , female_births %>% 
+    select(cohort = year, cohort_size = value, everything())
+  , by = c('country', 'cohort')
+  , all.x = T
+)
+
+# Get estimated values for countries
+
+cl_countries <- 
+  cl_full %>% 
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    , cohort = as.numeric(cohort)
+    # , measure = "child_death"
+    ) %>% 
+  select(country, region, cohort, age, value)
+  
+# Get summary values (median and IQR) for regions
+
+cl_regions <- 
+  cl_countries %>% 
+  group_by(region, age, cohort) %>%
+  summarise(
+    median = median(value)
+    , iqr = IQR(value)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "child_death"
+         )
+
+print("8 - tab.2.1_child_death_full saved to ../../Output")
+
+# 2.2.	Child survival (CS) ====
+# ~~~~~~~~~~~~~
+
+# Full country results for the expected number of children surviving for a woman aged a (selected ages; median and IQR).
+
+cs_full <- merge(
+  df_cs_m_full %>% 
+    filter(type == "country")
+  , female_births %>% 
+    select(cohort = year, cohort_size = value, everything())
+  , by = c('country', 'cohort')
+  , all.x = T
+)
+
+cs_countries <- 
+  cs_full %>% 
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    , cohort = as.numeric(cohort)
+    # , measure = "child_survival"
+  ) %>% 
+  select(country, region, cohort, age, value)
+
+# Get summary values (median and IQR) for regions
+
+cs_regions <- 
+  cs_countries %>% 
+  group_by(region, age, cohort) %>%
+  summarise(
+    median = median(value)
+    , iqr = IQR(value)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "child_survival"
+  ) 
+
+
+print("8 - tab.2.2_child_survival_full.csv saved to ../../Output")
+
+# 3. Data from Fig 3 ~~~~ ----
+
+# 3.1.	First difference of child death (ΔCD) ====
+# ~~~~~~~~~~~~~
+
+# First difference of child death for a woman surviving to age $a$ 
+# (full country results; selected ages; median and IQR).
+
+diff_countries <- 
+  df_cl_diff %>% 
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    , cohort = as.numeric(cohort)
+    # , measure = "child_death_first_diff"
+  ) %>% 
+  select(country, region, cohort, age, value = diff)
+
+diff_regions <- 
+  diff_countries %>% 
+  group_by(region, age, cohort) %>%
+  summarise(
+    median = median(value, na.rm = T)
+    , iqr = IQR(value, na.rm = T)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "child_death_first_diff"
+  ) 
+
+print("8 - tab.3.1_child_death_first_diff.csv saved to ../../Output")
+
+# 3.2.	Burden of child death ====
+# ~~~~~~~~~~~~~
+
+abs_countries <- 
+  abs_df %>% 
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    , cohort = as.numeric(cohort)
+    # , measure = "child_death_burden"
+  ) %>% 
+  select(country, region, cohort, age, value = absolute)
+
+abs_regions <- 
+  abs_countries %>% 
+  group_by(region, age, cohort) %>%
+  summarise(
+    median = sum(value, na.rm = T)
+    , iqr = IQR(value, na.rm = T)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "child_death_burden"
+  ) 
+
+print("8 - tab.3.2_child_death_burden.csv saved to ../../Output")
+
+# 4. Data from Fig 4 ~~~~ ----
+
+# 4.1.	Number of children expected to outlive mothers ====
+# ~~~~~~~~~~~~~
+
+csex_countries <- 
+  cs_ex_pop_country %>% 
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    , cohort = as.numeric(cohort)
+    # , measure = "num_children_outlive_mother"
+  ) %>% 
+  select(country, region, cohort, value)
+  
+
+csex_regions <- 
+  csex_countries %>% 
+  group_by(region, cohort) %>%
+  summarise(
+    median = median(value)
+    , iqr = IQR(value)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "num_children_outlive_mother"
+  ) 
+
+print("8 - tab.4.1_child_outlive_expected.csv saved to ../../Output")
+
+# 4.2.	Share of children outlive mothers ====
+# ~~~~~~~~~~~~~
+
+out_countries <-
+  ecl_ctfr %>%
+  filter(type == 'country') %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "share_children_outlive_mother"
+  ) %>% 
+  mutate(share = 1 - value / tfr) %>% 
+  select(country, region, cohort, value = share)
+
+
+out_regions <- 
+  out_countries %>% 
+  group_by(region, cohort) %>%
+  summarise(
+    median = median(value)
+    , iqr = IQR(value)
+  ) %>%
+  ungroup() %>% 
+  mutate(
+    region = as.character(region)
+    # , measure = "share_children_outlive_mother"
+  )
+
+
+# 7 . Export ----
+
+# 7.1. Country-level estimates ====
+
+write.csv(cl_countries, "../../Output/Fig1_countries_child_death_cumulative.csv", row.names = F)
+write.csv(cs_countries, "../../Output/Fig1_countries_child_survival_cumulative.csv", row.names = F)
+
+write.csv(diff_countries, "../../Output/Fig2_countries_child_death_first_difference.csv", row.names = F)
+write.csv(abs_countries, "../../Output/Fig2_countries_child_death_burden.csv", row.names = F)
+
+write.csv(csex_countries, "../../Output/Fig3_countries_outlive_mother_number.csv", row.names = F)
+write.csv(out_countries, "../../Output/Fig3_countries_outlive_mother_share.csv", row.names = F)
+
+print("8 - complete country-level estimates saved to ../../Output")
+
+# 7.2. Regional estimates ====
+
+write.csv(cl_regions, "../../Output/Fig1_regions_child_death_cumulative.csv", row.names = F)
+write.csv(cs_regions, "../../Output/Fig1_regions_child_survival_cumulative.csv", row.names = F)
+
+write.csv(diff_regions, "../../Output/Fig2_regions_child_death_first_difference.csv", row.names = F)
+write.csv(abs_regions, "../../Output/Fig2_regions_child_death_burden.csv", row.names = F)
+
+write.csv(csex_regions, "../../Output/Fig3_regions_outlive_mother_number.csv", row.names = F)
+write.csv(out_regions, "../../Output/Fig3_regions_outlive_mother_share.csv", row.names = F)
+
+print("8 - complete regional estimates saved to ../../Output")

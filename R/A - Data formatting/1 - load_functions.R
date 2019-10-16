@@ -4,7 +4,13 @@ source("../_global_functions/_global_functions.R")
 wrangling <- c(
   "tidyverse", "tidyr", "reshape2"
   , "scales", "gridExtra", "ungroup"
-  , "splines", "DemoTools", "data.table", "parallel"
+  , "splines", "data.table", "parallel"
+  , "readxl"
 )
 
 library2(wrangling)
+
+if(!require("DemoTools")) {
+  devtools::install_github("timriffe/DemoTools")
+  library(DemoTools)
+}
