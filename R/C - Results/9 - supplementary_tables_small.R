@@ -23,6 +23,9 @@
 
 # 0. Params ----
 
+# Save tables as pdf?
+export <- F
+
 # For small tables (to be included in the Supplementary Materials)
 
 ages <- c(20, 45, 100)
@@ -105,7 +108,7 @@ cl_w[cl_w == "0"] <- '<0.01'
 
 # Export
 
-write.csv(cl_w, "../../Output/tab.2.1_child_death_full.csv", row.names = F)
+if(export) write.csv(cl_w, "../../Output/tab.2.1_child_death_full.csv", row.names = F)
 
 print("8 - tab.2.1_child_death_full saved to ../../Output")
 
@@ -184,7 +187,7 @@ cs_w[cs_w == "0"] <- '<0.01'
 
 # Export
 
-write.csv(cs_w, "../../Output/tab.2.2_child_survival_full.csv", row.names = F)
+if(export) write.csv(cs_w, "../../Output/tab.2.2_child_survival_full.csv", row.names = F)
 
 print("8 - tab.2.2_child_survival_full.csv saved to ../../Output")
 
@@ -259,7 +262,7 @@ diff_w[diff_w == "0"] <- '<0.01'
 
 # Export
 
-write.csv(diff_w, "../../Output/tab.3.1_child_death_first_diff.csv", row.names = F)
+if(export) write.csv(diff_w, "../../Output/tab.3.1_child_death_first_diff.csv", row.names = F)
 
 print("8 - tab.3.1_child_death_first_diff.csv saved to ../../Output")
 
@@ -332,7 +335,7 @@ abs_w[abs_w == "0"] <- '<0.01'
 
 # Export
 
-write.csv(abs_w, "../../Output/tab.3.2_child_death_burden.csv", row.names = F)
+if(export) write.csv(abs_w, "../../Output/tab.3.2_child_death_burden.csv", row.names = F)
 
 print("8 - tab.3.2_child_death_burden.csv saved to ../../Output")
 
@@ -393,7 +396,7 @@ csex_w$region[csex_w$area != ""] <- ""
 csex_w[csex_w == "0"] <- '<0.01'
 
 # Export
-write.csv(csex_w, "../../Output/tab.4.1_child_outlive_expected.csv", row.names = F)
+if(export) write.csv(csex_w, "../../Output/tab.4.1_child_outlive_expected.csv", row.names = F)
 
 print("8 - tab.4.1_child_outlive_expected.csv saved to ../../Output")
 
@@ -456,6 +459,6 @@ out_w$region[out_w$area != ""] <- ""
 out_w[out_w == "0"] <- '<0.01'
 
 # Export
-write.csv(out_w, "../../Output/tab.4.2_child_outlive_share_full.csv", row.names = F)
+if(export) write.csv(out_w, "../../Output/tab.4.2_child_outlive_share_full.csv", row.names = F)
 
 print("8 - tab.4.2_child_outlive_share_full.csv saved to ../../Output")
