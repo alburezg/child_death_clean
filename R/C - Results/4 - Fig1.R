@@ -13,7 +13,7 @@
 # Choose size options depending on whether image is intended for small format (e.g. PNAS).
 # medium (regular draft) or large (presentation)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. Journal plotting params (small)
 # base_size <- 9
 # width <- 9
 # height <- 6
@@ -64,8 +64,6 @@ ex_ctfr <- merge(
   , ctfr
   , by = c('country', 'cohort')
 )
-
-# ex_ctfr <- rbind(ex_df, ctfr)
 
 ex_ctfr_reg <- 
   merge(
@@ -118,12 +116,8 @@ points <- data.frame(do.call(rbind, lapply(df_l, function(df) {
 
 con <- c(
   "sweden"
-  # , "south africa"
   , 'zimbabwe'
-  # , 'kenya'
          )
-
-# con_new <- c("SWE", "ZA")
 
 country_lines <- 
   ex_ctfr_reg %>% 
@@ -136,7 +130,7 @@ lab_df <- data.frame(
   , y = c(2.1, 6.3)
 )
 
-# !! 5. Plot ----
+# 5. Plot ----
 
 p_ex_ctfr <- 
   ex_ctfr_sum %>% 
@@ -152,8 +146,6 @@ p_ex_ctfr <-
   geom_line(
     aes(x = ex, y = tfr, group = country)
     , linetype = 'longdash'
-    # , linetype = 'dashed'
-    # , linetype = 'dotted'
     , colour = "black"
     , data = country_lines
     , show.legend = F
@@ -167,19 +159,15 @@ p_ex_ctfr <-
              ) +
   geom_point(
     aes(x = ex, y = tfr, colour = region, shape = region
-        # , size = size
         )
     , size = point_size
     , data = points
   ) +
   scale_x_continuous(
-    # expression(e[0])
     "Cohort life expectancy at birth (years)"
     ) +
   scale_y_continuous(
     "Cohort Total Fertility Rate"
-    # , position = "left"
-    # , sec.axis = dup_axis()
   ) +
   scale_color_discrete("", br = regions_long, labels = regions_short) +
   scale_shape_discrete("", br = regions_long, labels = regions_short) +
@@ -191,8 +179,6 @@ p_ex_ctfr <-
     , legend.margin=margin(t=-0.25, r=0, b=0, l=0, unit="cm")
     # Remove space between legends
     , legend.key.size = unit(0.1, "cm")
-    # remove all margins
-    # , plot.margin = grid::unit(c(0,1,0,1), "mm")
   )
 
 p_ex_ctfr

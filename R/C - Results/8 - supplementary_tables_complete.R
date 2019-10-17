@@ -61,7 +61,8 @@ cl_countries <-
     , cohort = as.numeric(cohort)
     # , measure = "child_death"
     ) %>% 
-  select(country, region, cohort, age, value)
+  select(country, region, cohort, age, value) %>% 
+  arrange(country, cohort, age)
   
 # Get summary values (median and IQR) for regions
 
@@ -76,7 +77,8 @@ cl_regions <-
   mutate(
     region = as.character(region)
     # , measure = "child_death"
-         )
+         ) %>% 
+  arrange(region, cohort, age)
 
 print("8 - tab.2.1_child_death_full saved to ../../Output")
 
@@ -102,7 +104,8 @@ cs_countries <-
     , cohort = as.numeric(cohort)
     # , measure = "child_survival"
   ) %>% 
-  select(country, region, cohort, age, value)
+  select(country, region, cohort, age, value) %>% 
+  arrange(country, cohort, age)
 
 # Get summary values (median and IQR) for regions
 
@@ -117,7 +120,8 @@ cs_regions <-
   mutate(
     region = as.character(region)
     # , measure = "child_survival"
-  ) 
+  ) %>% 
+  arrange(region, cohort, age)
 
 
 print("8 - tab.2.2_child_survival_full.csv saved to ../../Output")
@@ -138,7 +142,8 @@ diff_countries <-
     , cohort = as.numeric(cohort)
     # , measure = "child_death_first_diff"
   ) %>% 
-  select(country, region, cohort, age, value = diff)
+  select(country, region, cohort, age, value = diff) %>% 
+  arrange(country, cohort, age)
 
 diff_regions <- 
   diff_countries %>% 
@@ -151,7 +156,8 @@ diff_regions <-
   mutate(
     region = as.character(region)
     # , measure = "child_death_first_diff"
-  ) 
+  ) %>% 
+  arrange(region, cohort, age)
 
 print("8 - tab.3.1_child_death_first_diff.csv saved to ../../Output")
 
@@ -166,7 +172,8 @@ abs_countries <-
     , cohort = as.numeric(cohort)
     # , measure = "child_death_burden"
   ) %>% 
-  select(country, region, cohort, age, value = absolute)
+  select(country, region, cohort, age, value = absolute) %>% 
+  arrange(country, cohort, age)
 
 abs_regions <- 
   abs_countries %>% 
@@ -179,7 +186,8 @@ abs_regions <-
   mutate(
     region = as.character(region)
     # , measure = "child_death_burden"
-  ) 
+  ) %>% 
+  arrange(region, cohort, age)
 
 print("8 - tab.3.2_child_death_burden.csv saved to ../../Output")
 
@@ -196,7 +204,8 @@ csex_countries <-
     , cohort = as.numeric(cohort)
     # , measure = "num_children_outlive_mother"
   ) %>% 
-  select(country, region, cohort, value)
+  select(country, region, cohort, value) %>% 
+  arrange(country, cohort)
   
 
 csex_regions <- 
@@ -210,7 +219,8 @@ csex_regions <-
   mutate(
     region = as.character(region)
     # , measure = "num_children_outlive_mother"
-  ) 
+  ) %>% 
+  arrange(region, cohort)
 
 print("8 - tab.4.1_child_outlive_expected.csv saved to ../../Output")
 
@@ -225,7 +235,8 @@ out_countries <-
     # , measure = "share_children_outlive_mother"
   ) %>% 
   mutate(share = 1 - value / tfr) %>% 
-  select(country, region, cohort, value = share)
+  select(country, region, cohort, value = share) %>% 
+  arrange(country, cohort)
 
 
 out_regions <- 
@@ -239,7 +250,8 @@ out_regions <-
   mutate(
     region = as.character(region)
     # , measure = "share_children_outlive_mother"
-  )
+  ) %>% 
+  arrange(region, cohort)
 
 
 # 7 . Export ----

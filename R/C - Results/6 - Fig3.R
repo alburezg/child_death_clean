@@ -9,7 +9,7 @@
 # sum_abs
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# 0. Plotting params ---- 
+# 0. Plotting params ----
 
 lower_year <- 1950
 upper_year <- 1999

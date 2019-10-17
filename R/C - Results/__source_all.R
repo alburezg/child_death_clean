@@ -21,5 +21,8 @@ source(files[6])
 # Fig4
 source(files[7])
 
-# Supplementary tables
+# Supplementary tables (complete)
 source(files[8])
+
+# Supplementary tables (selection of cohorts and ages)
+source(files[9])
