@@ -72,6 +72,8 @@ cl_regions <-
   summarise(
     median = median(value)
     , iqr = IQR(value)
+    , mean = mean(value)
+    , sd = sd(value)
   ) %>%
   ungroup() %>% 
   mutate(
@@ -115,6 +117,8 @@ cs_regions <-
   summarise(
     median = median(value)
     , iqr = IQR(value)
+    , mean = mean(value)
+    , sd = sd(value)
   ) %>%
   ungroup() %>% 
   mutate(
@@ -151,6 +155,8 @@ diff_regions <-
   summarise(
     median = median(value, na.rm = T)
     , iqr = IQR(value, na.rm = T)
+    , mean = mean(value, na.rm = T)
+    , sd = sd(value, na.rm = T)
   ) %>%
   ungroup() %>% 
   mutate(
@@ -181,6 +187,8 @@ abs_regions <-
   summarise(
     median = sum(value, na.rm = T)
     , iqr = IQR(value, na.rm = T)
+    , mean = mean(value, na.rm = T)
+    , sd = sd(value, na.rm = T)
   ) %>%
   ungroup() %>% 
   mutate(
@@ -214,6 +222,8 @@ csex_regions <-
   summarise(
     median = median(value)
     , iqr = IQR(value)
+    , mean = mean(value)
+    , sd = sd(value)
   ) %>%
   ungroup() %>% 
   mutate(
@@ -245,6 +255,8 @@ out_regions <-
   summarise(
     median = median(value)
     , iqr = IQR(value)
+    , mean = mean(value)
+    , sd = sd(value)
   ) %>%
   ungroup() %>% 
   mutate(
