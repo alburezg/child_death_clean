@@ -2,7 +2,7 @@ print(paste0("Running script: 6 - CD_first_difference"))
 
 # The first difference of the expected child death is equivalent
 # to the number of child deaths experienced by a woman
-# aged 'a' exactly
+# aged 'a' exactly (i.e. at each age 'a')
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 

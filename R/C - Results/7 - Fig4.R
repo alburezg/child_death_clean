@@ -55,7 +55,7 @@ point_size <- 4
 # 1. Merge dfs for tally part ----
 
 # levels <- c("Expected number", "As share of TFR")
-levels <- c("Expected (total)", "Expected as share of TFR")
+levels <- c("Expected number of children", "Expected number as fraction of TFR")
 levels <- factor(levels, levels = levels)
 measures <- c("Child death", "Child survival")
 
@@ -165,7 +165,7 @@ tally_share_con <-
 coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
-  x = 1953
+  x = 1955
   , y = c(5.15, 0.959)
   , label = LETTERS[1:2]
   , level = levels
@@ -210,7 +210,7 @@ p_cs_number_share <-
   scale_x_continuous(
     "Woman's birth cohort"
     , breaks = seq(lower_year, 2000, 10)
-    , labels = c(lower_year, "", 1975 ,"", "", 2000)
+    , labels = c(lower_year, seq(60, 90, 10), 2000)
     ) +
   scale_y_continuous(
     "Children outlive mother"

@@ -34,6 +34,66 @@
 # cl_ex_pop_country
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# 1. Data from Fig 1 ~~~~ ----
+
+# 1.1 Cohort ex 
+
+ex_df <- 
+  LTCB %>% 
+  filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
+  filter(Age == 0) %>% 
+  select(country = Country, cohort = Cohort, ex)
+
+# 1.2. Cohort TFR
+
+ctfr <- 
+  ASFRC %>% 
+  filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
+  group_by(country, Cohort) %>% 
+  summarise(tfr = sum(ASFR)/1000) %>% 
+  ungroup %>% 
+  rename(cohort = Cohort) 
+
+# 1.3. Merge and get regions
+
+ex_ctfr <- merge(
+  ex_df
+  , ctfr
+  , by = c('country', 'cohort')
+)
+
+# Country level
+
+ex_ctfr_con <- 
+  merge(
+    ex_ctfr
+    , un_reg
+    , by.x = 'country'
+    , by.y = 'level1'
+    , all.x = T
+    , all.y = F
+  ) %>% 
+  mutate(
+    region = factor(default_region, levels = regions_long)
+  ) %>% 
+  filter(type == 'country') %>% 
+  select(country, region, cohort, ex, tfr)
+
+# Regional estimates
+
+# 4. Summarise by region ====
+
+ex_ctfr_sum <- 
+  ex_ctfr_con %>% 
+  group_by(region, cohort) %>% 
+  summarise(
+    ex = median(ex)
+    , tfr = median(tfr)
+  ) %>% 
+  ungroup
+
+print("8 - tab.2.1_child_death_full saved to ../../Output")
+
 # 2. Data from Fig 2 ~~~~ ----
 
 # 2.1	Child death (CD) ====
@@ -270,6 +330,8 @@ out_regions <-
 
 # 7.1. Country-level estimates ====
 
+write.csv(ex_ctfr_con, "../../Output/Fig1_countries_TFR_e0.csv", row.names = F)
+
 write.csv(cl_countries, "../../Output/Fig2_countries_child_death_cumulative.csv", row.names = F)
 write.csv(cs_countries, "../../Output/Fig2_countries_child_survival_cumulative.csv", row.names = F)
 
@@ -282,6 +344,8 @@ write.csv(out_countries, "../../Output/Fig4_countries_outlive_mother_share.csv",
 print("8 - complete country-level estimates saved to ../../Output")
 
 # 7.2. Regional estimates ====
+
+write.csv(ex_ctfr_sum, "../../Output/Fig1_regions_TFR_e0.csv", row.names = F)
 
 write.csv(cl_regions, "../../Output/Fig2_regions_child_death_cumulative.csv", row.names = F)
 write.csv(cs_regions, "../../Output/Fig2_regions_child_survival_cumulative.csv", row.names = F)

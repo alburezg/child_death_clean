@@ -3,13 +3,14 @@ print(paste0("Running script: ", "5 - CD_regional_medians"))
 
 # Regional estimates use countries-level data to aggregate estimates at the region-level
 # An alternative (not included in this script) uses the ECL estimates derived from the 
-# region as a whole
+# region as a whole (ie from the aggregated regional CASFR and regional cohort life tables
+# as estimated by the UN WPP).
 
-# When estimating region means from individual country data, it is 
-# necessary to weight the relative contribution of each country: 
+# It is possible to weight the relative contribution of each country, but this is not done 
+# in the present script: 
 # This is a weighted average with weights proportional to the size 
 # of the cohorts in different countries. 
-# Comparing this estimates to those averaged by UNN SDG region directly
+# Comparing this estimates to those averaged by UN SDG region directly
 # tells us something about the relationship between the weighted average 
 # trajectory across countries and the value obtained using aggregate rates for  
 # all regions. 
@@ -30,13 +31,6 @@ print(paste0("Running script: ", "5 - CD_regional_medians"))
 # 1. Weighted regional means ----
 
 # 1.1. Filter cohorts and regions ====
-
-# DEPRECATED 20201019
-# Cosider for sensitivity analysis, although it is essentially 
-# describing somethig different
-# The mean should be weighted accordin to the size of 
-# each prospective birth cohort. 
-# This can be obtained my merging with the population file:
 
 cl_pop <- merge(
   df_cl_m_full %>% 
@@ -61,19 +55,10 @@ sum_cl <-
   group_by(region, age, cohort) %>%
   summarise(
     median = median(value)
-    # , mean_weighted = weighted.mean(value, w = cohort_size)
     , low_iqr = quantile(value, quant_low)
     , high_iqr = quantile(value, quant_high)
   ) %>%
-  ungroup() %>%
-  # mutate(
-    # low_iqr = median - q25
-    # , high_iqr = median + q75
-    # low_iqr = median - q40
-    # , high_iqr = median + q60
-     # low_sd = mean_weighted - sd * 0.5
-    # , high_sd = mean_weighted + sd * 0.5
-  # ) %>% 
+  ungroup() %>% 
   mutate(cohort2 = paste0("Women born in ", cohort))
 
 # 1.3. Export ====

@@ -9,7 +9,6 @@
 
 lower_year <- 1950
 upper_year <- 1999
-# upper_year <- 2000
 
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""
@@ -41,8 +40,12 @@ point_size <- 2.5
 
 # 1. Merge dfs ----
 
-sources <- c("died", "survived")
+sources <- c("died (cumulative)", "currently alive")
 sources <- factor(sources, levels = sources)
+ylab <- "Number of children"
+
+# sources <- c("died", "survived")
+# ylab <- "Number of children who"
 
 sum_cl2 <- sum_cl %>% filter(cohort %in% c(lower_year, upper_year)) 
 sum_cs2 <- sum_cs %>% filter(cohort %in% c(lower_year, upper_year)) 
@@ -123,8 +126,7 @@ p_cl_cs_facet <-
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_x_continuous("Woman's age") +
   scale_y_continuous(
-    "Number of children who"
-    # "Cumulative number of children who"
+    ylab
     , position = "left"
     , sec.axis = dup_axis()
   ) +

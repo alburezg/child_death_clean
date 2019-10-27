@@ -21,7 +21,8 @@ col_lab <- ""
 
 
 # Facet labels eventually in the plot
-sources <- c("individual-level", "population-level")
+# sources <- c("individual-level", "population-level")
+sources <- c("for average woman", "at a population level")
 sources <- factor(sources, levels = sources)
 
 # Choose size options depending on whether image is intended for small format (e.g. PNAS).
@@ -61,7 +62,10 @@ diff_abs <-
         ) %>% 
       select(region, age, cohort, value, low = low_sd, high = high_sd, source)
     ) %>% 
-  mutate(cohort2 = paste0(cohort, " birth cohort"))
+  mutate(
+    cohort2 = paste0(cohort, " birth cohort")
+    , source =  factor(source, levels = sources)
+    )
 
 # ! 2. Plot with facets ----
 
@@ -101,7 +105,6 @@ p_diff_abs <-
   # Plot ECL shapes to help distinguish regions
   geom_point(
     aes(x = age, y = value, group = region, colour = region
-        # , size = share
         , shape = region
     )
     , size = point_size
@@ -111,8 +114,6 @@ p_diff_abs <-
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_x_continuous("Woman's age") +
   scale_y_continuous(
-    # expression(Delta*"(child death)")
-    # "First difference of child death"
     "Number of child deaths at each age"
     , position = "left"
     , sec.axis = dup_axis()
@@ -139,9 +140,6 @@ p_diff_abs <-
     , axis.title.y.right = element_blank()
     # get rid of facet boxes
     , strip.background = element_blank()
-    # Remove spacing between facets
-    # , panel.spacing.x=unit(0.07, "cm")
-    # , panel.spacing.y=unit(0.07, "cm")
     # Move y axis closer to the plot
     , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
     )

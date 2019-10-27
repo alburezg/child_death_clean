@@ -35,7 +35,6 @@ text_size <- 4
 
 lower_year <- 1950
 upper_year <- 1999
-# upper_year <- 2000
 
 # 1. Cohort ex ----
 
@@ -44,7 +43,6 @@ ex_df <-
   filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
   filter(Age == 0) %>% 
   select(country = Country, cohort = Cohort, ex)
-# filter(age < 100)
 
 # 2. Cohort TFR ----
 
@@ -55,7 +53,6 @@ ctfr <-
   summarise(tfr = sum(ASFR)/1000) %>% 
   ungroup %>% 
   rename(cohort = Cohort) 
-  # mutate(source = "TFR")
 
 # 3. Merge and get regions ----
 
@@ -65,7 +62,7 @@ ex_ctfr <- merge(
   , by = c('country', 'cohort')
 )
 
-ex_ctfr_reg <- 
+ex_ctfr_con <- 
   merge(
     ex_ctfr
     , un_reg
@@ -83,7 +80,7 @@ ex_ctfr_reg <-
 # 4. Summarise by region ====
 
 ex_ctfr_sum <- 
-  ex_ctfr_reg %>% 
+  ex_ctfr_con %>% 
   group_by(region, cohort) %>% 
   summarise(
     ex = median(ex)
@@ -98,7 +95,6 @@ ex_ctfr_sum <-
 
 df_l <- split(ex_ctfr_sum, ex_ctfr_sum$region)
 
-# brk <- c(1, 25, 50)
 brk <- c(1, 50)
 siz <- c(2,1)
 
@@ -115,19 +111,28 @@ points <- data.frame(do.call(rbind, lapply(df_l, function(df) {
 # To display in plot
 
 con <- c(
-  "sweden"
-  , 'zimbabwe'
+  'zimbabwe'
+  # , "sweden"
          )
 
 country_lines <- 
-  ex_ctfr_reg %>% 
+  ex_ctfr_con %>% 
   filter(country %in% con) %>% 
   arrange(country, cohort)
 
 lab_df <- data.frame(
-  text = c("Sweden", "Zimbabwe")
-  , x = c(86, 49)
-  , y = c(2.1, 6.3)
+  text = c(
+    "Zimbabwe"
+    # , "Sweden"
+    )
+  , x = c(
+    49
+    #, 86
+    )
+  , y = c(
+    6.3 
+    #, 2.1
+    )
 )
 
 # 5. Plot ----
@@ -145,11 +150,11 @@ p_ex_ctfr <-
   # Selected countries
   geom_line(
     aes(x = ex, y = tfr, group = country)
-    , linetype = 'longdash'
+    , linetype = 'dashed'
     , colour = "black"
     , data = country_lines
     , show.legend = F
-    , size = country_line_size
+    , size = country_line_size * 0.7
   ) +
   # COuntry names
   geom_text(
