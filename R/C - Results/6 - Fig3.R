@@ -112,7 +112,8 @@ p_diff_abs <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  scale_x_continuous("Woman's age") +
+  # scale_x_continuous("Woman's age") +
+  scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
     "Number of child deaths at each age"
     , position = "left"

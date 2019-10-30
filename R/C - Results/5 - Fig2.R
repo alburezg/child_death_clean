@@ -40,7 +40,7 @@ point_size <- 2.5
 
 # 1. Merge dfs ----
 
-sources <- c("died (cumulative)", "currently alive")
+sources <- c("died (cumulative)", "surviving")
 sources <- factor(sources, levels = sources)
 ylab <- "Number of children"
 
@@ -124,7 +124,8 @@ p_cl_cs_facet <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  scale_x_continuous("Woman's age") +
+  # scale_x_continuous("Woman's age") +
+  scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
     ylab
     , position = "left"
