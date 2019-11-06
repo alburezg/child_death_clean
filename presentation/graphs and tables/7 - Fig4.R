@@ -34,11 +34,23 @@ upper_year <- 1999
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""
 
+# Add facet Label
+coh <- paste0(c(lower_year, upper_year), " birth cohort")
+
+# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# medium (regular draft) or large (presentation)
+
+# 0.1. PNAS plotting params (small)
+# width <- 8
+# height <- 5
+# base_size <- 9
+# region_line_size <- 0.5
+# point_size <- 2
 
 # 0.2. Draft paper and presentation format (large)
 
 width <- 16
-height <- 10
+height <- 16
 base_size <- 14
 region_line_size <- 1
 point_size <- 4
@@ -88,84 +100,13 @@ tally_share <- rbind(
 )
 
 
-# # 3.1. Tally part ====
-# # ~~~~~~~~~~~~~~~~~~~~~~
-# 
-# # 3.1.1. Child death 
-# 
-# cl_ex_selected <- 
-#   cl_ex_pop_country %>% 
-#   select(region = country, cohort, value) %>% 
-#   mutate(
-#     level = levels[1]
-#       , measure = measures[1]
-#   )
-# 
-# # 3.1.2. Child survival 
-# 
-# cs_ex_selected <- 
-#   cs_ex_pop_country %>% 
-#   select(region = country, cohort, value) %>% 
-#   mutate(
-#     level = levels[1]
-#     , measure = measures[2]
-#   )
-# 
-# # 3.2. Share part ====
-# # ~~~~~~~~~~~~~~~~~~~~~~
-# 
-# # 3.2.1. Child death 
-# 
-# ecl_ctfr_selected <- 
-#   ecl_ctfr %>% 
-#   mutate(share = value / tfr) %>% 
-#   select(region = country, cohort, value = share) %>% 
-#   mutate(
-#     level = levels[2]
-#     , measure = measures[1]
-#   )
-#   
-# 
-# # 3.2.2. Child survival 
-# 
-# ecs_ctfr_selected <- 
-#   ecl_ctfr %>% 
-#   mutate(share = 1 - value / tfr) %>% 
-#   select(region = country, cohort, value = share) %>% 
-#   mutate(
-#     level = levels[2]
-#     , measure = measures[2]
-#   )
-# 
-# # 3.3. COnsolidate ====
-# 
-# tally_share_con <- 
-#   rbind(
-#     cl_ex_selected
-#     , cs_ex_selected
-#     , ecl_ctfr_selected
-#     , ecs_ctfr_selected
-#   ) %>% 
-#   filter(region %in% con) %>% 
-#   filter(measure %in% measures[2]) %>% 
-#   mutate(cohort = as.numeric(cohort))
+# ! 3. Plot facet A ----
 
-# ! 4. Plot with facets ----
-
-# Add facet Label
-coh <- paste0(c(lower_year, upper_year), " birth cohort")
-
-f_lab <- data.frame(
-  x = 1955
-  , y = c(5.15, 0.959)
-  , label = LETTERS[1:2]
-  , level = levels
-)
-
-p_cs_number_share <-
+fig4a <-
   tally_share %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(measure %in% measures[2]) %>% 
+  filter(level %in% levels[1]) %>% 
   mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() +
   # Region summary lines
@@ -184,55 +125,89 @@ p_cs_number_share <-
     aes(x = cohort, y = value, group = region, colour = region
         , shape = region
     )
-    , size = point_size
+    , size = 5
     , data = . %>% filter(cohort %in% c(lower_year, 1975, upper_year))
   ) +
-  # Add facet numbers
-  geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  # SWE and ZWE lines
-  # geom_line(
-  #   aes(x = cohort, y = value, group = region)
-  #   , linetype = "longdash"
-  #   , colour = "black"
-  #   , show.legend = F
-  #   , data = tally_share_con
-  # ) +
-  
   scale_x_continuous(
     "Woman's birth cohort"
     , breaks = seq(lower_year, 2000, 10)
-    , labels = c(lower_year, seq(60, 90, 10), 2000)
+    # , labels = c(lower_year, seq(60, 90, 10), 2000)
     ) +
   scale_y_continuous(
-    "Children outlive mother"
+    "Expected number of children outlive mother"
     , br = trans_breaks(identity, identity, 4)
                      ) +
   scale_color_discrete(col_lab, br = regions_long, labels = regions_short) +
   scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
   scale_shape_discrete(col_lab, br = regions_long, labels = regions_short) +
-  scale_size_continuous("Population share") +
-  # coord_cartesian(ylim = c(0, NA)) +
-  # facet_grid(level ~ measure, scales = 'free_y') +
-  facet_wrap(level ~ ., scales = 'free_y') +
-  theme_bw(base_size = base_size) +
+  theme_bw(base_size = 17) +
   theme(
     legend.position = "bottom"
-    # Remove space over legend
-    , legend.margin=margin(t=-0.25, r=0.5, b=0, l=0, unit="cm")
     # Remove space between legends
     , legend.key.size = unit(0.1, "cm")
-    # Move y axis closer to the plot
-    , axis.title.y = element_text(margin = margin(t = 0, r = - 0.5, b = 0, l = 0))
-    , plot.margin = unit(c(t=0.2, r=0.25, b=0.1, l=0.1), unit="cm")
     # get rid of facet boxes
     , strip.background = element_blank()
     # Remove spacing between facets
-    # , panel.spacing.x=unit(0.07, "cm")
   )
 
-p_cs_number_share
+fig4a
 
 # ECS_expected_share_TFR
-ggsave(paste0("../../Output/fig4.pdf"), p_cs_number_share, width = width, height = height, units = "cm")
+ggsave(paste0("../pres/fig4a.pdf"), fig4a, width = 20, height = 16, units = "cm")
+
+# ! 3. Plot facet B ----
+
+fig4b <-
+  tally_share %>% 
+  filter(!region %in% regions_to_remove) %>% 
+  filter(measure %in% measures[2]) %>% 
+  filter(level %in% levels[2]) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
+  ggplot() +
+  # Region summary lines
+  geom_line(
+    aes(x = cohort, y = value, group = region, colour = region)
+    , size = region_line_size
+    , show.legend = F
+  ) +
+  # Plot ECL quantiles as bands
+  geom_ribbon(
+    aes(x = cohort, ymin = low, ymax = high, group = region, fill = region)
+    , alpha = 0.4, show.legend = F
+  ) +
+  # Plot ECL shapes to help distinguish regions
+  geom_point(
+    aes(x = cohort, y = value, group = region, colour = region
+        , shape = region
+    )
+    , size = 5
+    , data = . %>% filter(cohort %in% c(lower_year, 1975, upper_year))
+  ) +
+  scale_x_continuous(
+    "Woman's birth cohort"
+    , breaks = seq(lower_year, 2000, 10)
+    # , labels = c(lower_year, seq(60, 90, 10), 2000)
+  ) +
+  scale_y_continuous(
+    "Share of TFR will outlive mother"
+    , br = trans_breaks(identity, identity, 4)
+  ) +
+  scale_color_discrete(col_lab, br = regions_long, labels = regions_short) +
+  scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
+  scale_shape_discrete(col_lab, br = regions_long, labels = regions_short) +
+  theme_bw(base_size = 17) +
+  theme(
+    legend.position = "bottom"
+    # Remove space between legends
+    , legend.key.size = unit(0.1, "cm")
+    # get rid of facet boxes
+    , strip.background = element_blank()
+    # Remove spacing between facets
+  )
+
+fig4b
+
+# ECS_expected_share_TFR
+ggsave(paste0("../pres/fig4b.pdf"), fig4b, width = 20, height = 16, units = "cm")
 
 print("7 - Figure 4 saved to ../../Output")

@@ -5,3 +5,4 @@
 # Folders with large datasets
 Data/derived/*.csv
 Data/derived/*.RDS
+# For presentation
