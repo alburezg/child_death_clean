@@ -67,7 +67,7 @@ sum_cs <- readRDS('../../Data/estimates/sum_cs.RDS') %>%
   arrange(region, cohort, age) 
 
 # cs_pop
-cs_pop <- readRDS('../../Data/estimates/cs_pop.RData')
+cs_pop <- readRDS('../../Data/estimates/cs_pop.RDS')
 
 # Expected children outlived mothers
 # cs_ex_pop_country

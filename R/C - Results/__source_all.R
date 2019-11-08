@@ -1,4 +1,11 @@
-(files <- list.files(pattern = ".R$")[-1])
+
+if(!require("stringr")) {
+  install.packages("stringr")
+  library(stringr)
+} 
+
+files <- list.files(pattern = ".R$")[-1]
+( files <- str_sort(files, numeric = TRUE) )
 
 # Load functions
 source(files[1])
