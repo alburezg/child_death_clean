@@ -21,7 +21,7 @@ for more details about the data and estimation.
 
 In order to run the code, please download this repository as a zip file, extract it and run in R.
 The scripts in all three folders needs to be executed in order for the figures and tables to be produced and stored 
-in the `Output` directory. The scripts `__source_all.R`, included in each of the three sub-directories, can be used
+in the `Output` directory. The scripts `__run_code.R`, included in each of the three sub-directories, can be used
 for this purpose.
 
 The final results are stored in the `Output` directory, including the figures as .pdf files.  The full country and regional estimates of the 
