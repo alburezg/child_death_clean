@@ -45,5 +45,5 @@ source(files[12])
 
 # NOT RUN:
 # Export full country-cohort-age results for Tables S6-10 as csv files
-# The resulting files are quite large in size and are not included in SI pdf file
+# The resulting files are quite large in size and are not included in the SI pdf file
 # source(files[13])
