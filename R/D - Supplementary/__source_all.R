@@ -43,7 +43,7 @@ source(files[11])
 # Table S10 - Children outliving their mothers as a share of the mother’s cohort TFR
 source(files[12])
 
+# NOT RUN:
 # Export full country-cohort-age results for Tables S6-10 as csv files
-# Not included in SI pdf file
-# Not run:
+# The resulting files are quite large in size and are not included in SI pdf file
 # source(files[13])

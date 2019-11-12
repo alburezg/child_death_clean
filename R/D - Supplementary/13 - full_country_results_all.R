@@ -192,7 +192,7 @@ print("8 - tab.2.2_child_survival_full.csv saved to ../../Output")
 
 # 3. Data from Fig 3 ~~~~ ----
 
-# 3.1.	First difference of child death (ΔCD) ====
+# 3.1.	First difference of child death (DELTA CD) ====
 # ~~~~~~~~~~~~~
 
 # First difference of child death for a woman surviving to age $a$ 
