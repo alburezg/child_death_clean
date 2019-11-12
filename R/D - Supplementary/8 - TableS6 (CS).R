@@ -15,7 +15,7 @@ caption <- "Full country results for the expected number of children surviving f
 lab <- "S6"
 
 # Save tables as pdf?
-export <- T
+export <- F
 export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)

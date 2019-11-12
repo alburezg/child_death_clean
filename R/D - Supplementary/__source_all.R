@@ -16,18 +16,34 @@ source(files[2])
 # Country and region labels
 source(files[3])
 
-# Tables with full country reuslts (complete)
+# Fig S1 (CD) and S2 (CD) - global estimates
 source(files[4])
 
-# Tables with full country reuslts (complete) (selection of cohorts and ages)
+# Fig S3 - Expected child survival - global estimates
 source(files[5])
 
-# FigS1 - Total burden of chid death
+# FigS4 - Total burden of child death by region
 source(files[6])
 
-# Table: global estimates for all regions
+# Table S5 - Cumulative number of child death for a woman living to age a (CD)
 source(files[7])
 
+# Table S6 - Number of surviving children for a woman living to age a (CS)
+source(files[8])
 
-
+# Table S7 - First difference of child death for a woman living to age a (ΔCD)
 source(files[9])
+
+# Table S8 - Burden of child death at each age a
+source(files[10])
+
+# Table S9 - Number of children expected to outlive their mothers
+source(files[11])
+
+# Table S10 - Children outliving their mothers as a share of the mother’s cohort TFR
+source(files[12])
+
+# Export full country-cohort-age results for Tables S6-10 as csv files
+# Not included in SI pdf file
+# Not run:
+# source(files[13])

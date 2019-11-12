@@ -1,6 +1,4 @@
-
-# S7 - First difference of child death for a woman living to age a (ΔCD)
-
+# S7 - First difference of child death for a woman living to age a (deltaCD)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
@@ -18,7 +16,7 @@ caption <- "First difference of child death for a woman surviving to ages 20, 45
 lab <- "S7"
 
 # Save tables as pdf?
-export <- T
+export <- F
 export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)
@@ -26,7 +24,7 @@ export_latex <- T
 cohorts <- c(1950, 1975, 1999)
 ages <- c(25, 70, 99)
 
-# 3.1.	First difference of child death (ΔCD) ====
+# 3.1.	First difference of child death (CD) ====
 # ~~~~~~~~~~~~~
 
 # First difference of child death for a woman surviving to age $a$ 
@@ -90,8 +88,6 @@ diff_w$region[diff_w$area != ""] <- ""
 
 diff_w[diff_w == "0"] <- '<0.01'
 
-# Export
-
 # Export ====
 
 if(export) write.csv(diff_w, paste0("../../Output/tab",lab,".csv"), row.names = F)
@@ -120,4 +116,3 @@ if(export_latex) {
 }
 
 print("9 - S7 saved to ../../Output")
-

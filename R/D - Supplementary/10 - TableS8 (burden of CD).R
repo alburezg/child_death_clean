@@ -16,7 +16,7 @@ caption <- "Child deaths experienced by women in birth cohort c at exact age a. 
 lab <- "S8"
 
 # Save tables as pdf?
-export <- T
+export <- F
 export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)

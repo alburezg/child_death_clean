@@ -18,7 +18,7 @@ caption <- "Full country results for the cumulative number of child deaths for a
 lab <- "S5"
 
 # Save tables as pdf?
-export <- T
+export <- F
 export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)

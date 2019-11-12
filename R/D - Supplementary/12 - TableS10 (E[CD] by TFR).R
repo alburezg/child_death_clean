@@ -17,7 +17,7 @@ caption <- "Number of children expected to live longer than their mothers as a s
 lab <- "S10"
 
 # Save tables as pdf?
-export <- T
+export <- F
 export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)
