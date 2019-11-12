@@ -28,7 +28,7 @@ print(paste0("Running script: ", "5 - CD_regional_medians"))
 # df_cl_m_full <- readRDS('../../Data/estimates/df_cl_m_1950to1999_15to100.RData')
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# 1. Weighted regional means ----
+# 1. Regional means ----
 
 # 1.1. Filter cohorts and regions ====
 

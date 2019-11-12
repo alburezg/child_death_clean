@@ -1208,6 +1208,29 @@ format_doExtrapolate <- function(df, age_span) {
   X
 }
 
+# Formats table for latex visualisation
+format_table <- function(df, row_keep = 29, ages = c(20,45,100), cohorts = c(1950, 1975, 1999), extra_header = T) {
+  df$area[df$region != ""] <- df$region[df$region != ""]
+  df$region <- NULL
+  colnames(df) <- gsub("^X", "", colnames(df))
+  df$area[df$area == "oceania (excluding australia and new zealand)"] <- "oceania (exc. Aus and NZ)"
+  if(nchar(colnames(df)[2]) == 4)
+    colnames(df)[1] <- "Birth Cohort"
+  else
+    colnames(df)[1] <- "Birth Cohort and Age"
+  
+  # Keep only first 30 rows and add extra row
+  df <- df[1:row_keep,]
+  df[row_keep+1, ] <- rep("...", ncol(df))
+  # Format colnames
+  if(extra_header) {
+    colnames(df) <- c("Age", rep(ages, length(cohorts)))
+  }
+  
+  return(df)  
+  
+}
+
 get_asfr <- function(df, sex_keep, y_range, age_breaks) {
   
   # 1. Denominator - women in reproductive years

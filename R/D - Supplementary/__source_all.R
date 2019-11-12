@@ -16,14 +16,18 @@ source(files[2])
 # Country and region labels
 source(files[3])
 
-# Fig1
+# Tables with full country reuslts (complete)
 source(files[4])
 
-# Fig2
+# Tables with full country reuslts (complete) (selection of cohorts and ages)
 source(files[5])
 
-# Fig3
+# FigS1 - Total burden of chid death
 source(files[6])
 
-# Fig4
+# Table: global estimates for all regions
 source(files[7])
+
+
+
+source(files[9])

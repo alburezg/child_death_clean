@@ -7,6 +7,22 @@ point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 age_br <- c(seq(5, 100, 20), 100)
 col_lab <- ""
 
+new_order <- 
+  rev(
+  c(
+    "europe and northern america"
+    , "northern africa and western asia"
+    , "latin america and the caribbean"
+    , "eastern and south-eastern asia"
+    , "sub-saharan africa"
+    , "central and southern asia"
+    , "australia_new zealand"
+    , "oceania (excluding australia and new zealand)"
+    )
+  )
+
+orders <- match(new_order, regions_long)
+
 # Choose size options depending on whether image is intended for small format (e.g. PNAS).
 # medium (regular draft) or large (presentation)
 
@@ -51,6 +67,11 @@ sum_burden <-
 # Data visualisation inspired by @ikashnitsky: 
 # https://ikashnitsky.github.io/images/190719/one-figure.png
 
+base_size <- 15
+base_inset <- 11
+point_size <- 4
+point_inset <- 3
+
 x_adj <- -28
 y_adj <- -6.5
 
@@ -65,9 +86,9 @@ p_sum_burden <-
   ) %>% 
   ggplot(aes(y = region)) +
   geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
-  geom_point(aes(x = `1950`), shape = 16, size = 2) +
-  geom_point(aes(x = `1975`), shape = 21, size = 2, fill = "white") +
-  geom_point(aes(x = `1999`), shape = 17, size = 2) +
+  geom_point(aes(x = `1950`), shape = 16, size = point_size) +
+  geom_point(aes(x = `1975`), shape = 21, size = point_size, fill = "white") +
+  geom_point(aes(x = `1999`), shape = 17, size = point_size) +
   scale_y_discrete("", br = new_order, labels = regions_short[orders]) +
   scale_x_continuous(
     "Total number of child deaths"
@@ -75,7 +96,7 @@ p_sum_burden <-
     , labels = function(x) ifelse(x == 0, x, paste0(x, "M"))
   ) + 
   coord_cartesian(xlim = c(0, 55)) +
-  theme_bw()
+  theme_bw(base_size = base_size)
 
 p_sum_burden
 
@@ -97,9 +118,9 @@ p_inset <-
   ) %>% 
   ggplot(aes(y = region)) +
   geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
-  geom_point(aes(x = `1950`), shape = 16, size = 2) +
-  geom_point(aes(x = `1975`), shape = 21, size = 2, fill = "white") +
-  geom_point(aes(x = `1999`), shape = 17, size = 2) +
+  geom_point(aes(x = `1950`), shape = 16, size = point_inset) +
+  geom_point(aes(x = `1975`), shape = 21, size = point_inset, fill = "white") +
+  geom_point(aes(x = `1999`), shape = 17, size = point_inset) +
   # annotate("text", x = c(0.12, 0.25), y = c(2, 1), label = c("Oceania (other)", "AUS & NZ"),
   # size = c(3,3), hjust = .5, color = "grey20") +
   coord_cartesian(xlim = c(0.03, 0.32), ylim = c(0.75, 2.25)) +
@@ -110,7 +131,7 @@ p_inset <-
     , labels = function(x) ifelse(x == 0, x, paste0(x, "M"))
   ) +
   theme_bw(
-    base_size = 10
+    base_size = base_inset
   ) +
   theme(
     axis.title=element_text(size=7)
@@ -122,7 +143,7 @@ p_inset <-
     # , plot.margin = unit(c(t=0.2, r=0.25, b=0.1, l=0.1), unit="cm")
   )
 
-# 2.2. Complete plot ====
+# 2.2. S3 - Complete plot ====
 
 p_complete <- 
   p_sum_burden +
@@ -144,7 +165,7 @@ p_complete <-
 
 p_complete
 
-pdf("../../Output/figS1.pdf", width = 6.5, height = 5)
+pdf("../../Output/figS3.pdf", width = 6.5, height = 5)
 p_complete
 dev.off()    
 
@@ -198,7 +219,7 @@ dev.off()
 # # p_sum_burden
 # # dev.off()    
 # 
-# # 2.1. Inset plot  ====
+# # 2.1. Inset plot 
 # 
 # p_inset <-
 #   sum_burden %>% 
@@ -235,7 +256,7 @@ dev.off()
 #     # , plot.margin = unit(c(t=0.2, r=0.25, b=0.1, l=0.1), unit="cm")
 #   )
 # 
-# # 2.2. Complete plot ====
+# # 2.2. Complete plot 
 # 
 # p_complete <- 
 #   p_sum_burden +

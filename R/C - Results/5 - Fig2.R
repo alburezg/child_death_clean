@@ -107,6 +107,7 @@ p_cl_cs_facet <-
   geom_line(
     aes(x = age, y = median, group = region, colour = region)
     , size = region_line_size
+    , show.legend = FALSE
   ) +
   # Plot ECL quantiles as bands
   geom_ribbon(
