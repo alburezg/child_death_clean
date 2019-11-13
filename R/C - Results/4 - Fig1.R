@@ -176,7 +176,7 @@ p_ex_ctfr <-
   ) +
   scale_color_discrete("", br = regions_long, labels = regions_short) +
   scale_shape_discrete("", br = regions_long, labels = regions_short) +
-  # scale_size_continuous("", range = c(1, 3), guide = F) +
+  # coord_cartesian(ylim = c(0, 6.5)) +
   theme_bw(base_size = base_size) +
   theme(
     legend.position = "bottom"

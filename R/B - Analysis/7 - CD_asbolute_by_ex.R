@@ -86,32 +86,21 @@ abs_df <- merge(
 
 # Now it is possible to group the data and get summary
 # statistics if this is wanted
+# Note that for this measure, we do not estimate percentiles, as 
+# it is ultimately the sum of the estimates from a deterministic model
+# We do, however, keep the lx column as this will be used later on, in the results section
+# to visualise the heterogeneity within each region.
 
-# DEPRECATED: Tidyverse approach too slow
-# sum_abs <-
-#   abs_df %>%
-#   group_by(region, age, cohort) %>%
-#   summarise(
-#     value = sum(absolute)
-#     , sd = sd(absolute)
-#     , low_sd = value - 2*sd
-#     , high_sd = value + 2*sd
-#   ) %>%
-#   ungroup 
-
-# Data.table alternative is preferred
-
-sum_abs <- data.table(abs_df)[ , list(value = sum(absolute), sd = sd(absolute)), by = list(region, age, cohort)]
-
-sum_abs <- 
-  sum_abs %>% 
-  mutate(
-    low_sd = value - 2*sd
-    , high_sd = value + 2*sd
-    # , cohort2 = paste0("Women born in ", cohort)
-  ) %>% 
+sum_abs <-
+  abs_df %>%
+  group_by(region, age, cohort) %>%
+  summarise(
+    value = sum(absolute)
+    , lx = sum(lx)
+  ) %>%
+  ungroup %>% 
   arrange(region, cohort, age) 
-  
+
 # 1.4 Export ====
 
 saveRDS(sum_abs, file = "../../Data/estimates/sum_abs.RDS")

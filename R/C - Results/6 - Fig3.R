@@ -18,6 +18,8 @@ point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 age_br <- c(seq(5, 100, 20), 100)
 col_lab <- ""
 
+# For y axis of burden of child death
+scale_by <- 1e6
 
 # Facet labels eventually in the plot
 sources <- c("individual-level", "population-level")
@@ -44,23 +46,49 @@ point_size <- 2.5
 
 # 1. Merge dfs ----
 
+# To obtain the bands showing regional heterogeneity, 
+# multiply the percentiles obtained for Delta CD by the lx value (point
+# estimate) for each region (the sum from all countries in the region).
+# In practice, this means merging both (agregated) data frames and multiplying by region. 
+# Note that the heterogeneity being displaced in this case is, actually, that provided
+# by first difference of child death (delta CD). the lx component of the expression 
+# (ie the women surviving to that age) has no variation associated with it since it
+# comes from the sum (not the media) of all country-level lx values. 
+
+sum_abs_temp <- merge(
+  sum_abs
+  , sum_diff %>% 
+    select(region, cohort, age, median_diff = median, low_iqr, high_iqr) %>% 
+    filter(age < 100)
+  , by = c("region", "cohort", "age")
+  , all.x = T
+) %>% 
+  mutate(
+    # Center around the median
+    # The values will be different because the current median
+    # was estimated from the individual countries
+    # and we are now estimating the 'psuedo-percentiles'
+    # after having agregated the data
+    # a. find range of percentiles
+    high = high_iqr - median_diff
+    , low = median_diff - low_iqr
+    # b. Get absooute number of child deaths
+    , low = (value + (lx * low)) / scale_by
+    , high = (value - (lx * high)) / scale_by
+    , value = value / scale_by
+    , source = levels(sources)[2]
+  ) %>% 
+  select(region, age, cohort, value, low, high, source)
+
 diff_abs <-
   rbind(
-    # Child loss
     sum_diff %>% 
       mutate(source = levels(sources)[1]) %>% 
       select(region, age, cohort, value = median, low = low_iqr, high = high_iqr, source)
-    # Child survival
-    , sum_abs %>% 
-      mutate(
-        source = levels(sources)[2]
-        , value = value / 1e6
-        , low_sd = low_sd / 1e6
-        , high_sd = high_sd / 1e6
-        ) %>% 
-      select(region, age, cohort, value, low = low_sd, high = high_sd, source)
+    , sum_abs_temp
     ) %>% 
   mutate(cohort2 = paste0(cohort, " birth cohort"))
+
 
 # ! 2. Plot with facets ----
 
@@ -72,7 +100,7 @@ coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = rep(90, 4)
-  , y = c(0.105, 2.75, 0.105, 2.75)
+  , y = c(0.105, 2.25, 0.105, 2.25)
   , label = c("A", "C", "B", "D")
   , source = rep(sources, 2)
   , cohort2 = sort(rep(coh, 2))
