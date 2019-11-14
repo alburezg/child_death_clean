@@ -1,6 +1,12 @@
-# For background section, 
-# one plot with ex in x axis and tfr in y axis for all regions
-# and a line showing progress in 1950-2000 cohort
+
+# Cohort fertility and life expectancy for UN SDG regions (solid lines, median values) 
+# for the 1950-1999 annual birth cohorts (cohorts approximated using UN WPP period data). 
+# The DT theory predicts a progression from the top-left of the figure (high fertility and 
+# mortality) to the bottom-right (low fertility and mortality) for younger birth cohorts.
+# Regions with longer trajectories are expected to experience the largest fertility and mortality decline.
+# Horizontal trajectories (e.g. Europe and N America) result from increases in mortality but little change 
+# in fertility for younger generations. 
+# Estimates for Oceania, Australia, and New Zealand omitted.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 

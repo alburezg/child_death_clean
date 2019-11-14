@@ -1,4 +1,18 @@
 
+# Timing of child death over the life course for two female birth cohorts.
+# (A and B) Number of child deaths experienced at each age $a$ by a woman reaching 
+# that age (i.e. conditional on female survival). This is the First Difference of 
+# Child Death ($\Delta CD$) - its cumulative sum over age yields the measure of 
+# Child Death introduced above. (C and D) Burden of child death: total number of 
+# child deaths experienced by all women in a region and birth cohort at each age $a$.
+# We obtained it by multiplying $\Delta CD$ by the absolute number of women expected 
+# to survive to each age, considering the original size of each female birth cohort 
+# and the mortality rates prevalent in their countries of origin.
+# This measure removes the assumption of female survival by accounting for the size 
+# and age structure of the population. The solid lines show the regional median and 
+# the bands percentiles within each region.
+# See Materials and Methods for details of the estimation procedures.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A. Plot first diff and weighted first diff ~~~~ 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

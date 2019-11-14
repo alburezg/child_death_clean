@@ -1,4 +1,19 @@
 
+# Frequency of child death and child survival over the life course 
+# of two selected birth cohorts of women (by region and birth cohort).
+# These measures pertain to a hypothetical woman aged $a$, standing 
+# before us (i.e. surviving to that age). (A and B) Cumulative number 
+# of child deaths (CD) experienced by a woman reaching age $a$. 
+# The slope of the curves is positive at all ages, even after the end 
+# of a woman's reproductive age, because offspring mortality continues 
+# to accumulate over the life course. (C and D) Total number of children 
+# surviving (CS) for a woman reaching age $a$. Values in the 
+# vertical axis represent the total number of children `currently alive' - 
+# those surviving exposure to the life table mortality function corresponding 
+# to their birth cohorts. The solid lines represent median values and the 
+# bands the variability among countries in each region.
+# See Materials and Methods for details of the estimation procedures.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 
 # sum_cl 

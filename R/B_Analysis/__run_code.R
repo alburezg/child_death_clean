@@ -2,7 +2,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Code to produce estimates of Child Death, Child Survival, and derived measures
-# described in the main text and in the SI appendix.
+# described in the main text and in the SI Appendix.
 # Make sure that all scripts in the directory `A_Data_formatting` have been run before
 # attempting to run these scripts - otherwise they won't work.
 # The scripts in this directory carry out the analysis of the data but do not produce

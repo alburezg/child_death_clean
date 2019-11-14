@@ -1,3 +1,16 @@
+
+# Absolute and relative number of children expected to live 
+# longer than their mothers. (A) Number of children expected 
+# to outlive an average woman. Values in the vertical axis 
+# show the number of children alive at the time of a woman's 
+# death if she survives to the life expectancy in her cohort 
+# and country of birth. (B) Children expected to outlive a 
+# woman as a fraction of her cohort's TFR. Higher values indicate 
+# that a larger fraction of a woman's offspring is expected to 
+# live longer than her, independently of the prevalent levels 
+# of fertility. The solid lines represent regional median values 
+# and the bands the variability among countries in each region.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A. Plot CL and CS in four facets ~~~~ ----
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
