@@ -25,22 +25,25 @@ for more details about the data and estimation.
 
 In order to run the code, please do the following:
 
-1. 
-
-download this repository as a zip file, extract it and run in R.
-The scripts in all three folders needs to be executed in order for the figures and tables to be produced and stored 
-in the `Output` directory. The scripts `__run_code.R`, included in each of the three sub-directories, can be used
-for this purpose.
-
-The final results are stored in the `Output` directory, including the figures as .pdf files.  The full country and regional estimates of the 
-six main measures included in the paper are stored in tabular format in several .csv files in the same directory.
+1. Download this repository as a zip file (aprox 150MB) and extract its content
+1. Open the `R/A_Data_formatting` folder in order to start the data manipulation
+1. Each directory in `R` has the same structure:
+  1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
+  1. A script called `__run_code.R` which can be used to execute all scripts at once
+  1. Several R scripts ordered numerically
+1. Open the `___A_Data_formatting.Rproj` R project in RStudio
+1. Open the `__run_code.R` script and run line by line to execute all the scripts in the directory
+1. When finished, exit RStudio
+1. Repeat for all four directoriesin the `R` folder
+1. The final results are stored in the `Output` directory, including the figures as .pdf files and full country and regional estimates.
+  
 
 ## A note on parallelisation
 
 If possible, the R scripts in the directory [A_Data_formatting](R/A_Data_formatting) used to re-format the UN WPP should be run on a High Performance Computing (HPC) unit
-as they involve many calculations. These would take many hours in a normal PC, but only about 2 hours on a HPC running on 25 cores. 
+as they involve many calculations. These would take many hours in a normal PC, but under one hour on a HPC running 25 cores. 
 
-The scripts were ran on a Windows server:
+We ran the scripts on a Windows server:
 
 `> sessionInfo()`
 
