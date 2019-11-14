@@ -6,4 +6,4 @@
 Data/derived/*.csv
 Data/derived/*.RDS
 # For presentation
-presentation/
+/presentation/

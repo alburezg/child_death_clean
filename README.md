@@ -21,13 +21,26 @@ UN World Population Prospect data was downloaded by hand before running the scri
 Data/wpp_data. All data come from: [https://population.un.org/wpp/Download/](https://population.un.org/wpp/Download/), downloaded on 14 October 2019. See the *Supporting Information*
 for more details about the data and estimation.
 
-In order to run the code, please download this repository as a zip file, extract it and run in R.
+## Runing the scripts to reproduce the results
+
+In order to run the code, please do the following:
+
+1. 
+
+download this repository as a zip file, extract it and run in R.
 The scripts in all three folders needs to be executed in order for the figures and tables to be produced and stored 
 in the `Output` directory. The scripts `__run_code.R`, included in each of the three sub-directories, can be used
 for this purpose.
 
 The final results are stored in the `Output` directory, including the figures as .pdf files.  The full country and regional estimates of the 
 six main measures included in the paper are stored in tabular format in several .csv files in the same directory.
+
+## A note on parallelisation
+
+If possible, the R scripts in the directory [A_Data_formatting](R/A_Data_formatting) used to re-format the UN WPP should be run on a High Performance Computing (HPC) unit
+as they involve many calculations. These would take many hours in a normal PC, but only about 2 hours on a HPC running on 25 cores. 
+
+The scripts were ran on a Windows server:
 
 `> sessionInfo()`
 
