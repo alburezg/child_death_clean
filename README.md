@@ -4,7 +4,7 @@
 
 Scripts to reproduce figures and tables of paper "Women's experience of child death over the life course: a global demographic perspective".
 
-## Structure
+## A - Structure
 
 The directory `R` has three sub-directories, which are needed to transform the data to the right format, produce the model estimates
 , produce the figures and tables from the main text, and create the resources for the SI Appendix. They are:
@@ -17,33 +17,35 @@ The directory `R` has three sub-directories, which are needed to transform the d
 
 [D_Supplementary](R/D_Supplementary)
 
-Each directory in `R` has the same structure:
+Each directory in `R` has the same structure, which includes:
+
 1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
-1. A script called `__run_code.R` which can be used to execute all scripts at once
-1. Several R scripts ordered numerically
+1. A script called `__run_code.R` which should be used to execute all scripts in the directory
+1. Several R scripts ordered numerically.
  
  
-## Runing the scripts to reproduce the results
+## B - Runing the scripts to reproduce the results
 
 In order to run the code, please do the following:
 
 1. Download this repository as a zip file (aprox 150MB) and extract its content
-1. Open the `R/A_Data_formatting` folder in order to start the data manipulation
+1. Open the `R/A_Data_formatting` directory in order to start with the data wrangling
 1. Open the `___A_Data_formatting.Rproj` R project in RStudio
-1. Open the `__run_code.R` script and run line by line to execute all the scripts in the directory
+1. Open the `__run_code.R` script and run the code line by line to execute all the scripts in the directory
 1. When finished, exit RStudio
-1. Repeat for all four directoriesin the `R` folder
-1. The final results are stored in the `Output` directory, including the figures as .pdf files and full country and regional estimates.
+1. Repeat for the other three directories in the `R` directory.
 
-## Data availability
+The final results of the analysis are stored in the `Output` directory, including the figures as .pdf files and full country and regional estimates.
 
-This repository includes all the raw data needed to reproduce the results. UN World Population Prospect data was downloaded by hand in advance and stored in the folder
-[Data/wpp_data](Data/wpp_data). All data come from: [https://population.un.org/wpp/Download/](https://population.un.org/wpp/Download/), downloaded on 14 October 2019. 
+## C - Data availability
+
+This repository already includes all the raw data needed to reproduce the results. UN World Population Prospect data was downloaded by hand in advance and stored in the
+[Data/wpp_data](Data/wpp_data) directory. All data come from: [https://population.un.org/wpp/Download/](https://population.un.org/wpp/Download/), downloaded on 14 October 2019. 
 See the *Supporting Information* for more details about the data and estimation.  
 
-## A note on parallelisation
+## D - A note on parallelisation
 
-If possible, the R scripts in the directory [A_Data_formatting](R/A_Data_formatting) used to re-format the UN WPP should be run on a High Performance Computing (HPC) unit
+If possible, the R scripts in the [A_Data_formatting](R/A_Data_formatting) directory (used to re-format the UN WPP data) should be run on a High Performance Computing (HPC) unit
 as they involve many calculations. These would take many hours in a normal PC, but under one hour on a HPC running 25 cores. 
 
 We ran the scripts on a Windows server:
