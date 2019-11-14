@@ -198,8 +198,8 @@ if(visual_examination) {
   
    #Export graphs
   
-  ggsave("output/2.1.test_asfr_1_1.pdf", test_asfr_1_1)
-  ggsave("output/2.1.test_tfr_1_1.pdf", test_tfr_1_1)
+  ggsave("../../Output/A.3.test_asfr_1_1.pdf", test_asfr_1_1)
+  ggsave("../../Output/A.3.test_tfr_1_1.pdf", test_tfr_1_1)
   
 }
 

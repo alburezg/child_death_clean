@@ -108,8 +108,8 @@ convert_period_LT_to_cohort_LT <-
           theme_bw()
       )
       
-      ggsave("output/3.2.test_coh_mx.pdf", test_coh_mx)
-      ggsave("output/3.2.test_coh_ex.pdf", test_coh_ex)
+      ggsave("../../Output/A.7.test_coh_mx.pdf", test_coh_mx)
+      ggsave("../../Output/A.7.test_coh_ex.pdf", test_coh_ex)
       
     }
     

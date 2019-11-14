@@ -237,8 +237,8 @@ ungroup_mortality_from_mx <- function(lt_per, sex = "F", parallel = T, numCores 
     
     # Export tests
     
-    ggsave("output/test_5_1_mx.pdf", test_5_1_mx, height = 15, width = 25, units = "cm")
-    ggsave("output/test_5_1_ex.pdf", test_5_1_ex, height = 15, width = 25, units = "cm")
+    ggsave("../../Output/A.6.test_5_1_mx.pdf", test_5_1_mx, height = 15, width = 25, units = "cm")
+    ggsave("../../Output/A.6.test_5_1_ex.pdf", test_5_1_ex, height = 15, width = 25, units = "cm")
     
     rm("mx_l")
     rm("lt_l")

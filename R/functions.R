@@ -105,7 +105,7 @@ age_frequency <- function(df, low = 0, high = 100) {
 }
 
 # Apply cohort life tables to real-life populatinos
-# with the intention of gettin the lx column
+# with the intention of getting the lx column
 # where radices are the initial size of birth cohorts 
 # of women using wpp data
 apply_lt <- function(female_births, LTCF, numCores) {
@@ -204,7 +204,7 @@ change_cohort <- function(l1, p, breaks, labels,
   return(l3)
 }
 
-# Use to fertility levels without altering mean age at childbearing given a vector of ASFR
+# Use to change fertility levels without altering mean age at childbearing given a vector of ASFR
 change_fertility_levels <- function(multiply_by, base_year, ASFRSC) {
   
   ASFR <- ASFRSC[ASFRSC$Cohort == base_year, ]
