@@ -17,17 +17,18 @@ The directory `R` has three sub-directories, which are needed to transform the d
 
 [D_Supplementary](R/D_Supplementary)
 
-
+Each directory in `R` has the same structure:
+1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
+1. A script called `__run_code.R` which can be used to execute all scripts at once
+1. Several R scripts ordered numerically
+ 
+ 
 ## Runing the scripts to reproduce the results
 
 In order to run the code, please do the following:
 
 1. Download this repository as a zip file (aprox 150MB) and extract its content
 1. Open the `R/A_Data_formatting` folder in order to start the data manipulation
-1. Each directory in `R` has the same structure:
-   1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
-   1. A script called `__run_code.R` which can be used to execute all scripts at once
-    1. Several R scripts ordered numerically
 1. Open the `___A_Data_formatting.Rproj` R project in RStudio
 1. Open the `__run_code.R` script and run line by line to execute all the scripts in the directory
 1. When finished, exit RStudio
