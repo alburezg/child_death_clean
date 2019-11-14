@@ -1,7 +1,7 @@
 print("Running script: 3 - ungroup_fertility_ASFR.R")
 
-# This script takes 5-year age specific rates
-# projected by the UN and creates 1x1 projected period ASFR for all countries in the world
+# This script takes 5-year gropued age specific rates reported and projected by 
+# the UN and returns 1x1 projected period ASFR for all countries in the world
 # https://population.un.org/wpp/Download/Standard/Fertility/
 
 visual_examination <- F

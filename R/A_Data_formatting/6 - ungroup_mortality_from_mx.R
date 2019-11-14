@@ -1,6 +1,20 @@
 
 print("Running script: 6 - ungroup_mortality_from_mx.R")
 
+# This script takes abridged period life  tables from the UN and creates complete life tables 
+# (ie with single age groups) for all countries in the world. The UN life tables are grouped
+# by 5-year age groups and 5-year calendar years.
+# It does so by interpolatnig values on the mx column and creating life tables based on that
+# column later on. 
+# Afterwards, we interpolate again the values to create single-year complete (period) life tables.
+
+# Note that not all resulting life tables have values for the upper age groups
+# In some cases, mortality is high enough that there would be no surviving individuals
+# to age 100, for example. In this case, the reuslting life table will only have rows 
+# going up to age 95
+
+# Data: https://population.un.org/wpp/Download/Standard/Mortality/
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # The files created with this script can be loaded with:
 # Women only
@@ -11,20 +25,10 @@ print("Running script: 6 - ungroup_mortality_from_mx.R")
 
 # 1. Define a function to do the complete interpolation ----
 
-# This script takes abridged period life  
-# from the UN and creates complete life tables for all countries in the world
-# https://population.un.org/wpp/Download/Standard/Mortality/
-
-# It interpolates values for mx
-
-# Note that not all reusulting life tables have values for the upper age groups
-# In some cases, mortality is high enough that there would be no surviving individuals
-# to age 100, for example. In this case, the reuslting life table will only have rows 
-# going up to age 95
 
 # This function is stored here and not in _global_functions.R since it is pretty much 
 # all the analysis
-# Working on 20190702
+
 ungroup_mortality_from_mx <- function(lt_per, sex = "F", parallel = T, numCores = 4, export = F, run_graphic_tests = F) {
 
   # 1. Format life tables ----

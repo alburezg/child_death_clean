@@ -1,6 +1,12 @@
 
 print("Running script: 7 - convert_period_LT_to_cohort_LT.R")
 
+# This scripts takes a list of period life tables and converts them to psuedo-cohort life tables.
+# It does so by extracting “pseudo-cohort” data by looking at diagonals of the period data. 
+# the period LT cover the 1950-2100 period. We could have cohorts from 1950-1999. 
+# The mortality rate for the 1950 cohort would be the 1m0 for 1950, 1m1 based on 1951 data, 
+# 1m2 based on 1952 data, etc.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # The files created with this script can be loaded with:
 # get name_out below, in the parameters
@@ -12,14 +18,6 @@ print("Running script: 7 - convert_period_LT_to_cohort_LT.R")
 
 # 1. Define function  ----
 # ~~~~~~~~~~~~~~~~~~~~~~~~
-
-# This scripts takes a list of period life tables
-# and converts it to psuedo-cohort life tables
-
-# One possibility is to extract “pseudo-cohort” data by looking at diagonals of the period data. 
-# For example, the data goes from 1950-2100. We could have cohorts from 1950-2000. 
-# The mortality rate for the 1950 cohort would be the 1m0 for 1950, 1m1 based on 1951 data, 
-# 1m2 based on 1952 data, etc.
 
 # Use with WPP data formatted in previous script
 

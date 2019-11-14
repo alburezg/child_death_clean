@@ -1,13 +1,11 @@
 
 print("Running script: 5 - ungroup_births.R")
 
-# I am interseted in the size of female birth cohorts by country and year
-# To estimate this I need the number of female births on a yearly basis
-# However, the WPP only reports the number of births (both sexes) in 5-year bands
-# one way of getting the yearly number of female births (aka female birth cohort size)
-# is to 
-# 1. multiply the 5-year number of births by the sex ratio at birth, and
-# 2. ungroup to year-specific estimates usig interpolation techniques
+# We require the size of annual female birth cohorts by UN region.
+# However, the WPP only reports the number of births (both sexes) in 5-year bands.
+# To estimate the yearly number of female births (ie "female birth cohort size"):
+#  a. multiply the 5-year number of births by the sex ratio at birth, and
+#  b. ungroup to year-specific estimates using linear interpolation.
 
 visual_examination <- F
 export <- T
