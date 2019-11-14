@@ -1,8 +1,8 @@
 print(paste0("Running script: 6 - CD_first_difference"))
 
-# The first difference of the expected child death is equivalent
-# to the number of child deaths experienced by a woman
-# aged 'a' exactly (i.e. at each age 'a')
+# Obtain country-level estimates of the first difference of Child Death. 
+# This is the number of child deaths experienced by a woman at each age 'a'.
+# See the main text and the SI Appendix for a formal description.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 

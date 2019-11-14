@@ -75,7 +75,7 @@ source(files[6])
 
 # 7. Approximate cohort life tables using values on the diagonal of the period ones ====
 
-# This scripts takes a list of period life tables and converts them to psuedo-cohort life tables.
+# This scripts takes a list of period life tables and converts them to pseudo-cohort life tables.
 # It does so by extracting “pseudo-cohort” data by looking at diagonals of the period data. 
 # the period LT cover the 1950-2100 period. We could have cohorts from 1950-1999. 
 # The mortality rate for the 1950 cohort would be the 1m0 for 1950, 1m1 based on 1951 data, 

@@ -2,13 +2,9 @@ print(paste0("Running script: ", "4 - CD_create_df"))
 
 # This script takes cohort age-specific fertility rates (ASFRC) 
 # and matrices of survival probabilities (lx.kids.arr) to implement 
-# equation 1 in the main text for all countries:
-
-# \underbrace{CD_{(a,c, r)}}_{\text{child death}}= \underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,r)}}}_{\text{children born}}-\underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,r)}} l_{(a-x,c+x,r)}}_{\text{children surviving}}
-
-# where $CD_{(a,c,r)}$, the expected number of child deaths experienced
-# by a woman born in cohort $c$ and UN SDG region $r$ (using the M49 standard), 
-# conditional on her surviving to age $a$
+# equation 1 in the main text for all countries and birth cohorts separately. 
+# It produces estimates of the cumulative number of child deaths for a woman 
+# surviving to different ages. 
 
 # The output, df_cl_m_full, is a data frame containing the expected CD value by woman's age.
 

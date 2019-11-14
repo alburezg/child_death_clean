@@ -1,26 +1,9 @@
 
 print(paste0("Running script: ", "5 - CD_regional_medians"))
 
-# Regional estimates use countries-level data to aggregate estimates at the region-level
-# An alternative (not included in this script) uses the ECL estimates derived from the 
-# region as a whole (ie from the aggregated regional CASFR and regional cohort life tables
-# as estimated by the UN WPP).
-
-# It is possible to weight the relative contribution of each country, but this is not done 
-# in the present script: 
-# This is a weighted average with weights proportional to the size 
-# of the cohorts in different countries. 
-# Comparing this estimates to those averaged by UN SDG region directly
-# tells us something about the relationship between the weighted average 
-# trajectory across countries and the value obtained using aggregate rates for  
-# all regions. 
-# My sense is that the weighted average trajectory across countries is 
-# a better measure since no country actually 
-# experiences the average for the region. We should aim to use rates at 
-# the lowest levels of aggregation (in this case, countries), as this would 
-# allow us to account for some heterogeneity across countries.  Different 
-# give us a sense of the spread across countries in the region. It will eventually 
-# be shown as a shaded area with the  respective color of the line.
+# Use the country-level estimates produced by the previous script to estimate
+# the levels of child death at a regional level. Regions are UN SDG regions.
+# Median and different percentiles are estimated.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # # Data requirements: 

@@ -1,5 +1,19 @@
 print(paste0("Running script: ", "7 - CD_asbolute_by_ex"))
 
+# Estimate the total number of child deaths experienced by all women in a region 
+# and birth cohort at each age $a$.
+# We obtain this by multiplying $\Delta CD$ by the absolute number of women expected 
+# to survive to each age, considering the original size of each female birth cohort 
+# and the mortality rates prevalent in their countries of origin.
+# This measure removes the assumption of female survival by accounting for the size 
+# and age structure of the population.
+
+# In practice, for each country/cohort combination, we need:
+#  - First difference of cumulative child loss (ECLC)
+#   This was estimated in previous script
+#  - Number of woman surviving to age a 
+#   This is estimated in this script. 
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 
 # The ECL data frame created in the previous script can be loaded with
@@ -8,9 +22,6 @@ print(paste0("Running script: ", "7 - CD_asbolute_by_ex"))
 
 # 1. Absolute child loss by age ----
 
-# For a given birth cohort of women, 
-# what is the total number of children that would be lost 
-# to women surviving to age a?
 
 # For every country, we need:
 # Enumerator: first difference of cumulative child loss (ECLC)

@@ -1,7 +1,5 @@
 # Reproducible analysis
 
-*Last updated: 14 October 2019*
-
 Scripts to reproduce figures and tables of paper "Women's experience of child death over the life course: a global demographic perspective".
 
 ## A - Structure

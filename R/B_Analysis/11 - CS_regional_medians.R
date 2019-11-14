@@ -1,5 +1,7 @@
 print(paste0("Running script: ", "11 - CS_regional_medians"))
 
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # # Data requirements: 
 # The ECL data frame created in this script can be loaded (if created) with
@@ -11,11 +13,7 @@ print(paste0("Running script: ", "11 - CS_regional_medians"))
 # A. Group by country->region ~~~~ ----
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Keep only years of interest for this visualisation
-
 # 1. Weighted regional means ====
-
-# 20190816: This is not needed if only plotting median values
 
 # Get weighted and IQR by region
 # usig estimates for individual countries

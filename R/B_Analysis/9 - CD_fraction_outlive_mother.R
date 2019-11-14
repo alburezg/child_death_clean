@@ -1,20 +1,15 @@
-print(paste0("Running script: ", "8 - CD_share_outlive_mother"))
+print(paste0("Running script: ", "9 - CD_fraction_outlive_mother"))
 
-# We defined the number of children expected to outlive their mothers $E[CS_{(-,c,r)}]$ in the main text as:
-#   
-#   \begin{equation}
-# E[CS_{(-,c,r)}] = \frac{\sum_{a=15}^{e} d_{(a,c,r)} CS_{(a,c,r)}}{\sum_{a=15}^{e} d_{(a,c,r)}}
-# \label{eq:ECS}
-# \end{equation}
-# 
-# where $d_{(a,c,r)}$ is the cohort life table death distribution of women and $e$ is the life expectancy for women in cohort $c$ and region $r$.
-# 
-# The share of children that will outlive their mothers $SOM_{(-, c, r)}$ can then be defined by weighting equation \ref{eq:ECS} by the Cohort Total Fertility of women in cohort $c$ and region $r$, $CTFR_{(-, c, r)}$:
-#   
-#   
-#   \begin{equation}
-# SOM_{(-, c, r)} = \frac{E[CS_{(-,c,r)}]}{CTFR_{(-, c, r)}}.
-# \end{equation}
+# Estimate the fraction of a woman's cohort TFR that will outlive her. 
+# Higher values of SOM indicate that a larger fraction of a woman's offspring is expected 
+# to live longer than her, independently of the prevalent levels of fertility. 
+# It is defined as: FOM = E[CS]/CTFR
+# where E[CS] is the Expected Value of Child Death (see previous script). 
+# The denominator, CTFR, is the cohort total fertility rate for a given country/cohort 
+# combination.
+# This script computes both FOM and FDM (fraction of children died before mothers).
+# FOM and FDM are, in fact, complementary measures to the degree that FOM+FDM = 1
+# for any given country/cohort combination.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 

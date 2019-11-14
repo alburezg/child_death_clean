@@ -1,4 +1,11 @@
+
 print(paste0("Running script: ", "10 - CS_create_df"))
+
+# Total number of children surviving (CS) for a woman reaching age $a$. 
+# Values in the vertical axis represent the total number of children `currently alive' - 
+# those surviving exposure to the life table mortality function corresponding to their 
+# birth cohorts. 
+# See Eq. 1 and Fig. 2 (C-D) in the main text for more details.  
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # # Data requirements: 
