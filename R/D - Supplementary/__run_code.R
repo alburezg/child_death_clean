@@ -19,14 +19,13 @@ source(files[3])
 # Fig S1 (CD) - global estimates
 source(files[4])
 
-# S2 (CD) - global estimates
+# FigS2 - Global burden of child death by region
 source(files[5])
 
-# Fig S3 - Expected child survival - global estimates
+# Fig S3 - Children outliving their mothers - global estimates
 source(files[6])
 
-
-# FigS4 - Total burden of child death by region
+# Fig S4 - Expected child survival and demographic transition
 source(files[7])
 
 # Table S5 - Cumulative number of child death for a woman living to age a (CD)
