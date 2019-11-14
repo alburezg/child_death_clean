@@ -1,4 +1,19 @@
 
+# Global patterns of child death and child survival 
+# for women in three different birth cohorts.
+# (A) Cumulative number of child deaths (CD) 
+# experienced by a woman reaching age $a$.
+# (B) Total number of children surviving (CS) 
+# for a woman reaching age $a$. Values in the vertical 
+# axis represent the total number of children `currently alive'.
+# (C) Number of child deaths experienced at each age $a$ by a woman 
+# reaching that age (i.e. conditional on female survival).
+# This is the First Difference of Child Death ($\Delta CD$).
+# (D) Burden of child death: total number of child deaths experienced by 
+# all women in a given birth cohort at each age $a$ (in millions).
+# The solid lines represent median values and the bands the variability 
+# among countries for each cohort.
+
 # 0. Parameters ----
 
 # Chose percentiles to estimate for each region

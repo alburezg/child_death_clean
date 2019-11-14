@@ -45,25 +45,71 @@ source(files[3])
 
 # 4. Produce Fig S1 (CD) - global estimates ====
 
-
+# Global patterns of child death and child survival 
+# for women in three different birth cohorts.
+# (A) Cumulative number of child deaths (CD) 
+# experienced by a woman reaching age $a$.
+# (B) Total number of children surviving (CS) 
+# for a woman reaching age $a$. Values in the vertical 
+# axis represent the total number of children `currently alive'.
+# (C) Number of child deaths experienced at each age $a$ by a woman 
+# reaching that age (i.e. conditional on female survival).
+# This is the First Difference of Child Death ($\Delta CD$).
+# (D) Burden of child death: total number of child deaths experienced by 
+# all women in a given birth cohort at each age $a$ (in millions).
+# The solid lines represent median values and the bands the variability 
+# among countries for each cohort.
 
 source(files[4])
 
 # 5.  Produce FigS2 - Global burden of child death by region ====
 
-
+# Global trends in the absolute and relative number of children 
+# expected to live longer than their mothers. 
+# (A) Number of children expected to outlive an average woman.
+# Values in the vertical axis show the number of children alive 
+# at the time of a woman's death if she survives to the life 
+# expectancy in her cohort and country of birth. 
+# (B) Children expected to outlive a woman as a fraction of her 
+# cohort's TFR. Higher values indicate that a larger fraction of 
+# a woman's offspring is expected to live longer than her, 
+# independently of the prevalent levels of fertility. 
+# The solid lines represent regional median values and the 
+# bands the variability among all countries in the world for 
+# each birth cohort.
 
 source(files[5])
 
 # 6.  Produce Fig S3 - Children outliving their mothers - global estimates ====
 
-
+# Global burden of child death. Estimated as the sum of the
+# (non-cumulative) burden of child death over all ages. This
+# measure, considers the size and structure of different birth 
+# cohorts of women to determine the number of child deaths 
+# accumulated by all women in a given birth cohort and region 
+# throughout their lives. Lower values for subsequent cohorts 
+# of women in a region show than women born in younger cohorts 
+# can expect to experience fewer child deaths compared to preceding generations. 
+# Estimates for Oceania, Australia, and New Zealand shown in inset plot.
 
 source(files[6])
 
 # 7.  Produce Fig S4 - Expected child survival and demographic transition ====
 
+# Changes in the experience of child death throughout the Demographic 
+# Transition (horizontal axis, proxied by life expectancy) in different
+# regions of the world. (A-F) Association between the fraction of a
+# woman's offspring expected to live longer than her and the cohort 
+# life expectancy for the woman's cohort. The panels show country-level 
+# trajectories by UN SDG region.
 
+# The figure adresses the question of where there is a relationship
+# between progress on the demographic transition and expossure to
+# offspring mortality.
+# In other words, do female cohorts in countries more advanced towards the demographic transition
+# lose a smaller share of their children?
+# If so, then the experience of child death does really decline with the demographic transition,
+# as Livi Bacci suggested.
 
 source(files[7])
 

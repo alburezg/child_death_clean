@@ -1,4 +1,14 @@
 
+# Global burden of child death. Estimated as the sum of the
+# (non-cumulative) burden of child death over all ages. This
+# measure, considers the size and structure of different birth 
+# cohorts of women to determine the number of child deaths 
+# accumulated by all women in a given birth cohort and region 
+# throughout their lives. Lower values for subsequent cohorts 
+# of women in a region show than women born in younger cohorts 
+# can expect to experience fewer child deaths compared to preceding generations. 
+# Estimates for Oceania, Australia, and New Zealand shown in inset plot.
+
 # 0. Parameters ----
 
 lower_year <- 1950

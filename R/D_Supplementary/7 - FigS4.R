@@ -1,7 +1,15 @@
-# 
-# Is there a relationship between progress on the demographic transition and 
-# expossure to offspring mortality?
-# In other words, do female cohorts in countries more advanced towards the demographic transition 
+
+# Changes in the experience of child death throughout the Demographic 
+# Transition (horizontal axis, proxied by life expectancy) in different
+# regions of the world. (A-F) Association between the fraction of a
+# woman's offspring expected to live longer than her and the cohort 
+# life expectancy for the woman's cohort. The panels show country-level 
+# trajectories by UN SDG region.
+
+# The figure adresses the question of where there is a relationship
+# between progress on the demographic transition and expossure to
+# offspring mortality.
+# In other words, do female cohorts in countries more advanced towards the demographic transition
 # lose a smaller share of their children?
 # If so, then the experience of child death does really decline with the demographic transition,
 # as Livi Bacci suggested.
