@@ -103,7 +103,7 @@ ungroup_mortality_from_mx <- function(lt_per, sex = "F", parallel = T, numCores 
   
   lt_5_5_l <- split(lt_5_5, list(lt_5_5$country, lt_5_5$year))
   
-  print("Interpolating ages rom the mx column...")
+  print("Interpolating ages from the mx column...")
   
   # Note on 20191009:
   # This inerpolates mx values within each age group

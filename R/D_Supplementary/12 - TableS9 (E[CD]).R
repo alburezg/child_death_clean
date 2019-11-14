@@ -1,6 +1,11 @@
 
 # S9 - Number of children expected to outlive their mothers
 
+# Number of children expected to live longer than their mothers, asuming 
+# that the mothers survive to mean age at death (life expectancy) in 
+# their cohort and country of birth. Regional estimates show the median 
+# value and IQR in parenthesis.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # cs_ex_pop_country

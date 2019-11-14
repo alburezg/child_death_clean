@@ -1,5 +1,10 @@
 # S8 - Burden of child death at each age a
 
+# Child deaths experienced by women in birth cohort c at exact age a. 
+# Obtained by weighting the first difference of child death by the life table 
+# distribution of women. Regional values include point estimate and standard deviation, 
+# in hundreds of thousands.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # abs_df

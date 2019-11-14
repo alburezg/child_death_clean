@@ -4,7 +4,7 @@ Scripts to reproduce figures and tables of paper "Women's experience of child de
 
 ## A - Structure
 
-The directory `R` has three sub-directories, which are needed to transform the data to the right format, produce the model estimates
+The directory `R` has four sub-directories, which are needed to transform the data to the right format, produce the model estimates
 , produce the figures and tables from the main text, and create the resources for the SI Appendix. They are:
 
 [A_Data_formatting](R/A_Data_formatting)

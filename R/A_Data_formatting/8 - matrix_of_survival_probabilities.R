@@ -1,7 +1,7 @@
 
 print("Running script: 8 - matrix_of_survival_probabilities.R")
 
-# The function creates is a matrix of the survival probabilities of children. 
+# The function creates a matrix of the survival probabilities of children. 
 # There is one matrix for each birth cohort of mothers showing the probability
 # that a child will reach a certain age.
 
@@ -132,4 +132,4 @@ matrix_of_survival_probabilities(
   , numCores = numCores
   )
 
-print("8 - matrix_survival_probabilities: sucess!")
+print("8 - matrix_survival_probabilities: success!")

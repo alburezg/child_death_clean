@@ -1,5 +1,9 @@
 # S10 - Children outliving their mothers as a share of the mother’s cohort TFR
 
+# Number of children expected to live longer than their mothers 
+# as a share of the woman's cohort TFR. Regional estimates show 
+# the median value and IQR in parenthesis.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # cs_ex_pop_country
@@ -108,4 +112,3 @@ if(export_latex) {
 }
 
 print("12 - S10 saved to ../../Output")
-

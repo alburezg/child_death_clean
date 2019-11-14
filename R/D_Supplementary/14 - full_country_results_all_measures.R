@@ -1,10 +1,13 @@
 
-# This scipt generates complete tables of child death and child survival estimates
+# Export full country-cohort-age results for Tables S6-10 as csv files
+# The resulting files are quite large in size and are not included in 
+# the SI pdf file.
+
+# This script generates complete tables of child death and child survival estimates
 # for supplementary materials.
 # This script basically generates the underlying data used to produce 
 # Figures 2-4 in the main text, plus data on all other cohorts (1950-1999) 
 # which are not included in the figures, but whose values were estimated.
-
 
 # The tables are exported as csv files in long format, which is easier to manipulate.
 # The tables include estimates for all countries and regions, including 
@@ -13,10 +16,8 @@
 # individual-country estimates. Details of the estimation can be found in the main 
 # text and in the Supporting Information.
 
-
-
 # One table is generated for each different region and for country and regional-level
-# estimates. Ttables follow the following naming convention:
+# estimates. Tables follow the following naming convention:
 # [Figure to which the data corresponds in the main text]
 # [whether country or regional estimates]
 # [type of measure]

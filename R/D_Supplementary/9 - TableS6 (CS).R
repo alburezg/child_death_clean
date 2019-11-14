@@ -1,6 +1,10 @@
 
 # S6 - Number of surviving children for a woman living to age a (CS)
 
+# Full country results for the expected number of children surviving for a 
+# woman surviving to ages 20, 45, and 100. Regional estimates show the median 
+# value and IQR in parenthesis.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # Child survival

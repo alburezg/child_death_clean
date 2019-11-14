@@ -1,5 +1,8 @@
 # S7 - First difference of child death for a woman living to age a (deltaCD)
 
+# First difference of child death for a woman surviving to ages 20, 45, and 100. 
+# Regional estimates show the median value and IQR in parenthesis.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # df_cl_diff

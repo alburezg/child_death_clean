@@ -64,10 +64,10 @@ source(files[5])
 
 # 6. Expand the UN abridged period life tables by interpolating on the nMx column ====
 
-# This script takes abridged period life  tables from the UN and creates complete life tables 
+# This script takes abridged period life tables from the UN and creates complete life tables 
 # (ie with single age groups) for all countries in the world. The UN life tables are grouped
 # by 5-year age groups and 5-year calendar years.
-# It does so by interpolatnig values on the mx column and creating life tables based on that
+# It does so by interpolating values on the mx column and creating life tables based on that
 # column later on. 
 # Afterwards, we interpolate again the values to create single-year complete (period) life tables.
 
@@ -85,7 +85,7 @@ source(files[7])
 
 # 8. Create matrices of survival probabilities for all UN regions ====
 
-# The function creates is a matrix of the survival probabilities of children. 
+# The function creates a matrix of the survival probabilities of children. 
 # There is one matrix for each birth cohort of mothers showing the probability
 # that a child will reach a certain age.
 

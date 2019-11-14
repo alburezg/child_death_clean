@@ -209,4 +209,4 @@ if(export) {
   write.csv(x = fert_per_1_1, file = paste0("../../Data/derived/", "fert_per_1_1.csv"), row.names = F)
 }
 
-print("3 - ungroup_fertility_ASFR: sucess!")
+print("3 - ungroup_fertility_ASFR: success!")

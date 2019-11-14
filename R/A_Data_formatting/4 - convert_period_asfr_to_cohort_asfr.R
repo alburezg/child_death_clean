@@ -69,4 +69,4 @@ if(export) {
   write.csv(x = ASFRC, file = paste0("../../Data/derived/", "ASFRC.csv"), row.names = F)
 }
 
-print("4 - convert_period_asfr_to_cohort_asfr: sucess!")
+print("4 - convert_period_asfr_to_cohort_asfr: success!")

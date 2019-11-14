@@ -134,7 +134,7 @@ convert_period_LT_to_cohort_LT <-
 numCores <- ifelse(detectCores() > 8, 25, detectCores())
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print('7.1 - Convering LT from period to (pseudo) cohort for women.')
+print('7.1 - Converting LT from period to (pseudo) cohort for women.')
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 LTCF <- 
@@ -155,7 +155,7 @@ LTCF <-
 numCores <- ifelse(detectCores() > 8, 25, detectCores())
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print('7.2 - Convering LT from period to (pseudo) cohort for both sexes.')
+print('7.2 - Converting LT from period to (pseudo) cohort for both sexes.')
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 LTCB <- 

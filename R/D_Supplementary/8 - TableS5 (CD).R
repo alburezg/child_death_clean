@@ -1,6 +1,10 @@
 
 # S5 - Cumulative number of child death for a woman living to age a (CD)
 
+# Full country results for the cumulative number of child deaths 
+# for a woman surviving to ages 20, 45, and 100. Regional estimates 
+# show the median value and IQR in parenthesis.
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
 # Child death: 
