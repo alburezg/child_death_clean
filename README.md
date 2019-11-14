@@ -17,9 +17,6 @@ The directory `R` has three sub-directories, which are needed to transform the d
 
 [D_Supplementary](R/D_Supplementary)
 
-UN World Population Prospect data was downloaded by hand before running the scripts in 'A - Data formatting' and stored in the folder
-Data/wpp_data. All data come from: [https://population.un.org/wpp/Download/](https://population.un.org/wpp/Download/), downloaded on 14 October 2019. See the *Supporting Information*
-for more details about the data and estimation.
 
 ## Runing the scripts to reproduce the results
 
@@ -28,15 +25,20 @@ In order to run the code, please do the following:
 1. Download this repository as a zip file (aprox 150MB) and extract its content
 1. Open the `R/A_Data_formatting` folder in order to start the data manipulation
 1. Each directory in `R` has the same structure:
-  1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
-  1. A script called `__run_code.R` which can be used to execute all scripts at once
-  1. Several R scripts ordered numerically
+   1. An R project prefaced by `___` (e.g. `___A_Data_formatting.Rproj`)
+   1. A script called `__run_code.R` which can be used to execute all scripts at once
+    1. Several R scripts ordered numerically
 1. Open the `___A_Data_formatting.Rproj` R project in RStudio
 1. Open the `__run_code.R` script and run line by line to execute all the scripts in the directory
 1. When finished, exit RStudio
 1. Repeat for all four directoriesin the `R` folder
 1. The final results are stored in the `Output` directory, including the figures as .pdf files and full country and regional estimates.
-  
+
+## Data availability
+
+This repository includes all the raw data needed to reproduce the results. UN World Population Prospect data was downloaded by hand in advance and stored in the folder
+[Data/wpp_data](Data/wpp_data). All data come from: [https://population.un.org/wpp/Download/](https://population.un.org/wpp/Download/), downloaded on 14 October 2019. 
+See the *Supporting Information* for more details about the data and estimation.  
 
 ## A note on parallelisation
 
