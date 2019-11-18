@@ -74,6 +74,15 @@ ecl_ctfr_ex <-
 
 # 4. Plot ----
 
+# Add facets
+
+f_lab <- data.frame(
+  x = 32
+  , y = 0.94
+  , label = c("A", "D", "B", "E", "C", "F")
+  , region = regions_short[1:6]
+)
+
 # 4.1. By ex ====
 
 p_ecl_ex <- 
@@ -85,6 +94,8 @@ p_ecl_ex <-
     aes(colour = cohort)
     , size = point_size
              ) +
+  # Add facet numbers
+  geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_y_continuous("Fraction of TFR expected to outlive mother") +
   scale_x_continuous("Life expectancy in cohort of women") +
   scale_color_gradient("Woman's birth cohort", low = "red", high = "blue", breaks = c(1950, 1975, 1999)) +
