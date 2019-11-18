@@ -11,7 +11,11 @@ LTCB <- data.table::fread(file = paste0("../../Data/derived/","LTCB.csv"), strin
 ASFRC <- read.csv(file = paste0("../../Data/derived/","ASFRC.csv"), stringsAsFactors = F)
 
 # un_regions
-un_regions <- read.csv(file = paste0("../../Data/wpp_data/","un_regions.csv"), stringsAsFactors = F)
+un_regions <- read.csv(file = paste0("../../Data/wpp_data/un_regions.csv"), stringsAsFactors = F)
+
+# For recoding countries
+cont <- read.csv(file = paste0("../../Data/wpp_data/countries_code.csv"), stringsAsFactors = F)
+
 
 female_births <- read.csv(
   file = paste0("../../Data/derived/","wpp_female_births_1_1.csv")

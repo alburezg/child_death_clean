@@ -77,6 +77,10 @@ abs_long <- bind_rows(
 abs_w <- spread(
   abs_long %>% 
     mutate(cohort_age = paste0(cohort, "_", age)) %>% 
+    mutate(
+      area = plyr::mapvalues(area, from = cont$new, to = cont$old, warn_missing = F)
+      , region = plyr::mapvalues(region, from = cont$new, to = cont$old, warn_missing = F)
+    ) %>% 
     select(-cohort, -age)
   , cohort_age
   , CS
@@ -98,25 +102,24 @@ if(export) write.csv(abs_w, paste0("../../Output/tab",lab,".csv"), row.names = F
 
 if(export_latex) {
   
-  # 29 rows fit in one page
-  # 59 in 2 but there are issues showing it in multiple pages
-  short <- format_table(abs_w, row_keep = 29, ages, cohorts)
+  short <- format_table(abs_w, row_keep = NA, ages, cohorts)
   
   k <- kable(
     short
     , format = "latex"
     , booktabs = TRUE
+    , longtable = T
     , caption = caption
     , label = lab
     , align = "l"
     , row.names = F
     , escape = T
-  ) %>% 
-    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "1999"=3)) %>% 
-    kable_styling(latex_options = c("hold_position", "repeat_header"))
+  ) %>%
+    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "1999"=3)) %>%
+    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
   
   write(k, file = paste0("../../Output/tab", lab, ".tex"))
-  
+
 }
 
 print("10 - S8 saved to ../../Output")

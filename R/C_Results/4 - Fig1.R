@@ -44,8 +44,10 @@ upper_year <- 1999
 
 # 1. Cohort ex ----
 
+# For women only
+
 ex_df <- 
-  LTCB %>% 
+  LTCF %>% 
   filter(dplyr::between(Cohort, lower_year, upper_year)) %>%
   filter(Age == 0) %>% 
   select(country = Country, cohort = Cohort, ex)
@@ -154,20 +156,20 @@ p_ex_ctfr <-
     , size = region_line_size
   ) +
   # Selected countries
-  geom_line(
-    aes(x = ex, y = tfr, group = country)
-    , linetype = 'dashed'
-    , colour = "black"
-    , data = country_lines
-    , show.legend = F
-    , size = country_line_size * 0.7
-  ) +
-  # COuntry names
-  geom_text(
-    aes(x = x, y = y, label = text)
-    , size = text_size
-    , data = lab_df
-             ) +
+  # geom_line(
+  #   aes(x = ex, y = tfr, group = country)
+  #   , linetype = 'dashed'
+  #   , colour = "black"
+  #   , data = country_lines
+  #   , show.legend = F
+  #   , size = country_line_size * 0.7
+  # ) +
+  # # COuntry names
+  # geom_text(
+  #   aes(x = x, y = y, label = text)
+  #   , size = text_size
+  #   , data = lab_df
+  #            ) +
   geom_point(
     aes(x = ex, y = tfr, colour = region, shape = region
         )

@@ -62,6 +62,10 @@ csex_long <- bind_rows(
     mutate(
       value = as.character(round(value, 2))
     ) %>% 
+    mutate(
+      country = plyr::mapvalues(country, from = cont$new, to = cont$old, warn_missing = F)
+      , region = plyr::mapvalues(region, from = cont$new, to = cont$old, warn_missing = F)
+    ) %>% 
     select(region, area = country, cohort, value)
   , csex_regions
 ) %>% 
@@ -88,20 +92,20 @@ if(export) write.csv(csex_w, paste0("../../Output/tab",lab,".csv"), row.names = 
 
 if(export_latex) {
   
-  # 29 rows fit in one page
-  # 59 in 2 but there are issues showing it in multiple pages
-  short <- format_table(csex_w, row_keep = 29, ages, cohorts, extra_header = F)
+  short <- format_table(csex_w, row_keep = NA, ages, cohorts, extra_header = F)
   
   k <- kable(
     short
     , format = "latex"
     , booktabs = TRUE
+    , longtable = T
     , caption = caption
     , label = lab
     , align = "l"
     , row.names = F
     , escape = T
-  ) 
+  ) %>%
+    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 7)
   
   write(k, file = paste0("../../Output/tab", lab, ".tex"))
   

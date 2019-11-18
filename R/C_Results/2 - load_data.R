@@ -3,8 +3,8 @@
 # 1. UN WPP data ----
 # ~~~~~~~~~~~~~~~~~~~~~~
 
-# LTCB (both sexes)
-LTCB <- data.table::fread(file = paste0("../../Data/derived/","LTCB.csv"), stringsAsFactors = F) %>% 
+# LTCB (Women only)
+LTCF <- data.table::fread(file = paste0("../../Data/derived/","LTCF.csv"), stringsAsFactors = F) %>% 
   data.frame
 
 # ASFRC

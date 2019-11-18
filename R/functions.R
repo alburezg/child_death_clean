@@ -1220,8 +1220,10 @@ format_table <- function(df, row_keep = 29, ages = c(20,45,100), cohorts = c(195
     colnames(df)[1] <- "Birth Cohort and Age"
   
   # Keep only first 30 rows and add extra row
-  df <- df[1:row_keep,]
-  df[row_keep+1, ] <- rep("...", ncol(df))
+  if(!is.na(row_keep)) {
+    df <- df[1:row_keep,]
+    df[row_keep+1, ] <- rep("...", ncol(df)) 
+  }
   # Format colnames
   if(extra_header) {
     colnames(df) <- c("Age", rep(ages, length(cohorts)))
