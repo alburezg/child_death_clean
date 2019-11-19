@@ -47,8 +47,12 @@ df_cl_diff <- readRDS("../../Data/estimates/df_cl_diff.RDS")
 sum_diff <- readRDS('../../Data/estimates/sum_diff.RDS')
 
 # Burden of child death:
-# abs_df
+# At each age: 
 abs_df <- readRDS("../../Data/estimates/abs_df.RDS")
+
+# Summed over all ages (up to life expectancy):
+sum_burden <- readRDS("../../Data/estimates/sum_burden.RDS")
+
 
 # sum_abs
 sum_abs <- readRDS('../../Data/estimates/sum_abs.RDS')

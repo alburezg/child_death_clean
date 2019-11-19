@@ -9,6 +9,15 @@
 # can expect to experience fewer child deaths compared to preceding generations. 
 # Estimates for Oceania, Australia, and New Zealand shown in inset plot.
 
+# Note that this should not sum the values of ALL ages.
+# Doing so would be slightly misleading as we cannot expect women in all
+# country/cohorts to survive to age 100 (the current upper age limit) in
+# the data. Instead, the values in each country/cohorts combination
+# should only be summed up to the female life expectancy for that country/cohort.
+# This would then represent the `actual` experience number of child deaths
+# assuming that all women survive to the life expectancty.
+# This is equivalent to the way in which E[CS] is estimated.
+
 # 0. Parameters ----
 
 lower_year <- 1950
@@ -53,25 +62,17 @@ base_size <- 15
 region_line_size <- 1
 point_size <- 2.5
 
-# 1. Merge dfs ----
+# 1. Format dfs ----
+
+# Save in millions
 
 sum_burden <-
-  abs_df %>% 
-  group_by(region, cohort) %>% 
-  dplyr::summarise(
-    value = sum(absolute, na.rm = T)
-    , sd = sd(absolute, na.rm = T)
-    , low_sd = value - sd
-    , high_sd = value + sd
-    ) %>% 
-  ungroup %>% 
+  sum_burden %>% 
   mutate(
     value = value / 1e6
-    , low_sd = low_sd / 1e6
-    , high_sd = high_sd / 1e6
-    , cohort2 = paste0(cohort, " birth cohort")
-  ) %>% 
-  select(region, cohort, cohort2, value, low = low_sd, high = high_sd)
+    , low = low / 1e6
+    , high = high / 1e6
+  ) 
 
 # 2. Plot ----
 
@@ -83,8 +84,8 @@ base_inset <- 11
 point_size <- 4
 point_inset <- 3
 
-x_adj <- -28
-y_adj <- -6.5
+x_adj <- -13
+y_adj <- -3.7
 
 p_sum_burden <-
   sum_burden %>% 
@@ -103,10 +104,10 @@ p_sum_burden <-
   scale_y_discrete("", br = new_order, labels = regions_short[orders]) +
   scale_x_continuous(
     "Total number of child deaths"
-    , breaks = scales::pretty_breaks(n = 6)
+    , breaks = scales::pretty_breaks(n = 5)
     , labels = function(x) ifelse(x == 0, x, paste0(x, "M"))
   ) + 
-  coord_cartesian(xlim = c(0, 55)) +
+  coord_cartesian(xlim = c(0, 37)) +
   theme_bw(base_size = base_size)
 
 p_sum_burden
@@ -134,7 +135,7 @@ p_inset <-
   geom_point(aes(x = `1999`), shape = 17, size = point_inset) +
   # annotate("text", x = c(0.12, 0.25), y = c(2, 1), label = c("Oceania (other)", "AUS & NZ"),
   # size = c(3,3), hjust = .5, color = "grey20") +
-  coord_cartesian(xlim = c(0.03, 0.32), ylim = c(0.75, 2.25)) +
+  coord_cartesian(xlim = c(0.03, 0.2), ylim = c(0.75, 2.25)) +
   scale_y_continuous("", br = 1:2, labels = regions_short[7:8], minor_breaks = NULL) +
   scale_x_continuous(
     "Total number of child deaths"
@@ -147,11 +148,6 @@ p_inset <-
   theme(
     axis.title=element_text(size=7)
     , axis.text = element_text(size = 7)
-    # axis.text.y=element_blank()
-    # , axis.ticks.y=element_blank()
-    # , axis.title.y.left = element_blank()
-    # , axis.title.y = element_blank()
-    # , plot.margin = unit(c(t=0.2, r=0.25, b=0.1, l=0.1), unit="cm")
   )
 
 # 2.2. S3 - Complete plot ====
@@ -160,7 +156,7 @@ p_complete <-
   p_sum_burden +
   annotation_custom(
     ggplotGrob(p_inset) 
-    , xmin = 28, xmax = 58.55
+    , xmin = 15, xmax = 39
     , ymin = 4.69, ymax = 6.69
   ) +
   # add legend manually

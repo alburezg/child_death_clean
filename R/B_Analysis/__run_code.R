@@ -18,14 +18,13 @@
 #    5. Regional estimates of CD  
 #    6. First difference of Child Death (Delta CD) 
 #    7. Burden of child death 
-#    8. Expected value of Child Death E[CD] 
-#    9. Children expected to outlive a woman as a fraction of her cohort's TFR 
+#    8. Sum of burden of child death 
+#    9. Expected value of Child Death E[CD] 
+#    10. Children expected to outlive a woman as a fraction of her cohort's TFR 
 # B. Child survival 
-#    10.  Child Survival (CS) 
-#    11. Regional estimates of CS  
-#    12. Expected value of Child Survival E[CS] 
-
-
+#    11.  Child Survival (CS) 
+#    12. Regional estimates of CS  
+#    13. Expected value of Child Survival E[CS] 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -100,7 +99,18 @@ source(files[6])
 
 source(files[7])
 
-# 8. Expected value of Child Death E[CD] ====
+# 8. Sum of Burden of child death ----
+
+# Global burden of child death. Estimated as the sum of the
+# (non-cumulative) burden of child death over all ages. This
+# measure, considers the size and structure of different birth 
+# cohorts of women to determine the number of child deaths 
+# accumulated by all women in a given birth cohort and region 
+# throughout their lives. 
+
+source(files[8])
+
+# 9. Expected value of Child Death E[CD] ====
 
 # The expected value of Child Death E[CD] is the number of children expected to 
 # die before their mothers, if she survives to the life expectancy in her
@@ -113,9 +123,9 @@ source(files[7])
 # woman's age is equivalent to the cohort life expectancy at birth of that woman's 
 # region/cohort combination.
 
-source(files[8])
+source(files[9])
 
-# 9. Children expected to outlive a woman as a fraction of her cohort's TFR ====
+# 10. Children expected to outlive a woman as a fraction of her cohort's TFR ====
 
 # Estimate the fraction of a woman's cohort TFR that will outlive her. 
 # Higher values of SOM indicate that a larger fraction of a woman's offspring is expected 
@@ -128,7 +138,7 @@ source(files[8])
 # FOM and FDM are, in fact, complementary measures to the degree that FOM+FDM = 1
 # for any given country/cohort combination.
 
-source(files[9])
+source(files[10])
 
 # B. Child survival ----
 
@@ -140,7 +150,7 @@ source(files[9])
 # birth cohorts. 
 # See Eq. 1 and Fig. 2 (C-D) in the main text for more details.  
 
-source(files[10])
+source(files[11])
 
 # 11. Regional estimates of CS  ====
 
@@ -148,7 +158,7 @@ source(files[10])
 # the levels of child survival at a regional level. Regions are UN SDG regions.
 # Median and different percentiles are estimated.
 
-source(files[11])
+source(files[12])
 
 # 12. Expected value of Child Survival E[CS] ====
 
@@ -157,4 +167,4 @@ source(files[11])
 # death if she survives to the life expectancy in her cohort and country of birth.
 # See main text (Fig. 4) and SI Appendix for more details.
 
-source(files[12])
+source(files[13])
