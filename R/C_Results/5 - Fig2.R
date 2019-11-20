@@ -45,7 +45,7 @@ width <- 16
 height <- 12
 base_size <- 15
 region_line_size <- 0.6
-point_size <- 2.5
+point_size <- 3.5
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A. Plot CL, CS conditional on survival ~~~~ ----
