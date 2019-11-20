@@ -15,8 +15,13 @@
 
 options("encoding" = "UTF-8")
 
-caption <- "Full country results for the expected number of children surviving for a woman surviving to ages 20, 45, and 100. Regional estimates show the median value and IQR in parenthesis."
-lab <- "S6"
+caption <- 
+  "Full country results for the expected number of children currently alive (CS) 
+for a woman surviving to ages 20, 45, and 100 in three selected birth cohorts. 
+Regional estimates (capitalized) show the median value and IQR in parenthesis. 
+For reasons of space, 0 stands for <0.01 in the table."
+
+lab <- "S2"
 
 # Save tables as pdf?
 export <- F
@@ -101,11 +106,11 @@ cs_w <- cs_w[ , c("region", "area", paste0(sort(rep(cohorts, length(cohorts))), 
 
 cs_w$region[cs_w$area != ""] <- ""
 
+# Make regions bold in latex
+rows <- cs_w$region != ""
+
 # Format 0 values
-
-cs_w[cs_w == "0"] <- '<0.01'
-
-# Export
+# cs_w[cs_w == "0"] <- '<0.01'
 
 # Export ====
 
@@ -115,10 +120,13 @@ if(export_latex) {
   
   short <- format_table(cs_w, row_keep = NA, ages, cohorts)
   
+  short[ rows, 1] <- toupper(short[ rows, 1])
+  
   k <- kable(
     short
     , format = "latex"
     , booktabs = TRUE
+    , linesep = ""
     , longtable = T
     , caption = caption
     , label = lab
@@ -127,7 +135,7 @@ if(export_latex) {
     , escape = T
   ) %>%
     add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "1999"=3)) %>%
-    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 7)
+    kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
   
   write(k, file = paste0("../../Output/tab", lab, ".tex"))
   

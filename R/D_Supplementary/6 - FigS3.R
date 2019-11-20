@@ -80,12 +80,9 @@ sum_burden <-
 # https://ikashnitsky.github.io/images/190719/one-figure.png
 
 base_size <- 15
-base_inset <- 11
+base_inset <- 12
 point_size <- 4
 point_inset <- 3
-
-x_adj <- -13
-y_adj <- -3.7
 
 p_sum_burden <-
   sum_burden %>% 
@@ -110,7 +107,7 @@ p_sum_burden <-
   coord_cartesian(xlim = c(0, 37)) +
   theme_bw(base_size = base_size)
 
-p_sum_burden
+# p_sum_burden
 
 # pdf("../../Output/figS1.pdf", width = 6.5, height = 5)
 # p_sum_burden
@@ -152,6 +149,12 @@ p_inset <-
 
 # 2.2. S3 - Complete plot ====
 
+# x_adj <- -13
+# y_adj <- -3.7
+
+x_adj <- -31.5
+y_adj <- -5.7
+
 p_complete <- 
   p_sum_burden +
   annotation_custom(
@@ -160,7 +163,7 @@ p_complete <-
     , ymin = 4.69, ymax = 6.69
   ) +
   # add legend manually
-  annotate("rect", xmin = 30 + x_adj, xmax = 50 + x_adj, ymin = 7.2 + y_adj, ymax = 8.1 + y_adj,
+  annotate("rect", xmin = 31 + x_adj, xmax = 48.5 + x_adj, ymin = 7.2 + y_adj, ymax = 8.1 + y_adj,
            color = "grey50", fill = "white") +
   annotate("text", x = 40 + x_adj, y = 7.9 + y_adj, label = "Birth cohort of women",
            size = 3, hjust = .5, color = "grey20") +
@@ -175,106 +178,3 @@ p_complete
 pdf("../../Output/figS3.pdf", width = 6.5, height = 5)
 p_complete
 dev.off()    
-
-
-# DEPRECATED:
-# With inset but showing Oceania u y axis
-
-# p_sum_burden <-
-# sum_burden %>% 
-#   filter(cohort %in% c(1950, 1975, 1999)) %>% 
-#   select(region, cohort, value) %>% 
-#   spread(., cohort, value) %>% 
-#   mutate(
-#     region = factor(region, levels = regions_long)
-#   ) %>% 
-#   ggplot(aes(y = region)) +
-#   geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
-#   geom_point(aes(x = `1950`), shape = 16, size = 2) +
-#   geom_point(aes(x = `1975`), shape = 21, size = 2, fill = "white") +
-#   geom_point(aes(x = `1999`), shape = 17, size = 2) +
-#   scale_y_discrete("", br = regions_long, labels = regions_short) +
-#   scale_x_continuous(
-#     "Total number of child deaths"
-#     , breaks = scales::pretty_breaks(n = 6)
-#     , labels = function(x) ifelse(x < 1, x, paste0(x, "M"))
-#     ) +
-#   # add legend manually
-#   annotate("rect", xmin = 31, xmax = 55, ymin = 7.2, ymax = 8.1,
-#            color = "grey50", fill = "white") +
-#   annotate("text", x = 42, y = 7.9, label = "Birth cohort of women", 
-#            size = 3, hjust = .5, color = "grey20") +
-#   annotate("point", x = c(32.5, 40, 47.5), y = 7.5, 
-#            pch = c(16, 21, 17), size = 2, color = 1) +
-#   annotate("text", x = c(33.5, 41, 48.5), y = 7.5, 
-#            label = c("1950", "1975", "1999"), 
-#            size = 3, hjust = 0, color = "grey20") +
-#   # annotate("rect", xmin = 24, xmax = 47, ymin = 7.2, ymax = 8.1,
-#   #          color = "grey50", fill = "white") +
-#   # annotate("text", x = 35, y = 7.9, label = "Birth cohort of women", 
-#   #          size = 3, hjust = .5, color = "grey20") +
-#   # annotate("point", x = c(25.5, 33, 40.5), y = 7.5, 
-#   #          pch = c(16, 21, 17), size = 2, color = 1) +
-#   # annotate("text", x = c(26.5, 34, 41.5), y = 7.5, 
-#   #          label = c("1950", "1975", "1999"), 
-#   #          size = 3, hjust = 0, color = "grey20") +
-#   theme_bw()
-# 
-# p_sum_burden
-# 
-# # pdf("../../Output/figS1.pdf", width = 6.5, height = 5)
-# # p_sum_burden
-# # dev.off()    
-# 
-# # 2.1. Inset plot 
-# 
-# p_inset <-
-#   sum_burden %>% 
-#   filter(cohort %in% c(1950, 1975, 1999)) %>% 
-#   filter(region %in% regions_to_remove) %>% 
-#   select(region, cohort, value) %>% 
-#   spread(., cohort, value) %>% 
-#   mutate(
-#     # region = factor(region, levels = regions_long)
-#     region = 1:2
-#   ) %>% 
-#   ggplot(aes(y = region)) +
-#   geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
-#   geom_point(aes(x = `1950`), shape = 16, size = 2) +
-#   geom_point(aes(x = `1975`), shape = 21, size = 2, fill = "white") +
-#   geom_point(aes(x = `1999`), shape = 17, size = 2) +
-#   annotate("text", x = c(0.14, 0.23), y = c(2, 1), label = c("Oceania (other)", "AUS & NZ"), 
-#            size = c(3,3), hjust = .5, color = "grey20") +
-#   coord_cartesian(ylim = c(0.75, 2.25)) +
-#   scale_y_continuous("", br = 1:2, labels = regions_short[7:8], minor_breaks = NULL) +
-#   scale_x_continuous(
-#     ""
-#     , breaks = scales::pretty_breaks(n = 3)
-#     , labels = function(x) paste0(x, "M")
-#   ) +
-#   theme_bw(
-#     base_size = 10
-#     ) +
-#   theme(
-#     axis.text.y=element_blank()
-#     , axis.ticks.y=element_blank()
-#     , legend.title = element_blank()
-#     , axis.title.y = element_blank()
-#     # , plot.margin = unit(c(t=0.2, r=0.25, b=0.1, l=0.1), unit="cm")
-#   )
-# 
-# # 2.2. Complete plot 
-# 
-# p_complete <- 
-#   p_sum_burden +
-#   annotation_custom(
-#   ggplotGrob(p_inset) 
-#   , xmin = 5, xmax = 25
-#   , ymin = 6.1, ymax = 8.6
-# )
-# 
-# p_complete
-# 
-# pdf("../../Output/figS1.pdf", width = 6.5, height = 5)
-# p_complete
-# dev.off()    

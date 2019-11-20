@@ -1,8 +1,10 @@
-# S10 - Children outliving their mothers as a share of the mother’s cohort TFR
 
-# Number of children expected to live longer than their mothers 
-# as a share of the woman's cohort TFR. Regional estimates show 
-# the median value and IQR in parenthesis.
+# S9 - Number of children expected to outlive their mothers
+
+# Number of children expected to live longer than their mothers, asuming 
+# that the mothers survive to mean age at death (life expectancy) in 
+# their cohort and country of birth. Regional estimates show the median 
+# value and IQR in parenthesis.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data required: 
@@ -17,8 +19,12 @@
 
 options("encoding" = "UTF-8")
 
-caption <- "Number of children expected to live longer than their mothers as a share of the woman's cohort TFR. Regional estimates show the median value and IQR in parenthesis."
-lab <- "S10"
+caption <- 
+  "Number of children expected to live longer than their mothers (E[CS]), asuming the latter 
+survive to the mean age at death in their cohort and country of birth. 
+Regional estimates (capitalized) for six cohorts show the median value and IQR in parenthesis."
+
+lab <- "S5"
 
 # Save tables as pdf?
 export <- F
@@ -28,22 +34,19 @@ export_latex <- T
 
 cohorts <- c(seq(1950, 1999, 10), 1999)
 
-
-
-# 4.2.	Share children outlive mothers ====
+# 4.1.	Expected children outlive mothers ====
 # ~~~~~~~~~~~~~
 
-out_countries <-
-  ecl_ctfr %>%
+csex_countries <- 
+  cs_ex_pop_country %>% 
   filter(type == 'country') %>% 
   filter(cohort %in% cohorts) %>% 
   mutate(region = as.character(region)) %>% 
-  mutate(share = 1 - value / tfr) %>% 
-  select(country, region, cohort, value = share)
+  select(country, region, cohort, value)
+  
 
-
-out_regions <- 
-  out_countries %>% 
+csex_regions <- 
+  csex_countries %>% 
   group_by(region, cohort) %>%
   summarise(
     median = round(median(value), 2)
@@ -56,11 +59,10 @@ out_regions <-
     , region = as.character(region)
     , area = as.character("")
   ) %>% 
-  # mutate_each(as.character) %>% 
   select(area, region, cohort, value)
 
-out_long <- bind_rows(
-  out_countries %>% 
+csex_long <- bind_rows(
+  csex_countries %>% 
     mutate(
       value = as.character(round(value, 2))
     ) %>% 
@@ -69,41 +71,43 @@ out_long <- bind_rows(
       , region = plyr::mapvalues(region, from = cont$new, to = cont$old, warn_missing = F)
     ) %>% 
     select(region, area = country, cohort, value)
-  , out_regions
+  , csex_regions %>% 
+    mutate(region = plyr::mapvalues(region, from = cont$new, to = cont$old, warn_missing = F))
 ) %>% 
   arrange(region, area, cohort)
-
+  
 # To wide
 
-out_w <- spread(
-  out_long 
+csex_w <- spread(
+  csex_long 
   , cohort
   , value
 ) %>% 
   arrange(region, area)
 
 # Add region names
+csex_w$region[csex_w$area != ""] <- ""
 
-out_w$region[out_w$area != ""] <- ""
+# Make regions bold in latex
+rows <- csex_w$region != ""
 
 # Format 0 values
-
-out_w[out_w == "0"] <- '<0.01'
+# csex_w[csex_w == "0"] <- '<0.01'
 
 # Export ====
 
-if(export) write.csv(out_w, paste0("../../Output/tab",lab,".csv"), row.names = F)
+if(export) write.csv(csex_w, paste0("../../Output/tab",lab,".csv"), row.names = F)
 
 if(export_latex) {
   
-  # 29 rows fit in one page
-  # 59 in 2 but there are issues showing it in multiple pages
-  short <- format_table(out_w, row_keep = NA, ages, cohorts, extra_header = F)
+  short <- format_table(csex_w, row_keep = NA, ages, cohorts, extra_header = F)
+  short[ rows, 1] <- toupper(short[ rows, 1])
   
   k <- kable(
     short
     , format = "latex"
     , booktabs = TRUE
+    , linesep = ""
     , longtable = T
     , caption = caption
     , label = lab
@@ -117,4 +121,5 @@ if(export_latex) {
   
 }
 
-print("12 - S10 saved to ../../Output")
+print("11 - S9 saved to ../../Output")
+

@@ -9,16 +9,16 @@
 #    1. Load the functions and packages needed in the scripts 
 #    2. Load the data needed for the analysis 
 #    3. Load data about country grouping and format them for the analysis  
-#    4. Produce Fig S1 (CD) - global estimates 
-#    5. Produce FigS2 - Global burden of child death by region 
-#    6. Produce Fig S3 - Children outliving their mothers - global estimates 
-#    7. Produce Fig S4 - Expected child survival and demographic transition 
-#    8. Produce Table S5 - Cumulative number of child death for a woman living to age a (CD) 
-#    9. Produce Table S6 - Number of surviving children for a woman living to age a (CS) 
-#   10. Produce Table S7 - First difference of child death for a woman living to age a (Delta CD) 
-#   11. Produce Table S8 - Burden of child death at each age a 
-#   12. Produce Table S9 - Number of children expected to outlive their mothers 
-#   13. Produce Table S10 - Children outliving their mothers as a share of the mother’s cohort TFR 
+#    4. Fig S1 (CD) - global estimates 
+#    5. FigS2 - Global burden of child death by region 
+#    6. Fig S3 - Children outliving their mothers - global estimates 
+#    7. Fig S4 - Expected child survival and demographic transition 
+#    8. Table S1 - Cumulative number of child death for a woman living to age a (CD) 
+#    9. Table S2 - Number of surviving children for a woman living to age a (CS) 
+#   10. Table S3 - First difference of child death for a woman living to age a (Delta CD) 
+#   11. Table S4 - Burden of child death at each age a 
+#   12. Table S5 - Number of children expected to outlive their mothers 
+#   13. Table S6 - Children outliving their mothers as a share of the mother’s cohort TFR 
 #   14. Tables with full country results 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +43,7 @@ source(files[2])
 
 source(files[3])
 
-# 4. Produce Fig S1 (CD) - global estimates ====
+# 4. Fig S1 (CD) - global estimates ====
 
 # Global patterns of child death and child survival 
 # for women in three different birth cohorts.
@@ -62,7 +62,7 @@ source(files[3])
 
 source(files[4])
 
-# 5.  Produce FigS2 - Global burden of child death by region ====
+# 5.  FigS2 - Global burden of child death by region ====
 
 # Global trends in the absolute and relative number of children 
 # expected to live longer than their mothers. 
@@ -80,7 +80,7 @@ source(files[4])
 
 source(files[5])
 
-# 6.  Produce Fig S3 - Children outliving their mothers - global estimates ====
+# 6.  Fig S3 - Children outliving their mothers - global estimates ====
 
 # Global burden of child death. Estimated as the sum of the
 # (non-cumulative) burden of child death over all ages. This
@@ -94,7 +94,7 @@ source(files[5])
 
 source(files[6])
 
-# 7.  Produce Fig S4 - Expected child survival and demographic transition ====
+# 7.  Fig S4 - Expected child survival and demographic transition ====
 
 # Changes in the experience of child death throughout the Demographic 
 # Transition (horizontal axis, proxied by life expectancy) in different
@@ -113,7 +113,7 @@ source(files[6])
 
 source(files[7])
 
-# 8.  Produce Table S5 - Cumulative number of child death for a woman living to age a (CD) ====
+# 8.  Table S1 - Cumulative number of child death for a woman living to age a (CD) ====
 
 # Full country results for the cumulative number of child deaths 
 # for a woman surviving to ages 20, 45, and 100. Regional estimates 
@@ -121,7 +121,7 @@ source(files[7])
 
 source(files[8])
 
-# 9.  Produce Table S6 - Number of surviving children for a woman living to age a (CS) ====
+# 9.  Table S2 - Number of surviving children for a woman living to age a (CS) ====
 
 # Full country results for the expected number of children surviving for a 
 # woman surviving to ages 20, 45, and 100. Regional estimates show the median 
@@ -129,14 +129,14 @@ source(files[8])
 
 source(files[9])
 
-# 10.  Produce Table S7 - First difference of child death for a woman living to age a (Delta CD) ====
+# 10.  Table S3 - First difference of child death for a woman living to age a (Delta CD) ====
 
 # First difference of child death for a woman surviving to ages 20, 45, and 100. 
 # Regional estimates show the median value and IQR in parenthesis.
 
 source(files[10])
 
-# 11.  Produce Table S8 - Burden of child death at each age a ====
+# 11.  Table S4 - Burden of child death at each age a ====
 
 # Child deaths experienced by women in birth cohort c at exact age a. 
 # Obtained by weighting the first difference of child death by the life table 
@@ -145,7 +145,7 @@ source(files[10])
 
 source(files[11])
 
-# 12.  Produce Table S9 - Number of children expected to outlive their mothers ====
+# 12.  Table S5 - Number of children expected to outlive their mothers ====
 
 # Number of children expected to live longer than their mothers, asuming 
 # that the mothers survive to mean age at death (life expectancy) in 
@@ -154,7 +154,7 @@ source(files[11])
 
 source(files[12])
 
-# 13.  Produce Table S10 - Children outliving their mothers as a share of the mother’s cohort TFR ====
+# 13.  Table S6 - Children outliving their mothers as a share of the mother’s cohort TFR ====
 
 # Number of children expected to live longer than their mothers 
 # as a share of the woman's cohort TFR. Regional estimates show 

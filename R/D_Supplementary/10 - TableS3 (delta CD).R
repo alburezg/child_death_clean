@@ -15,8 +15,12 @@
 
 options("encoding" = "UTF-8")
 
-caption <- "First difference of child death for a woman surviving to ages 20, 45, and 100. Regional estimates show the median value and IQR in parenthesis."
-lab <- "S7"
+caption <- 
+  "First difference of child death for a woman surviving to ages 20, 45, and 100 in three selected birth cohorts. 
+Regional estimates (capitalized) show the median value and IQR in parenthesis. 
+For reasons of space, 0 stands for <0.01 in the table."
+
+lab <- "S3"
 
 # Save tables as pdf?
 export <- F
@@ -91,9 +95,11 @@ diff_w <- diff_w[ , c("region", "area", paste0(sort(rep(cohorts, length(cohorts)
 
 diff_w$region[diff_w$area != ""] <- ""
 
-# Format 0 values
+# Make regions bold in latex
+rows <- diff_w$region != ""
 
-diff_w[diff_w == "0"] <- '<0.01'
+# Format 0 values
+# diff_w[diff_w == "0"] <- '<0.01'
 
 # Export ====
 
@@ -103,10 +109,13 @@ if(export_latex) {
   
   short <- format_table(diff_w, row_keep = NA, ages, cohorts)
   
+  short[ rows, 1] <- toupper(short[ rows, 1])
+  
   k <- kable(
     short
     , format = "latex"
     , booktabs = TRUE
+    , linesep = ""
     , longtable = T
     , caption = caption
     , label = lab
