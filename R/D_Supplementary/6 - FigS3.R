@@ -66,13 +66,15 @@ point_size <- 2.5
 
 # Save in millions
 
-sum_burden <-
+sum_burden2 <-
   sum_burden %>% 
   mutate(
     value = value / 1e6
     , low = low / 1e6
     , high = high / 1e6
   ) 
+
+# 
 
 # 2. Plot ----
 
@@ -85,7 +87,7 @@ point_size <- 4
 point_inset <- 3
 
 p_sum_burden <-
-  sum_burden %>% 
+  sum_burden2 %>% 
   filter(cohort %in% c(1950, 1975, 1999)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   select(region, cohort, value) %>% 
@@ -104,7 +106,7 @@ p_sum_burden <-
     , breaks = scales::pretty_breaks(n = 5)
     , labels = function(x) ifelse(x == 0, x, paste0(x, "M"))
   ) + 
-  coord_cartesian(xlim = c(0, 37)) +
+  coord_cartesian(xlim = c(0, 55)) +
   theme_bw(base_size = base_size)
 
 # p_sum_burden
@@ -116,7 +118,7 @@ p_sum_burden <-
 # 2.1. Inset plot  ====
 
 p_inset <-
-  sum_burden %>% 
+  sum_burden2 %>% 
   filter(cohort %in% c(1950, 1975, 1999)) %>% 
   filter(region %in% regions_to_remove) %>% 
   select(region, cohort, value) %>% 
@@ -132,7 +134,7 @@ p_inset <-
   geom_point(aes(x = `1999`), shape = 17, size = point_inset) +
   # annotate("text", x = c(0.12, 0.25), y = c(2, 1), label = c("Oceania (other)", "AUS & NZ"),
   # size = c(3,3), hjust = .5, color = "grey20") +
-  coord_cartesian(xlim = c(0.03, 0.2), ylim = c(0.75, 2.25)) +
+  coord_cartesian(xlim = c(0.03, 0.32), ylim = c(0.75, 2.25)) +
   scale_y_continuous("", br = 1:2, labels = regions_short[7:8], minor_breaks = NULL) +
   scale_x_continuous(
     "Total number of child deaths"
@@ -152,24 +154,24 @@ p_inset <-
 # x_adj <- -13
 # y_adj <- -3.7
 
-x_adj <- -31.5
+x_adj <- -30
 y_adj <- -5.7
 
 p_complete <- 
   p_sum_burden +
   annotation_custom(
     ggplotGrob(p_inset) 
-    , xmin = 15, xmax = 39
+    , xmin = 24, xmax = 57
     , ymin = 4.69, ymax = 6.69
   ) +
   # add legend manually
-  annotate("rect", xmin = 31 + x_adj, xmax = 48.5 + x_adj, ymin = 7.2 + y_adj, ymax = 8.1 + y_adj,
+  annotate("rect", xmin = 29.5 + x_adj, xmax = 53 + x_adj, ymin = 7.2 + y_adj, ymax = 8.1 + y_adj,
            color = "grey50", fill = "white") +
   annotate("text", x = 40 + x_adj, y = 7.9 + y_adj, label = "Birth cohort of women",
            size = 3, hjust = .5, color = "grey20") +
-  annotate("point", x = c(32 + x_adj, 38 + x_adj, 44 + x_adj), y = 7.5 + y_adj,
+  annotate("point", x = c(32 + x_adj, 39 + x_adj, 46 + x_adj), y = 7.5 + y_adj,
            pch = c(16, 21, 17), size = 2, color = 1) +
-  annotate("text", x = c(33 + x_adj, 39 + x_adj, 45 + x_adj), y = 7.5 + y_adj,
+  annotate("text", x = c(33 + x_adj, 40 + x_adj, 47 + x_adj), y = 7.5 + y_adj,
            label = c("1950", "1975", "1999"),
            size = 3, hjust = 0, color = "grey20") 
 
