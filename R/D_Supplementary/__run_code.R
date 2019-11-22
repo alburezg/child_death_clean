@@ -186,5 +186,4 @@ source(files[13])
 # [Figure to which the data corresponds in the main text]_[whether country or 
 # regional estimates]_[type of measure]
 
-# NOT RUN:
-# source(files[13])
+source(files[14])

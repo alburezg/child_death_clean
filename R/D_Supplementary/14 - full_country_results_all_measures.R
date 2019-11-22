@@ -35,6 +35,11 @@
 # cl_ex_pop_country
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# 0. Parameters ----
+
+lower_year <- 1950
+upper_year <- 1999
+
 # 1. Data from Fig 1 ~~~~ ----
 
 # 1.1 Cohort ex 
@@ -82,7 +87,7 @@ ex_ctfr_con <-
 
 # Regional estimates
 
-# 4. Summarise by region ====
+# 4. Summarise by region
 
 ex_ctfr_sum <- 
   ex_ctfr_con %>% 
@@ -103,19 +108,19 @@ print("8 - tab.2.1_child_death_full saved to ../../Output")
 # Full country results for the (cumulative) number of child deaths 
 # for a woman surviving to selected ages (median and IQR).
 
-cl_full <- merge(
-  df_cl_m_full %>% 
-    filter(type == "country")
-  , female_births %>% 
-    select(cohort = year, cohort_size = value, everything())
-  , by = c('country', 'cohort')
-  , all.x = T
-)
+# cl_full <- merge(
+#   df_cl_m_full %>% 
+#     filter(type == "country")
+#   , female_births %>% 
+#     select(cohort = year, cohort_size = value, everything())
+#   , by = c('country', 'cohort')
+#   , all.x = T
+# )
 
 # Get estimated values for countries
 
 cl_countries <- 
-  cl_full %>% 
+  df_cl_m_full %>% 
   filter(type == 'country') %>% 
   mutate(
     region = as.character(region)
@@ -331,30 +336,65 @@ out_regions <-
 
 # 7.1. Country-level estimates ====
 
-write.csv(ex_ctfr_con, "../../Output/Fig1_countries_TFR_e0.csv", row.names = F)
+# Wrap all of them in two datasets
 
-write.csv(cl_countries, "../../Output/Fig2_countries_child_death_cumulative.csv", row.names = F)
-write.csv(cs_countries, "../../Output/Fig2_countries_child_survival_cumulative.csv", row.names = F)
+# The first for measures that consider country, cohort, and age
+# (ie those corresponding to figures 2-3 in the main paper)
 
-write.csv(diff_countries, "../../Output/Fig3_countries_child_death_first_difference.csv", row.names = F)
-write.csv(abs_countries, "../../Output/Fig3_countries_child_death_burden.csv", row.names = F)
 
-write.csv(csex_countries, "../../Output/Fig4_countries_outlive_mother_number.csv", row.names = F)
-write.csv(out_countries, "../../Output/Fig4_countries_outlive_mother_share.csv", row.names = F)
+figs2_and_3 <- bind_cols(
+  cl_countries %>% 
+    select(-region) %>% 
+    rename(child_death_cumulative = value)
+  , cs_countries %>% 
+    select(child_survival = value)
+  , diff_countries %>% 
+    select(first_difference = value)
+  , abs_countries %>% 
+    select(child_death_burden = value)
+)
+
+write.csv(figs2_and_3, "../../Output/database_fig2-3.csv", row.names = F)
+
+# Then, those that consider country, cohort only
+# (ie fig 4)
+
+fig4 <- bind_cols(
+  csex_countries %>% 
+    select(-region) %>% 
+    rename(outlive_mother_number = value)
+  , out_countries %>% 
+    select(outlive_mother_fraction = value)
+)
+  
+
+write.csv(fig4, "../../Output/database_fig4.csv", row.names = F)
+
+
+# write.csv(ex_ctfr_con, "../../Output/Fig1_countries_TFR_e0.csv", row.names = F)
+
+# write.csv(cl_countries %>% select(-region), "../../Output/Fig2_countries_child_death_cumulative.csv", row.names = F)
+# write.csv(cs_countries %>% select(-region), "../../Output/Fig2_countries_child_survival_cumulative.csv", row.names = F)
+# 
+# write.csv(diff_countries %>% select(-region), "../../Output/Fig3_countries_child_death_first_difference.csv", row.names = F)
+# write.csv(abs_countries %>% select(-region), "../../Output/Fig3_countries_child_death_burden.csv", row.names = F)
+# 
+# write.csv(csex_countries %>% select(-region), "../../Output/Fig4_countries_outlive_mother_number.csv", row.names = F)
+# write.csv(out_countries %>% select(-region), "../../Output/Fig4_countries_outlive_mother_share.csv", row.names = F)
 
 print("8 - complete country-level estimates saved to ../../Output")
 
 # 7.2. Regional estimates ====
 
-write.csv(ex_ctfr_sum, "../../Output/Fig1_regions_TFR_e0.csv", row.names = F)
+# write.csv(ex_ctfr_sum, "../../Output/Fig1_regions_TFR_e0.csv", row.names = F)
 
-write.csv(cl_regions, "../../Output/Fig2_regions_child_death_cumulative.csv", row.names = F)
-write.csv(cs_regions, "../../Output/Fig2_regions_child_survival_cumulative.csv", row.names = F)
+# write.csv(cl_regions, "../../Output/Fig2_regions_child_death_cumulative.csv", row.names = F)
+# write.csv(cs_regions, "../../Output/Fig2_regions_child_survival_cumulative.csv", row.names = F)
+# 
+# write.csv(diff_regions, "../../Output/Fig3_regions_child_death_first_difference.csv", row.names = F)
+# write.csv(abs_regions, "../../Output/Fig3_regions_child_death_burden.csv", row.names = F)
+# 
+# write.csv(csex_regions, "../../Output/Fig4_regions_outlive_mother_number.csv", row.names = F)
+# write.csv(out_regions, "../../Output/Fig4_regions_outlive_mother_share.csv", row.names = F)
 
-write.csv(diff_regions, "../../Output/Fig3_regions_child_death_first_difference.csv", row.names = F)
-write.csv(abs_regions, "../../Output/Fig3_regions_child_death_burden.csv", row.names = F)
-
-write.csv(csex_regions, "../../Output/Fig4_regions_outlive_mother_number.csv", row.names = F)
-write.csv(out_regions, "../../Output/Fig4_regions_outlive_mother_share.csv", row.names = F)
-
-print("8 - complete regional estimates saved to ../../Output")
+# print("8 - complete regional estimates saved to ../../Output")
