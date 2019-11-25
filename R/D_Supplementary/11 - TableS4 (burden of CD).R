@@ -18,10 +18,10 @@
 options("encoding" = "UTF-8")
 
 caption <- 
-  "Child deaths experienced by women in birth cohort c at exact age a. 
+  "Burden of Child Death (BCD): child deaths experienced by women in birth cohort c at exact age a. 
 Obtained by weighting the first difference of child death by the life table distribution of women. 
 Regional estimates (capitalized) show the median value and IQR in parenthesis. 
-Estimates in in hundreds of thsousands.
+Estimates in hundreds of thsousands.
 For reasons of space, 0 stands for <0.01 in the table."
 
 lab <- "S4"

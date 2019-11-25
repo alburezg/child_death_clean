@@ -342,33 +342,33 @@ out_regions <-
 # (ie those corresponding to figures 2-3 in the main paper)
 
 
-figs2_and_3 <- bind_cols(
+datasetS1 <- bind_cols(
   cl_countries %>% 
     select(-region) %>% 
-    rename(child_death_cumulative = value)
+    rename(child_death = value)
   , cs_countries %>% 
     select(child_survival = value)
   , diff_countries %>% 
-    select(first_difference = value)
+    select(first_difference_of_child_death = value)
   , abs_countries %>% 
-    select(child_death_burden = value)
+    select(burden_of_child_death = value)
 )
 
-write.csv(figs2_and_3, "../../Output/database_fig2-3.csv", row.names = F)
+write.csv(datasetS2, "../../Output/datasetS1.csv", row.names = F)
 
 # Then, those that consider country, cohort only
 # (ie fig 4)
 
-fig4 <- bind_cols(
+datasetS2 <- bind_cols(
   csex_countries %>% 
     select(-region) %>% 
-    rename(outlive_mother_number = value)
+    rename(outlive_mother_expected = value)
   , out_countries %>% 
     select(outlive_mother_fraction = value)
 )
   
 
-write.csv(fig4, "../../Output/database_fig4.csv", row.names = F)
+write.csv(datasetS2, "../../Output/datasetS2.csv", row.names = F)
 
 
 # write.csv(ex_ctfr_con, "../../Output/Fig1_countries_TFR_e0.csv", row.names = F)
@@ -384,6 +384,7 @@ write.csv(fig4, "../../Output/database_fig4.csv", row.names = F)
 
 print("8 - complete country-level estimates saved to ../../Output")
 
+# NOT RUN
 # 7.2. Regional estimates ====
 
 # write.csv(ex_ctfr_sum, "../../Output/Fig1_regions_TFR_e0.csv", row.names = F)

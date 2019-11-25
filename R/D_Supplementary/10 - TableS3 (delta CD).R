@@ -16,7 +16,7 @@
 options("encoding" = "UTF-8")
 
 caption <- 
-  "First difference of child death for a woman surviving to ages 20, 45, and 100 in three selected birth cohorts. 
+  "First Difference of Child Death for a woman surviving to ages 20, 45, and 100 in three selected birth cohorts. 
 Regional estimates (capitalized) show the median value and IQR in parenthesis. 
 For reasons of space, 0 stands for <0.01 in the table."
 
