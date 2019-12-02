@@ -1,4 +1,13 @@
 
+# *~^**~^**~^**~^**~^**~^**#
+# Code by                  #
+# Diego Alburez-Gutierrez  #
+# gatemonte@gmail.com      #
+# @d_alburez               #
+# Unless stated otherwise  #
+# *~^**~^**~^**~^**~^**~^**#
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Code to reshape UN WPP population estimates and period demographic rates.
@@ -14,7 +23,7 @@
 #    6. Expand the UN abridged period life tables by interpolating on the nMx 
 #       column and by single-year
 #    7. Approximate cohort life tables using values on the diagonal of the period ones
-#    8. Create matrices of survival probabilities for all UN regions
+#    8. Create matrices of survival probabilities for all countries
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -19,7 +19,7 @@
 #   11. Table S4 - Burden of child death at each age a 
 #   12. Table S5 - Number of children expected to outlive their mothers 
 #   13. Table S6 - Children outliving their mothers as a share of the mother’s cohort TFR 
-#   14. Tables with full country results 
+#   14. Tables with full country results (Datasets_S1_S2)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -162,9 +162,8 @@ source(files[12])
 
 source(files[13])
 
-# 14. Tables with full country results ====
+# 14. 14 - Datasets_S1_S2 ====
 
-# Export full country-cohort-age results for Tables S6-10 as csv files
 # The resulting files are quite large in size and are not included in 
 # the SI pdf file.
 
