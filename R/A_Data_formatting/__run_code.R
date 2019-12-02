@@ -1,11 +1,14 @@
 
-# *~^**~^**~^**~^**~^**~^**#
-# Code by                  #
-# Diego Alburez-Gutierrez  #
-# gatemonte@gmail.com      #
-# @d_alburez               #
-# unless stated otherwise. #
-# *~^**~^**~^**~^**~^**~^**#
+
+# *~^**~^**~^**~^**~^**~^**~^*#
+# Code by                     #
+# Diego Alburez-Gutierrez     #
+# gatemonte@gmail.com         #
+# @d_alburez                  #
+# unless stated otherwise.    #
+# GNU GENERAL PUBLIC LICENSE  #
+# Version 3, 29 June 2007     #
+# *~^**~^**~^**~^**~^**~^**~^*#
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,4 +1,16 @@
 
+
+# *~^**~^**~^**~^**~^**~^**~^*#
+# Code by                     #
+# Diego Alburez-Gutierrez     #
+# gatemonte@gmail.com         #
+# @d_alburez                  #
+# unless stated otherwise.    #
+# GNU GENERAL PUBLIC LICENSE  #
+# Version 3, 29 June 2007     #
+# *~^**~^**~^**~^**~^**~^**~^*#
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Scripts to produce Figs. 1-4 from the main text of the paper.
