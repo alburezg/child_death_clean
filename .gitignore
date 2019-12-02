@@ -7,3 +7,5 @@ Data/derived/*.csv
 Data/derived/*.RDS
 # For presentation
 presentation/
+#other materials, including full functions
+others/
