@@ -4,7 +4,7 @@
 # Diego Alburez-Gutierrez  #
 # gatemonte@gmail.com      #
 # @d_alburez               #
-# Unless stated otherwise  #
+# unless stated otherwise. #
 # *~^**~^**~^**~^**~^**~^**#
 
 
