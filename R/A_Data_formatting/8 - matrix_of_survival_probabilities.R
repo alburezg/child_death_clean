@@ -19,7 +19,7 @@ if(F) {
   # NOTE: this only works outsdie Hydra as it referes to the C Drive
   
   (files <- list.files(path = "../../Data/derived", pattern = "^lx.kids.arr_"))
-  files2 <- paste0("../../Data/derived/", files)[52:55]
+  files2 <- paste0("../../Data/derived/", files)[1]
   arr_l <- lapply(files2, function(f) {
     readRDS(f)
   })  

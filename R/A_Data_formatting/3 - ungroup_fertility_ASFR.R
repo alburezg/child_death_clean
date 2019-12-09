@@ -16,7 +16,7 @@ allowed_types <- c("Country", "SDG region")
 # The files created with this script can be loaded with:
 
 # 1. Read all into a uique file (recommended)
-# fert_per_1_1 <- read.csv(file = paste0("output/","fert_per_1_1.csv"), stringsAsFactors = F)
+# fert_per_1_1 <- read.csv(file = paste0("../../Data/derived/","fert_per_1_1.csv"), stringsAsFactors = F)
 
 # 2. Load separately by type of region
 # fil <- list.files("output/")

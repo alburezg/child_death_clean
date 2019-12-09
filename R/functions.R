@@ -8,7 +8,11 @@
 # GNU GENERAL PUBLIC LICENSE  #
 # Version 3, 29 June 2007     #
 # *~^**~^**~^**~^**~^**~^**~^*#
-
+#       \   ^__^ 
+#        \  (oo)\ ________ 
+#           (__)\         )\ /\ 
+#                ||------w|
+#                ||      ||
 
 
 # Apply cohort life tables to real-life populatinos
@@ -982,7 +986,7 @@ worker_LT_period_to_cohort <- function(df, years, ages) {
     }
   }
   
-  # 2. dx and nLx columns for for open age interval
+  # 2. dx and nLx columns for open age interval
   
   open_age <-  which(df$Age == age_limit_max & df$Cohort < year_limit_max)
   last_age <- which(df$Age== age_limit_max - 1  & df$Cohort < year_limit_max)
