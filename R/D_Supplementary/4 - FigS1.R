@@ -22,7 +22,7 @@ quant_high <- 0.6
 
 age_br <- c(seq(5, 100, 20), 100)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. plotting params (small)
 # width <- 8
 # height <- 6
 # base_size <- 9
@@ -248,7 +248,7 @@ dummy <- data.frame(
 
 p_world1 <- 
   world1 %>% 
-  filter(cohort %in% c(1950, 1975, 1999)) %>% 
+  filter(cohort %in% c(1950, 1975, 2000)) %>% 
   mutate(cohort = as.character(cohort)) %>% 
   ggplot() +
   geom_line(

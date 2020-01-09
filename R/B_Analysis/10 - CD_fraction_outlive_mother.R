@@ -66,7 +66,7 @@ ecl_ex <- merge(
 
 ctfr <- 
   ASFRC %>% 
-  filter(dplyr::between(Cohort, 1950, 1999)) %>% 
+  filter(dplyr::between(Cohort, 1950, 2000)) %>% 
   group_by(country, Cohort) %>% 
   summarise(tfr = sum(ASFR)/1000) %>% 
   ungroup %>% 

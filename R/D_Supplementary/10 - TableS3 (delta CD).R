@@ -28,7 +28,7 @@ export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)
 
-cohorts <- c(1950, 1975, 1999)
+cohorts <- c(1950, 1975, 2000)
 ages <- c(25, 70, 99)
 
 # 3.1.	First difference of child death (CD) ====
@@ -123,7 +123,7 @@ if(export_latex) {
     , row.names = F
     , escape = T
   ) %>%
-    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "1999"=3)) %>%
+    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "2000"=3)) %>%
     kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 7)
   
   write(k, file = paste0("../../Output/tab", lab, ".tex"))

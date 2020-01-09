@@ -189,7 +189,7 @@ ungroup_mortality_from_mx <- function(lt_per, sex = "F", parallel = T, numCores 
     mx_l <- split(mx, list(mx$country, mx$year))
     
     lt_l <- lapply(mx_l, function(df) {
-      lt <- lt_mx(nmx = df$mx, age = min(df$age):max(df$age), radix = 1E5)
+      lt <- lt_mx(nmx = df$mx, age = min(df$age):max(df$age), radix = 1E6)
       cbind(
         df[1:nrow(lt) , 1:2]
         , lt
@@ -352,7 +352,7 @@ if(parallel) {
 } else {
   # non-parallel verion
   lt_1_1_l <- lapply(mx_1_1_l, function(df) {
-    lt <- lt_mx(nmx = df$mx, age = 0:100, radix = 1E5)
+    lt <- lt_mx(nmx = df$mx, age = 0:100, radix = 1E6)
     cbind(
       df[1:nrow(lt) , 1:2]
       , lt

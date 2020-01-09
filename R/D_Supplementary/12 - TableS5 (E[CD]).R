@@ -32,7 +32,7 @@ export_latex <- T
 
 # For small tables (to be included in the Supplementary Materials)
 
-cohorts <- c(seq(1950, 1999, 10), 1999)
+cohorts <- c(seq(1950, 2000, 10), 2000)
 
 # 4.1.	Expected children outlive mothers ====
 # ~~~~~~~~~~~~~

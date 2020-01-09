@@ -144,7 +144,7 @@ cl_ex_pop_country <-
     , by = c("country", 'cohort')
     , all.x = T
   ) %>% 
-  filter(between(cohort, 1950, 1999) )
+  filter(between(cohort, 1950, 2000) )
 
 # Every row in this df is the ECL values 
 # for every country/cohort combination

@@ -30,7 +30,7 @@ export_latex <- T
 # For small tables (to be included in the Supplementary Materials)
 
 ages <- c(20, 45, 100)
-cohorts <- c(1950, 1975, 1999)
+cohorts <- c(1950, 1975, 2000)
 
 
 # 2.2.	Child survival (CS) ====
@@ -134,7 +134,7 @@ if(export_latex) {
     , row.names = F
     , escape = T
   ) %>%
-    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "1999"=3)) %>%
+    add_header_above(c("Birth cohort"=1, "1950"=3, "1975"=3, "2000"=3)) %>%
     kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
   
   write(k, file = paste0("../../Output/tab", lab, ".tex"))

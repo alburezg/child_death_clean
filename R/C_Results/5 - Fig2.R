@@ -23,7 +23,7 @@
 # 0. Plotting params ----
 
 lower_year <- 1950
-upper_year <- 1999
+upper_year <- 2000
 
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""

@@ -6,7 +6,7 @@
 # This script generates complete tables of child death and child survival estimates
 # for supplementary materials.
 # This script basically generates the underlying data used to produce 
-# Figures 2-4 in the main text, plus data on all other cohorts (1950-1999) 
+# Figures 2-4 in the main text, plus data on all other cohorts (1950-2000) 
 # which are not included in the figures, but whose values were estimated.
 
 # The tables are exported as csv files in long format, which is easier to manipulate.
@@ -38,7 +38,7 @@
 # 0. Parameters ----
 
 lower_year <- 1950
-upper_year <- 1999
+upper_year <- 2000
 
 # Number of digits to round all numeric columns in final datasets
 # Done to save space

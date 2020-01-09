@@ -21,7 +21,7 @@
 # 0. Parameters ----
 
 lower_year <- 1950
-upper_year <- 1999
+upper_year <- 2000
 
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 age_br <- c(seq(5, 100, 20), 100)
@@ -88,7 +88,7 @@ point_inset <- 3
 
 p_sum_burden <-
   sum_burden2 %>% 
-  filter(cohort %in% c(1950, 1975, 1999)) %>% 
+  filter(cohort %in% c(1950, 1975, 2000)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   select(region, cohort, value) %>% 
   spread(., cohort, value) %>% 
@@ -96,10 +96,10 @@ p_sum_burden <-
     region = factor(region, levels = new_order)
   ) %>% 
   ggplot(aes(y = region)) +
-  geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
+  geom_segment(aes(x = `1950`, xend = `2000`, yend = region)) +
   geom_point(aes(x = `1950`), shape = 16, size = point_size) +
   geom_point(aes(x = `1975`), shape = 21, size = point_size, fill = "white") +
-  geom_point(aes(x = `1999`), shape = 17, size = point_size) +
+  geom_point(aes(x = `2000`), shape = 17, size = point_size) +
   scale_y_discrete("", br = new_order, labels = regions_short[orders]) +
   scale_x_continuous(
     "Total number of child deaths"
@@ -119,7 +119,7 @@ p_sum_burden <-
 
 p_inset <-
   sum_burden2 %>% 
-  filter(cohort %in% c(1950, 1975, 1999)) %>% 
+  filter(cohort %in% c(1950, 1975, 2000)) %>% 
   filter(region %in% regions_to_remove) %>% 
   select(region, cohort, value) %>% 
   spread(., cohort, value) %>% 
@@ -128,10 +128,10 @@ p_inset <-
     region = 1:2
   ) %>% 
   ggplot(aes(y = region)) +
-  geom_segment(aes(x = `1950`, xend = `1999`, yend = region)) +
+  geom_segment(aes(x = `1950`, xend = `2000`, yend = region)) +
   geom_point(aes(x = `1950`), shape = 16, size = point_inset) +
   geom_point(aes(x = `1975`), shape = 21, size = point_inset, fill = "white") +
-  geom_point(aes(x = `1999`), shape = 17, size = point_inset) +
+  geom_point(aes(x = `2000`), shape = 17, size = point_inset) +
   # annotate("text", x = c(0.12, 0.25), y = c(2, 1), label = c("Oceania (other)", "AUS & NZ"),
   # size = c(3,3), hjust = .5, color = "grey20") +
   coord_cartesian(xlim = c(0.03, 0.32), ylim = c(0.75, 2.25)) +
@@ -172,7 +172,7 @@ p_complete <-
   annotate("point", x = c(32 + x_adj, 39 + x_adj, 46 + x_adj), y = 7.5 + y_adj,
            pch = c(16, 21, 17), size = 2, color = 1) +
   annotate("text", x = c(33 + x_adj, 40 + x_adj, 47 + x_adj), y = 7.5 + y_adj,
-           label = c("1950", "1975", "1999"),
+           label = c("1950", "1975", "2000"),
            size = 3, hjust = 0, color = "grey20") 
 
 p_complete

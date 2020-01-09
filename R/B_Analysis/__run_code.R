@@ -154,7 +154,7 @@ source(files[10])
 
 # B. Child survival ----
 
-# 10.  Child Survival (CS) ====
+# 11.  Child Survival (CS) ====
 
 # Total number of children surviving (CS) for a woman reaching age $a$. 
 # Values in the vertical axis represent the total number of children `currently alive' - 
@@ -164,7 +164,7 @@ source(files[10])
 
 source(files[11])
 
-# 11. Regional estimates of CS  ====
+# 12. Regional estimates of CS  ====
 
 # Use the country-level estimates produced by the previous script to estimate
 # the levels of child survival at a regional level. Regions are UN SDG regions.
@@ -172,7 +172,7 @@ source(files[11])
 
 source(files[12])
 
-# 12. Expected value of Child Survival E[CS] ====
+# 13. Expected value of Child Survival E[CS] ====
 
 # E[CS] is the number of children expected to outlive their mothers
 # This is the number of children who will be alive at the time of a woman's 

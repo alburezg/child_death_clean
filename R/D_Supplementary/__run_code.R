@@ -13,7 +13,7 @@
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Scripts to produce figures and tables in the Supplemetnary Information 
+# Scripts to produce figures and tables in the Supplementary Information 
 # of the paper (S1-S10). 
 # Note that all of the analysis has already been done before and these
 # scripts only prduce plots and tables using data generated in previous scripts. 

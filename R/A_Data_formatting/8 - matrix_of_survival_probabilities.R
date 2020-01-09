@@ -37,7 +37,7 @@ if(F) {
 
 matrix_of_survival_probabilities <- function(LTC, run_checks = F, cos, xs, mas, numCores) {
   
-  # 1. Get matrix of survival probabilities of kids ----
+  # 1. Get matrix of survival probabilities of kids 
   
   LTC_l <-  split(LTC, LTC$Country)
   
@@ -60,7 +60,7 @@ matrix_of_survival_probabilities <- function(LTC, run_checks = F, cos, xs, mas, 
   )
   
   
-  # 3. Explore ----
+  # 3. Explore 
   
   if(run_checks) {
     
@@ -113,7 +113,8 @@ matrix_of_survival_probabilities <- function(LTC, run_checks = F, cos, xs, mas, 
 
 # xs are allowed reproductive ages
 # This must be the same as the age groups in the asfr data
-cos <- c(1950:2099) # cohorts
+# cos <- c(1950:2099) # cohorts
+cos <- c(1950:2100) # cohorts
 xs <- c(13:54) # reproductive age
 mas<-c(13:100) # mother ages
 

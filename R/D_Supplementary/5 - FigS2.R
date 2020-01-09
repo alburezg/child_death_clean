@@ -21,7 +21,7 @@ quant_high <- 0.6
 
 age_br <- c(seq(5, 100, 20), 100)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. plotting params (small)
 # width <- 8
 # height <- 6
 # base_size <- 9

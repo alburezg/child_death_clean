@@ -22,7 +22,7 @@
 apply_lt <- function(female_births, LTCF, numCores) {
   
   countries <- unique(LTCF$Country)
-  cohorts <- 1950:1999
+  cohorts <- 1950:2000
   
   cl <- makeCluster(numCores)
   
@@ -351,10 +351,11 @@ expand_LT_year_by_mx <- function(df_5_1, method = "linear", parallel = T, numCor
   df_l <- split(df_5_1, df_5_1[c("country", "age")])  
   names(df_l) <- paste0(names(df_l), ".")
   
-  years <- unique(sort(unlist(lapply(df_l[[1]]$year, function(d) {
-    n <- as.numeric(unlist(strsplit(d, "-")))
-    min(n):max(n)
-  }))))
+  # years <- unique(sort(unlist(lapply(df_l[[1]]$year, function(d) {
+  #   n <- as.numeric(unlist(strsplit(d, "-")))
+  #   min(n):max(n)
+  # }))))
+  years <- 1950:2100
   y_range_length <- length(years)
   
   print("interpolating...")
@@ -567,10 +568,14 @@ interpolate_COLUMN_calendar_years <- function(df_5_1, method = "linear", col = "
         , val = NA
       )
     } else {
-      years <- unique(sort(unlist(lapply(df$year, function(d) {
-        n <- as.numeric(unlist(strsplit(d, "-")))
-        min(n):max(n)
-      }))))
+      
+      # years <- unique(sort(unlist(lapply(df$year, function(d) {
+      #   n <- as.numeric(unlist(strsplit(d, "-")))
+      #   min(n):max(n)
+      # }))))
+      
+      years <- 1950:2100
+      
       y_range_length <- length(years)
       
       if(nrow(df) == 1) {
@@ -632,11 +637,12 @@ library2 <- function (package1, ...) {
   }
 }
 
+
 # Builds a life table by using the mortality rate schedule to calculate 
 # the subsequent columns of the table
 # Adapted from LifeTables::lt.mx
 lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)), 
-                   nax = NULL, radix = 1E5) 
+                   nax = NULL, radix = 1E6) 
   
 {
   # browser()
@@ -668,9 +674,9 @@ lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)),
   }
   nqx <- (n * nmx)/(1 + (n - nax) * nmx)
   nqx <- c(nqx[-(length(nqx))], 1)
+  # nqx[nqx > 1] <- 1
   for (i in 1:length(nqx)) {
-    if (nqx[i] > 1) 
-      nqx[i] <- 1
+    if (nqx[i] > 1) nqx[i] <- 1
   }
   nage <- length(age)
   npx <- 1 - nqx
@@ -679,23 +685,25 @@ lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)),
   ndx <- -diff(lx)
   lxpn <- lx[-1]
   nLx <- n * lxpn + ndx * nax
-  Tx <- c(rev(cumsum(rev(nLx[-length(nLx)]))), 0)
+  
+  # Deal with open age interval for Lx:
+  # Normally, I would just take it from the abriged life tables
+  # but this is not possible since the abridged life tables are 
+  # also grouped in 5-calendar-year groupps so that there is no
+  # 'original' value to get this from and it must be computed
+  # anew.
+  # Lx = lx/(Inf_nmx_100)
+  # Note: This method will only work if lx > 0 for the
+  # open age interval. In some cases, this is not true if the radix
+  # is too small and the mortality too high (eg niger 1950)
+  # For this reason, I cahnged to radix from 1E5 to 1E6 on 20200108
+  
+  nLx[nage] <- lx[nage]/nmx[nage]
+  
+  
+  Tx <- rev(cumsum(rev(nLx)))
   lx <- lx[1:length(age)]
   ex <- Tx/lx
-  
-  # With rounding
-  # lt <- data.frame(
-  #   age = age
-  #   , ax = c(round(nax[-length(nax)], 3), NA)
-  #   , mx = round(nmx, 4)
-  #   , qx = round(nqx, 4)
-  #   , px = round(npx, 4)
-  #   , dx = ndx
-  #   , lx = lx
-  #   , Lx = c(round(nLx[-length(nLx)]), NA)
-  #   , Tx = c(round(Tx[-length(Tx)]), NA)
-  #   , ex = c(round(ex[-length(ex)], 2), NA)
-  #   )
   
   # Without rounding
   lt <- data.frame(
@@ -706,15 +714,101 @@ lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)),
     , px = npx
     , dx = ndx
     , lx = lx
-    , Lx = c(nLx[-length(nLx)], NA)
-    , Tx = c(Tx[-length(Tx)], NA)
-    , ex = c(ex[-length(ex)], NA)
+    , Lx = nLx
+    , Tx = Tx
+    , ex = ex
   )
   
   lt.top.age <- min(which(nqx == 1))
   lt <- lt[1:lt.top.age, ]
   return(lt)
 }
+
+# DEPRECATED 20200108 becuase it did not generate ex for upper age
+# interval in expanded life tables
+# Builds a life table by using the mortality rate schedule to calculate 
+# the subsequent columns of the table
+# Adapted from LifeTables::lt.mx
+# lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)), 
+#                    nax = NULL, radix = 1E5) 
+#   
+# {
+#   # browser()
+#   n <- c(diff(age), 999)
+#   if (is.null(nax)) {
+#     nax <- 0.5 * n
+#     if (n[2] == 4) {
+#       if (sex == "male") {
+#         if (nmx[1] >= 0.107) {
+#           nax[1] <- 0.33
+#           nax[2] <- 1.352
+#         }
+#         else {
+#           nax[1] <- 0.045 + 2.684 * nmx[1]
+#           nax[2] <- 1.651 - 2.816 * nmx[1]
+#         }
+#       }
+#       if (sex == "female") {
+#         if (nmx[1] >= 0.107) {
+#           nax[1] <- 0.35
+#           nax[2] <- 1.361
+#         }
+#         else {
+#           nax[1] <- 0.053 + 2.8 * nmx[1]
+#           nax[2] <- 1.522 - 1.518 * nmx[1]
+#         }
+#       }
+#     }
+#   }
+#   nqx <- (n * nmx)/(1 + (n - nax) * nmx)
+#   nqx <- c(nqx[-(length(nqx))], 1)
+#   nqx[nqx > 1] <- 1
+#   # for (i in 1:length(nqx)) {
+#   #   if (nqx[i] > 1) nqx[i] <- 1
+#   # }
+#   nage <- length(age)
+#   npx <- 1 - nqx
+#   l0 = radix
+#   lx <- round(cumprod(c(l0, npx)))
+#   ndx <- -diff(lx)
+#   lxpn <- lx[-1]
+#   nLx <- n * lxpn + ndx * nax
+#   Tx <- c(rev(cumsum(rev(nLx[-length(nLx)]))), 0)
+#   lx <- lx[1:length(age)]
+#   ex <- Tx/lx
+#   
+#   # With rounding
+#   # lt <- data.frame(
+#   #   age = age
+#   #   , ax = c(round(nax[-length(nax)], 3), NA)
+#   #   , mx = round(nmx, 4)
+#   #   , qx = round(nqx, 4)
+#   #   , px = round(npx, 4)
+#   #   , dx = ndx
+#   #   , lx = lx
+#   #   , Lx = c(round(nLx[-length(nLx)]), NA)
+#   #   , Tx = c(round(Tx[-length(Tx)]), NA)
+#   #   , ex = c(round(ex[-length(ex)], 2), NA)
+#   #   )
+#   
+#   # Without rounding
+#   lt <- data.frame(
+#     age = age
+#     , ax = c(nax[-length(nax)], NA)
+#     , mx = nmx
+#     , qx = nqx
+#     , px = npx
+#     , dx = ndx
+#     , lx = lx
+#     , Lx = c(nLx[-length(nLx)], NA)
+#     , Tx = c(Tx[-length(Tx)], NA)
+#     , ex = c(ex[-length(ex)], NA)
+#   )
+#   
+#   lt.top.age <- min(which(nqx == 1))
+#   lt <- lt[1:lt.top.age, ]
+#   return(lt)
+# }
 
 lt_mx_parallel <- function(l_mx_1_1_l, numCores) {
   
@@ -927,8 +1021,17 @@ worker_expand_LT_year_by_mx <- function(df, method, y_range_length, years) {
   if(method == "linear") {
     val <- approx(df$mx, method = method, n = y_range_length)$y    
   } else if(method == "spline") {
-    spline_mx <- interpSpline(seq(1, 150, 5), df$mx)
-    val <- predict(spline_mx, 1:150)$y
+    # spline_mx <- interpSpline(seq(1, 150, 5), df$mx)
+    # val <- predict(spline_mx, 1:150)$y
+    # Grouped year intervals of the UN WPP data refer to mid-year estimates
+    # so that the value reported for 1950-1955 actually refers to the period
+    # 1950.5-1955.5. This means that the value can be interpreted as that 
+    # corresponding to the middle of the period, in this case the 1 of January
+    # of 1953.
+    # I consider this in the spline interpolation below by considering that each
+    # interval corresponds to the lower bound plus 3;
+    spline_mx <- interpSpline(seq(3, y_range_length, 5), df$mx)
+    val <- predict(spline_mx, 1:y_range_length)$y
   }
   
   data.frame(
@@ -941,7 +1044,7 @@ worker_expand_LT_year_by_mx <- function(df, method, y_range_length, years) {
 }
 
 worker_lt_mx <- function(df) {
-  lt <- lt_mx(nmx = df$mx, age = 0:100, radix = 1E5)
+  lt <- lt_mx(nmx = df$mx, age = 0:100, radix = 1E6)
   
   cbind(
     df[1:nrow(lt) , 1:2]
@@ -980,7 +1083,7 @@ worker_LT_period_to_cohort <- function(df, years, ages) {
       df$dx[lag_position] <- df$lx[lag_position] * df$qx[lag_position]
       
       # Assign nLx column
-      if(age < age_limit_max + 1 & year < year_limit_max) {
+      if(age < age_limit_max + 1 & year <= year_limit_max) {
         df$nLx[lag_position] <- 
           df$lx[current_position] + df$dx[lag_position] * df$ax[lag_position]
       }
@@ -989,8 +1092,8 @@ worker_LT_period_to_cohort <- function(df, years, ages) {
   
   # 2. dx and nLx columns for open age interval
   
-  open_age <-  which(df$Age == age_limit_max & df$Cohort < year_limit_max)
-  last_age <- which(df$Age== age_limit_max - 1  & df$Cohort < year_limit_max)
+  open_age <-  which(df$Age == age_limit_max & df$Cohort <= year_limit_max)
+  last_age <- which(df$Age== age_limit_max - 1  & df$Cohort <= year_limit_max)
   open_age2 <- which(df$Age == age_limit_max)
   
   df$dx[open_age] <- df$lx[last_age] * df$qx[last_age]
@@ -999,7 +1102,7 @@ worker_LT_period_to_cohort <- function(df, years, ages) {
   # 3. Tx column (persons alive at any point in time above age x)
   
   for (year in years){
-    if (year < year_limit_max)
+    if (year <= year_limit_max)
       df$Tx[df$Cohort == year] <- rev(cumsum(rev(df$nLx[df$Cohort == year])))
   }
   

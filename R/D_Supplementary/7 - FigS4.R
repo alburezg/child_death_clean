@@ -17,7 +17,7 @@
 # 0. Parameters ----
 
 lower_year <- 1950
-upper_year <- 1999
+upper_year <- 2000
 
 # 0.2. Draft paper and presentation format (large)
 
@@ -98,7 +98,7 @@ p_ecl_ex <-
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_y_continuous("Fraction of TFR expected to outlive mother") +
   scale_x_continuous("Life expectancy in cohort of women") +
-  scale_color_gradient("Woman's birth cohort", low = "red", high = "blue", breaks = c(1950, 1975, 1999)) +
+  scale_color_gradient("Woman's birth cohort", low = "red", high = "blue", breaks = c(1950, 1975, 2000)) +
   # facet_grid(. ~ cohort) +
   facet_wrap(. ~ region) +
   theme_bw() +
@@ -124,7 +124,7 @@ ggsave(paste0("../../Output/figS4.pdf"), p_ecl_ex, width = width, height = heigh
 #   ) +
 #   scale_y_continuous("Fraction of TFR expected to outlive mother") +
 #   scale_x_continuous("Cohort Total Fertility Rate") +
-#   scale_color_gradient("Woman's birth cohort", low = "red", high = "blue", breaks = c(1950, 1975, 1999)) +
+#   scale_color_gradient("Woman's birth cohort", low = "red", high = "blue", breaks = c(1950, 1975, 2000)) +
 #   # facet_grid(. ~ cohort) +
 #   facet_wrap(. ~ region) +
 #   theme_bw() +
