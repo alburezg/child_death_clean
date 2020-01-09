@@ -157,7 +157,7 @@ p_diff_abs <-
     "Number of child deaths at each age"
     , position = "left"
     , sec.axis = dup_axis()
-    , breaks = scales::pretty_breaks(n = 4)
+    , breaks = scales::pretty_breaks(n = 3)
     # Make sure the lower facet shows labels in millions
     # but the upper does does not
     , labels = function(x) ifelse(x < 1, x, paste0(x, "M"))
