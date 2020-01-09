@@ -639,6 +639,7 @@ lt_mx <- function (nmx, sex = "female", age = c(0, 1, seq(5, 110, 5)),
                    nax = NULL, radix = 1E5) 
   
 {
+  # browser()
   n <- c(diff(age), 999)
   if (is.null(nax)) {
     nax <- 0.5 * n
