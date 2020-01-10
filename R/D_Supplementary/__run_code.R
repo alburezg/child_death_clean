@@ -6,6 +6,7 @@
 # gatemonte@gmail.com         #
 # @d_alburez                  #
 # unless stated otherwise.    #
+# Last edited 20200110        #
 # GNU GENERAL PUBLIC LICENSE  #
 # Version 3, 29 June 2007     #
 # *~^**~^**~^**~^**~^**~^**~^*#

@@ -5,6 +5,7 @@
 # gatemonte@gmail.com         #
 # @d_alburez                  #
 # unless stated otherwise.    #
+# Last edited 20200110        #
 # GNU GENERAL PUBLIC LICENSE  #
 # Version 3, 29 June 2007     #
 # *~^**~^**~^**~^**~^**~^**~^*#
@@ -481,7 +482,7 @@ format_births <- function(df) {
 }
 
 # Formats table for latex visualisation
-format_table <- function(df, row_keep = 29, ages = c(20,45,100), cohorts = c(1950, 1975, 1999), extra_header = T) {
+format_table <- function(df, row_keep = 29, ages = c(20,45,100), cohorts = c(1950, 1975, 2000), extra_header = T) {
   df$area[df$region != ""] <- df$region[df$region != ""]
   df$region <- NULL
   colnames(df) <- gsub("^X", "", colnames(df))

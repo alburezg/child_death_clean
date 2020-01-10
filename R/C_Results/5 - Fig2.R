@@ -29,10 +29,10 @@ point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
 col_lab <- ""
 age_br <- c(seq(5, 100, 20), 100)
 
-# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# Choose size options depending on whether image is intended for small format.
 # medium (regular draft) or large (presentation)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. Small plotting params 
 # width <- 8
 # height <- 6
 # base_size <- 9

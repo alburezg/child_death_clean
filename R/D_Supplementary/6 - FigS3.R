@@ -43,10 +43,10 @@ new_order <-
 
 orders <- match(new_order, regions_long)
 
-# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# Choose size options depending on whether image is intended for small format..
 # medium (regular draft) or large (presentation)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. plotting params (small)
 # width <- 8
 # height <- 6
 # base_size <- 9
@@ -54,7 +54,7 @@ orders <- match(new_order, regions_long)
 # point_size <- 1.5
 
 # 0.2. Draft paper and presentation format (large)
-# 8x6 is a good size for PNAS
+# 8x6 is a good size for small size
 
 width <- 16
 height <- 12

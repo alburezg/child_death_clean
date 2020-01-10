@@ -39,10 +39,10 @@ scale_by <- 1e6
 sources <- c("individual-level", "population-level")
 sources <- factor(sources, levels = sources)
 
-# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# Choose size options depending on whether image is intended for small format.
 # medium (regular draft) or large (presentation)
 
-# 0.1. PNAS plotting params (small)
+# 0.1. plotting params (small)
 # width <- 8
 # height <- 6
 # base_size <- 9
@@ -50,7 +50,7 @@ sources <- factor(sources, levels = sources)
 # point_size <- 1.5
 
 # 0.2. Draft paper and presentation format (large)
-# 8x6 is a good size for PNAS
+# 8x6 is a good size for two-column journal
 
 width <- 16
 height <- 12

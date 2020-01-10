@@ -16,7 +16,7 @@
 
 # 0. Plotting params ----
 
-# Choose size options depending on whether image is intended for small format (e.g. PNAS).
+# Choose size options depending on whether image is intended for small format.
 # medium (regular draft) or large (presentation)
 
 # 0.1. Journal plotting params (small)
@@ -103,7 +103,7 @@ ex_ctfr_sum <-
 
 df_l <- split(ex_ctfr_sum, ex_ctfr_sum$region)
 
-brk <- c(1, 50)
+brk <- c(1, 51)
 siz <- c(2,1)
 
 points <- data.frame(do.call(rbind, lapply(df_l, function(df) {
