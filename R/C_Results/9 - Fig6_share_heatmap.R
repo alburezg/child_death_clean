@@ -244,4 +244,4 @@ lex_share_died <-
 
 # lex_share_died
 
-ggsave(paste0("../../Output/Fig5_share_died.pdf"), lex_share_died, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig6_share_died.pdf"), lex_share_died, width = width, height = height, units = "cm")
