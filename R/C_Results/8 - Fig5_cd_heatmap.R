@@ -145,7 +145,7 @@ lex_cohort <-
   # Add labels for contour plot
   geom_text(
     aes(x = cohort, y = age, group = value, label = value)
-    , data = label_min_value(min_val, df, x = 1952.5, shift_y = 3)
+    , data = label_min_value(min_val, df, x = 1953, shift_y = 3)
     , size = label_size
     ) +
   # Add labels for e_x line
