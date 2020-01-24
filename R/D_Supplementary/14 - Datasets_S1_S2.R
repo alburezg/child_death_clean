@@ -335,6 +335,17 @@ out_regions <-
   ) %>% 
   arrange(region, cohort)
 
+# 5. Data from Fig S4 ~~~~~ ----
+
+generational_burden_countries <-
+  abs_df %>% 
+  group_by(cohort, country) %>% 
+  dplyr::summarise(
+    value = sum(absolute, na.rm = T)
+  ) %>% 
+  ungroup %>% 
+  select(country, cohort, value)
+
 
 # 7 . Export ----
 
@@ -370,6 +381,8 @@ datasetS2 <- bind_cols(
     rename(outlive_mother_expected = value)
   , out_countries %>% 
     select(outlive_mother_fraction = value)
+  , generational_burden_countries %>% 
+    select(generational_burden = value)
 ) %>% 
   mutate_if(is.numeric, round, round_by)
   

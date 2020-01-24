@@ -9,3 +9,5 @@ Data/derived/*.RDS
 presentation/
 #other materials, including full functions
 others/
+#experimental
+R/E_Experimental

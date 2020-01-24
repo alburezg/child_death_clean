@@ -142,60 +142,6 @@ expand_asfr_age <- function(l_5_5, grouped_ages, method = "linear", col = "value
   
 }
 
-# Deprecated on 20191009 in favour of 
-# expand_LT_age_by_mx_linear
-# Still works but overestimated child mortality by trying to fit
-# one single line between all points
-# expand_LT_age_by_mx <- function(l_5_5, grouped_ages, method = "linear") {
-#   
-#   all_ages <- min(grouped_ages):max(grouped_ages)
-#   
-#   names(l_5_5) <- paste0(names(l_5_5), ".")
-#   
-#   print("interpolating...")
-#   # Use a linear regression to interpolate the value
-#   estimates_list <- lapply(l_5_5, function(df) {
-#     
-#     if(method == "linear") {
-#       val <- approx(df$mx[order(df$age)], method = method, n = length(all_ages))$y
-#     } else if (method == "spline") {
-#       # Interpolate separaelty for 0-4, 5-10 and 10+
-#       
-#       # pos_old <- list(1:3, 4:length(grouped_ages))
-#       # pos_new <- list(1:6, 7:length(all_ages)) 
-#       # 
-#       # old_ages <- grouped_ages[pos_old[[1]]]
-#       # new_ages <- all_ages[pos_new[[1]]]
-#       # 
-#       # mx <- df$mx[pos_old[[1]]]
-#       # 
-#       # val <- predict(interpSpline(old_ages, mx), new_ages)$y      
-#       
-#       spline_mx <- interpSpline(grouped_ages, df$mx)
-#       val <- predict(spline_mx, all_ages)$y
-#     }
-#       
-#     # Return a df 
-#       data.frame(
-#         country = unique(df$country)
-#         , year = unique(df$year)
-#         , age = all_ages
-#         , mx = val
-#       )
-#     
-#   })
-#   
-#   # Save as data frame
-#   
-#   print("converting to data.table...")
-#   
-#   yearly_estimates <- rbindlist(estimates_list, use.names = T) %>% 
-#     dplyr::arrange(country, year, age)
-#   
-#   return(yearly_estimates)
-#   
-# }
-
 expand_LT_age_by_mx_linear <- function(l_5_5, grouped_ages) {
   
   all_ages <- min(grouped_ages):max(grouped_ages)
