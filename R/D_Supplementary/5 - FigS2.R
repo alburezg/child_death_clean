@@ -109,7 +109,7 @@ world2 <-
 
 f_lab <- data.frame(
   x = 1955
-  , y = c(4, 0.935)
+  , y = c(4, 0.942)
   , label = LETTERS[1:2]
   , source = sources[1:2]
 )

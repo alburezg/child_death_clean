@@ -114,7 +114,7 @@ coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = rep(90, 4)
-  , y = c(0.105, 2.25, 0.105, 2.25)
+  , y = c(0.1, 2.25, 0.1, 2.25)
   , label = c("A", "C", "B", "D")
   , source = rep(sources, 2)
   , cohort2 = sort(rep(coh, 2))

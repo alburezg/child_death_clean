@@ -233,7 +233,7 @@ world1 <-
 
 f_lab <- data.frame(
   x = rep(20, 4)
-  , y = c(2.5, 4, 0.0875, 7.7e6)
+  , y = c(2.3, 4, 0.08, 7.7e6)
   , label = c("A", "B", "C", "D")
   , source = sources[1:4]
 )
