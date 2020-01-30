@@ -89,7 +89,8 @@ min_y <- min(all_years)
 max_y <- max(all_years)
 year_range <- min_y:max_y
 
-grouped_ages <- seq(15, 45, 5)
+# grouped_ages <- seq(15, 45, 5)
+grouped_ages <- seq(15, 50, 5)
 age_groups_range <- 15:49
 
 countries <- unique(fert_df$country)
