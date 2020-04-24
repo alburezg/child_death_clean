@@ -202,15 +202,7 @@ p_cs_number_share <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  # SWE and ZWE lines
-  # geom_line(
-  #   aes(x = cohort, y = value, group = region)
-  #   , linetype = "longdash"
-  #   , colour = "black"
-  #   , show.legend = F
-  #   , data = tally_share_con
-  # ) +
-  
+
   scale_x_continuous(
     "Woman's birth cohort"
     , breaks = seq(lower_year, 2000, 10)
@@ -224,8 +216,6 @@ p_cs_number_share <-
   scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
   scale_shape_discrete(col_lab, br = regions_long, labels = regions_short) +
   scale_size_continuous("Population share") +
-  # coord_cartesian(ylim = c(0, NA)) +
-  # facet_grid(level ~ measure, scales = 'free_y') +
   facet_wrap(level ~ ., scales = 'free_y') +
   theme_bw(base_size = base_size) +
   theme(
@@ -240,7 +230,6 @@ p_cs_number_share <-
     # get rid of facet boxes
     , strip.background = element_blank()
     # Remove spacing between facets
-    # , panel.spacing.x=unit(0.07, "cm")
   )
 
 p_cs_number_share
