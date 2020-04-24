@@ -192,3 +192,29 @@ p_diff_abs
 ggsave(paste0("../../Output/fig3.pdf"), p_diff_abs, width = width, height = height, units = "cm")
 
 print("6 - Figure 2 saved to ../../Output")
+
+# 4. Burden of CD for young and old women ----
+
+# ie for tos in reproductive and retirement age
+
+rep_age <- 15:49
+ret_age <- 65:99
+
+sum_abs_temp %>% 
+  mutate(
+    agegr = "other"
+    , agegr = ifelse(age %in% rep_age, "reproductive", agegr)
+    , agegr = ifelse(age %in% ret_age, "retirement", agegr)
+  ) %>% 
+  # group_by(region, cohort, agegr) %>% 
+  group_by(cohort, agegr) %>% 
+  summarise(value = sum(value, na.rm = T)) %>% 
+  ungroup() %>% 
+  filter(cohort %in% c(1955, 2000)) %>% 
+  pivot_wider(names_from = agegr, values_from = value) %>% 
+  mutate(
+    share_rep = reproductive / (retirement + reproductive + other) * 100
+    , share_ret = retirement / (retirement + reproductive + other) * 100
+    , share_sum = share_rep + share_ret
+    )
+

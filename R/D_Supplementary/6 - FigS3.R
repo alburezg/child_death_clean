@@ -180,3 +180,13 @@ p_complete
 pdf("../../Output/figS3.pdf", width = 6.5, height = 5)
 p_complete
 dev.off()    
+
+# 3. Generational Burden for the whole world ----
+
+burden_world <- 
+  sum_burden %>% 
+  group_by(cohort) %>% 
+  summarise(
+    value = sum(value) / 1e6
+  ) %>% 
+  ungroup

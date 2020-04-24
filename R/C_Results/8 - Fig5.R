@@ -320,6 +320,27 @@ lex_share_surv <-
 
 ggsave(paste0("../../Output/fig5.pdf"), lex_share_surv, width = width, height = height, units = "cm")
 
+# 5. Share of offspring alive at retirement age ----
+
+# By region
+
+df %>% 
+  filter(age == 65) %>% 
+  filter(cohort %in% c(1955, 2000)) %>% 
+  mutate(value = (1 - value)*100) %>% 
+  select(region, cohort, value) %>% 
+  pivot_wider(names_from = cohort, values_from = value)
+
+# By country
+
+share_died  %>% 
+  filter(age == 60) %>% 
+  filter(cohort %in% c(1960, 2000)) %>% 
+  filter(country %in% c("zambia", "australia", "republic of korea", "bolivia (plurinational state of)", "argentina", "paraguay")) %>% 
+  mutate(value = (1 - value)*100) %>% 
+  select(country, cohort, value) %>% 
+  pivot_wider(names_from = cohort, values_from = value)
+
 # # Depdrecated 20200204
 # # Alternative for getting min_values for pecentile lines first for countries
 # # and then grouppin by regions, but it's buggy
