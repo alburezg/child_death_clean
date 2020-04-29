@@ -2,8 +2,6 @@
 # of a cohort's TFR expected to outlive their mothers, for
 # women entering retirement age (70) in 2020 - eg born in 1950.
 
-library2(c("maps", "countrycode", "viridis", "rworldmap"))
-
  # Data required: tally_share (created for fig 4)
 
 cohort_show <- 1950
