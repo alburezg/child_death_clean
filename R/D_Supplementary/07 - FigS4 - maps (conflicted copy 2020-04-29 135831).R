@@ -97,16 +97,15 @@ ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 # END
 print("All maps saved!")
 
-# 6. Share of child deaths after retirement ----
+# 6. Share of child deaths take place after retirement ----
 
-# 6.1. Get df of distributino of child deaths by woman's age
-
+scale_by <- 1e6
 rep_age <- 15:49
 ret_age <- 70:99
 
-share_of_deaths_in_retirement <- 
+
   abs_df %>% 
-  mutate(
+    mutate(
     agegr = "other"
     , agegr = ifelse(age %in% rep_age, "reproductive", agegr)
     , agegr = ifelse(age %in% ret_age, "retirement", agegr)
@@ -114,88 +113,13 @@ share_of_deaths_in_retirement <-
   select(country, agegr, cohort, value = absolute) %>%
   group_by(country, cohort, agegr) %>% 
   summarise(value = sum(value, na.rm = T)) %>% 
-  ungroup()   %>% 
-  # filter(cohort %in% c(cohort_show)) %>% 
+  ungroup() %>% 
+  filter(cohort %in% c(cohort_show)) %>% 
   pivot_wider(names_from = agegr, values_from = value) %>% 
   mutate(
-    share_rep = reproductive / (retirement + reproductive + other)
-    , share_ret = retirement / (retirement + reproductive + other)
+    , share_rep = reproductive / (retirement + reproductive + other) * 100
+    share_ret = retirement / (retirement + reproductive + other) * 100
     # , share_sum = share_rep + share_ret
     , share_more_in_rep = share_ret/share_rep
   ) %>% 
-  select(country, cohort, starts_with("share"))
-
-# Plot
-
-# Make sure that various cohorts share the same range of colours
-# in the legend colorbar
-bar_br <- seq(0, 0.8, 0.2)
-bar_lim <- c(0, 0.82)
-
-col <- "share_ret"
-bar_name <- paste0("Share of all child\ndeaths experienced after\nwoman's retirement")
-
-p1 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1950
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-p2 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1975
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-p3 <- map_share_child_deaths_in_age_range(
-  cohort_show = 2000
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-p_name <- paste0("../../Output/map-share-cd-in-retirement",".pdf")
-
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
-
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
-
-# 7. Share of child deaths in reproductive age --------
-
-# Make sure that various cohorts share the same range of colours
-# in the legend colorbar
-bar_br <- seq(0, 0.8, 0.2)
-bar_lim <- c(0, 0.9)
-
-col <- "share_rep"
-bar_name <- paste0("Share of all child\ndeaths experienced in\nreproductive age")
-
-p1 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1950
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-  )
-
-p2 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1975
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-p3 <- map_share_child_deaths_in_age_range(
-  cohort_show = 2000
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-
-p_name <- paste0("../../Output/map-share-cd-in-reproductive",".pdf")
-
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
-
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+  select(cohort, starts_with("share"))

@@ -907,7 +907,7 @@ LT_period_to_cohort <- function(df, years, ages, parallel = F, numCores = 4) {
 
 
 
-map_burden_cd <- function(cohort_show) {
+map_burden_cd <- function(cohort_show, ...) {
   
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
@@ -949,7 +949,7 @@ map_burden_cd <- function(cohort_show) {
   # Plot
   
   ggplot(data = w) +
-    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
     scale_fill_viridis(
       name = bar_name
       , option="viridis"
@@ -973,14 +973,22 @@ map_burden_cd <- function(cohort_show) {
 
 
 # For plotting measure for SA materials
-map_child_death <- function(cohort_show) {
+map_child_death <- function(cohort_show, shift_colors_by = 0.5, ...) {
+  
+  # Note that this shifts all values by 0.5
+  # to avoid very yellow colors that make
+  # the map hard to read
+  # There's a bug that the scale shows colour for negtive values,
+  # which are impossible. The colors in the map are fine, it's just
+  # the colourbar that is confusing.
   
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
-  bar_br <- seq(0, 3, 1)
-  bar_lim <- c(0, 3.5)
+  # bar_br <- seq(shift_colors_by, 3 + shift_colors_by, 1)
+  bar_br <- seq(shift_colors_by + 0.5, 3.5 + shift_colors_by, 1)
+  bar_lim <- c(0, 3.5 + shift_colors_by)
   
-  bar_name <- paste0("Number of children\nlost by retirement")
+  bar_name <- paste0("Number of children\nlost by a woman\naged 70 years")
   p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
   
   # Keep only people entering retirement age, defined as the 1955 cohort
@@ -995,6 +1003,8 @@ map_child_death <- function(cohort_show) {
     mutate(
       country = ifelse(country == "eswatini", "swaziland", country)
       , country = countrycode(country, "country.name", "iso3c")
+      # to fix color scale
+      , value = value + shift_colors_by
     ) %>% 
     select(country, value) 
   
@@ -1009,12 +1019,13 @@ map_child_death <- function(cohort_show) {
   # Plot
   
   ggplot(data = w) +
-    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
     scale_fill_viridis(
       name = bar_name
-      , option="magma"
-      , direction = -1
+      , option="viridis"
+      # , direction = -1
       , breaks = bar_br
+      , labels = function(br) br - shift_colors_by
       , limits = bar_lim
     ) +
     labs(
@@ -1033,7 +1044,7 @@ map_child_death <- function(cohort_show) {
 }
 
 # For plotting measure for SA materials
-map_child_survival <- function(cohort_show) {
+map_child_survival <- function(cohort_show, ...) {
   
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
@@ -1041,7 +1052,9 @@ map_child_survival <- function(cohort_show) {
   p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
   bar_lim <- c(0, 3.3)
   
-  bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
+  # bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
+  bar_name <- paste0("Number of children\nalive for a woman's\n70th birthday")
+  
   p_name <- paste0("../../Output/figS4-cs-",cohort_show,".pdf")
   
   # Keep only people entering retirement age, defined as the 1955 cohort
@@ -1070,7 +1083,7 @@ map_child_survival <- function(cohort_show) {
   # Plot
   
   ggplot(data = w) +
-    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
     scale_fill_viridis(
       name = bar_name
       , option="viridis"
@@ -1092,8 +1105,10 @@ map_child_survival <- function(cohort_show) {
   
 }
 
+
+
 # For plotting measure for SA materials
-map_share_outlived_mother <- function(cohort_show) {
+map_share_outlived_mother <- function(cohort_show, ...) {
   
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
@@ -1133,7 +1148,7 @@ map_share_outlived_mother <- function(cohort_show) {
   
   # p1 <- 
   ggplot(data = w) +
-    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
     scale_fill_viridis(
       name = bar_name
       , option="magma"
@@ -1156,6 +1171,65 @@ map_share_outlived_mother <- function(cohort_show) {
   
 }
 
+
+map_share_child_deaths_in_age_range <- function(cohort_show, col, bar_name, ...) {
+  
+  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  
+  # Keep only people entering retirement age, defined as the 1955 cohort
+  # currently, approaching age 65
+  
+  # Get value :
+  values <-
+    share_of_deaths_in_retirement %>%
+    filter(cohort == cohort_show) %>%
+    filter(country != 'channel islands') %>%
+    mutate(
+      country = ifelse(country == "eswatini", "swaziland", country)
+      , country = countrycode(country, "country.name", "iso3c")
+    ) %>%
+    select(country, value = dplyr::starts_with(col))
+  
+  # Join with map
+  w <- left_join(
+    world
+    , values
+    , by = "country"
+  ) %>%
+    filter(! ID %in% "Antarctica")
+  
+  # Plot
+  
+  # p1 <-
+  ggplot(data = w) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
+    scale_fill_viridis(
+      name = bar_name
+      , option="viridis"
+      , breaks = bar_br
+      , limits = bar_lim
+      , labels = function(br) paste0(round(br*100), "%")
+    ) +
+    labs(
+      title = ""
+    ) +
+    coord_sf(crs = "+proj=robin") +
+    ggtitle(p_title) +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.line = element_blank(), axis.text = element_blank()
+      , axis.ticks = element_blank(), axis.title = element_blank()
+      , plot.title = element_text(size = title_size, face="bold")
+    ) +
+    guides(fill = guide_colourbar(barwidth = 1))
+}
+
+# For plotting measure for SA materials
+map_share_survive_to_moms_retirement <- function(cohort_show, ...) {
+  
+  # EMPTY
+  
+}
 
 myfxHCLramp <- function(H,C=95,L,N=5){
   # H and L must be of equal length
