@@ -7,6 +7,8 @@
 
 # Data required: tally_share (created for fig 4)
 
+retirement_age <- 70
+
 # 0. Create world map ----
 # Can be reused for all maps
 
@@ -258,7 +260,7 @@ p_name <- paste0("../../Output/figS4-cd-",cohort_show,".pdf")
 
 # Get share outlived mother:
 values <-
-  cl_countries %>%
+  ecl_ctfr %>%
   filter(cohort == cohort_show) %>% 
   filter(country != 'channel islands') %>% 
   mutate(
@@ -310,7 +312,7 @@ p_name <- paste0("../../Output/figS4-cd-",cohort_show,".pdf")
 
 # Get share outlived mother:
 values <-
-  cl_countries %>%
+  ecl_ctfr %>%
   filter(cohort == cohort_show) %>% 
   filter(country != 'channel islands') %>% 
   mutate(
@@ -350,12 +352,12 @@ ggplot(data = w) +
 
 ggsave(p_name, height = 7, width = 16, units = "cm")
 
-# 4. Generational burden by country ----
+# 4. Generational burden by region ----
 
 # Make sure that various cohorts share the same range of colours
 # in the legend colorbar
-bar_br <- seq(0.5, 2.5, 0.5)
-bar_lim <- c(0, 3)
+bar_br <- seq(0, 30, 5)
+bar_lim <- c(0, 30)
 
 # 4.1. 1950 cohort====
 
@@ -370,11 +372,16 @@ p_name <- paste0("../../Output/figS4-burden-",cohort_show,".pdf")
 # Get share outlived mother:
 values <-
   abs_df %>%
+  # Get generations burden from age-specific burden
+  group_by(cohort, country) %>% 
+  mutate(value = cumsum(absolute)) %>% 
+  ungroup() %>% 
   filter(cohort == cohort_show) %>% 
+  filter(age == retirement_age) %>% 
   filter(country != 'channel islands') %>% 
   mutate(
-    value = absolute
-    , country = ifelse(country == "eswatini", "swaziland", country)
+    value = value / 1e6
+     , country = ifelse(country == "eswatini", "swaziland", country)
     , country = countrycode(country, "country.name", "iso3c")
   ) %>% 
   select(country, value) 
@@ -394,8 +401,8 @@ ggplot(data = w) +
   scale_fill_viridis(
     name = bar_name
     , option="viridis"
-    # , breaks = bar_br
-    # , limits = bar_lim
+    , breaks = bar_br
+    , limits = bar_lim
   ) +
   labs(
     title = ""
@@ -423,10 +430,15 @@ p_name <- paste0("../../Output/figS4-burden-",cohort_show,".pdf")
 # Get share outlived mother:
 values <-
   abs_df %>%
+  # Get generations burden from age-specific burden
+  group_by(cohort, country) %>% 
+  mutate(value = cumsum(absolute)) %>% 
+  ungroup() %>% 
   filter(cohort == cohort_show) %>% 
+  filter(age == retirement_age) %>% 
   filter(country != 'channel islands') %>% 
   mutate(
-    value = absolute / 1e6
+    value = value / 1e6
     , country = ifelse(country == "eswatini", "swaziland", country)
     , country = countrycode(country, "country.name", "iso3c")
   ) %>% 
@@ -447,8 +459,8 @@ ggplot(data = w) +
   scale_fill_viridis(
     name = bar_name
     , option="viridis"
-    # , breaks = bar_br
-    # , limits = bar_lim
+    , breaks = bar_br
+    , limits = bar_lim
   ) +
   labs(
     title = ""
