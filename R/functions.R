@@ -1046,9 +1046,9 @@ map_child_survival <- function(cohort_show, ...) {
   
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
-  bar_br <- seq(0, 3, 1)
+  bar_br <- seq(0, 6, 1)
   p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
-  bar_lim <- c(0, 3.5)
+  bar_lim <- c(0, 6.5)
   
   # bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
   bar_name <- paste0("Number of children\nalive for a woman\naged 70 years")
@@ -1060,7 +1060,7 @@ map_child_survival <- function(cohort_show, ...) {
   
   # Get share outlived mother:
   values <-
-    df_cl_m_full %>%
+    df_cs_m_full %>%
     filter(cohort == cohort_show) %>% 
     filter(age == retirement_age) %>% 
     filter(country != 'channel islands') %>% 
