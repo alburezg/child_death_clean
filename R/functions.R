@@ -906,6 +906,257 @@ LT_period_to_cohort <- function(df, years, ages, parallel = F, numCores = 4) {
 }
 
 
+
+map_burden_cd <- function(cohort_show) {
+  
+  # Make sure that various cohorts share the same range of colours
+  # in the legend colorbar
+  bar_br <- seq(0, 30, 5)
+  bar_lim <- c(0, 30)
+  
+  
+  bar_name <- paste0("Regional Burden\nof child death")
+  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  
+  # Keep only people entering retirement age, defined as the 1955 cohort
+  # currently, approaching age 65
+  
+  # Get share outlived mother:
+  values <-
+    abs_df %>%
+    # Get generations burden from age-specific burden
+    group_by(cohort, country) %>% 
+    mutate(value = cumsum(absolute)) %>% 
+    ungroup() %>% 
+    filter(cohort == cohort_show) %>% 
+    filter(age == retirement_age) %>% 
+    filter(country != 'channel islands') %>% 
+    mutate(
+      value = value / 1e6
+      , country = ifelse(country == "eswatini", "swaziland", country)
+      , country = countrycode(country, "country.name", "iso3c")
+    ) %>% 
+    select(country, value) 
+  
+  # Join with map
+  w <- left_join(
+    world
+    , values
+    , by = "country"
+  ) %>% 
+    filter(! ID %in% "Antarctica")
+  
+  # Plot
+  
+  ggplot(data = w) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    scale_fill_viridis(
+      name = bar_name
+      , option="viridis"
+      , breaks = bar_br
+      , limits = bar_lim
+    ) +
+    labs(
+      title = ""
+    ) +
+    coord_sf(crs = "+proj=robin") +
+    ggtitle(p_title) +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.line = element_blank(), axis.text = element_blank()
+      , axis.ticks = element_blank(), axis.title = element_blank()
+      , plot.title = element_text(size = title_size, face="bold")
+    ) +
+    guides(fill = guide_colourbar(barwidth = 1))
+  
+}
+
+
+# For plotting measure for SA materials
+map_child_death <- function(cohort_show) {
+  
+  # Make sure that various cohorts share the same range of colours
+  # in the legend colorbar
+  bar_br <- seq(0, 3, 1)
+  bar_lim <- c(0, 3.5)
+  
+  bar_name <- paste0("Number of children\nlost by retirement")
+  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  
+  # Keep only people entering retirement age, defined as the 1955 cohort
+  # currently, approaching age 65
+  
+  # Get share outlived mother:
+  values <-
+    df_cl_m_full %>%
+    filter(cohort == cohort_show) %>% 
+    filter(age == retirement_age) %>% 
+    filter(country != 'channel islands') %>% 
+    mutate(
+      country = ifelse(country == "eswatini", "swaziland", country)
+      , country = countrycode(country, "country.name", "iso3c")
+    ) %>% 
+    select(country, value) 
+  
+  # Join with map
+  w <- left_join(
+    world
+    , values
+    , by = "country"
+  ) %>% 
+    filter(! ID %in% "Antarctica")
+  
+  # Plot
+  
+  ggplot(data = w) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    scale_fill_viridis(
+      name = bar_name
+      , option="magma"
+      , direction = -1
+      , breaks = bar_br
+      , limits = bar_lim
+    ) +
+    labs(
+      title = ""
+    ) +
+    ggtitle(p_title) +
+    coord_sf(crs = "+proj=robin") +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.line = element_blank(), axis.text = element_blank()
+      , axis.ticks = element_blank(), axis.title = element_blank()
+      , plot.title = element_text(size = title_size, face="bold")
+    ) +
+    guides(fill = guide_colourbar(barwidth = 1))
+  
+}
+
+# For plotting measure for SA materials
+map_child_survival <- function(cohort_show) {
+  
+  # Make sure that various cohorts share the same range of colours
+  # in the legend colorbar
+  bar_br <- seq(0, 3, 1)
+  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  bar_lim <- c(0, 3.3)
+  
+  bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
+  p_name <- paste0("../../Output/figS4-cs-",cohort_show,".pdf")
+  
+  # Keep only people entering retirement age, defined as the 1955 cohort
+  # currently, approaching age 65
+  
+  # Get share outlived mother:
+  values <-
+    df_cl_m_full %>%
+    filter(cohort == cohort_show) %>% 
+    filter(age == retirement_age) %>% 
+    filter(country != 'channel islands') %>% 
+    mutate(
+      country = ifelse(country == "eswatini", "swaziland", country)
+      , country = countrycode(country, "country.name", "iso3c")
+    ) %>% 
+    select(country, value) 
+  
+  # Join with map
+  w <- left_join(
+    world
+    , values
+    , by = "country"
+  ) %>% 
+    filter(! ID %in% "Antarctica")
+  
+  # Plot
+  
+  ggplot(data = w) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    scale_fill_viridis(
+      name = bar_name
+      , option="viridis"
+      , breaks = bar_br
+      , limits = bar_lim
+    ) +
+    labs(
+      title = ""
+    ) +
+    coord_sf(crs = "+proj=robin") +
+    ggtitle(p_title) +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.line = element_blank(), axis.text = element_blank()
+      , axis.ticks = element_blank(), axis.title = element_blank()
+      , plot.title = element_text(size = title_size, face="bold")
+    ) +
+    guides(fill = guide_colourbar(barwidth = 1))
+  
+}
+
+# For plotting measure for SA materials
+map_share_outlived_mother <- function(cohort_show) {
+  
+  # Make sure that various cohorts share the same range of colours
+  # in the legend colorbar
+  bar_br <- seq(0.70, 1, 0.05)
+  bar_lim <- c(0.65, 1)
+  
+  # bar_name <- paste0("Offspring expected\nto outlive a woman\nretiring in ", cohort_show + 70)
+  bar_name <- paste0("Offspring expected\nto outlive a woman")
+  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  p_name <- paste0("../../Output/figS4-share-survive-",cohort_show,".pdf")
+  
+  
+  # Keep only people entering retirement age, defined as the 1955 cohort
+  # currently, approaching age 65
+  
+  # Get share outlived mother:
+  cl_share <-
+    ecl_ctfr %>%
+    filter(cohort == cohort_show) %>% 
+    filter(country != 'channel islands') %>% 
+    mutate(
+      share = 1 - value / tfr
+      , country = ifelse(country == "eswatini", "swaziland", country)
+      , country = countrycode(country, "country.name", "iso3c")
+    ) %>% 
+    select(country, value = share) 
+  
+  # Join with map
+  w <- left_join(
+    world
+    , cl_share
+    , by = "country"
+  ) %>% 
+    filter(! ID %in% "Antarctica")
+  
+  # Plot
+  
+  # p1 <- 
+  ggplot(data = w) +
+    geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
+    scale_fill_viridis(
+      name = bar_name
+      , option="magma"
+      , breaks = bar_br
+      , limits = bar_lim
+      , labels = function(br) paste0(round(br*100), "%")
+    ) +
+    labs(
+      title = ""
+    ) +
+    coord_sf(crs = "+proj=robin") +
+    ggtitle(p_title) +
+    theme_minimal(base_size = 6) +
+    theme(
+      axis.line = element_blank(), axis.text = element_blank()
+      , axis.ticks = element_blank(), axis.title = element_blank()
+      , plot.title = element_text(size = title_size, face="bold")
+    ) +
+    guides(fill = guide_colourbar(barwidth = 1))
+  
+}
+
+
 myfxHCLramp <- function(H,C=95,L,N=5){
   # H and L must be of equal length
   colsi <- c()
