@@ -1,5 +1,5 @@
 
-# Global burden of child death. Estimated as the sum of the
+# Generational burden of child death. Estimated as the sum of the
 # (non-cumulative) burden of child death over all ages. This
 # measure, considers the size and structure of different birth 
 # cohorts of women to determine the number of child deaths 
@@ -180,13 +180,3 @@ p_complete
 pdf("../../Output/figS3.pdf", width = 6.5, height = 5)
 p_complete
 dev.off()    
-
-# 3. Generational Burden for the whole world ----
-
-burden_world <- 
-  sum_burden %>% 
-  group_by(cohort) %>% 
-  summarise(
-    value = sum(value) / 1e6
-  ) %>% 
-  ungroup

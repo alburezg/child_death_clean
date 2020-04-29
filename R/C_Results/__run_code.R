@@ -28,13 +28,8 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if(!require("stringr")) {
-  install.packages("stringr")
-  library(stringr)
-} 
 
-files <- list.files(pattern = ".R$")[-1]
-( files <- str_sort(files, numeric = TRUE) )
+(files <- list.files(pattern = ".R$")[-1])
 
 # 1. Load the functions and packages needed in the scripts ====
 

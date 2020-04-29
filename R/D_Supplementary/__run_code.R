@@ -75,7 +75,7 @@ source(files[3])
 
 source(files[4])
 
-# 5.  FigS2 - Global burden of child death by region ====
+# 5.  FigS2 - Generational burden of child death by region ====
 
 # Global trends in the absolute and relative number of children 
 # expected to live longer than their mothers. 
