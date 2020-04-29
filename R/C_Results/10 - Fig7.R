@@ -1,5 +1,9 @@
 
-# Draws a heatmap
+# Heatmap:
+# Number of children currently alive as a share of children ever born. Solid lines
+# show the ages at which we would expect various percentiles of a woman’s progeny to still
+# be alive. Dotted lines mark the regional life expectancy in years for an average woman in
+# each cohort and region.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Data requirements: 

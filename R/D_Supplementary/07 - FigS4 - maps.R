@@ -1,6 +1,5 @@
-# World map showing country-level variation in the share
-# of a cohort's TFR expected to outlive their mothers, for
-# women entering retirement age (70) in 2020 - eg born in 1950.
+# World map: children outliving their mothesr
+# for a woman aged 70 in 2020
 
 library2(c("maps", "countrycode", "viridis", "rworldmap"))
 

@@ -43,7 +43,7 @@ source(files[2])
 
 source(files[3])
 
-# 4. Produce Fig. 1 ====
+# 4. Produce Fig. 1 Cohort fertility and female life expectancy ====
 
 # Cohort fertility and life expectancy for UN SDG regions (solid lines, median values) 
 # for the 1950-1999 annual birth cohorts (cohorts approximated using UN WPP period data). 
@@ -56,7 +56,7 @@ source(files[3])
 
 source(files[4])
 
-# 5. Produce Fig. 2 ====
+# 5. Fig. 2 Mean frequency of child death (top) and child survival (bottom) ====
 
 # Frequency of child death and child survival over the life course 
 # of two selected birth cohorts of women (by region and birth cohort).
@@ -75,7 +75,7 @@ source(files[4])
 
 source(files[5])
 
-# 6. Produce Fig. 3 ====
+# 6. Fig. 3 - Timing of child death over the life course ====
 
 # Timing of child death over the life course for two female birth cohorts.
 # (A and B) Number of child deaths experienced at each age $a$ by a woman reaching 
@@ -93,7 +93,25 @@ source(files[5])
 
 source(files[6])
 
-# 7. Produce Fig. 4 ====
+# 7. Fig. 4 Generational burden of child death by region ====
+
+# Global trends in the absolute and relative number of children 
+# expected to live longer than their mothers. 
+# (A) Number of children expected to outlive an average woman.
+# Values in the vertical axis show the number of children alive 
+# at the time of a woman's death if she survives to the life 
+# expectancy in her cohort and country of birth. 
+# (B) Children expected to outlive a woman as a fraction of her 
+# cohort's TFR. Higher values indicate that a larger fraction of 
+# a woman's offspring is expected to live longer than her, 
+# independently of the prevalent levels of fertility. 
+# The solid lines represent regional median values and the 
+# bands the variability among all countries in the world for 
+# each birth cohort.
+
+source(files[7])
+
+# 8. Fig. 5 Children outliving their mothers ====
 
 # Absolute and relative number of children expected to live 
 # longer than their mothers. (A) Number of children expected 
@@ -107,4 +125,23 @@ source(files[6])
 # of fertility. The solid lines represent regional median values 
 # and the bands the variability among countries in each region.
 
-source(files[7])
+source(files[8])
+
+# 9. Fig. 6 Map: Children outliving their mothers ====
+
+# World map showing country-level variation in the share
+# of a cohort's TFR expected to outlive their mothers, for
+# women entering retirement age (70) in 2020 - eg born in 1950.
+
+source(files[9])
+
+# 10. Fig. 7 Heatmap ====
+
+# Heatmap showing the proportion of a female cohort's TFR surviving
+# to each age in the 15-100 age range for women born between 1950 
+# and 2000. Colours show the share of surviving children by each 
+# maternal age and solid lines show the ages at which different 
+# percentiles of children are expecte to survive for the different
+# world regions.
+
+source(files[10])

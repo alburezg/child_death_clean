@@ -36,13 +36,8 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if(!require("stringr")) {
-  install.packages("stringr")
-  library(stringr)
-} 
 
-files <- list.files(pattern = ".R$")[-1]
-( files <- str_sort(files, numeric = TRUE) )
+(files <- list.files(pattern = ".R$")[-1])
 
 # 1. Load the functions and packages needed in the scripts ====
 
@@ -93,17 +88,9 @@ source(files[4])
 
 source(files[5])
 
-# 6.  Fig S3 - Children outliving their mothers - global estimates ====
+# 6. Fig S3 ====
 
-# Global burden of child death. Estimated as the sum of the
-# (non-cumulative) burden of child death over all ages. This
-# measure, considers the size and structure of different birth 
-# cohorts of women to determine the number of child deaths 
-# accumulated by all women in a given birth cohort and region 
-# throughout their lives. Lower values for subsequent cohorts 
-# of women in a region show than women born in younger cohorts 
-# can expect to experience fewer child deaths compared to preceding generations. 
-# Estimates for Oceania, Australia, and New Zealand shown in inset plot.
+# 
 
 source(files[6])
 
