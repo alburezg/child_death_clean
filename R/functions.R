@@ -1048,10 +1048,10 @@ map_child_survival <- function(cohort_show, ...) {
   # in the legend colorbar
   bar_br <- seq(0, 3, 1)
   p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
-  bar_lim <- c(0, 3.3)
+  bar_lim <- c(0, 3.5)
   
   # bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
-  bar_name <- paste0("Number of children\nalive for a woman's\n70th birthday")
+  bar_name <- paste0("Number of children\nalive for a woman\naged 70 years")
   
   p_name <- paste0("../../Output/figS4-cs-",cohort_show,".pdf")
   

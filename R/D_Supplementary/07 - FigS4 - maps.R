@@ -127,7 +127,8 @@ bar_br <- seq(0, 0.8, 0.2)
 bar_lim <- c(0, 0.82)
 
 col <- "share_ret"
-bar_name <- paste0("Share of all child\ndeaths experienced after\nwoman's retirement")
+# bar_name <- paste0("Share of all child\ndeaths experienced after\nwoman's retirement")
+bar_name <- paste0("Share of all child\ndeaths experienced after\nmaternal age 70")
 
 p1 <- map_share_child_deaths_in_age_range(
   cohort_show = 1950
@@ -158,7 +159,7 @@ p_name <- paste0("../../Output/map-share-cd-in-retirement",".pdf")
 patch <- p1 / p3  +   plot_layout(guides = "collect") 
 ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
-# 7!. Share of child deaths in reproductive age --------
+# 7!.Child deaths in reproductive age --------
 
 # Make sure that various cohorts share the same range of colours
 # in the legend colorbar
