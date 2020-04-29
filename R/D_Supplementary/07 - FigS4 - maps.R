@@ -27,56 +27,48 @@ world <- sf::st_as_sf(rworldmap::getMap(resolution = "low")) %>%
 # 1. Share children outlive mothers ----
 
 p1 <- map_share_outlived_mother(cohort_show = 1950, country_line_size)
-p2 <- map_share_outlived_mother(cohort_show = 1975, country_line_size)
+# p2 <- map_share_outlived_mother(cohort_show = 1975, country_line_size)
 p3 <- map_share_outlived_mother(cohort_show = 2000, country_line_size)
 
 p_name <- paste0("../../Output/map-share-outlive",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
-
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
-
-# 2. Share children survive to retirement ----
-
-# p1 <- map_share_survive_to_moms_retirement(cohort_show = 1950, country_line_size)
-# p2 <- map_share_survive_to_moms_retirement(cohort_show = 1975, country_line_size)
-# p3 <- map_share_survive_to_moms_retirement(cohort_show = 2000, country_line_size)
-# 
-# p_name <- paste0("../../Output/map-share-survive",".pdf")
-# 
 # patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
-# 
 # ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-# 3. Total children survive to mother's retirement ----
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")
+
+
+# 2. Total children survive to mother's retirement ----
 
 
 p1 <- map_child_survival(cohort_show = 1950)
-p2 <- map_child_survival(cohort_show = 1975)
+# p2 <- map_child_survival(cohort_show = 1975)
 p3 <- map_child_survival(cohort_show = 2000)
 
 p_name <- paste0("../../Output/map-cs",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
-# 4. Total children died at retirement ----
+# 4. Total children died  ----
 
-# Note that this shifts all values by 1
-# to avoid very yellow colors that make
-# the map hard to read
-shift_colors_by <- 0
+# before maternal age 70
 
-p1 <- map_child_death(cohort_show = 1950, shift_colors_by = shift_colors_by)
-p2 <- map_child_death(cohort_show = 1975, shift_colors_by = shift_colors_by)
-p3 <- map_child_death(cohort_show = 2000, shift_colors_by = shift_colors_by)
+p1 <- map_child_death(cohort_show = 1950)
+# p2 <- map_child_death(cohort_show = 1975)
+p3 <- map_child_death(cohort_show = 2000)
 
 p_name <- paste0("../../Output/map-cd",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
 # 5. Generational burden by region ----
 
@@ -85,19 +77,21 @@ ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 # countries sharing a region
 
 p1 <- map_burden_cd(cohort_show = 1950)
-p2 <- map_burden_cd(cohort_show = 1975)
+# p2 <- map_burden_cd(cohort_show = 1975)
 p3 <- map_burden_cd(cohort_show = 2000)
 
 p_name <- paste0("../../Output/map-burden",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect") 
+# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
 # END
 print("All maps saved!")
 
-# 6. Share of child deaths after retirement ----
+# 6. Child deaths after retirement ----
 
 # 6.1. Get df of distributino of child deaths by woman's age
 
@@ -142,12 +136,12 @@ p1 <- map_share_child_deaths_in_age_range(
   , bar_br, bar_lim
 )
 
-p2 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1975
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
+# p2 <- map_share_child_deaths_in_age_range(
+#   cohort_show = 1975
+#   , country_line_size = country_line_size
+#   , col = col, bar_name = bar_name
+#   , bar_br, bar_lim
+# )
 
 p3 <- map_share_child_deaths_in_age_range(
   cohort_show = 2000
@@ -158,11 +152,13 @@ p3 <- map_share_child_deaths_in_age_range(
 
 p_name <- paste0("../../Output/map-share-cd-in-retirement",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
+# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
+# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
-# 7. Share of child deaths in reproductive age --------
+# 7!. Share of child deaths in reproductive age --------
 
 # Make sure that various cohorts share the same range of colours
 # in the legend colorbar
@@ -179,12 +175,12 @@ p1 <- map_share_child_deaths_in_age_range(
   , bar_br, bar_lim
   )
 
-p2 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1975
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
+# p2 <- map_share_child_deaths_in_age_range(
+#   cohort_show = 1975
+#   , country_line_size = country_line_size
+#   , col = col, bar_name = bar_name
+#   , bar_br, bar_lim
+# )
 
 p3 <- map_share_child_deaths_in_age_range(
   cohort_show = 2000
@@ -196,6 +192,8 @@ p3 <- map_share_child_deaths_in_age_range(
 
 p_name <- paste0("../../Output/map-share-cd-in-reproductive",".pdf")
 
-patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
+# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
+# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
 
-ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+patch <- p1 / p3  +   plot_layout(guides = "collect") 
+ggsave(p_name, patch, height = 14, width = 16, units = "cm")

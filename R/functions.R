@@ -973,7 +973,7 @@ map_burden_cd <- function(cohort_show, ...) {
 
 
 # For plotting measure for SA materials
-map_child_death <- function(cohort_show, shift_colors_by = 0.5, ...) {
+map_child_death <- function(cohort_show, ...) {
   
   # Note that this shifts all values by 0.5
   # to avoid very yellow colors that make
@@ -985,8 +985,8 @@ map_child_death <- function(cohort_show, shift_colors_by = 0.5, ...) {
   # Make sure that various cohorts share the same range of colours
   # in the legend colorbar
   # bar_br <- seq(shift_colors_by, 3 + shift_colors_by, 1)
-  bar_br <- seq(shift_colors_by + 0.5, 3.5 + shift_colors_by, 1)
-  bar_lim <- c(0, 3.5 + shift_colors_by)
+  bar_br <- seq(0, 3, 1)
+  bar_lim <- c(0, 3.5)
   
   bar_name <- paste0("Number of children\nlost by a woman\naged 70 years")
   p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
@@ -1004,7 +1004,6 @@ map_child_death <- function(cohort_show, shift_colors_by = 0.5, ...) {
       country = ifelse(country == "eswatini", "swaziland", country)
       , country = countrycode(country, "country.name", "iso3c")
       # to fix color scale
-      , value = value + shift_colors_by
     ) %>% 
     select(country, value) 
   
@@ -1025,7 +1024,6 @@ map_child_death <- function(cohort_show, shift_colors_by = 0.5, ...) {
       , option="viridis"
       # , direction = -1
       , breaks = bar_br
-      , labels = function(br) br - shift_colors_by
       , limits = bar_lim
     ) +
     labs(
@@ -1151,7 +1149,8 @@ map_share_outlived_mother <- function(cohort_show, ...) {
     geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = country_line_size) +
     scale_fill_viridis(
       name = bar_name
-      , option="magma"
+      # , option="magma"
+      , option="viridis"
       , breaks = bar_br
       , limits = bar_lim
       , labels = function(br) paste0(round(br*100), "%")
@@ -1222,13 +1221,6 @@ map_share_child_deaths_in_age_range <- function(cohort_show, col, bar_name, ...)
       , plot.title = element_text(size = title_size, face="bold")
     ) +
     guides(fill = guide_colourbar(barwidth = 1))
-}
-
-# For plotting measure for SA materials
-map_share_survive_to_moms_retirement <- function(cohort_show, ...) {
-  
-  # EMPTY
-  
 }
 
 myfxHCLramp <- function(H,C=95,L,N=5){
