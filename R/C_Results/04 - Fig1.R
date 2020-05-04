@@ -182,7 +182,7 @@ p_ex_ctfr <-
   scale_y_continuous(
     "Cohort Total Fertility Rate"
   ) +
-  scale_color_discrete("", br = regions_long, labels = regions_short) +
+  scale_color_discrete("", br = regions_long, labels =  regions_short) +
   scale_shape_discrete("", br = regions_long, labels = regions_short) +
   # coord_cartesian(ylim = c(0, 6.5)) +
   theme_bw(base_size = base_size) +
