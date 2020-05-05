@@ -93,7 +93,7 @@ cl_cs <-
   ) %>% 
   mutate(
     cohort2 = paste0(cohort, " birth cohort")
-    )
+  )
 
 # ! 2. Plot with facets ----
 
@@ -110,6 +110,16 @@ f_lab <- data.frame(
   , source = rep(sources, 2)
   , cohort2 = sort(rep(coh, 2))
 )
+
+# For highlithgint reprodctive and retirement age
+
+# rect_df <- data.frame(
+#   xmin = c(15)
+#   , xmax = c(49)
+#   , ymin = c(0)
+#   , ymax = c(4)
+#   , fill = "zz"
+# )
 
 p_cl_cs_facet <-
   cl_cs %>% 
@@ -140,7 +150,31 @@ p_cl_cs_facet <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  # scale_x_continuous("Woman's age") +
+  # Show reproductive and retirenemt age ~~~~~~
+  geom_vline(xintercept = c(49, 70), linetype = "dashed", show.legend = F) +
+  geom_text(
+    aes(x = x, y = y, label = label)
+    , data = data.frame(
+      x = c(30, 85), y = 3.2
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = "died (cumulative)"
+      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+    )
+    , size = 3
+  ) +
+  # Add arrow over text
+  geom_segment(
+    aes(x = x, xend = xend, yend = yend, y = y)
+    , data = data.frame(
+      x = c(16, 75), xend = c(45, 95)
+      , y = 4, yend = 4
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = "died (cumulative)"
+      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+    )
+    , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
+  ) +
+  # SCALES
   scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
     ylab
@@ -172,8 +206,8 @@ p_cl_cs_facet <-
     # Remove spacing between facets
     # , panel.spacing.x=unit(0.07, "cm")
     # , panel.spacing.y=unit(0.07, "cm")
-    )
-  
+  )
+
 p_cl_cs_facet
 
 ggsave(paste0("../../Output/fig2.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")

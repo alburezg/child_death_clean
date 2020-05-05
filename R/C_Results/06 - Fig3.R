@@ -150,6 +150,30 @@ p_diff_abs <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
+  # Show reproductive and retirenemt age ~~~~~~
+  geom_vline(xintercept = c(49, 70), linetype = "dashed", show.legend = F) +
+  geom_text(
+    aes(x = x, y = y, label = label)
+    , data = data.frame(
+      x = c(30, 85), y = c(0.095, 1.3)
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = c("individual-level", "population-level")
+      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+    )
+    , size = 3
+  ) +
+  # Add arrow over text
+  geom_segment(
+    aes(x = x, xend = xend, yend = yend, y = y)
+    , data = data.frame(
+      x = c(16, 75), xend = c(45, 95)
+      , y = c(0.113, 1.7), yend = c(0.113, 1.7)
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = c("individual-level", "population-level")
+      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+    )
+    , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
+  ) +
   scale_x_continuous("Woman's age") +
   scale_y_continuous(
     # expression(Delta*"(child death)")
