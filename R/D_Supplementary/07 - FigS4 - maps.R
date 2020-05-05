@@ -98,6 +98,9 @@ print("All maps saved!")
 rep_age <- 15:49
 ret_age <- 70:99
 
+# rep_age <- 15:49
+# ret_age <- 65:99
+
 share_of_deaths_in_retirement <- 
   abs_df %>% 
   mutate(
@@ -132,6 +135,7 @@ bar_name <- paste0("Share of all child\ndeaths experienced after\nmaternal age 7
 
 p1 <- map_share_child_deaths_in_age_range(
   cohort_show = 1950
+  # cohort_show = 1975
   , country_line_size = country_line_size
   , col = col, bar_name = bar_name
   , bar_br, bar_lim
@@ -158,6 +162,9 @@ p_name <- paste0("../../Output/map-share-cd-in-retirement",".pdf")
 
 patch <- p1 / p3  +   plot_layout(guides = "collect") 
 ggsave(p_name, patch, height = 14, width = 16, units = "cm")
+
+# p1
+ggsave("../../Output/map-share-cd-in-retirement_75.pdf")
 
 # 7!.Child deaths in reproductive age --------
 
