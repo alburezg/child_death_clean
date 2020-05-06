@@ -134,6 +134,7 @@ sum_abs_temp %>%
 # 5. Share of offspring alive at retirement age ----
 
 # worldwide
+# gjks54
 
 df %>% 
   group_by(cohort, age) %>% 

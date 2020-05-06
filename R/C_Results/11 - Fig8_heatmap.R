@@ -19,9 +19,9 @@ height <- 25
 base_size <- 16
 label_size <- 5
 
-y_br <- c(20, 40, 60, 65, 80, 100)
-y_labs <- c(20, 40, 60, "retirement", 80, 100)
-y_labs_simple <- c(20, 40, 60, "", 80, 100)
+y_br <- c(20, 40, 50, 60, 65, 80, 100)
+y_labs <- c(20, 40, "menopause", 60, "retirement", 80, 100)
+y_labs_simple <- c(20, 40, "", 60, "", 80, 100)
 
 # 1. Estimate values ----
 
@@ -263,8 +263,8 @@ labels_df$age[cond] <- 40
 
 # Recode to make this about survival
 
-old <- paste0(c(5, 10, 20, 30,40), "%")
-new <- paste0(c(95, 90, 80, 70, 60), "%")
+old <- paste0(c(1, 5, 10, 20, 30,40), "%")
+new <- paste0(c(99, 95, 90, 80, 70, 60), "%")
 
 labels_df <- labels_df %>% 
   mutate(
@@ -337,7 +337,7 @@ lex_share_surv <-
   geom_vline(xintercept=seq(1950,2000,by=10), colour="#80808030") +
   geom_hline(yintercept=seq(20,100,by=10), colour="#80808030") +
   # Retirement age
-  geom_hline(yintercept = 65, linetype = "dashed") +
+  geom_hline(yintercept = c(50, 65), linetype = "dotted") +
   labs(x ="Cohort of women", y = "Woman's age") +
   scale_x_continuous(br = br, labels = labs) +
   scale_y_continuous(sec.axis = dup_axis(name = "", labels = y_labs_simple), breaks = y_br, labels = y_labs) +
@@ -365,7 +365,6 @@ lex_share_surv <-
 # lex_share_surv
 
 ggsave(paste0("../../Output/fig8_heatmap.pdf"), lex_share_surv, width = width, height = height, units = "cm")
-
 
 # # Depdrecated 20200204
 # # Alternative for getting min_values for pecentile lines first for countries
