@@ -19,6 +19,10 @@ height <- 25
 base_size <- 16
 label_size <- 5
 
+y_br <- c(20, 40, 60, 65, 80, 100)
+y_labs <- c(20, 40, 60, "retirement", 80, 100)
+y_labs_simple <- c(20, 40, 60, "", 80, 100)
+
 # 1. Estimate values ----
 
 # 1.1. Enumerator ====
@@ -133,7 +137,7 @@ lab_grad <- (1-brks)*100
 
 # For contour lines
 min_val <- c(0.05, seq(0.1,0.5,0.1))
-# min_val <- c(0.1, 0.25, 0.5, 0.75, 1, 2, 3)
+# min_val <- c(0.01, 0.05, seq(0.1,0.5,0.1))
 
 # 4.3 Get median ex per region/cohort ====
 # First, merge with df of reginos
@@ -253,6 +257,10 @@ labels_df$cohort[cond] <- 1961
 cond <- labels_df$region == "Sub-Saharan Africa" & labels_df$value == "20%"
 labels_df$cohort[cond] <- 1963
 
+cond <- labels_df$region == "Europe & N America" & labels_df$value == "1%"
+labels_df$cohort[cond] <- 1980
+labels_df$age[cond] <- 40
+
 # Recode to make this about survival
 
 old <- paste0(c(5, 10, 20, 30,40), "%")
@@ -276,27 +284,27 @@ old_regions <- unique(datapoly$region)
 new_regions <- paste(LETTERS[1:length(old_regions)], "-", old_regions)
 # new_regions[1] <- "bold(A) - Central & South Asia"
 
+facet_id <-
+  as_labeller(
+  c("Central & South Asia" = "A Central & South Asia"
+  , "East & SE Asia" = "B East & SE Asia"
+  , "Europe & N America" = "C Europe & N America"
+  , "LATAM & Caribbean" = "D LATAM & Caribbean"
+  , "North Africa & West Asia" = "E N Africa & West Asia"
+  , "Sub-Saharan Africa" = "F Sub-Saharan Africa"
+)
+)
+
 # facet_id <- 
 #   as_labeller(
-#   c("Central & South Asia" = "A Central & South Asia"
-#   , "East & SE Asia" = "B East & SE Asia"
-#   , "Europe & N America" = "C Europe & N America"
-#   , "LATAM & Caribbean" = "D LATAM & Caribbean"
-#   , "North Africa & West Asia" = "E N Africa & West Asia"
-#   , "Sub-Saharan Africa" = "F Sub-Saharan Africa"
-# )
-# )
-
-facet_id <- 
-  as_labeller(
-    c("C & S Asia" = "A Central & South Asia"
-      , "E & SE Asia" = "B East & SE Asia"
-      , "Europe & N America" = "C Europe & N America"
-      , "LATAM & Caribbean" = "D LATAM & Caribbean"
-      , "N Africa & W Asia" = "E N Africa & West Asia"
-      , "Sub-Sah Africa" = "F Sub-Saharan Africa"
-    )
-  )
+#     c("C & S Asia" = "A Central & South Asia"
+#       , "E & SE Asia" = "B East & SE Asia"
+#       , "Europe & N America" = "C Europe & N America"
+#       , "LATAM & Caribbean" = "D LATAM & Caribbean"
+#       , "N Africa & W Asia" = "E N Africa & West Asia"
+#       , "Sub-Sah Africa" = "F Sub-Saharan Africa"
+#     )
+#   )
 
 lex_share_surv <-
   datapoly %>% 
@@ -328,18 +336,15 @@ lex_share_surv <-
   # Grid 
   geom_vline(xintercept=seq(1950,2000,by=10), colour="#80808030") +
   geom_hline(yintercept=seq(20,100,by=10), colour="#80808030") +
+  # Retirement age
+  geom_hline(yintercept = 65, linetype = "dashed") +
   labs(x ="Cohort of women", y = "Woman's age") +
   scale_x_continuous(br = br, labels = labs) +
-  scale_y_continuous(sec.axis = dup_axis(name = "")) +
+  scale_y_continuous(sec.axis = dup_axis(name = "", labels = y_labs_simple), breaks = y_br, labels = y_labs) +
   scale_linetype("", breaks = "ex", labels = c("Life expectancy of women"), guide = F) +
-  # coord_cartesian(xlim = c(1950, 2000), ylim = c(15, 100), expand = FALSE) +
   coord_fixed(xlim = c(1950, 2000), ylim = c(15, 100), expand = FALSE) +
   facet_wrap( ~ region, labeller = facet_id) +
   theme_bw(base_size = base_size) +
-  # guides(
-  #   fill = guide_colourbar(order = 1)
-  #   , linetype = guide_legend(order = 2)
-  # ) +
   theme(
     legend.position = "bottom"
     , legend.text=element_text(size=(base_size-2))

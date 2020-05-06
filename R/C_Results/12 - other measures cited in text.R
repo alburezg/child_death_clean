@@ -81,13 +81,7 @@ format_UN_country_grouping <- function(un_regions){
     , "oceania (excluding australia and new zealand)"
   )
   
-  # print(paste("Objects saved in global envir: un_reg, regions_short, regions_long"))
-  
 }
-
-# OLD
-# two_cohorts <- c(1950, 2000)
-# retirement_age <- 70
 
 # New
 retirement_age <- 65
@@ -108,11 +102,7 @@ sum_cl %>%
   filter(age == retirement_age & cohort %in% two_cohorts) %>% 
   select(region, cohort, median)
 
-# 1. CHildren surviving to women reaching retirement age ----
 
-share_died_reg %>% 
-  filter(age == 65 & cohort == 2000) %>% 
-  mutate(value = 1 - median)
 
 # 2. Relative change in size of birth cohorts ----
 # rcode sf20j
@@ -140,8 +130,6 @@ sum_abs_temp %>%
   group_by(region) %>% 
   summarise(mean = mean(change)) %>% 
   arrange(mean)
-
-  
 
 # 5. Share of offspring alive at retirement age ----
 
@@ -184,7 +172,20 @@ share_died  %>%
   select(country, cohort, value) %>% 
   pivot_wider(names_from = cohort, values_from = value)
 
-# 3. Share of women surviving to retirement age ----
+
+# Difference between country with highest and lowest child death ----
+# rcode shd88
+
+share_died %>% 
+  filter(age == retirement_age) %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  mutate(value = (1 - value)*100) %>% 
+  group_by(cohort) %>% 
+  arrange(value) %>% 
+  slice(1, n()) %>% 
+  mutate(diff = value / lag(value)) %>% 
+  # slice(2) %>% 
+  ungroup()
 
 # 4. Generational Burden for the whole world ----
 
@@ -255,7 +256,75 @@ sum_burden %>%
   pivot_wider(names_from = region, values_from = value) %>% 
   mutate(share = ssa / (ssa + other) * 100)
 
+# Children outlive mothesr ----
 
+# Global decline in absolute number of children outliving mothers
+# rcode jd50k
+
+tally_share %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  filter(level == "Expected number of children") %>% 
+  filter(measure == "Child survival") %>% 
+  group_by(cohort) %>% 
+  summarise(value = mean(value)) %>% 
+  mutate(decline =  1 - (value / lag(value))) %>% 
+  ungroup() 
+
+# Regional decline in absolute number of children outliving mothers
+# rcode hds5l
+
+
+tally_share %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  filter(level == "Expected number of children") %>% 
+  filter(measure == "Child survival") %>% 
+  group_by(region) %>% 
+  arrange(region, cohort) %>% 
+  mutate(decline =  1 - (value / lag(value))) %>% 
+  ungroup() %>% 
+  select(region, cohort, value, decline)
+
+
+# Global decline as share of tfr
+# rcode k847z
+
+tally_share %>% 
+  filter(level == "Expected number as fraction of TFR") %>% 
+  filter(measure == "Child survival") %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  group_by(cohort) %>% 
+  summarise(value = mean(value) * 100) %>% 
+  mutate(change = value / lag(value)) %>% 
+  ungroup() 
+
+
+# Global decline as share of tfr
+# rcode sl27k
+
+tally_share %>% 
+  filter(level == "Expected number as fraction of TFR") %>% 
+  filter(measure == "Child survival") %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  group_by(region) %>% 
+  arrange(region, cohort) %>% 
+  mutate(change = value / lag(value)) %>% 
+  ungroup() %>% 
+  select(region, cohort, value, change)
+
+# Difference between country with highest and lowest child death ----
+# rcode fhd58
+
+ecl_ctfr %>% 
+  filter(type == "country") %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  select(-region) %>% 
+  mutate(share = 1 - (value / tfr)) %>% 
+  group_by(cohort) %>% 
+  arrange(share) %>% 
+  slice(1, n()) %>% 
+  mutate(diff = share / lag(share)) %>% 
+  # slice(2) %>% 
+  ungroup()
 
 # B. NEW DRAGGED FROM SUP folder ----
 
@@ -458,3 +527,12 @@ cl_reg %>%
     , share = reproductive / (reproductive + retirement)
   )  %>% 
   split(., .$cohort)
+
+
+# Other (unused?) ----
+
+# 1. Children surviving to women reaching retirement age 
+
+share_died_reg %>% 
+  filter(age == 65 & cohort == 2000) %>% 
+  mutate(value = 1 - median)
