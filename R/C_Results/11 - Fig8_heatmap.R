@@ -276,19 +276,27 @@ old_regions <- unique(datapoly$region)
 new_regions <- paste(LETTERS[1:length(old_regions)], "-", old_regions)
 # new_regions[1] <- "bold(A) - Central & South Asia"
 
-facet_id <- 
-  # label_parsed(
-  as_labeller(
-  # label_parsed(
-  c("Central & South Asia" = "A Central & South Asia"
-  , "East & SE Asia" = "B East & SE Asia"
-  , "Europe & N America" = "C Europe & N America"
-  , "LATAM & Caribbean" = "D LATAM & Caribbean"
-  , "North Africa & West Asia" = "E N Africa & West Asia"
-  , "Sub-Saharan Africa" = "F Sub-Saharan Africa"
-)
+# facet_id <- 
+#   as_labeller(
+#   c("Central & South Asia" = "A Central & South Asia"
+#   , "East & SE Asia" = "B East & SE Asia"
+#   , "Europe & N America" = "C Europe & N America"
+#   , "LATAM & Caribbean" = "D LATAM & Caribbean"
+#   , "North Africa & West Asia" = "E N Africa & West Asia"
+#   , "Sub-Saharan Africa" = "F Sub-Saharan Africa"
 # )
-)
+# )
+
+facet_id <- 
+  as_labeller(
+    c("C & S Asia" = "A Central & South Asia"
+      , "E & SE Asia" = "B East & SE Asia"
+      , "Europe & N America" = "C Europe & N America"
+      , "LATAM & Caribbean" = "D LATAM & Caribbean"
+      , "N Africa & W Asia" = "E N Africa & West Asia"
+      , "Sub-Sah Africa" = "F Sub-Saharan Africa"
+    )
+  )
 
 lex_share_surv <-
   datapoly %>% 
@@ -351,7 +359,7 @@ lex_share_surv <-
 
 # lex_share_surv
 
-ggsave(paste0("../../Output/fig7.pdf"), lex_share_surv, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig8_heatmap.pdf"), lex_share_surv, width = width, height = height, units = "cm")
 
 
 # # Depdrecated 20200204

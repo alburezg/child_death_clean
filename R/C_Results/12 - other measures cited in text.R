@@ -85,30 +85,53 @@ format_UN_country_grouping <- function(un_regions){
   
 }
 
+# OLD
+# two_cohorts <- c(1950, 2000)
+# retirement_age <- 70
 
-# 1. CHildren surviving to women reaching retirement age
+# New
+retirement_age <- 65
+two_cohorts <- c(2020 - retirement_age, 2000)
+
+# 1. child deaths at retirement WORLD ----
+# rcode ns621
+
+sum_cl %>% 
+  filter(age == retirement_age & cohort %in% two_cohorts) %>% 
+  group_by(cohort, age) %>% 
+  summarise(value = mean(median))
+
+# 2. child deats by region ----
+# rcode 7lsdk6
+
+sum_cl %>% 
+  filter(age == retirement_age & cohort %in% two_cohorts) %>% 
+  select(region, cohort, median)
+
+# 1. CHildren surviving to women reaching retirement age ----
 
 share_died_reg %>% 
   filter(age == 65 & cohort == 2000) %>% 
   mutate(value = 1 - median)
 
-# 2. Relative change in size of birth cohorts
+# 2. Relative change in size of birth cohorts ----
+# rcode sf20j
 
 # For whole world
 female_births %>%
-  filter(year %in% c(1950, 2000)) %>% 
+  filter(year %in% two_cohorts) %>% 
   find_regions(ignore_regions = F) %>% 
   group_by(cohort = year) %>% 
   summarise(value = sum(value)) %>% 
   ungroup %>% 
   pivot_wider(names_from = cohort, values_from = value) %>% 
-  mutate(x = `2000` / `1950` )
+  mutate(x = `2000` / `1955` )
 
 # 4. Reduction in burden of child death 1950 -2000 ----
 # rcode: 4fgr
 
 sum_abs_temp %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   na.omit() %>% 
   select(region, cohort, age, value) %>% 
   pivot_wider(names_from = cohort, values_from = value) %>% 
@@ -122,16 +145,30 @@ sum_abs_temp %>%
 
 # 5. Share of offspring alive at retirement age ----
 
-# By region
+# worldwide
 
 df %>% 
-  filter(age == 70) %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  group_by(cohort, age) %>% 
+  summarise(value = mean(value)) %>% 
+  ungroup() %>% 
+  filter(age == retirement_age) %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  mutate(value = (1 - value)*100) %>% 
+  select(cohort, value) %>% 
+  pivot_wider(names_from = cohort, values_from = value)
+
+# By region
+# rcode sdlk36
+
+df %>% 
+  filter(age == retirement_age) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   mutate(value = (1 - value)*100) %>% 
   select(region, cohort, value) %>% 
   pivot_wider(names_from = cohort, values_from = value)
 
 # By country
+# rcode l34du
 
 country_keep <- c(
   # "zambia", "australia", "republic of korea"
@@ -140,15 +177,14 @@ country_keep <- c(
 )
 
 share_died  %>% 
-  filter(age == 70) %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(age == retirement_age) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   filter(country %in% country_keep) %>% 
   mutate(value = (1 - value)*100) %>% 
   select(country, cohort, value) %>% 
   pivot_wider(names_from = cohort, values_from = value)
 
 # 3. Share of women surviving to retirement age ----
-
 
 # 4. Generational Burden for the whole world ----
 
@@ -159,9 +195,7 @@ sum_burden %>%
     value = sum(value) / 1e6
   ) %>% 
   ungroup %>% 
-  filter(cohort %in% c(1950, 2000))
-
-95.4/160
+  filter(cohort %in% two_cohorts)
 
 # 4. Burden of CD for young and old women ----
 # rcode jsd83
@@ -169,15 +203,17 @@ sum_burden %>%
 # Global generational burden 
 
 sum_burden %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   group_by(cohort) %>% 
-  summarise(value = sum(value) / 1e6 )
+  summarise(value = sum(value) / 1e6 ) %>% 
+  mutate(change = value / lag(value))
 
-# ie for tos in reproductive and retirement age
+# Times more likely to experience death in retirement than in reproductive life
+# Worldwide
 # % rcode 76ger
 
 rep_age <- 15:49
-ret_age <- 70:99
+ret_age <- retirement_age:99
 
 sum_abs_temp %>% 
   mutate(
@@ -189,21 +225,29 @@ sum_abs_temp %>%
   group_by(cohort, agegr) %>% 
   summarise(value = sum(value, na.rm = T)) %>% 
   ungroup() %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   pivot_wider(names_from = agegr, values_from = value) %>% 
   mutate(
     share_rep = reproductive / (retirement + reproductive + other) * 100
     , share_ret = retirement / (retirement + reproductive + other) * 100
     , share_sum = share_rep + share_ret
-    , share_more_in_rep = share_ret/share_rep
+    , share_more_in_retirement = share_ret/share_rep
   ) %>% 
   select(cohort, starts_with("share"))
+
+# Burden by region
+# rcode a3ka8
+
+sum_burden %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  mutate(value = value/1e6) %>% 
+  select(region, cohort, value)
 
 # Burden in africa ====
 # rcode as18r
 
 sum_burden %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   mutate(region = ifelse(region != "sub-saharan africa", "other", "ssa")) %>% 
   group_by(region, cohort) %>% 
   summarise(value = sum(value) / 1e6 ) %>% 
@@ -256,21 +300,23 @@ cl_world <-
   mutate(source = sources[1]) %>% 
   arrange(cohort, age)
 
-# Decline in frequency at all ages
+# Decline in frequency at all ages ----
+# rcode gjs63j
+
 cl_world %>% 
-  # filter(age == 70) %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
+  mutate(cohort = plyr::mapvalues(cohort, from = two_cohorts, to = c("low", "high"))) %>% 
   select(cohort, age, median) %>% 
   pivot_wider(names_from = cohort, values_from = median) %>% 
-  mutate(change = (`2000` - `1950`) / `1950` + 1) %>% 
+  mutate(change = (high - low) / low ) %>% 
   na.omit() %>% 
   pull(change) %>% 
   mean()
 
-# At age 70
+# At age retirement_age
 cl_world %>% 
-  filter(age == 70) %>%
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(age == retirement_age) %>%
+  filter(cohort %in% two_cohorts) %>% 
   select(cohort, age, median) %>% 
   pivot_wider(names_from = cohort, values_from = median) %>% 
   mutate(change = (`2000` - `1950`) / `1950` + 1)
@@ -288,7 +334,7 @@ cl_reg <-
 # Relative change
 
 cl_reg %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   select(region, cohort, age, median) %>% 
   pivot_wider(names_from = cohort, values_from = median) %>% 
   mutate(change = (`2000` - `1950`) / `1950` + 1) %>% 
@@ -300,16 +346,16 @@ cl_reg %>%
 # Absolute change at retirement
 
 cl_reg %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   select(region, cohort, age, median) %>% 
   pivot_wider(names_from = cohort, values_from = median) %>% 
   mutate(change = `2000` - `1950`) %>%
-  filter(age == 70)
+  filter(age == retirement_age)
 
 # Absolute change reproductive age
 
 cl_reg %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   select(region, cohort, age, median) %>% 
   pivot_wider(names_from = cohort, values_from = median) %>% 
   mutate(change = `2000` - `1950`) %>%
@@ -318,7 +364,7 @@ cl_reg %>%
 # Difference between region with highest and lowest child death
 
 cl_reg %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   group_by(cohort, age) %>% 
   arrange(median) %>% 
   slice(1, n()) %>% 
@@ -326,17 +372,17 @@ cl_reg %>%
   slice(2) %>% 
   ungroup() %>% 
   na.omit() %>% 
-  # filter(age <= 70) %>%
+  # filter(age <= retirement_age) %>%
   filter(age == 50) %>%
   group_by(cohort) %>% 
   summarise(diff = mean(diff))
 
-# Difference between country with highest and lowest child death
+# Difference between country with highest and lowest child death ----
+# rcode sldk65
 
 cl_countries %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
-  # filter(age == 50) %>%
-  filter(age == 70) %>%
+  filter(cohort %in% two_cohorts) %>% 
+  filter(age == retirement_age) %>%
   select(-age, -region) %>% 
   group_by(cohort) %>% 
   arrange(value) %>% 
@@ -348,26 +394,29 @@ cl_countries %>%
 # 2. First difference of chlid deaths ----
 
 # 2.1. Reduction in reproductive and retirement age
+# rcode ks324
+
+# WORLD 
 
 cl_world %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   filter(age == 49) %>% 
   select(cohort, `49` = median) %>% 
   left_join(
     cl_world %>% 
-      filter(cohort %in% c(1950, 2000)) %>% 
+      filter(cohort %in% two_cohorts) %>% 
       filter(age == 100) %>% 
       select(cohort, `100` = median)  
   ) %>% 
   left_join(
     cl_world %>% 
-      filter(cohort %in% c(1950, 2000)) %>% 
-      filter(age == 69) %>% 
-      select(cohort, `69` = median) 
+      filter(cohort %in% two_cohorts) %>% 
+      filter(age == retirement_age - 1) %>% 
+      select(cohort, retirement_low = median) 
   ) %>% 
   mutate(
     reproductive = `49`
-    , retirement = `100` - `69`
+    , retirement = `100` - retirement_low
   ) %>% 
   select(cohort, reproductive, retirement) %>% 
   # Distributino of deaths between age groups
@@ -378,28 +427,29 @@ cl_world %>%
 
 
 # By region
+# rcode l5763
 
 cl_reg %>% 
-  filter(cohort %in% c(1950, 2000)) %>% 
+  filter(cohort %in% two_cohorts) %>% 
   filter(age == 49) %>% 
   select(cohort, region, `49` = median) %>% 
   left_join(
     cl_reg %>% 
-      filter(cohort %in% c(1950, 2000)) %>% 
+      filter(cohort %in% two_cohorts) %>% 
       filter(age == 100) %>% 
       select(cohort, region, `100` = median)  
     , by = c("cohort", "region")
   ) %>% 
   left_join(
     cl_reg %>% 
-      filter(cohort %in% c(1950, 2000)) %>% 
-      filter(age == 69) %>% 
-      select(cohort, region, `69` = median) 
+      filter(cohort %in% two_cohorts) %>% 
+      filter(age == retirement_age - 1) %>% 
+      select(cohort, region, retirement_low = median) 
     , by = c("cohort", "region")
   ) %>% 
   mutate(
     reproductive = `49`
-    , retirement = `100` - `69`
+    , retirement = `100` - retirement_low
   ) %>% 
   select(cohort, region, reproductive, retirement) %>% 
   # Distributino of deaths between age groups

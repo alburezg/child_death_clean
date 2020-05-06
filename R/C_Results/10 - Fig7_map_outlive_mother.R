@@ -4,7 +4,7 @@
 
  # Data required: tally_share (created for fig 4)
 
-cohort_show <- 1950
+cohort_show <- 1955
 # cohort_show <- 2000
 
 # 1. Data management ----
@@ -54,7 +54,9 @@ ggplot(data = w) +
     # name = "Children expected\nto outlive their\nmother (proportion\nof TFR for women\nentering retirement)"
     # name = "Children expected\nto outlive an average\nmother (proportion\nof TFR for women\nentering retirement)"
     name = "Offspring expected\nto outlive a woman\nretiring in 2020"
-    , option="magma"
+    # , option="magma"
+    , option="viridis"
+    , direction = -1
     # , breaks = seq(0.65, 0.95, 0.05)
     , labels = function(br) paste0(round(br*100), "%")
     ) +
@@ -71,5 +73,5 @@ ggplot(data = w) +
     ) +
   guides(fill = guide_colourbar(barwidth = 1))
 
-ggsave("../../Output/fig6.pdf", height = 7, width = 16, units = "cm")
+ggsave("../../Output/fig7_map_outlive.pdf", height = 7, width = 16, units = "cm")
 

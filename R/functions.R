@@ -1173,8 +1173,6 @@ map_share_outlived_mother <- function(cohort_show, ...) {
 
 map_share_child_deaths_in_age_range <- function(cohort_show, col, bar_name, ...) {
   
-  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
-  
   # Keep only people entering retirement age, defined as the 1955 cohort
   # currently, approaching age 65
   
@@ -1207,6 +1205,7 @@ map_share_child_deaths_in_age_range <- function(cohort_show, col, bar_name, ...)
       , option="viridis"
       , breaks = bar_br
       , limits = bar_lim
+      , direction = viridis_direction
       , labels = function(br) paste0(round(br*100), "%")
     ) +
     labs(

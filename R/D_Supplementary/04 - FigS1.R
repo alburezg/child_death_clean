@@ -272,6 +272,28 @@ p_world1 <-
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   # Dummy point to fix axis
   geom_text(aes(x = x, y = y, label = label), data = dummy) +
+  # Show reproductive and retirenemt age ~~~~~~
+  geom_vline(xintercept = c(49, 65), linetype = "dashed", show.legend = F) +
+  geom_text(
+    aes(x = x, y = y, label = label)
+    , data = data.frame(
+      x = c(30, 85), y = c(1.6, 6e6)
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = c("Child Death (CD)", "Burden of child death")
+    )
+    , size = 3
+  ) +
+  # Add arrow over text
+  geom_segment(
+    aes(x = x, xend = xend, yend = yend, y = y)
+    , data = data.frame(
+      x = c(16, 75), xend = c(45, 95)
+      , y = c(1.9, 6.9e6), yend = c(1.9, 6.9e6)
+      , label = c("Reproductive\nage", "Retirement\nage")
+      , source = c("Child Death (CD)", "Burden of child death")
+    )
+    , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
+  ) +
   scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
     ""

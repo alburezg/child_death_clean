@@ -151,7 +151,7 @@ p_diff_abs <-
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   # Show reproductive and retirenemt age ~~~~~~
-  geom_vline(xintercept = c(49, 70), linetype = "dashed", show.legend = F) +
+  geom_vline(xintercept = c(49, 65), linetype = "dashed", show.legend = F) +
   geom_text(
     aes(x = x, y = y, label = label)
     , data = data.frame(
