@@ -4,8 +4,12 @@
 
  # Data required: tally_share (created for fig 4)
 
-cohort_show <- 1955
-# cohort_show <- 2000
+cohort_show <- 1970
+retirement_age <- 65
+menopause_age <- 50
+
+p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+# p_title <- paste0("Women born in ", cohort_show, " and experiencing menopause around ", cohort_show + menopause_age)
 
 # 1. Data management ----
 
@@ -53,7 +57,8 @@ ggplot(data = w) +
     # name = "Children expected\nto outlive their\nretiring mother (as\nproportion of TFR)"
     # name = "Children expected\nto outlive their\nmother (proportion\nof TFR for women\nentering retirement)"
     # name = "Children expected\nto outlive an average\nmother (proportion\nof TFR for women\nentering retirement)"
-    name = "Offspring expected\nto outlive a woman\nretiring in 2020"
+    # name = "Offspring expected\nto outlive a woman\nretiring in 2020"
+    name = "Offspring expected\nto outlive an average\nwoman"
     # , option="magma"
     , option="viridis"
     , direction = -1
@@ -61,7 +66,7 @@ ggplot(data = w) +
     , labels = function(br) paste0(round(br*100), "%")
     ) +
   labs(
-    title = ""
+    title = p_title
   ) +
   # coord_sf(datum = NA) +
   coord_sf(crs = "+proj=robin") +
@@ -74,4 +79,3 @@ ggplot(data = w) +
   guides(fill = guide_colourbar(barwidth = 1))
 
 ggsave("../../Output/fig6_map_outlive.pdf", height = 7, width = 16, units = "cm")
-

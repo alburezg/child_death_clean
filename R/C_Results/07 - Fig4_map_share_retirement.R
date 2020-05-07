@@ -71,8 +71,7 @@ p1 <- map_share_child_deaths_in_age_range(
   , bar_br, bar_lim, p_title, viridis_direction
 )
 
-cohort_show <- 1975
-# cohort_show <- 2000
+cohort_show <- 2000
 bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
 p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
 
@@ -87,7 +86,12 @@ p2 <- map_share_child_deaths_in_age_range(
 patch <- p1 / p2  +   plot_layout(guides = "collect") 
 
 p_name <- paste0("../../Output/fig4_map-share-cd-in-retirement",".pdf")
-ggsave(p_name, patch, height = 14, width = 16, units = "cm")
+# ggsave(p_name, patch, height = 14, width = 16, units = "cm")
+
+# SAve only 1 map!!
+ggsave(p_name, p1, height = 7, width = 16, units = "cm")
+
+
 
 # 7!.Child deaths in reproductive age --------
 

@@ -216,7 +216,7 @@ p_diff_abs <-
 
 p_diff_abs
 
-ggsave(paste0("../../Output/fig3_delta_cs.pdf"), p_diff_abs, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig3_delta_cd.pdf"), p_diff_abs, width = width, height = height, units = "cm")
 
 print("6 - Figure 3 saved to ../../Output")
 
