@@ -4,7 +4,7 @@
 
  # Data required: tally_share (created for fig 4)
 
-cohort_show <- 1970
+cohort_show <- 1955
 retirement_age <- 65
 menopause_age <- 50
 
@@ -65,9 +65,7 @@ ggplot(data = w) +
     # , breaks = seq(0.65, 0.95, 0.05)
     , labels = function(br) paste0(round(br*100), "%")
     ) +
-  labs(
-    title = p_title
-  ) +
+  ggtitle(p_title) +
   # coord_sf(datum = NA) +
   coord_sf(crs = "+proj=robin") +
   # coord_sf() +
