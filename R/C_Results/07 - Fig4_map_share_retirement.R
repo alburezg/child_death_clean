@@ -61,7 +61,7 @@ viridis_direction <- -1
 
 # WORKING
 cohort_show <- 1955
-bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
+bar_name <- paste0("Share of life-time\noffspring deaths\nexperienced after\nwoman's age 65")
 p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
 
 p1 <- map_share_child_deaths_in_age_range(
@@ -85,7 +85,7 @@ p2 <- map_share_child_deaths_in_age_range(
 
 patch <- p1 / p2  +   plot_layout(guides = "collect") 
 
-p_name <- paste0("../../Output/fig4_map-share-cd-in-retirement",".pdf")
+# p_name <- paste0("../../Output/fig4_map-share-cd-in-retirement",".pdf")
 # ggsave(p_name, patch, height = 14, width = 16, units = "cm")
 
 # SAve only 1 map!!
@@ -93,43 +93,43 @@ ggsave(p_name, p1, height = 7, width = 16, units = "cm")
 
 
 
-# 7!.Child deaths in reproductive age --------
+# DEPRECATED 7!.Child deaths in reproductive age --------
 
-# Make sure that various cohorts share the same range of colours
-# in the legend colorbar
-bar_br <- seq(0, 0.8, 0.2)
-bar_lim <- c(0, 0.9)
-
-col <- "share_rep"
-bar_name <- paste0("Share of all child\ndeaths experienced in\nreproductive age")
-
-p1 <- map_share_child_deaths_in_age_range(
-  cohort_show = 1950
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-  )
-
-# p2 <- map_share_child_deaths_in_age_range(
-#   cohort_show = 1975
+# # Make sure that various cohorts share the same range of colours
+# # in the legend colorbar
+# bar_br <- seq(0, 0.8, 0.2)
+# bar_lim <- c(0, 0.9)
+# 
+# col <- "share_rep"
+# bar_name <- paste0("Share of all child\ndeaths experienced in\nreproductive age")
+# 
+# p1 <- map_share_child_deaths_in_age_range(
+#   cohort_show = 1950
+#   , country_line_size = country_line_size
+#   , col = col, bar_name = bar_name
+#   , bar_br, bar_lim
+#   )
+# 
+# # p2 <- map_share_child_deaths_in_age_range(
+# #   cohort_show = 1975
+# #   , country_line_size = country_line_size
+# #   , col = col, bar_name = bar_name
+# #   , bar_br, bar_lim
+# # )
+# 
+# p3 <- map_share_child_deaths_in_age_range(
+#   cohort_show = 2000
 #   , country_line_size = country_line_size
 #   , col = col, bar_name = bar_name
 #   , bar_br, bar_lim
 # )
-
-p3 <- map_share_child_deaths_in_age_range(
-  cohort_show = 2000
-  , country_line_size = country_line_size
-  , col = col, bar_name = bar_name
-  , bar_br, bar_lim
-)
-
-
-p_name <- paste0("../../Output/map-share-cd-in-reproductive",".pdf")
-
-# patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
-# ggsave(p_name, patch, height = 21, width = 16, units = "cm")
-
-patch <- p1 / p3  +   plot_layout(guides = "collect") 
-ggsave(p_name, patch, height = 14, width = 16, units = "cm")
-
+# 
+# 
+# p_name <- paste0("../../Output/map-share-cd-in-reproductive",".pdf")
+# 
+# # patch <- p1 / p2 / p3  +   plot_layout(guides = "collect")
+# # ggsave(p_name, patch, height = 21, width = 16, units = "cm")
+# 
+# patch <- p1 / p3  +   plot_layout(guides = "collect") 
+# ggsave(p_name, patch, height = 14, width = 16, units = "cm")
+# 

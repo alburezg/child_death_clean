@@ -250,6 +250,8 @@ cohort_show <- 1975
 bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
 p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
 
+# country_line_size <- 5e-1
+country_line_size <- 5e-04
 
 p1 <- map_share_child_deaths_in_age_range(
   cohort_show = cohort_show
@@ -259,5 +261,13 @@ p1 <- map_share_child_deaths_in_age_range(
 )
 
 p_name <- paste0("../../Output/map-scientific_report",".pdf")
-
 ggsave(p_name, p1, height = 7, width = 16, units = "cm")
+
+# EPS
+
+ggsave("../../Output/map-scientific_report.eps", p1, height = 7, width = 16, units = "cm")
+ggsave("../../Output/map-scientific_report.svg", p1, height = 7, width = 16, units = "cm")
+
+# cairo_ps("../../Output/map-scientific_report.eps")
+# p1
+# dev.off()

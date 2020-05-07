@@ -216,6 +216,7 @@ sum_burden %>%
 # Times more likely to experience death in retirement than in reproductive life
 # Worldwide
 # % rcode 76ger
+# rcode alj27
 
 rep_age <- 15:49
 ret_age <- retirement_age:99
@@ -230,7 +231,7 @@ sum_abs_temp %>%
   group_by(cohort, agegr) %>% 
   summarise(value = sum(value, na.rm = T)) %>% 
   ungroup() %>% 
-  filter(cohort %in% two_cohorts) %>% 
+  # filter(cohort %in% two_cohorts) %>% 
   pivot_wider(names_from = agegr, values_from = value) %>% 
   mutate(
     share_rep = reproductive / (retirement + reproductive + other) * 100
@@ -238,7 +239,8 @@ sum_abs_temp %>%
     , share_sum = share_rep + share_ret
     , share_more_in_retirement = share_ret/share_rep
   ) %>% 
-  select(cohort, starts_with("share"))
+  select(cohort, starts_with("share")) %>% 
+  data.frame()
 
 # Burden by region
 # rcode a3ka8

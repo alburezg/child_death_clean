@@ -110,38 +110,10 @@ points <- data.frame(do.call(rbind, lapply(df_l, function(df) {
   d <- arrange(df, ex)[brk, ]
   d$size <- siz
   d
-  }) ), stringsAsFactors = F ) %>% 
+}) ), stringsAsFactors = F ) %>% 
   na.omit() %>% 
   mutate(region = factor(region, levels = regions_long))
 
-# 5.2. Chose individual countries ====
-
-# To display in plot
-
-con <- c(
-  'zimbabwe'
-  # , "sweden"
-         )
-
-country_lines <- 
-  ex_ctfr_con %>% 
-  filter(country %in% con) %>% 
-  arrange(country, cohort)
-
-lab_df <- data.frame(
-  text = c(
-    "Zimbabwe"
-    # , "Sweden"
-    )
-  , x = c(
-    49
-    #, 86
-    )
-  , y = c(
-    6.3 
-    #, 2.1
-    )
-)
 
 # 5. Plot ----
 
@@ -149,36 +121,30 @@ p_ex_ctfr <-
   ex_ctfr_sum %>% 
   mutate(region = factor(as.character(region), levels = regions_long)) %>% 
   ggplot() + 
+  # All countries
+  geom_path(
+    aes(x = ex, y = tfr, group = region, colour = region)
+    , show.legend = F
+    , size = 0.05
+    , alpha = 0.25
+    , data = ex_ctfr_con %>% 
+      filter(!region %in% regions_to_remove)
+  ) +
   # Region lines
   geom_line(
     aes(x = ex, y = tfr, colour = region, group = region)
     , show.legend = F
     , size = region_line_size
   ) +
-  # Selected countries
-  # geom_line(
-  #   aes(x = ex, y = tfr, group = country)
-  #   , linetype = 'dashed'
-  #   , colour = "black"
-  #   , data = country_lines
-  #   , show.legend = F
-  #   , size = country_line_size * 0.7
-  # ) +
-  # # COuntry names
-  # geom_text(
-  #   aes(x = x, y = y, label = text)
-  #   , size = text_size
-  #   , data = lab_df
-  #            ) +
   geom_point(
     aes(x = ex, y = tfr, colour = region, shape = region
-        )
+    )
     , size = point_size
     , data = points
   ) +
   scale_x_continuous(
     "Cohort life expectancy at birth (years)"
-    ) +
+  ) +
   scale_y_continuous(
     "Cohort Total Fertility Rate"
   ) +
@@ -194,8 +160,8 @@ p_ex_ctfr <-
     , legend.key.size = unit(0.1, "cm")
   )
 
-p_ex_ctfr
+# p_ex_ctfr
 
-ggsave(paste0("../../Output/fig1.pdf"), p_ex_ctfr, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig1_TFR_ex.pdf"), p_ex_ctfr, width = width, height = height, units = "cm")
 
 print("4 - Figure 1 saved to ../../Output")
