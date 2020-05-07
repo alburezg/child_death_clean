@@ -208,7 +208,10 @@ sum_burden %>%
   filter(cohort %in% two_cohorts) %>% 
   group_by(cohort) %>% 
   summarise(value = sum(value) / 1e6 ) %>% 
-  mutate(change = value / lag(value))
+  mutate(
+    change = value / lag(value)
+    , times_lower = 1 / change
+    )
 
 # Times more likely to experience death in retirement than in reproductive life
 # Worldwide
@@ -256,6 +259,19 @@ sum_burden %>%
   ungroup() %>% 
   pivot_wider(names_from = region, values_from = value) %>% 
   mutate(share = ssa / (ssa + other) * 100)
+
+# burdne in africa over the projection horizon
+# rcode fge53j
+
+sum_burden %>% 
+  filter(cohort %in% c(1950, 2000)) %>% 
+  mutate(region = ifelse(region != "sub-saharan africa", "other", "ssa")) %>% 
+  group_by(region, cohort) %>% 
+  summarise(value = sum(value) / 1e6 ) %>% 
+  ungroup() %>% 
+  pivot_wider(names_from = region, values_from = value) %>% 
+  mutate(share = ssa / (ssa + other) * 100)
+
 
 # Children outlive mothesr ----
 

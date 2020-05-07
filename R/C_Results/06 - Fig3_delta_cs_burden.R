@@ -25,7 +25,8 @@
 
 # 0. Plotting params ----
 
-lower_year <- 1950
+# lower_year <- 1950
+lower_year <- 1955
 upper_year <- 2000
 
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
@@ -158,7 +159,8 @@ p_diff_abs <-
       x = c(30, 85), y = c(0.095, 1.3)
       , label = c("Reproductive\nage", "Retirement\nage")
       , source = c("individual-level", "population-level")
-      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , size = 3
   ) +
@@ -170,7 +172,8 @@ p_diff_abs <-
       , y = c(0.113, 1.7), yend = c(0.113, 1.7)
       , label = c("Reproductive\nage", "Retirement\nage")
       , source = c("individual-level", "population-level")
-      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
   ) +
@@ -213,7 +216,7 @@ p_diff_abs <-
 
 p_diff_abs
 
-ggsave(paste0("../../Output/fig3.pdf"), p_diff_abs, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig3_delta_cs.pdf"), p_diff_abs, width = width, height = height, units = "cm")
 
 print("6 - Figure 3 saved to ../../Output")
 

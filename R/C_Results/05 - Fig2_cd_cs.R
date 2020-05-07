@@ -22,7 +22,8 @@
 
 # 0. Plotting params ----
 
-lower_year <- 1950
+# lower_year <- 1950
+lower_year <- 1955
 upper_year <- 2000
 
 point_br <- c(seq(lower_year, upper_year, 10) , upper_year)
@@ -103,13 +104,26 @@ cl_cs <-
 # Add facet Label
 coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
-f_lab <- data.frame(
-  x = rep(20, 4)
-  , y = rep(5.1, 4.2)
-  , label = c("A", "C", "B", "D")
-  , source = rep(sources, 2)
-  , cohort2 = sort(rep(coh, 2))
-)
+if(lower_year == 1950) {
+  f_lab <- data.frame(
+    x = rep(20, 4)
+    , y = rep(5.1, 4.2)
+    , label = c("A", "C", "B", "D")
+    , source = rep(sources, 2)
+    , cohort2 = sort(rep(coh, 2))
+  )  
+}
+
+if(lower_year == 1955) {
+  f_lab <- data.frame(
+    x = rep(20, 4)
+    , y = rep(4.8, 4)
+    , label = c("A", "C", "B", "D")
+    , source = rep(sources, 2)
+    , cohort2 = sort(rep(coh, 2))
+  )  
+}
+
 
 # For highlithgint reprodctive and retirement age
 
@@ -158,7 +172,8 @@ p_cl_cs_facet <-
       x = c(30, 85), y = 3.2
       , label = c("Reproductive\nage", "Retirement\nage")
       , source = "died (cumulative)"
-      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , size = 3
   ) +
@@ -170,7 +185,8 @@ p_cl_cs_facet <-
       , y = 4, yend = 4
       , label = c("Reproductive\nage", "Retirement\nage")
       , source = "died (cumulative)"
-      , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
   ) +
@@ -210,6 +226,6 @@ p_cl_cs_facet <-
 
 p_cl_cs_facet
 
-ggsave(paste0("../../Output/fig2.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig2_cd_cs.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")
 
 print("5 - Figure 2 saved to ../../Output")

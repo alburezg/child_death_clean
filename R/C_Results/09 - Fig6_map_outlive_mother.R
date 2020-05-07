@@ -73,5 +73,5 @@ ggplot(data = w) +
     ) +
   guides(fill = guide_colourbar(barwidth = 1))
 
-ggsave("../../Output/fig7_map_outlive.pdf", height = 7, width = 16, units = "cm")
+ggsave("../../Output/fig6_map_outlive.pdf", height = 7, width = 16, units = "cm")
 
