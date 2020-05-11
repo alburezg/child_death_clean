@@ -8,8 +8,11 @@ cohort_show <- 1955
 retirement_age <- 65
 menopause_age <- 50
 
-p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
-# p_title <- paste0("Women born in ", cohort_show, " and experiencing menopause around ", cohort_show + menopause_age)
+# p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+# p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+# p_title <- paste0("Percentage of children outliving an average woman born in ", cohort_show, " (i.e. retiring approximately in ", cohort_show + retirement_age, ")")
+
+p_title <- paste0("Percentage of children outliving an average woman born in ", cohort_show, " (i.e. aged 65 in 2020)")
 
 # 1. Data management ----
 
@@ -32,13 +35,10 @@ cl_share <-
 # 1.4. Plot ====
 
 # Create world map
-  # world <- sf::st_as_sf(map('world', plot = FALSE, fill = TRUE))
-  # world$country <- countrycode(world$ID, "country.name", "iso3c")
-  
+
   world <- sf::st_as_sf(rworldmap::getMap(resolution = "low")) %>% 
     select(ID = ADMIN, country = ADM0_A3, geometry) %>% 
     mutate(ID = as.character(ID), country = as.character(country))
-  # world$country <- countrycode(world$ID, "country.name", "iso3c")
 
 
 w <- left_join(
@@ -53,11 +53,6 @@ w <- left_join(
 ggplot(data = w) +
   geom_sf(aes(geometry = geometry, fill = value), colour = alpha("white", 1 / 2), size = 0.005) +
   scale_fill_viridis(
-    # name = "Proportion of\nchildren expected\nto outlive their\nretiring mother"
-    # name = "Children expected\nto outlive their\nretiring mother (as\nproportion of TFR)"
-    # name = "Children expected\nto outlive their\nmother (proportion\nof TFR for women\nentering retirement)"
-    # name = "Children expected\nto outlive an average\nmother (proportion\nof TFR for women\nentering retirement)"
-    # name = "Offspring expected\nto outlive a woman\nretiring in 2020"
     name = "Offspring expected\nto outlive an average\nwoman"
     # , option="magma"
     , option="viridis"
@@ -73,7 +68,14 @@ ggplot(data = w) +
   theme(
     axis.line = element_blank(), axis.text = element_blank()
     , axis.ticks = element_blank(), axis.title = element_blank()
+    , plot.title = element_text(size = 9, face="bold")
     ) +
   guides(fill = guide_colourbar(barwidth = 1))
 
 ggsave("../../Output/fig6_map_outlive.pdf", height = 7, width = 16, units = "cm")
+
+# Text to add as label
+
+cl_share %>% 
+  arrange(value) %>% 
+  slice(1, nrow(.))

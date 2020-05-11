@@ -988,8 +988,8 @@ map_child_death <- function(cohort_show, ...) {
   bar_br <- seq(0, 3, 1)
   bar_lim <- c(0, 3.5)
   
-  bar_name <- paste0("Number of children\nlost by a woman\naged 70 years")
-  p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
+  bar_name <- paste0("Number of children\nlost by a woman\naged ", retirement_age ," years")
+  # p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
   
   # Keep only people entering retirement age, defined as the 1955 cohort
   # currently, approaching age 65
@@ -1051,7 +1051,7 @@ map_child_survival <- function(cohort_show, ...) {
   bar_lim <- c(0, 6.5)
   
   # bar_name <- paste0("Number of children\nsurviving for a woman\nretiring this year")
-  bar_name <- paste0("Number of children\nalive for a woman\naged 70 years")
+  bar_name <- paste0("Number of children\nalive for a woman\naged", retirement_age ," years")
   
   p_name <- paste0("../../Output/figS4-cs-",cohort_show,".pdf")
   
