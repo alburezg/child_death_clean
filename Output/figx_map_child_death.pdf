@@ -2,9 +2,9 @@
 %âãÏÓ
 1 0 obj
 <<
-/CreationDate (D:20200511185842)
+/CreationDate (D:20200512063401)
 /Creator (R)
-/ModDate (D:20200511190548+02'00')
+/ModDate (D:20200512063502+02'00')
 /Producer (R 3.6.0)
 /Title (R Graphics Output)
 >>
@@ -31,9 +31,9 @@ stream
 				xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
 				xmlns:dc="http://purl.org/dc/elements/1.1/"
 				xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
-			<xmp:CreateDate>2020-05-11T18:58:42+02:00</xmp:CreateDate>
+			<xmp:CreateDate>2020-05-12T06:34:01+02:00</xmp:CreateDate>
 			<xmp:CreatorTool>R</xmp:CreatorTool>
-			<xmp:ModifyDate>2020-05-11T19:05:48+02:00</xmp:ModifyDate>
+			<xmp:ModifyDate>2020-05-12T06:35:02+02:00</xmp:ModifyDate>
 			<pdf:Producer>R 3.6.0</pdf:Producer>
 			<dc:title>
 				<rdf:Alt>
@@ -41,8 +41,8 @@ stream
 				</rdf:Alt>
 			</dc:title>
 			<dc:format>application/pdf</dc:format>
-			<xmpMM:DocumentID>uuid:780e099e-0535-4522-b8d1-2ffde94b44fe</xmpMM:DocumentID>
-			<xmpMM:InstanceID>uuid:a22c4ca7-a45d-4ca7-aabd-d938d9fc5b40</xmpMM:InstanceID>
+			<xmpMM:DocumentID>uuid:7d5b27e6-94d4-447a-b997-67446bc94a1e</xmpMM:DocumentID>
+			<xmpMM:InstanceID>uuid:7d543e09-ef5c-49e8-b3f3-d1b58536c114</xmpMM:InstanceID>
 		</rdf:Description>
 	</rdf:RDF>
 </x:xmpmeta>
@@ -162,17 +162,16 @@ endobj
 /AP <<
 /N 17 0 R
 >>
-/Contents (A Canadian woman currently aged 65 has lost, on average, 0.06 children in her life-time)
+/Contents (A Canadian woman currently aged 65 has lost, on average, 0.06 children in her entire life)
 /CreationDate (D:20200511174838+02'00')
 /DA (1 1 1 rg /F1 12 Tf)
 /DS (font-family:Arial;font-size:12pt;color:#000000;)
 /F 4
 /IT /FreeText
-/M (D:20200511190451+02'00')
+/M (D:20200512063502+02'00')
 /NM (9953deb6-4adf-4325-bbced838ed34257d)
 /P 5 0 R
-/Page 0
-/RC (<?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.5" xfa:spec="2.0.2" style="text-align:left;line-height:normal;font-family:Arial;font-size:6pt;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;text-valign:top;"><p><span>A&#32;</span><span>Canadian</span><span>&#32;</span><span>woman</span><span>&#32;</span><span>currently</span><span>&#32;</span><span>aged</span><span>&#32;65&#32;</span><span>has</span><span>&#32;</span><span>lost</span><span>,&#32;</span><span>on</span><span>&#32;</span><span>average</span><span>,&#32;</span><span>0.06</span><span>&#32;</span><span>children</span><span>&#32;</span><span>in</span><span>&#32;</span><span>her</span><span>&#32;</span><span>life</span><span>-</span><span>time</span></p></body>)
+/RC (<?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:10.1.5" xfa:spec="2.0.2" style="text-align:left;line-height:normal;font-family:Arial;font-size:6pt;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;text-valign:top;"><p><span>A&#32;</span><span>Canadian</span><span>&#32;</span><span>woman</span><span>&#32;</span><span>currently</span><span>&#32;</span><span>aged</span><span>&#32;65&#32;</span><span>has</span><span>&#32;</span><span>lost</span><span>,&#32;</span><span>on</span><span>&#32;</span><span>average</span><span>,&#32;0.06&#32;</span><span>children</span><span>&#32;</span><span>in</span><span>&#32;</span><span>her</span><span>&#32;</span><span>entire</span><span>&#32;</span><span>life</span></p></body>)
 /RD [2 2 2 2]
 /Rect [36.075005 53.586742 99.832253 100.380905]
 /Subj (Text Box)
@@ -197,7 +196,6 @@ endobj
 /M (D:20200511190547+02'00')
 /NM (82f4a130-cbeb-416e-85556db8250807d1)
 /P 5 0 R
-/Page 0
 /Rect [63.650002 140.506256 95.235512 142.626495]
 /Subj (Line)
 /Subtype /Line
@@ -1593,20 +1591,20 @@ endobj
 <<
 /BBox [36.075005 53.586742 99.832253 100.380905]
 /Filter /FlateDecode
-/Length 285
+/Length 279
 /Matrix [1 0 0 1 -36.075005 -53.586742]
 /Resources <<
 /Font <<
-/F0 27 0 R
+/F0 28 0 R
 >>
 >>
 /Subtype /Form
 /Type /XObject
 >>
 stream
-xÚe‘KO…0…÷ı³ÔDÆ–¾—jÔ½’¸n€{Áp!á¢D½ÓÄ4éãë™3§© Aãí•¦™I‡ÜjĞµ³ =ZmAåh½‚±†÷(ĞQ`G[b|@ÏÆáŠ2N3NËoÜ÷/'>ùxJsEÅnn‹O¦ÑØ¨¤óSèCÕ†>âÜ¢Tn½˜‡ËB3)‘™ÁÅ¢üÇºŸºŸT£È+_kÂ¹®"’ŒÔ
-ÁèÅ†^-ÌnÓ„kÒ
-Ò®Òn¸N‘y”Ò¬ì.y CJåöªğ]Ô9¥”Æ+3­Ë½+GnşE,›¶«èMÉ"'‹í¢MÈº7õ˜lé»¤V»o×R‹Æl²Ô½ßÀÔ^’è¹`u²zL
+xÚe‘MO„0†ïısÔDf[ú}T£Şµ‰gì‚AHº«D½ÓÂCRàé;ÏLA€ ëõ…–™I‡ÜjĞµ³ =ZmA•h½‚ØÂ[
+è0ÈSÀ-q¼ÃÈãp¡NË‚Óí7=ÇÃ3áÒg¨4÷vs>˜FcS’Ş«±jújL¸´(•[7æés¡…”È…ƒÂà¢¨¿blÇËğ“k¹Êµ¦:µM‚B’H­Œ^4tja6MWsVPvÓù’˜G)ÍÊî;0å©ÜVU}·‘:çiMãö•…VÈåÖ•#7ÿF¬»~hèLYQ’âºÑgdvİ»6f-ı.©Õæ¥ÒÇ<ƒ0;ÁĞ3|
+ìòUwĞ
 endstream
 endobj
 18 0 obj
@@ -1640,7 +1638,7 @@ xÚ3P0 Â w=S…r.3=KKK=c…\0ÛĞÄPÏ\!G!˜ §R
 endstream
 endobj
 20 0 obj
-[/ICCBased 28 0 R]
+[/ICCBased 29 0 R]
 endobj
 21 0 obj
 <<
@@ -1663,7 +1661,7 @@ endobj
 24 0 obj
 <<
 /BaseFont /Helvetica
-/Encoding 29 0 R
+/Encoding 30 0 R
 /Name /F2
 /Subtype /Type1
 /Type /Font
@@ -1672,7 +1670,7 @@ endobj
 25 0 obj
 <<
 /BaseFont /Helvetica-Bold
-/Encoding 29 0 R
+/Encoding 30 0 R
 /Name /F3
 /Subtype /Type1
 /Type /Font
@@ -1701,7 +1699,7 @@ endobj
 /BaseFont /Arial
 /Encoding /WinAnsiEncoding
 /FirstChar 32
-/FontDescriptor 30 0 R
+/FontDescriptor 31 0 R
 /LastChar 122
 /Subtype /TrueType
 /Type /Font
@@ -1714,6 +1712,23 @@ endobj
 >>
 endobj
 28 0 obj
+<<
+/BaseFont /Arial
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/FontDescriptor 32 0 R
+/LastChar 121
+/Subtype /TrueType
+/Type /Font
+/Widths [278 0 0 0 0 0 0 0 0 0 0 0 278 0 278 0
+556 0 0 0 0 556 556 0 0 0 0 0 0 0 0 0
+0 667 0 722 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 556 0 500 556 556 278 556 556 222 0 0 222 833 556 556
+0 0 333 500 278 556 500 722 0 500]
+>>
+endobj
+29 0 obj
 <<
 /Alternate /DeviceRGB
 /Filter /FlateDecode
@@ -1731,14 +1746,29 @@ cmfwB;y9­v:æôÖÙÁYì|Øù¦KšK‹Ë£yÆóøóç¹ê¹r\ë]¥n·D·½nRw]w{ƒû}G“Ç„§©gªçAÏg^
 5eCÙ‹²»Å4ÙÏÔ€ÄD²^2šã–S“ó&7:÷Hr0o`¹ÙòMË'ò}ó¿^ZÁ]Ñ[ [°¶`t¥çÊúUĞª¥«zWë¯.Z=¾ÆoÍµ„µik(´.,/|¹.f]O‘VÑš¢±õ~ë[‹ŠEÅ76¸l¨ÛˆÚ(Ø8¸iî¦ªMKx%K­K+Jßoæn¾ø•ÍW•_}Ú’´e°Ì¡lÏVÌVáÖëÛÜ·(W.Ï/Û²½scGÉ—;—ì¼PaWQ·‹°K²KZ\Ù]ePµµê}uJõHWM{­fí¦Ú×»y»¯ìñØÓV§UWZ÷n¯`ïÍz¿úÎ£†Š}˜}9û6F7öÍúº¹I£©´éÃ~á~éˆ}ÍÍÍ-š-e­p«¤uò`ÂÁËßxÓİÆl«o§·—‡$‡›øíõÃA‡{°´}gø]mµ£¤ê\Ş9Õ•Ò%íë>x´·Ç¥§ã{Ëï÷Ó=Vs\åxÙ	Â‰¢ŸNæŸœ>•uêééäÓc½Kzïœ‰=s­/¼oğlĞÙóç|Ïé÷ì?yŞõü±Î^d]ìºäp©sÀ~ ãû:;‡‡º/;]î7|âŠû•ÓW½¯»píÒÈü‘áëQ×oŞH¸!½É»ùèVú­ç·snÏÜYs}·äÒ½Šûš÷~4ı±]ê =>ê=:ğ`Áƒ;cÜ±'?eÿô~¼è!ùaÅ„ÎDó#ÛGÇ&}'/?^øxüIÖ“™§Å?+ÿ\ûÌäÙw¿xü20;5ş\ôüÓ¯›_¨¿ØÿÒîeïtØôıW¯f^—¼Qsà-ëmÿ»˜w3¹ï±ï+?˜~èùôñî§ŒOŸ~÷„óû
 endstream
 endobj
-29 0 obj
+30 0 obj
 <<
 /BaseEncoding /WinAnsiEncoding
 /Differences [45 /minus]
 /Type /Encoding
 >>
 endobj
-30 0 obj
+31 0 obj
+<<
+/Ascent 905
+/CapHeight 716
+/Descent -212
+/Flags 32
+/FontBBox [-665 -325 2000 1006]
+/FontFamily (Arial)
+/FontName /Arial
+/FontWeight 400
+/ItalicAngle 0
+/StemV 0
+/Type /FontDescriptor
+>>
+endobj
+32 0 obj
 <<
 /Ascent 905
 /CapHeight 716
@@ -1754,7 +1784,7 @@ endobj
 >>
 endobj
 xref
-0 31
+0 33
 0000000000 65535 f
 0000000015 00000 n
 0000000164 00000 n
@@ -1765,33 +1795,35 @@ xref
 0000004898 00000 n
 0000005268 00000 n
 0000005636 00000 n
-0000006994 00000 n
-0000007369 00000 n
-0000007734 00000 n
-0000437391 00000 n
-0000437590 00000 n
-0000438110 00000 n
-0000438374 00000 n
-0000438624 00000 n
-0000439141 00000 n
-0000439403 00000 n
-0000439655 00000 n
-0000439690 00000 n
-0000439739 00000 n
-0000439786 00000 n
-0000439833 00000 n
-0000439931 00000 n
-0000440034 00000 n
-0000441071 00000 n
-0000441489 00000 n
-0000444186 00000 n
-0000444280 00000 n
+0000006968 00000 n
+0000007335 00000 n
+0000007700 00000 n
+0000437357 00000 n
+0000437556 00000 n
+0000438076 00000 n
+0000438340 00000 n
+0000438590 00000 n
+0000439101 00000 n
+0000439363 00000 n
+0000439615 00000 n
+0000439650 00000 n
+0000439699 00000 n
+0000439746 00000 n
+0000439793 00000 n
+0000439891 00000 n
+0000439994 00000 n
+0000441031 00000 n
+0000441449 00000 n
+0000441841 00000 n
+0000444538 00000 n
+0000444632 00000 n
+0000444836 00000 n
 trailer
 <<
 /Info 1 0 R
 /Root 2 0 R
-/Size 31
+/Size 33
 >>
 startxref
-444484
+445040
 %%EOF
