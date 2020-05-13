@@ -177,7 +177,7 @@ share_died  %>%
 # Difference between country with highest and lowest child death ----
 # rcode shd88
 
-share_died %>% 
+x <- share_died %>% 
   filter(age == retirement_age) %>% 
   filter(cohort %in% two_cohorts) %>% 
   mutate(value = (1 - value)*100) %>% 
@@ -187,6 +187,12 @@ share_died %>%
   mutate(diff = value / lag(value)) %>% 
   # slice(2) %>% 
   ungroup()
+
+x
+
+# Decline in difference between the two birth cohort
+(1 - x$diff[4] / x$diff[2]) * 100
+
 
 # 4. Generational Burden for the whole world ----
 
@@ -333,7 +339,7 @@ tally_share %>%
 # Difference between country with highest and lowest child death ----
 # rcode fhd58
 
-ecl_ctfr %>% 
+x <- ecl_ctfr %>% 
   filter(type == "country") %>% 
   filter(cohort %in% two_cohorts) %>% 
   select(-region) %>% 
@@ -344,6 +350,11 @@ ecl_ctfr %>%
   mutate(diff = share / lag(share)) %>% 
   # slice(2) %>% 
   ungroup()
+
+x
+
+# Decline in difference between the two birth cohort
+(1 - x$diff[4] / x$diff[2]) * 100
 
 # B. NEW DRAGGED FROM SUP folder ----
 
@@ -468,7 +479,7 @@ cl_reg %>%
 # Difference between country with highest and lowest child death ----
 # rcode sldk65
 
-cl_countries %>% 
+x <- cl_countries %>% 
   filter(cohort %in% two_cohorts) %>% 
   filter(age == retirement_age) %>%
   select(-age, -region) %>% 
@@ -478,6 +489,11 @@ cl_countries %>%
   mutate(diff = value / lag(value)) %>% 
   # slice(2) %>% 
   ungroup()
+
+x
+
+# Decline in difference between the two birth cohort
+(x$diff[4] / x$diff[2]) * 100
 
 # 2. First difference of chlid deaths ----
 
