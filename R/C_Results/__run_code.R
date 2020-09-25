@@ -28,9 +28,9 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-fertility_variant <- c("low")
-# fertility_variant <- c("medium")
-# fertility_variant <- c("high")
+# rm(list=ls()); fertility_variant <- c("low")
+rm(list=ls()); fertility_variant <- c("medium")
+# rm(list=ls());  fertility_variant <- c("high")
 
 (files <- list.files(pattern = ".R$")[-1])
 
@@ -149,3 +149,4 @@ source(files[9])
 
 source(files[10])
 
+source(files[11])
