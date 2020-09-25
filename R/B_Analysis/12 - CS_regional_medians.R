@@ -59,5 +59,5 @@ sum_cs <-
 
 # 1.3. Export ====
 
-saveRDS(sum_cs, file = "../../Data/estimates/sum_cs.RDS")
-saveRDS(cs_pop, file = "../../Data/estimates/cs_pop.RDS")
+saveRDS(sum_cs, file = paste0("../../Data/estimates/sum_cs_",fertility_variant,".RDS"))
+saveRDS(cs_pop, file = paste0("../../Data/estimates/cs_pop_",fertility_variant,".RDS"))

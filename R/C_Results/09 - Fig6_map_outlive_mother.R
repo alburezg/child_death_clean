@@ -72,7 +72,7 @@ ggplot(data = w) +
     ) +
   guides(fill = guide_colourbar(barwidth = 1))
 
-ggsave("../../Output/fig6_map_outlive.pdf", height = 7, width = 16, units = "cm")
+ggsave(paste0("../../Output/fig6_map_outlive_",fertility_variant,".pdf"), height = 7, width = 16, units = "cm")
 
 # Text to add as label
 

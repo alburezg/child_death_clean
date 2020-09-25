@@ -162,6 +162,6 @@ p_ex_ctfr <-
 
 # p_ex_ctfr
 
-ggsave(paste0("../../Output/fig1_TFR_ex.pdf"), p_ex_ctfr, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig1_TFR_ex_",fertility_variant,".pdf"), p_ex_ctfr, width = width, height = height, units = "cm")
 
 print("4 - Figure 1 saved to ../../Output")

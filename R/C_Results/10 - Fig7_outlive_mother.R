@@ -235,6 +235,6 @@ p_cs_number_share <-
 p_cs_number_share
 
 # ECS_expected_share_TFR
-ggsave(paste0("../../Output/fig7_outlive_mother.pdf"), p_cs_number_share, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig7_outlive_mother_",fertility_variant,".pdf"), p_cs_number_share, width = width, height = height, units = "cm")
 
 print("8 - Figure 5 saved to ../../Output")

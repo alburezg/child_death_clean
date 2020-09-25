@@ -226,6 +226,6 @@ p_cl_cs_facet <-
 
 p_cl_cs_facet
 
-ggsave(paste0("../../Output/fig2_cd_cs.pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig2_cd_cs_",fertility_variant,".pdf"), p_cl_cs_facet, width = width, height = height, units = "cm")
 
 print("5 - Figure 2 saved to ../../Output")

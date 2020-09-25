@@ -118,6 +118,6 @@ sum_ecs_ctfr <-
 
 # 3.3. Export ====
 
-saveRDS(ecl_ctfr, file = "../../Data/estimates/ecl_ctfr.RDS")
-saveRDS(sum_ecl_ctfr, file = "../../Data/estimates/sum_ecl_ctfr.RDS")
-saveRDS(sum_ecs_ctfr, file = "../../Data/estimates/sum_ecs_ctfr.RDS")
+saveRDS(ecl_ctfr, file = paste0("../../Data/estimates/ecl_ctfr_",fertility_variant,".RDS"))
+saveRDS(sum_ecl_ctfr, file = paste0("../../Data/estimates/sum_ecl_ctfr_",fertility_variant,".RDS"))
+saveRDS(sum_ecs_ctfr, file = paste0("../../Data/estimates/sum_ecs_ctfr_",fertility_variant,".RDS"))

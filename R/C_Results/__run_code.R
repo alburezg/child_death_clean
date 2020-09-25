@@ -28,6 +28,9 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+fertility_variant <- c("low")
+# fertility_variant <- c("medium")
+# fertility_variant <- c("high")
 
 (files <- list.files(pattern = ".R$")[-1])
 
@@ -145,3 +148,4 @@ source(files[9])
 # world regions.
 
 source(files[10])
+

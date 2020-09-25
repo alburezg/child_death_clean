@@ -393,4 +393,4 @@ lex_share_surv <-
 
 # lex_share_surv
 
-ggsave(paste0("../../Output/fig8_heatmap.pdf"), lex_share_surv, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig8_heatmap_",fertility_variant,".pdf"), lex_share_surv, width = width, height = height, units = "cm")

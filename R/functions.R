@@ -98,6 +98,67 @@ child_survival <- function(countries, reference_years, ages_keep = 15:100, path 
   
 }
 
+
+# highest-level function.  Takes df of period ASFR in
+# 1 age and 1 year groups from UNWPP and returns 
+# cohort estimates
+convert_period_asfr_to_cohort_asfr <- function(fert_per_1_1,variant_name,export = T, returnme = T){
+  
+  # 2. Get cohort asfr df
+  
+  # fert_per_1_1 was created in the previous script and can also be read from the corresponding csv file
+  # it is the ungrouped age-specific fertility rates for 1-calendar-year intervals for all countries and regions
+  # in the world, derived from the WPP 2019 data
+  
+  # In order to create pseudo-cohort fertility data, 
+  # the first step is to create a 'cohort' column
+  
+  ASFRC_temp <- 
+    fert_per_1_1 %>% 
+    mutate(cohort = year - age) %>% 
+    select(country, Cohort = cohort, Age = age, ASFR = value) %>% 
+    arrange(country, Cohort, Age)
+  
+  # 2.2. Add all cohort/age combinations
+  
+  coh <- sort( unique(ASFRC_temp$Cohort) )
+  a <- sort(unique(ASFRC_temp$Age))
+  con <- as.character( unique(ASFRC_temp$country) )
+  
+  len_con <- length(a) * length(coh)
+  len_a <- length(con) * length(coh)
+  
+  coh2 <- sort(rep(coh, length(a)))
+  
+  comb <- data.frame(
+    country = sort(rep(con, len_con))
+    , Cohort = rep(coh2, length(con))
+    , Age = rep(a, len_a)
+  ) %>% 
+    arrange(country, Cohort, Age) 
+  
+  # Merge with created data structure
+  ASFRC <- merge(
+    ASFRC_temp
+    , comb
+    , all = T
+  ) %>% 
+    arrange(country, Cohort, Age)
+  
+  
+  # 4. Export 
+  if(export) {
+    write.csv(x = ASFRC, file = paste0("../../Data/derived/", "ASFRC_",variant_name,".csv"), row.names = F)
+  }
+  
+  if(returnme){
+    ASFRC
+  } else {
+    print("Returning no value...")
+  }
+  
+}
+
 expand_asfr_age <- function(l_5_5, grouped_ages, method = "linear", col = "value") {
   
   all_ages <- min(grouped_ages):max(grouped_ages)
@@ -107,7 +168,7 @@ expand_asfr_age <- function(l_5_5, grouped_ages, method = "linear", col = "value
   print("interpolating...")
   # Use a linear regression to interpolate the value
   estimates_list <- lapply(l_5_5, function(df) {
-    
+    # print(paste(df$country[1], df$year[1], df$variant[1], collapse = "-"))
     # the number of ages to interpolate depends on the number of 
     # age groups present in the data
     
@@ -473,6 +534,125 @@ get_lx_array <- function(country_keep, reference_years, sex_keep, path = "../../
   lx_array_temp <- lx.kids.arr[ , , paste(reference_years)]
   return(lx_array_temp)
 }
+
+get_world_pop_age <- function(fertility_variant){
+  what <- "WPP2019_PopulationByAgeSex_"
+  
+  f <- paste0(
+    "../../Data/wpp_data/"
+    ,what
+    , ifelse(fertility_variant == "medium", "Medium", "OtherVariants")
+    ,".csv"
+  )
+  
+  if(fertility_variant == "medium"){
+    out <- 
+      read.csv(file = f, stringsAsFactors = F) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location)  
+  } else{
+    # Split in two
+    # for initial period get 'meiudm' estimates (ie estiamtes)
+    old_period <- 1950 :2019
+    
+    out_1950_2020 <- 
+      read.csv(
+        file = paste0("../../Data/wpp_data/", what, "Medium", ".csv")
+        , stringsAsFactors = F
+      ) %>% 
+      filter(Time %in% old_period) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location)
+    
+    # New period
+    out_post2020 <- 
+      read.csv(file = f, stringsAsFactors = F) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location) %>% 
+      filter(Variant == fertility_variant)    
+    
+    out <- 
+      bind_rows(out_1950_2020, out_post2020) %>% 
+      mutate(Variant = fertility_variant)
+    
+  }
+  
+  return(out)
+}
+
+get_wpp_period_by_variant <- function(fertility_variant){
+  
+  
+  
+  f <- paste0(
+    "../../Data/wpp_data/"
+    ,"WPP2019_Period_Indicators_"
+    , ifelse(fertility_variant == "medium", "Medium", "OtherVariants")
+    ,".csv"
+  )
+
+  if(fertility_variant == "medium"){
+    out <- 
+      read.csv(file = f, stringsAsFactors = F) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location)  
+  } else{
+    # Split in two
+    # for initial period get 'meiudm' estimates (ie estiamtes)
+    old_period <- c("1950-1955", "1955-1960", "1960-1965", "1965-1970", "1970-1975", 
+      "1975-1980", "1980-1985", "1985-1990", "1990-1995", "1995-2000", 
+      "2000-2005", "2005-2010", "2010-2015", "2015-2020")
+    
+    out_1950_2020 <- 
+      read.csv(
+        file = "../../Data/wpp_data/WPP2019_Period_Indicators_Medium.csv"
+        , stringsAsFactors = F
+        ) %>% 
+      filter(Time %in% old_period) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location)
+    
+    # New period
+    out_post2020 <- 
+      read.csv(file = f, stringsAsFactors = F) %>% 
+      mutate(
+        region = tolower(Location)
+        , region = fix_un_countries(region)
+        , Variant = tolower(Variant)
+      ) %>% 
+      select(-Location) %>% 
+      filter(Variant == fertility_variant)    
+    
+    out <- 
+      bind_rows(out_1950_2020, out_post2020) %>% 
+      mutate(Variant = fertility_variant)
+    
+  }
+    
+  return(out)
+  
+}
+
 
 interpolate_births_calendar_years <- function(df_5, method = "linear") {
   # browser()
@@ -1259,6 +1439,371 @@ survival_probs_parallel <- function(l, xs, mas, cos, numCores = 4) {
   
   print("Done! This function returns no object since save_output == T")
   
+}
+
+# highest-level function.  Takes df of period ASFR grouped in
+# 5 age and 5 year groups from UNWPP and and returns 
+# Single year and single age estimates
+# Function has no output but saves df to disk
+ungroup_fertility_ASFR <- function(fert_df, variant_name, allowed_types = c("Country", "SDG region"), export = T, returnme = T){
+  
+  print(paste("Expanding ASFR for variant:", variant_name))
+  
+  # 1. Reformat fert data 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # 1.1. Change column names 
+  
+  old_names <- colnames(fert_df)
+  
+  new_names <- c("index", "variant", "country", "notes", "country_code", 
+                 "type","parent_code", "year", "X15.19", "X20.24", 
+                 "X25.29", "X30.34", "X35.39", "X40.44", "X45.49")
+  
+  # Change colnames
+  colnames(fert_df) <- new_names
+  
+  # Save for future reference
+  fert_codebook <- data.frame(old = old_names, new = new_names)
+  # print(fert_codebook)
+  
+  # sum(is.na(fert_df$year))
+  
+  fert_df[fert_df == "..."] <- NA
+  
+  fert_5_5 <- 
+    fert_df %>% 
+    filter(type %in% allowed_types) %>% 
+    select(country, year, dplyr::starts_with("X")) %>% 
+    reshape2::melt(id = c("country", "year")) %>% 
+    select(country, year, age = variable, value) %>% 
+    mutate_all(list(as.character)) %>% 
+    # Remove unwanted punctuation
+    mutate(
+      country = fix_un_countries(country)
+      , age = gsub("\\.|\\?", "-", age)
+      , value = as.numeric(value)
+    ) %>% 
+    arrange(country, year, age) 
+  
+  # 1.2. Parameters 
+  
+  # Change period labels
+  # UN calendar year periods are non-exlusive; ie 1950-1955 and 1955-1960
+  # The should actually be only 5 yers long: 1950-1954 and 1955-1959
+  
+  per_old <- unique(fert_5_5$year)
+  
+  per_new <- unlist(lapply(per_old, function(p) {
+    pe <- as.numeric(unlist(strsplit(p, "-")))
+    pe[2] <- pe[2] -1
+    paste(pe, collapse = "-")
+  }))
+  
+  fert_5_5$year <- plyr::mapvalues(fert_5_5$year, from = per_old, to = per_new)
+  
+  all_years <- as.numeric(unlist(strsplit(per_new, "-")))
+  
+  min_y <- min(all_years)
+  max_y <- max(all_years)
+  year_range <- min_y:max_y
+  
+  # grouped_ages <- seq(15, 45, 5)
+  grouped_ages <- seq(15, 50, 5)
+  age_groups_range <- 15:49
+  
+  countries <- unique(fert_df$country)
+  
+  # 2. Ungroup age groups 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  l_5_5 <- split(fert_5_5, list(fert_5_5$country, fert_5_5$year))
+  
+  # This returns a data frame with 1-year age bands but still grouped in 5-year long calendar year periods
+  fert_5_1 <- expand_asfr_age(
+    l_5_5 = l_5_5
+    , grouped_ages = grouped_ages
+    , method = "linear"
+    , col = 'value'
+  )
+  
+  rm("l_5_5")
+  
+  # View(fert_5_1)
+  
+  # 3. Interpolate calendar years 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  fert_per_1_1 <- interpolate_COLUMN_calendar_years(
+    df_5_1 = fert_5_1
+    , method = "linear"
+    , col = 'value'
+  )
+  
+  rm("fert_5_1")
+  
+  # 4. Visual exam 
+  # Plot for same country, one 
+  
+  # if(visual_examination) {
+  #   
+  #   country_keep <- c("sweden", "guatemala", "israel", "sri lanka")
+  #   
+  #   # 4.1. Compare ASFR 
+  #   
+  #   (
+  #     test_asfr_1_1 <- 
+  #       cowplot::plot_grid(
+  #         #  Original data
+  #         fert_5_5 %>% 
+  #           filter(country %in% country_keep) %>% 
+  #           mutate(
+  #             value = as.numeric(value)
+  #           ) %>% 
+  #           ggplot(aes(x = age, y = value, group = year, colour = year)) +
+  #           geom_line(size=0.5) +
+  #           facet_grid(~country) +
+  #           theme(legend.position = "none")
+  #         # Smoothed data
+  #         , fert_per_1_1 %>% 
+  #           filter(country %in% country_keep) %>% 
+  #           mutate(source = "interpolated") %>% 
+  #           ggplot(aes(x = age, y = value, group = year, colour = year)) +
+  #           geom_line(size=0.5) +
+  #           facet_grid(~country) +
+  #           theme(legend.position = "none")
+  #         , ncol = 1) 
+  #   )
+  #   
+  #   # 4.2. Compare TFR
+  #   
+  #   # Random countries
+  #   country_keep <- tolower( countries[sample(1:length(countries), 20)] )
+  #   
+  #   tfr_new <- 
+  #     fert_per_1_1 %>% 
+  #     mutate(year = year - 3) %>% 
+  #     group_by(country, year) %>% 
+  #     summarise(tfr = sum(value)/1000) %>% 
+  #     ungroup %>% 
+  #     mutate(
+  #       country = as.character(country)
+  #       , source= 'new'
+  #     )
+  #   
+  #   tfr_old <- 
+  #     fert_5_5 %>% 
+  #     mutate(year = as.numeric(str_extract(year, "^[0-9]{4}"))) %>% 
+  #     group_by(country, year) %>% 
+  #     summarise(tfr = sum(value)/1000*5) %>% 
+  #     ungroup %>% 
+  #     mutate(
+  #       source= 'old'
+  #     )
+  #   
+  #   tfr_both <- 
+  #     bind_rows(
+  #       tfr_new
+  #       , tfr_old
+  #     ) %>% 
+  #     filter(country %in% country_keep)
+  #   
+  #   (
+  #     test_tfr_1_1 <- 
+  #       tfr_both %>% 
+  #       ggplot(aes(x = year, y = tfr, group = source, colour = source)) +
+  #       geom_line(size = 0.5) +
+  #       facet_wrap(~country)
+  #   )
+  #   
+  #   #Export graphs
+  #   
+  #   ggsave("../../Output/A.3.test_asfr_1_1.pdf", test_asfr_1_1)
+  #   ggsave("../../Output/A.3.test_tfr_1_1.pdf", test_tfr_1_1)
+  #   
+  # }
+  
+  # 5. Export 
+  
+  if(export) {
+    write.csv(x = fert_per_1_1, file = paste0("../../Data/derived/", "fert_per_1_1_",variant_name,".csv"), row.names = F)
+    print(paste(variant_name, "Exported!"))
+  }
+  
+  if(returnme){
+    fert_per_1_1
+  } else {
+    print("Returning no value...")
+  }
+  
+}
+
+# highest-level function.  Takes df of 
+# 5 age and 5 year groups from UNWPP and and returns 
+# Single year and single age estimates
+# Function has no output but saves df to disk
+ungroup_births <- function(births_obs_B, births_pred_B,sex_ratio_5, variant_name, export){
+  
+  # 0. Format 
+  # ~~~~~~~~~~~~~~~~~~
+  
+  # 0.1. Births df
+  
+  births_5 <- bind_rows(
+    format_births(df = births_obs_B)
+    , format_births(df = births_pred_B)
+  ) %>% 
+    # Fix UN overlapping periods
+    mutate(
+      year = change_period_labels(year)
+      # UN values are given in thousands
+      , value = value*1000
+    ) %>% 
+    arrange(country, year)
+  
+  # 0.2. Sex ratio at birth df
+  
+  # sex_ratio_5 <- bind_rows(
+  #   format_births(df = sex_ratio_at_birth_obs)
+  #   , format_births(df = sex_ratio_at_birth_pred)
+  # ) %>% 
+  #   # Fix UN overlapping periods
+  #   mutate(year = change_period_labels(year)) %>% 
+  #   arrange(country, year)
+  
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # A. Women only 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # 1. 5-year number of female births 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  births_f_5 <- 
+    births_5 %>% 
+    rename(births = value) %>% 
+    left_join(
+      sex_ratio_5 %>% 
+        rename(sex_ratio = value) 
+      , by = c("country", "year")
+    ) %>% 
+    mutate(
+      value = births / (sex_ratio + 1)
+    ) %>% 
+    select(country, year, value)
+  
+  # births_f_5 <- 
+  #   births_5 %>% 
+  #   mutate(
+  #     value = value / (sex_ratio_5$value + 1)
+  #   )
+  
+  # 2. 1-year number of female births 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # Interpolate female births for every calendar year
+  
+  births_f_1 <- 
+    interpolate_births_calendar_years(
+      df_5 = births_f_5
+      , method = "linear"
+    ) %>% 
+    mutate(
+      country = as.character(country)
+      , value = round(value, 0)
+    )
+  
+  # 3. Checks 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # if(visual_examination) {
+  #   
+  #   country_keep <- c("sweden", "guatemala", "israel", "sri Lanka")
+  #   
+  #   cowplot::plot_grid(
+  #     births_f_1 %>% 
+  #       filter(country %in% country_keep) %>% 
+  #       ggplot(aes(x = year, y = value, group = country, colour = country)) +
+  #       geom_line(size=0.5) +
+  #       scale_x_continuous(breaks = seq(1950, 2100, 50)) +
+  #       theme(legend.position = "none")
+  #     , 
+  #     births_f_5 %>% 
+  #       filter(country %in% country_keep) %>% 
+  #       mutate(year = as.numeric(str_extract(year, '^[0-9]{4}'))) %>% 
+  #       ggplot(aes(x = year, y = value, group = country, colour = country)) +
+  #       scale_x_continuous(breaks = seq(1950, 2100, 50), labels = seq(1950, 2100, 50)) +
+  #       geom_line(size=0.5) +
+  #       # facet_grid(. ~ country) +
+  #       theme(legend.position = "right")
+  #   )
+  #   
+  # }
+  
+  # 4. Export 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  if(export) {
+    n_out <- paste0('../../Data/derived/wpp_female_births_1_1_',variant_name,'.csv')
+    write.csv(births_f_1, file = n_out, row.names = F)
+    print(paste0("Exported - ",n_out))
+    
+  }
+  
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # B. Men and women
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # 1. 1-year number of female births
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # Interpolate female births for every calendar year
+  
+  births_1 <- 
+    interpolate_births_calendar_years(
+      df_5 = births_5
+      , method = "linear"
+    ) %>% 
+    mutate(
+      country = as.character(country)
+      , value = round(value, 0)
+    )
+  
+  # 2. Checks
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # if(visual_examination) {
+  #   
+  #   country_keep <- c("sweden", "guatemala", "israel", "sri Lanka")
+  #   
+  #   cowplot::plot_grid(
+  #     births_1 %>% 
+  #       filter(country %in% country_keep) %>% 
+  #       ggplot(aes(x = year, y = value, group = country, colour = country)) +
+  #       geom_line(size=0.5) +
+  #       scale_x_continuous(breaks = seq(1950, 2100, 50)) +
+  #       theme(legend.position = "none")
+  #     , 
+  #     births_5 %>% 
+  #       filter(country %in% country_keep) %>% 
+  #       mutate(year = as.numeric(str_extract(year, '^[0-9]{4}'))) %>% 
+  #       ggplot(aes(x = year, y = value, group = country, colour = country)) +
+  #       scale_x_continuous(breaks = seq(1950, 2100, 50), labels = seq(1950, 2100, 50)) +
+  #       geom_line(size=0.5) +
+  #       # facet_grid(. ~ country) +
+  #       theme(legend.position = "right")
+  #   )
+  #   
+  # }
+  
+  # 3. Export 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  if(export) {
+    n_out <- paste0('../../Data/derived/wpp_all_births_1_1_',variant_name,'.csv')
+    write.csv(births_f_1, file = n_out, row.names = F)
+    print(paste0("Exported - ",n_out))
+    # write.csv(births_1, file = paste0('../../Data/derived/wpp_all_births_1_1_',variant_name,'.csv'), row.names = F)
+  }
 }
 
 worker_apply_lt <- function(con, countries, cohorts, female_births, LTCF) {

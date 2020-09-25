@@ -67,7 +67,7 @@ bar_name <- paste0("Share of life-time\noffspring deaths\nexperienced after\nwom
 
 p_title <- paste0("Child deaths experienced after age 65 by women born in ", cohort_show, " (i.e. aged 65 in 2020)")
 
-p_name <- "../../Output/fig4_map-share-cd-in-retirement.pdf"
+p_name <- paste0("../../Output/fig4_map-share-cd-in-retirement_",fertility_variant,".pdf")
 
 p1 <- map_share_child_deaths_in_age_range(
   cohort_show = cohort_show

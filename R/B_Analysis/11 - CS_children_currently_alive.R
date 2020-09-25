@@ -60,4 +60,4 @@ df_cs_m_full <- merge(
 # Make sure all regions were properly coded
 !length(df_cs_m_full %>% filter(is.na(region)) %>% pull)
 
-saveRDS(df_cs_m_full, '../../Data/estimates/df_cs_m_1950to1999_15to100.RDS')
+saveRDS(df_cs_m_full, paste0('../../Data/estimates/df_cs_m_1950to1999_15to100_',fertility_variant,'.RDS'))

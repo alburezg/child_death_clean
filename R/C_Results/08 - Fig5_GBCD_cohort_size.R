@@ -78,7 +78,7 @@ change %>%
   ) +
   guides(color = FALSE)
 
-ggsave("../../Output/fig5_births_burden.pdf")
+ggsave(paste0("../../Output/fig5_births_burden_",fertility_variant,".pdf"))
 
 # DEPRECTATED ----
 

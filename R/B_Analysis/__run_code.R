@@ -41,15 +41,13 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# 0. Define fertility variant! ----------
 
-if(!require("stringr")) {
-  install.packages("stringr")
-  library(stringr)
-} 
+# rm(list=ls()); fertility_variant <- c("low")
+# rm(list=ls()); fertility_variant <- c("medium")
+rm(list=ls());  fertility_variant <- c("high")
 
 files <- list.files(pattern = ".R$")[-1]
-( files <- stringr::str_sort(files, numeric = TRUE) )
-
 # 1. Load the functions and packages needed in the scripts ====
 
 source(files[1])
