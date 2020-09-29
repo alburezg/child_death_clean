@@ -1943,7 +1943,8 @@ ungroup_mortality_from_mx_robust <- function(lt_per, sex = "F", parallel = T, nu
   mx_5_1 <- expand_LT_age_by_mx_linear(
     l_5_5 = lt_5_5_l
     , grouped_ages = grouped_ages
-  )
+  ) %>%
+    data.frame()
   
   rm("lt_5_5_l")
   
