@@ -27,8 +27,6 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print('Expanding life tables for women.')
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
-numCores <- ifelse(detectCores() > 8, 25, 4)
-
 # Do all the mortality formating to return cohort single-age
 # single-year life tables for robustness analysis
 # and creates matrix of sruvival probs all in one sweep

@@ -22,6 +22,7 @@
 # constant/constant is stable population
 
 country_keep <- c("Guatemala", "Zimbabwe")
+numCores <- ifelse(detectCores() > 8, 25, 3)
 
 (files <- list.files(pattern = ".R$")[-1])
 
@@ -37,7 +38,6 @@ source(files[2])
 
 # 3. Format fertility rates ----
 
-
 source(files[3])
 
 # 4. Format Mortality ====
@@ -51,8 +51,5 @@ source(files[4])
 
 # B. Analysis -------------
 
-get_cumlative_child_death_robust <- function(){
-  
-  
-  
-}
+# Estimate child death
+source(files[4])

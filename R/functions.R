@@ -2342,8 +2342,8 @@ process_mortality_robust_top <- function(lt_per, numCores){
   # Create Matix of survival probs
   
   # This must be the same as the age groups in the asfr data
-  # cos <- c(1950:2100) # cohorts
-  cos <- c(2000:2001) # cohorts
+  cos <- c(1950:2100) # cohorts
+  # cos <- c(2000:2001) # cohorts
   xs <- c(15:49) # reproductive age
   mas<-c(15:100) # mother ages
   
@@ -2544,3 +2544,4 @@ get_lx_array_robust <- function(c, reference_years, sex_keep, path = "../../Data
   lx_array_temp <- lx.kids.arr[ , , paste(reference_years)]
   return(lx_array_temp)
 }
+
