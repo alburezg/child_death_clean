@@ -159,6 +159,72 @@ convert_period_asfr_to_cohort_asfr <- function(fert_per_1_1,variant_name,export 
   
 }
 
+convert_period_LT_to_cohort_LT_robust <- 
+  function(lt_1_1, sex = "B", export = T, years = 1951:2100, ages = 1:100, parallel = T, numCores = 4) {
+    
+    # 1. Create cohort life table 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # LTC ... Cohort life table
+    LTC_df <- 
+      lt_1_1 %>% 
+      select(Country = country, Year = year, Age = age, mx, qx, ax) %>% 
+      mutate(
+        Cohort = Year - Age
+        , Country = as.character(Country)
+      ) %>% 
+      arrange(Country, Cohort, Age) %>% 
+      filter(Cohort > min(years) - 1) %>% 
+      # filter(!Country %in% ignore) %>% 
+      # Assign to new cohort life tables:
+      # lx (number of people left alive)
+      # dx (annual number of deaths)
+      # nLx (person-live yeares lived in interval)
+      mutate(
+        lx = ifelse(Age == 0, 1, NA)
+        , dx = NA
+        , nLx = NA
+        , Tx = NA
+        , ex = NA
+      ) %>% 
+      select(Country, Cohort, Year, Age, mx, qx, ax, lx, dx, nLx, Tx, ex)
+    
+    # Sequentially, the function takes about 1 minute per country (for all years)
+    # to exeute currently, so estimate around 2-3 hours for all countries
+    # Parallelised on 4 cores is much faster, taking about 8-10 minutes
+    
+    # Return a df with new columns added
+    
+    closeAllConnections()
+    
+    LTC <- LT_period_to_cohort(
+      df = LTC_df
+      , years = years
+      , ages = ages
+      , parallel = parallel
+      , numCores = numCores
+    )
+    
+    rm("LTC_df")
+    
+    gc()
+    
+    # 3. Export 
+    
+    if(export) {
+      
+      # 3.1. Save all as one file
+      file <- paste0("../../Data/derived/", "LTC", sex, ".csv")
+      
+      write.csv(x = LTC, file = file, row.names = F)
+      
+      print(paste("All cohort life tables saved to", file))
+      
+    }
+    
+    return(LTC)
+    
+  }
+
 expand_asfr_age <- function(l_5_5, grouped_ages, method = "linear", col = "value") {
   
   all_ages <- min(grouped_ages):max(grouped_ages)
@@ -1806,6 +1872,164 @@ ungroup_births <- function(births_obs_B, births_pred_B,sex_ratio_5, variant_name
   }
 }
 
+# This function is stored here and not in _global_functions.R since it is pretty much 
+# all the analysis
+
+ungroup_mortality_from_mx_robust <- function(lt_per, sex = "F", parallel = T, numCores = 4, export = F) {
+  
+  # 1. Format life tables 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # I will do this for women initially, but the same can be repeated for men
+  
+  # lt_per is a df of period life tables
+  # If running interactively, for women, this would be:
+  # lt_per <- lt_per_F_small
+  
+  lt_5_5 <- lt_per_5_5 <- 
+    lt_per %>% 
+    select(country, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex) %>% 
+    # filter out rows with no data (headings)
+    filter(!is.na(age)) %>% 
+    mutate(
+      country = fix_un_countries(country)
+      , age = as.numeric(gsub("\\+", "", age))
+      # Change period labels
+      # UN calendar year periods are non-exlusive; ie 1950-1955 and 1955-1960
+      # The should actually be only 5 yers long: 1950-1954 and 1955-1959
+      , year = change_period_labels(year)
+      , mx = as.numeric(mx)
+      , ax = as.numeric(ax)
+    )
+  
+  
+  # 1.1. Parameters 
+  # ~~~~~~~~~~~~~~~~~~~~~
+  
+  all_years <- as.numeric(unlist(strsplit(unique(lt_5_5$year), "-")))
+  
+  min_y <- min(all_years)
+  max_y <- max(all_years)
+  year_range <- min_y:max_y
+  
+  grouped_years <- unique(lt_5_5$year)
+  countries <- unique(lt_5_5$country)
+  
+  grouped_ages <- unique(lt_5_5$age)
+  
+  # Temporary 
+  # change if you do chose to extrapolate to older ages
+  grouped_ages_extrap <- grouped_ages
+  
+  # 2. Interpolate ages (mx col) 
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # Expand abridged life table to create a full life table
+  # this is currently done by interpolating between the grouped mx values
+  # A more sophisticated approach would expand on qx values (see below)
+  
+  # First, split tables into a list with country/year combinations
+  
+  lt_5_5_l <- split(lt_5_5, list(lt_5_5$country, lt_5_5$year))
+  
+  print("Interpolating ages from the mx column...")
+  
+  # Note on 20191009:
+  # This inerpolates mx values within each age group
+  # and returns an expanded df with mx values for ages 0:100
+  # It assumes that 5Mx values represent the value
+  # for the mid-interval age; ie 5_M_x = 1_M_{(x+2)}
+  # (more details inside function)
+  mx_5_1 <- expand_LT_age_by_mx_linear(
+    l_5_5 = lt_5_5_l
+    , grouped_ages = grouped_ages
+  )
+  
+  rm("lt_5_5_l")
+  
+  # 3. Interpolate calendar years  
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # This are qx per country/period
+  # However, they are still grouped by 5-year calendar years
+  # Therefore, we need to smooth these qx values over the 5 calendar years before 
+  # gettin gthe values for the life tables
+  
+  print("Interpolating calendar years...")
+  
+  # Preferred option 20190628
+  # Takes around 5-10 minutes
+  # Spline is prefered as method since it gives more accurate values
+  mx_1_1 <- expand_LT_year_by_mx(
+    df_5_1 = mx_5_1
+    , method = "spline"
+    , parallel = parallel
+    , numCores = numCores
+  )
+  
+  print("mx_1_1 df created")
+  rm("mx_5_1")
+  
+  # 4. Create period life tables from mx matrices
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  # Now I have a data frame with all mx values for every country/year combination
+  # the next step is to create life tables for each of these combinations
+  
+  print("Creating life tables from new mx column...")
+  
+  mx_1_1_l <- split(mx_1_1, list(mx_1_1$country, mx_1_1$year))
+  
+  if(parallel) {
+    # Preferred option 20190628
+    # Parallel version
+    lt_1_1_l <- lt_mx_parallel(
+      l_mx_1_1_l = mx_1_1_l
+      , numCores = numCores
+    )
+  } else {
+    # non-parallel verion
+    lt_1_1_l <- lapply(mx_1_1_l, function(df) {
+      lt <- lt_mx(nmx = df$mx, age = 0:100, radix = 1E6)
+      cbind(
+        df[1:nrow(lt) , 1:2]
+        , lt
+      )
+    })
+  }
+  
+  # sAVE AS DF
+  lt_1_1 <- data.frame( rbindlist(lt_1_1_l, use.names = T))
+  
+  rm("mx_1_1_l")
+  rm("lt_1_1_l")
+  gc()
+  
+  # 4.2. Final edits 
+  
+  # Set ax columns value for for upper age group
+  # Currently it is NA, set to 1/qx
+  
+  lt_1_1$ax[lt_1_1$age == 100] <- 1/lt_1_1$mx[lt_1_1$age == 100]
+  
+  print("1x1 life tables created for all countries")
+  
+  # 7. Export 
+  # ~~~~~~~~~~~~~~~~~~
+  
+  if(export) {
+    print("Saving to csv file...")
+    file <- paste0("../../Data/derived/", "lt_per_1_1_", sex,".csv")
+    write.csv(x = lt_1_1, file = file, row.names = F)
+    
+    print(paste("All period life tables saved to", file))
+    
+  }  
+  
+  return(lt_1_1)
+  
+}
+
 worker_apply_lt <- function(con, countries, cohorts, female_births, LTCF) {
   print(con)
   
@@ -2085,4 +2309,238 @@ worker_survival_probs <- function(life_table, xs, mas, cos) {
   saveRDS(object = lx.kids.arr, file = file)
   print(paste(file, "saved"))
   
+}
+
+# RIBUSTNESS FUNCTIONS -----------
+
+process_mortality_robust_top <- function(lt_per, numCores){
+  
+  variant_current <- unique(lt_per$variant)
+  
+  lt_1_1 <- 
+    ungroup_mortality_from_mx_robust(
+      lt_per = lt_per
+      , sex = "F"
+      , parallel = T
+      , numCores = numCores
+      , export = F
+    )
+  
+  # Convert to cohort
+  LTC <- 
+    convert_period_LT_to_cohort_LT_robust(
+      lt_1_1 = lt_1_1
+      , sex = "F"
+      , export = F
+      , years = 1950:2100
+      , ages = 1:100
+      , parallel = T
+      , numCores = numCores
+    ) %>% 
+    mutate(variant = variant_current)
+  
+  # Create Matix of survival probs
+  
+  # This must be the same as the age groups in the asfr data
+  # cos <- c(1950:2100) # cohorts
+  cos <- c(2000:2001) # cohorts
+  xs <- c(15:49) # reproductive age
+  mas<-c(15:100) # mother ages
+  
+  matrix_of_survival_probabilities_robust(
+    LTC = LTC
+    , cos = cos
+    , xs = xs
+    , mas = mas
+    , numCores = numCores
+  )
+  
+}
+
+matrix_of_survival_probabilities_robust <- function(LTC, run_checks = F, cos, xs, mas, numCores) {
+  
+  # 1. Get matrix of survival probabilities of kids 
+  
+  LTC_l <-  split(LTC, LTC$Country)
+  
+  # If done together, this returns a list sized 1.04 GB, which is inconvenient
+  # This functino splits the data and saves it into a determined number of chunks
+  # It return no object but saves no_chunks number of files that can later be loaded into R
+  
+  # Takes 15 MINUTES USING 25 CORES on a HPC.
+  
+  closeAllConnections()
+  
+  print("Getting matrix of survival probs and saving as separate files...")
+  
+  survival_probs_parallel_robust(
+    l = LTC_l
+    , xs
+    , mas
+    , cos
+    , numCores = numCores
+  )
+  
+}
+
+
+survival_probs_parallel_robust <- function(l, xs, mas, cos, numCores = 4) {
+  
+  print(paste("Parallelising every country using", numCores, "cores."))
+  
+  cl <- makeCluster(numCores)
+  
+  # Load packages
+  # clusterEvalQ(cl, library(dplyr))
+  
+  clusterExport(
+    cl
+    , varlist = c("xs", "mas", "cos")
+    , envir = environment()
+  )
+  
+  clusterEvalQ(cl, library(dplyr))
+  
+  print(system.time(
+    out <- parLapply(cl, l, worker_survival_probs_robust, xs, mas, cos) 
+  ))
+  
+  stopCluster(cl)  
+  
+  print("Done! This function returns no object since save_output == T")
+  
+}
+
+
+worker_survival_probs_robust <- function(life_table, xs, mas, cos) {
+  browser()
+  
+  pais <- unique(life_table$Country)
+  var <- unique(life_table$variant)
+  life_table$Country <- NULL
+  
+  # Create array of 2x2 matrices
+  # one matrix for every cohort
+  # each matrix has rows = xs and cols = mas
+  
+  lx.kids.arr <- array(
+    NA
+    , dim=c(length(xs), length(mas), length(cos))
+    , dimnames=list(paste(xs), paste(mas), paste(cos))
+  )
+  
+  for (co in cos){ 
+    # For every column
+    for (ma in mas){
+      lx.kids <- c()
+      # for every row
+      for (x in xs){
+        tmp <- c()
+        
+        # This is the important bit: 
+        # It only applies for cases where ma >= x
+        
+        # Get the survival probability for a child given:
+        child_age <- ma - x # because 
+        child_cohort <- co + x
+        
+        tmp <- life_table$lx[life_table$Age == child_age & life_table$Cohort == child_cohort]
+        
+        if (length(tmp) > 0){
+          lx.kids<-c(lx.kids, tmp)
+        }
+        
+      }
+      if (length(lx.kids)>0)
+        lx.kids.arr[1:length(lx.kids),paste(ma),paste(co)] <- lx.kids
+    }
+  }
+  
+  # Export to file in pc
+  
+  nombre <- paste0("lx.kids.arr_", pais, "_", var)
+  # assign(x = nombre, value = lx.kids.arr)
+  
+  file <- paste0("../../Data/derived/", nombre, ".RDS")
+  
+  saveRDS(object = lx.kids.arr, file = file)
+  print(paste(file, "saved"))
+  
+}
+
+# here ==============
+
+child_loss_robust <- function(countries, reference_years, ages_keep = 15:100, path = "../../Data/derived", ASFRC, variant_fert, variant_mort) {
+  
+  df_l <- lapply(
+    countries
+    , worker_child_loss_robust
+    , reference_years = reference_years
+    , sex_keep = F
+    , ages_keep = ages_keep
+    , ASFRC
+    , path = path
+    , variant_mort = variant_mort
+  )
+  
+  data.frame(rbindlist(df_l, use.names = T))
+  
+}
+
+worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep, ASFRC, path, variant_fert, variant_mort) {
+  
+  # 2.1. Get LT for chosen years
+  
+  lx_array_temp <- get_lx_array_robust(
+    c = c
+    , reference_years = reference_years
+    , sex_keep = sex_keep
+    , path = path
+    , variant_mort = variant_mort
+  )
+  
+  # 2.2. Chose ASFR for chosen years
+  
+  ASFR_df <- 
+    ASFRC %>% 
+    filter(country %in% c) %>% 
+    filter(Cohort %in% reference_years)
+  
+  # 2.3. Expected child loss and child survival
+  
+  estimates <- expected_child_death(
+    ASFRSC = ASFR_df
+    , lx.kids.arr = lx_array_temp
+    , xs
+    , mas
+    , cos = reference_years
+    , ages_keep = ages_keep 
+  )
+  
+  ECLC.mat.coh <- estimates[[1]]
+  
+  # 2.4. FOrmat as data frame
+  
+  eclc <- as.data.frame(ECLC.mat.coh, stringsAsFactors = F)
+  eclc$age <- as.numeric(rownames(eclc))
+  
+  eclc %>% 
+    reshape2::melt(id = c("age")) %>% 
+    dplyr::mutate(
+      variable = as.character(variable)
+      , value = as.numeric(value)
+      , country = country_keep
+      , variant_fert = variant_fert
+      , variant_mort = variant_mort
+    )
+  
+}
+
+get_lx_array_robust <- function(c, reference_years, sex_keep, path = "../../Data/derived", variant_mort){
+  print(c)
+  
+  file <- paste0(paste0(path, "/lx.kids.arr_", c,"_",variant_mort, ".RDS"))
+  lx.kids.arr <- readRDS(file)  
+  lx_array_temp <- lx.kids.arr[ , , paste(reference_years)]
+  return(lx_array_temp)
 }

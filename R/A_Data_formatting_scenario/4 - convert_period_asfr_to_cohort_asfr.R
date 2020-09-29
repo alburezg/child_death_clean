@@ -47,7 +47,7 @@ ASFRC_medium <-
 
 ASFRC_high <- 
   convert_period_asfr_to_cohort_asfr(
-    fert_per_1_1 = fert_per_1_1_medium
+    fert_per_1_1 = fert_per_1_1_high
     , variant_name = "high"
     , export = export
     , returnme = T

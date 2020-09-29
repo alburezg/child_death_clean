@@ -5,9 +5,13 @@
 # Folders with large datasets
 Data/derived/*.csv
 Data/derived/*.RDS
+Data/estimates/*.RDS
+Data/est2
+Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv
 # For presentation
 presentation/
 #other materials, including full functions
 others/
 #experimental
 R/E_Experimental
+*.RDS
