@@ -21,8 +21,11 @@
 # cols (fert): low, medium, high, constant
 # constant/constant is stable population
 
+library(parallel)
+
 country_keep <- c("Guatemala", "Zimbabwe")
 numCores <- ifelse(detectCores() > 8, 25, 3)
+re_estimate_matrix_of_survival_probs <- F
 
 (files <- list.files(pattern = ".R$")[-1])
 

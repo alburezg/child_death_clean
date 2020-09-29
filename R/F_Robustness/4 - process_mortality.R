@@ -32,30 +32,34 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 # and creates matrix of sruvival probs all in one sweep
 # Saves output
 
-# 1. Median LT ----
-
-process_mortality_robust_top(
+if(re_estimate_matrix_of_survival_probs){
+  # 1. Median LT ----
+  
+  process_mortality_robust_top(
     lt_per = lt_median
     , numCores = numCores
   )
+  
+  # 2. Lower95 LT ----
+  
+  process_mortality_robust_top(
+    lt_per = lt_lower95
+    , numCores = numCores
+  )
+  
+  # 3. Upper95 LT ----
+  
+  process_mortality_robust_top(
+    lt_per = lt_upper95
+    , numCores = numCores
+  )
+  
+  # 4. Constant LT ----
+  
+  process_mortality_robust_top(
+    lt_per = lt_constant
+    , numCores = numCores
+  )
+}
 
-# 2. Lower95 LT ----
 
-process_mortality_robust_top(
-  lt_per = lt_lower95
-  , numCores = numCores
-)
-
-# 3. Upper95 LT ----
-
-process_mortality_robust_top(
-  lt_per = lt_upper95
-  , numCores = numCores
-)
-
-# 4. Constant LT ----
-
-process_mortality_robust_top(
-  lt_per = lt_constant
-  , numCores = numCores
-)

@@ -2482,14 +2482,30 @@ child_loss_robust <- function(countries, reference_years, ages_keep = 15:100, pa
     , ASFRC
     , path = path
     , variant_mort = variant_mort
+    , variant_fert = variant_fert
   )
   
-  data.frame(rbindlist(df_l, use.names = T))
+  df_out <- 
+    data.frame(rbindlist(df_l, use.names = T)) %>% 
+    mutate(
+      value = value/1000
+    ) %>% 
+    select(country, cohort = variable, age, variant_mort, variant_fert, value) %>% 
+    arrange(country, cohort, age) %>% 
+    # This last line, essentially removes ages 100 for the 2000 cohort 
+    # which are not available
+    filter(!is.na(value))
+  
+  nombre <- paste0('../../Data/estimates/df_cl_m_1950to1999_15to100_','fert_',variant_fert, "_mort_", variant_mort, '.RDS')
+  
+  saveRDS(df_out, nombre)
+  
+  print(paste(nombre, "saved!"))
   
 }
 
 worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep, ASFRC, path, variant_fert, variant_mort) {
-  
+  # browser()
   # 2.1. Get LT for chosen years
   
   lx_array_temp <- get_lx_array_robust(
@@ -2530,7 +2546,7 @@ worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep
     dplyr::mutate(
       variable = as.character(variable)
       , value = as.numeric(value)
-      , country = country_keep
+      , country = c
       , variant_fert = variant_fert
       , variant_mort = variant_mort
     )
