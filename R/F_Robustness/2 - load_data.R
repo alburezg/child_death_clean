@@ -49,18 +49,18 @@ asfr_pred_high <- readxl::read_xlsx(
 
 # Constant fertility
 
-# Constant fert measnt that 2015-2020 are repeated every year
+# Constant fert measnt that 2015-baseline are repeated every year
 years_project <- unique(asfr_pred_high$Period)
 times_years <- length(years_project)
 
-asfr_2020 <- 
+asfr_baseline <- 
   asfr_obs %>% 
-  filter(Period == "2015-2020")
+  filter(Period == baseline_year_constant_rates)
 
 # Now, repeat this times:
 
 asfr_constant <- 
-  asfr_2020[ rep(row.names(asfr_2020), times_years), ] %>% 
+  asfr_baseline[ rep(row.names(asfr_baseline), times_years), ] %>% 
   # arrange(country) %>% 
   group_by(`Region, subregion, country or area *`) %>% 
   mutate(Period = years_project) %>% 
@@ -158,21 +158,21 @@ lt_lower95 <-
   )  %>% 
   mutate(variant = "Lower 95 PI")
 
-# Constant fert measnt that 2015-2020 are repeated every year
+# Constant fert measnt that baseline are repeated every year
 years_project <- unique(lt_per_pred_F$year)
 times_years <- length(years_project)
 times_new_years <- length(unique(lt_per_obs_F2$age))
 
 new_years <- sort(rep(years_project, times_new_years))
 
-lt_2020 <- 
+lt_baseline <- 
   lt_per_obs_F2 %>% 
-  filter(year == "2015-2020")
+  filter(year == baseline_year_constant_rates)
 
 # Now, repeat this times:
 
 lt_expanded <- 
-  lt_2020[ rep(row.names(lt_2020), times_years), ] %>% 
+  lt_baseline[ rep(row.names(lt_baseline), times_years), ] %>% 
   # arrange(country) %>% 
   group_by(country) %>% 
   mutate(year = new_years) %>% 

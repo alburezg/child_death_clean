@@ -24,6 +24,7 @@
 library(parallel)
 
 country_keep <- c("Guatemala", "Zimbabwe")
+baseline_year_constant_rates <- "2000-2005"
 numCores <- ifelse(detectCores() > 8, 25, 3)
 re_estimate_matrix_of_survival_probs <- F
 
