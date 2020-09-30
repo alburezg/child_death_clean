@@ -57,3 +57,6 @@ source(files[4])
 
 # Estimate child death
 source(files[4])
+
+# Plot comparisson
+source(files[5])

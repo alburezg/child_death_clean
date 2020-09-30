@@ -5,13 +5,23 @@
 # Is there an eventual convergence in the experience of 
 # maternal bereavement between women in the Global North 
 # and South, on average
+country_plot <- "guatemala"
+# country_plot <- "zimbabwe"
 
 width <- 16
 height <- 12
 base_size <- 15
 region_line_size <- 1
-point_size <- 3.5
+point_size <- 1
 age_br <- c(seq(5, 100, 20), 100)
+
+mort_old <- c("Lower 95 PI", "Upper 95 PI", "constant", "Median PI")
+fert_old <- c("low", "high", "constant", "medium")
+
+# mort_levs <- c("lower 95 pi", "upper 95 pi", "constant/stable", "median pi")
+mort_levs <- c("low mortality", "high mortality", "stable/constant", "medium")
+fert_levs <- c("low fertility", "high fertility", "stable/constant", "medium")
+
 
 readme <- list.files(
   path = "../../Data/estimates/"
@@ -22,58 +32,93 @@ readme <- list.files(
 cl_robust <- 
   lapply(readme, readRDS) %>% 
   bind_rows() %>% 
-  # filter(country == "guatemala") %>% 
-  filter(cohort == 2000)
+  filter(country == country_plot) %>%
+  filter(cohort == 2000) %>% 
+  mutate(
+    variant_mort = plyr::mapvalues(variant_mort, mort_old, mort_levs)
+    , variant_mort = factor(variant_mort, mort_levs)
+    , variant_fert = plyr::mapvalues(variant_fert, fert_old, fert_levs)
+    , variant_fert = factor(variant_fert, fert_levs)
+    ) 
   
+# Get df of medium estiamtes to plor in all facets ===============
+
+cl_medium <- 
+  cl_robust %>% 
+  filter(variant_fert == "medium") %>% 
+  filter(variant_mort == "medium") %>% 
+  pull(value)
+
+cl_reference_medium <- cl_robust
+cl_reference_medium$value <- cl_medium
+
+cl_reference_medium <- 
+  cl_reference_medium %>% 
+  filter(variant_fert != "medium") %>% 
+  filter(variant_mort != "medium") %>% 
+  mutate(type = "reference_medium")
+
+# Get df of stable estiamtes to plor in all facets ===============
+
+cl_stable <- 
+  cl_robust %>% 
+  filter(variant_fert == "stable/constant") %>% 
+  filter(variant_mort == "stable/constant") %>% 
+  pull(value)
+
+cl_reference_stable <- cl_robust
+cl_reference_stable$value <- cl_stable
+
+cl_reference_stable <- 
+  cl_reference_stable %>% 
+  filter(variant_fert != "stable/constant") %>% 
+  filter(variant_mort != "stable/constant") %>% 
+  mutate(type = "stable")
 
 
-
-
-# p_robust <-
-#   bind_rows(
-#     cl_robust %>% mutate(source = "died (cumulative)")
-#     , cs_robust %>% mutate(source = "surviving")
-#   ) %>% 
-#   filter(!region %in% regions_to_remove) %>% 
-#   # mutate(source = factor(source, levels = sources)) %>% 
-#   mutate(
-#     region = factor(as.character(region), levels = regions_long)
-#     , variant = recode(variant
-#                        , low = "Low fertility"
-#                        , medium = "Medium fertility"
-#                        , high = "High fertility"
-#     )
-#     , variant = factor(variant, c("Low fertility", "Medium fertility", "High fertility"))
-#   ) 
-
-
-cl_robust %>% 
-  ggplot() +
+# Plot
+cl_robust %>%
+  filter(variant_fert != "medium") %>% 
+  filter(variant_mort != "medium") %>% 
+  filter(variant_fert != "stable/constant") %>% 
+  filter(variant_mort != "stable/constant") %>% 
+  mutate(type = "alternative") %>% 
+  ggplot(aes(x = age, y = value)) +
+  # Plot different scenarios
   geom_line(
-    aes(x = age, y = value, group = country, colour = country)
-    , size = region_line_size
+    size = region_line_size
     , show.legend = FALSE
   ) +
-  # Plot ECL shapes to help distinguish regions
-  geom_point(
-    aes(x = age, y = value, group = country, colour = country
-        # , size = share
-        # , shape = region
-    )
-    , size = point_size
-    , data = . %>% filter(age %in% age_br)
+  # Medium variant as reference
+  geom_line(
+    aes(colour = type)
+    , size = region_line_size
+    , linetype = "dashed"
+    , data = cl_reference_medium %>% 
+      filter(variant_fert != "stable/constant") %>% 
+      filter(variant_mort != "stable/constant")
+  ) +
+  # Stable variant as reference
+  geom_line(
+    aes(colour = type)
+    , size = region_line_size
+    , linetype = "dashed"
+    , data = cl_reference_stable %>% 
+      filter(variant_fert != "medium") %>% 
+      filter(variant_mort != "medium")
   ) +
   # # SCALES
   scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
-    "Number of children (woman born in 2000)"
+    "Cumulative child death"
     , position = "left"
     , sec.axis = dup_axis()
+    , breaks = c(0, 0.33, 0.66, 1)
+    # , breaks = scales::pretty_breaks(n=3)
   ) +
-  # scale_color_discrete(col_lab, br = regions_long, labels = regions_short) +
-  # scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
-  # scale_shape_discrete(col_lab, br = regions_long, labels = regions_short) +
-  facet_grid(variant_fert ~ variant_mort, scales = 'free', switch = "y") +
+  scale_color_discrete("Reference variants", labels = c("Medium", "Stable")) +
+  # scale_linetype_discrete("", breaks = "reference_medium", labels = "Medium scenario (reference)") +
+  facet_grid(variant_fert ~ variant_mort, scales = 'fixed', switch = "y") +
   # Use with four measures
   theme_bw(base_size = base_size) +
   theme(
@@ -81,7 +126,7 @@ cl_robust %>%
     # Remove space over legend
     , legend.margin=margin(t=-0.25, r=0, b=0, l=0, unit="cm")
     # Remove space between legends
-    , legend.key.size = unit(0.1, "cm")
+    , legend.key.size = unit(1, "cm")
     # Remove title on left
     , axis.text.y.left = element_blank()
     , axis.ticks.y.left = element_blank()
@@ -96,48 +141,59 @@ cl_robust %>%
     # , panel.spacing.y=unit(0.07, "cm")
   )
 
-p_robust
+ggsave(paste0("../../Output/robust_cd_",country_plot,".pdf"), width = width, height = height-1, units = "cm")
 
-ggsave(paste0("../../Output/robust_cd.pdf"), width = width, height = height, units = "cm")
-# 
-# 
-# out_tab <-
-# cl_robust %>% 
-#   filter(age %in% ages_keep_table) %>% 
-#   mutate(value = round(value, 2)) %>%
-#   pivot_wider(names_from = variant, values_from = value) %>% 
-#   mutate(
-#     diff =  medium - low
-#     , diff2  = high - medium
-#     , diff3  = high - low
-#     # , diff2 = round(diff/medium, 2)
-#     ) %>% 
-#   select(-region) %>% 
-#   kable(
-#     "latex"
-#     , caption = "Cumulative number of child deaths experienced by a woman born in 2000 surviving to ages 50, 65, and 100 under three distinct assumptions about future fertility development (UNWPP `low', `medium', and `high' fertility variants for the 2020-2100 projection horizon)."
-#     , label = "robust",
-#     booktabs = T, escape = T, 
-#     # col.names = c("Woman's age", "Low", "Medium", "High", "High-Low")
-#     col.names = c("Woman's age", "Low", "Medium", "High","Medium-Low", "High-Medium", "High-Low")
-#   ) %>% 
-#   kable_styling() %>%
-#   add_header_above(c("Region" = 1, "UNWPP fertility variant" = 3, "Difference between fertility variants" = 3)) %>%
-#   pack_rows(
-#     index = c(
-#       "Sub-Saharan Africa" = length(ages_keep_table)
-#       , "North Africa & West Asia" = length(ages_keep_table)
-#       , "Central & South Asia" = length(ages_keep_table)
-#       , "East & SE Asia" = length(ages_keep_table)
-#       , "LATAM & Caribbean" = length(ages_keep_table)
-#       , "AUS & NZ" = length(ages_keep_table)
-#       , "Oceania (other)" = length(ages_keep_table)
-#       , "Europe & N America" = length(ages_keep_table)
-#     )
+
+# cl_robust %>%
+#   filter(variant_fert != "medium") %>% 
+#   filter(variant_mort != "medium") %>% 
+#   filter(variant_fert == "stable/constant") %>% 
+#   filter(variant_mort == "stable/constant") %>% 
+#   mutate(type = "alternative") %>% 
+#   ggplot(aes(x = age, y = value, linetype = type)) +
+#   # Plot different scenarios
+#   geom_line(
+#     size = region_line_size
+#     , show.legend = FALSE
+#   ) +
+#   # Medium variant as reference
+#   geom_line(
+#     size = region_line_size
+#     , data = cl_reference_medium 
+#   ) +
+#   # Stable variant as reference
+#   # geom_line(
+#   #   size = region_line_size
+#   #   , data = cl_reference_stable 
+#   # ) +
+#   # # SCALES
+#   scale_x_continuous("Woman's life course (age in years)") +
+#   scale_y_continuous(
+#     "Cumulative number of children lost"
+#     , position = "left"
+#     , sec.axis = dup_axis()
+#     # , breaks = seq(0, 1, 0.5)
+#   ) +
+#   scale_linetype_discrete("", breaks = "reference_medium", labels = "Medium scenario (reference)") +
+#   facet_grid(variant_fert ~ variant_mort, scales = 'fixed', switch = "y") +
+#   # Use with four measures
+#   theme_bw(base_size = base_size) +
+#   theme(
+#     legend.position = "bottom"
+#     # Remove space over legend
+#     , legend.margin=margin(t=-0.25, r=0, b=0, l=0, unit="cm")
+#     # Remove space between legends
+#     , legend.key.size = unit(1, "cm")
+#     # Remove title on left
+#     , axis.text.y.left = element_blank()
+#     , axis.ticks.y.left = element_blank()
+#     , axis.title.y.right = element_blank()
+#     # get rid of facet boxes
+#     , strip.background = element_blank()
+#     # , strip.text.y = element_blank()
+#     # Move y axis closer to the plot
+#     , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+#     # Remove spacing between facets
+#     # , panel.spacing.x=unit(0.07, "cm")
+#     # , panel.spacing.y=unit(0.07, "cm")
 #   )
-# 
-# write(out_tab, file = "../../Output/robustness_fertility.tex")
-# 
-# #2.  Fig: child surv and death by variant -----------
-# 
-# 
