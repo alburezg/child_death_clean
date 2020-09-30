@@ -6,6 +6,13 @@
 # maternal bereavement between women in the Global North 
 # and South, on average
 
+width <- 16
+height <- 12
+base_size <- 15
+region_line_size <- 1
+point_size <- 3.5
+age_br <- c(seq(5, 100, 20), 100)
+
 readme <- list.files(
   path = "../../Data/estimates/"
   , pattern = "df_cl_m_1950to1999_15to100_fert"
@@ -19,12 +26,7 @@ cl_robust <-
   filter(cohort == 2000)
   
 
-width <- 16
-height <- 12
-base_size <- 15
-region_line_size <- 1
-point_size <- 3.5
-age_br <- c(seq(5, 100, 20), 100)
+
 
 
 # p_robust <-
@@ -96,7 +98,7 @@ cl_robust %>%
 
 p_robust
 
-# ggsave(paste0("../../Output/robust_fig2_cd_cs.pdf"), p_robust, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/robust_cd.pdf"), width = width, height = height, units = "cm")
 # 
 # 
 # out_tab <-
