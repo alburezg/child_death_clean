@@ -29,7 +29,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-(files <- list.files(pattern = ".R$")[-1])
+(files <- list.files(pattern = ".R$", full.names = T)[-1])
 
 # 1. Load the functions and packages needed in the scripts ====
 

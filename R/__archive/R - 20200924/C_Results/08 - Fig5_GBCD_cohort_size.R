@@ -52,9 +52,21 @@ change %>%
   ) +
   geom_label_repel(
      data = . %>% 
+       filter(!region %in% "North Africa & West Asia") %>% 
       group_by(region) %>% 
-      arrange(births) %>% slice(1)
-     , nudge_x = 1.8e6
+      arrange(births) %>% 
+      slice(1)
+     # , nudge_x = 1.8e6
+     , nudge_x = 35e6
+  ) +
+  geom_label(
+    data = data.frame(
+      region = "North Africa & West Asia"
+      , cohort = "1950"
+      , births = 11e6
+      , burden = 4e6
+      , stringsAsFactors = F
+    )
   ) +
   geom_path(size = 1) +
   geom_point(size = 4) +
@@ -64,13 +76,13 @@ change %>%
       , labels = function(br) paste0(br/1e6, "M")
                      ) +
   scale_y_continuous(
-    "Generational Burden of Child Death"
+    "Cohort Burden of Child Death"
     , breaks = seq(0, 100e6, 25e6)
     , labels = function(br) paste0(br/1e6, "M")
     ) +
   scale_shape_manual("Cohort", values = c(16, 15, 1, 17)) +
-  # coord_equal() +
-  theme_bw() +
+  coord_equal(xlim = c(0, 110E6), ylim = c(0, 5E7)) +
+  theme_bw(base_size = 15) +
   theme(
     legend.position = "bottom"
     # Remove space over legend
@@ -78,7 +90,10 @@ change %>%
   ) +
   guides(color = FALSE)
 
-ggsave("../../Output/fig5_births_burden.pdf")
+width <- 19
+height <- 10
+
+ggsave("../../Output/fig5_births_burden.pdf", width = width, height = height, units = "cm")
 
 # DEPRECTATED ----
 
