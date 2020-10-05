@@ -292,7 +292,7 @@ expand_LT_age_by_mx_linear <- function(l_5_5, grouped_ages) {
   
   estimates_list <- lapply(l_5_5, function(df) {
     
-    # print(paste(unique(df$country), unique(df$year)))
+    print(paste(unique(df$country), unique(df$year)))
     # if(df$country == "europe") browser()
     
     mx_df <- 
@@ -1891,8 +1891,10 @@ ungroup_mortality_from_mx_robust <- function(lt_per, sex = "F", parallel = T, nu
     select(country, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex) %>% 
     # filter out rows with no data (headings)
     filter(!is.na(age)) %>% 
+    # filter(!country %in% "Channel Islands") %>% 
     mutate(
       country = fix_un_countries(country)
+      # , country = countrycode(country_old, origin = "country.name", destination = "iso3c")
       , age = as.numeric(gsub("\\+", "", age))
       # Change period labels
       # UN calendar year periods are non-exlusive; ie 1950-1955 and 1955-1960
@@ -1900,7 +1902,7 @@ ungroup_mortality_from_mx_robust <- function(lt_per, sex = "F", parallel = T, nu
       , year = change_period_labels(year)
       , mx = as.numeric(mx)
       , ax = as.numeric(ax)
-    )
+    ) 
   
   
   # 1.1. Parameters 

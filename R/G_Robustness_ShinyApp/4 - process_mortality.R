@@ -63,3 +63,5 @@ if(re_estimate_matrix_of_survival_probs){
 }
 
 
+print("Mortality processed succesfully!")
+Sys.time()

@@ -106,7 +106,9 @@ colnames(lt_per_obs_F) <- new_names
 
 lt_per_obs_F2 <- 
   lt_per_obs_F %>% 
-  filter(country %in% country_keep) %>% 
+  # filter(country %in% country_keep) %>%
+  mutate(iso = countrycode(country, origin = "country.name", destination = "iso3c", warn = F)) %>% 
+  filter(iso %in% country_iso_keep) %>%
   mutate(
     mx = as.numeric(mx)
     , qx = as.numeric(qx)
@@ -119,15 +121,17 @@ lt_per_obs_F2 <-
     , ex = as.numeric(ex)
     , ax = as.numeric(ax)
   ) %>% 
-  select(country, variant, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex)
+  select(country, iso, variant, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex)
 
 lt_per_pred_F <- 
   data.table::fread("../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv", stringsAsFactors = F) %>% 
   data.frame() %>%  
   filter(Sex == "Female") %>% 
-  filter(Location %in% country_keep) %>% 
+  # filter(Location %in% country_keep) %>% 
+  mutate(iso = countrycode(Location, origin = "country.name", destination = "iso3c", warn = F)) %>% 
+  filter(iso %in% country_iso_keep) %>%
   select(
-    country = Location, variant = Variant
+    country = Location, iso, variant = Variant
     , year = Time, age = AgeGrpStart, interval = AgeGrpSpan
     , mx, qx, ax, lx, dx, Lx, Tx, ex
   )

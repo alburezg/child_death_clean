@@ -23,10 +23,58 @@
 
 library(parallel)
 
-country_keep <- c("Guatemala", "Zimbabwe")
+# country_keep <- c("Guatemala", "Zimbabwe")
 baseline_year_constant_rates <- "2000-2005"
 numCores <- ifelse(detectCores() > 8, 25, 3)
 re_estimate_matrix_of_survival_probs <- F
+
+country_keep <- c("Burundi", "Comoros", "Djibouti", "Eritrea", "Ethiopia", "Kenya", 
+                  "Madagascar", "Malawi", "Mauritius", "Mayotte", "Mozambique", 
+                  "Réunion", "Rwanda", "Seychelles", "Somalia", "South Sudan", 
+                  "Uganda", "United Republic of Tanzania", "Zambia", "Zimbabwe", 
+                  "Angola", "Cameroon", "Central African Republic", "Chad", "Congo", 
+                  "Democratic Republic of the Congo", "Equatorial Guinea", "Gabon", 
+                  "Sao Tome and Principe", "Botswana", "Eswatini", "Lesotho", "Namibia", 
+                  "South Africa", "Benin", "Burkina Faso", "Cabo Verde", "Côte d'Ivoire", 
+                  "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Liberia", "Mali", 
+                  "Mauritania", "Niger", "Nigeria", "Senegal", "Sierra Leone", 
+                  "Togo", "Algeria", "Egypt", "Libya", "Morocco", "Sudan", "Tunisia", 
+                  "Western Sahara", "Armenia", "Azerbaijan", "Bahrain", "Cyprus", 
+                  "Georgia", "Iraq", "Israel", "Jordan", "Kuwait", "Lebanon", "Oman", 
+                  "Qatar", "Saudi Arabia", "State of Palestine", "Syrian Arab Republic", 
+                  "Turkey", "United Arab Emirates", "Yemen", "Kazakhstan", "Kyrgyzstan", 
+                  "Tajikistan", "Turkmenistan", "Uzbekistan", "Afghanistan", "Bangladesh", 
+                  "Bhutan", "India", "Iran (Islamic Republic of)", "Maldives", 
+                  "Nepal", "Pakistan", "Sri Lanka", "China", "China, Hong Kong SAR", 
+                  "China, Macao SAR", "China, Taiwan Province of China", "Dem. People's Republic of Korea", 
+                  "Japan", "Mongolia", "Republic of Korea", "Brunei Darussalam", 
+                  "Cambodia", "Indonesia", "Lao People's Democratic Republic", 
+                  "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", 
+                  "Timor-Leste", "Viet Nam", "Antigua and Barbuda", "Aruba", "Bahamas", 
+                  "Barbados", "Cuba", "Curaçao", "Dominican Republic", "Grenada", 
+                  "Guadeloupe", "Haiti", "Jamaica", "Martinique", "Puerto Rico", 
+                  "Saint Lucia", "Saint Vincent and the Grenadines", "Trinidad and Tobago", 
+                  "United States Virgin Islands", "Belize", "Costa Rica", "El Salvador", 
+                  "Guatemala", "Honduras", "Mexico", "Nicaragua", "Panama", "Argentina", 
+                  "Bolivia (Plurinational State of)", "Brazil", "Chile", "Colombia", 
+                  "Ecuador", "French Guiana", "Guyana", "Paraguay", "Peru", "Suriname", 
+                  "Uruguay", "Venezuela (Bolivarian Republic of)", "Australia", 
+                  "New Zealand", "Fiji", "New Caledonia", "Papua New Guinea", "Solomon Islands", 
+                  "Vanuatu", "Guam", "Kiribati", "Micronesia (Fed. States of)", 
+                  "French Polynesia", "Samoa", "Tonga", "Belarus", "Bulgaria", 
+                  "Czechia", "Hungary", "Poland", "Republic of Moldova", "Romania", 
+                  "Russian Federation", "Slovakia", "Ukraine"
+                  # , "Channel Islands"
+                  , "Denmark", "Estonia", "Finland", "Iceland", "Ireland", "Latvia", 
+                  "Lithuania", "Norway", "Sweden", "United Kingdom", "Albania", 
+                  "Bosnia and Herzegovina", "Croatia", "Greece", "Italy", "Malta", 
+                  "Montenegro", "North Macedonia", "Portugal", "Serbia", "Slovenia", 
+                  "Spain", "Austria", "Belgium", "France", "Germany", "Luxembourg", 
+                  "Netherlands", "Switzerland", "Canada", "United States of America"
+)
+
+
+country_iso_keep <- countrycode(country_keep, origin = "country.name", destination = "iso3c")
 
 (files <- list.files(pattern = ".R$")[-1])
 

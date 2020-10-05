@@ -3,7 +3,6 @@ print(paste0("Running script: ", "4 - CD_create_df"))
 # reference_years <- 2000
 reference_years <- 1950:2000
 variant_fert_all <- c("low", "medium", "high", "constant")
-# variant_mort_all <- c("Median PI", "Upper 80 PI", "Lower 80 PI", "Upper 95 PI", "Lower 95 PI", "constant")
 variant_mort_all <- c("Lower 95 PI", "Median PI", "Upper 95 PI", "constant")
 
 # Parameters for the function
