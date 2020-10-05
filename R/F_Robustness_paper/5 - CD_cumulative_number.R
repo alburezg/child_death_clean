@@ -34,13 +34,3 @@ mas <- c(15:100) # woman ages
     }
   }
     
-  # child_loss_robust(
-  #   countries = tolower(country_keep)
-  #   , reference_years = reference_years
-  #   , path = "../../Data/derived"
-  #   , ASFRC = ASFRC_low %>% filter(Age < 50)
-  #   , ages_keep = 15:100
-  #   , variant_fert = "low"
-  #   , variant_mort = "Median PI"
-  # )
-  
