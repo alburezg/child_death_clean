@@ -15,6 +15,11 @@ mas <- c(15:100) # woman ages
 
   # Get for all four combinations of mortality and fert variants
 
+# IMPROVEMENT -----------
+# Not all combinations are relevnat - keep only 
+print("Keep only these!!")
+c("cm-cf", "lm-hf", "hm-hf", "lm-lf", "hm-lf", "mm-mf")
+
   for(m in variant_mort_all){
     for(f in variant_fert_all){
 
