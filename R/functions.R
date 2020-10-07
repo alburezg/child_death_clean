@@ -289,11 +289,14 @@ expand_LT_age_by_mx_linear <- function(l_5_5, grouped_ages) {
   # In practice, this means that the nmx value for a given interval is assumed to be the value
   # of the mid-point full age range. For exampele, the value for 5M10 is assumed to be the same as
   # 1M12 and the linear interpolation is then carried out between 1M12 and 1M17
-  
+  n=1
   estimates_list <- lapply(l_5_5, function(df) {
     
     print(paste(unique(df$country), unique(df$year)))
     # if(df$country == "europe") browser()
+    n <<- n+1
+    if(n == 34) browser()
+    print(n)
     
     mx_df <- 
       # a. expand df
@@ -1893,8 +1896,9 @@ ungroup_mortality_from_mx_robust <- function(lt_per, sex = "F", parallel = T, nu
     filter(!is.na(age)) %>% 
     # filter(!country %in% "Channel Islands") %>% 
     mutate(
-      country = fix_un_countries(country)
-      # , country = countrycode(country_old, origin = "country.name", destination = "iso3c")
+      # country = fix_un_countries(country)
+      country_old = fix_un_countries(country)
+      , country = countrycode(country_old, origin = "country.name", destination = "iso3c")
       , age = as.numeric(gsub("\\+", "", age))
       # Change period labels
       # UN calendar year periods are non-exlusive; ie 1950-1955 and 1955-1960

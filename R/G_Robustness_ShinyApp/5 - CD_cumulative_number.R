@@ -21,7 +21,7 @@ mas <- c(15:100) # woman ages
       ASFRC <- get(paste0("ASFRC_", f))
       
       child_loss_robust(
-        countries = tolower(country_keep)
+        countries = fix_un_countries(country_keep)
         , reference_years = reference_years
         , path = "../../Data/derived"
         , ASFRC = ASFRC %>% filter(Age < 50)

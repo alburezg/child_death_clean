@@ -87,7 +87,7 @@ lt_per_obs_F <- readxl::read_xlsx(
   path= "../../Data/wpp_data/WPP2019_MORT_F17_3_ABRIDGED_LIFE_TABLE_FEMALE.xlsx"
   , sheet = "ESTIMATES"
   , skip = 16
-  )
+  ) 
 
 lt_per_obs_F[lt_per_obs_F == "…"] <- NA
 
@@ -104,8 +104,17 @@ new_names <- c("id", "variant", "country" , "notes", "country_code", "type", "pa
 # Change colnames
 colnames(lt_per_obs_F) <- new_names
 
+# ignore_china <- 
+
 lt_per_obs_F2 <- 
   lt_per_obs_F %>% 
+  filter(type == "Country") %>% 
+  # mutate(
+  #   country = recode(
+  #     country
+  #     , 
+  #     )
+  #   ) %>% 
   # filter(country %in% country_keep) %>%
   mutate(iso = countrycode(country, origin = "country.name", destination = "iso3c", warn = F)) %>% 
   filter(iso %in% country_iso_keep) %>%
@@ -123,13 +132,24 @@ lt_per_obs_F2 <-
   ) %>% 
   select(country, iso, variant, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex)
 
+country_keep_lev2 <- sort(unique(lt_per_obs_F2$country))
+
 lt_per_pred_F <- 
   data.table::fread("../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv", stringsAsFactors = F) %>% 
   data.frame() %>%  
   filter(Sex == "Female") %>% 
-  # filter(Location %in% country_keep) %>% 
-  mutate(iso = countrycode(Location, origin = "country.name", destination = "iso3c", warn = F)) %>% 
-  filter(iso %in% country_iso_keep) %>%
+  # mutate(country = fix_un_countries(Location)) %>% 
+  mutate(
+    Location = recode(
+      Location
+      , "CuraÃ§ao" = "Curaçao" 
+      , "CÃ´te d'Ivoire" = "Côte d'Ivoire"
+      , "RÃ©union" = "Réunion"
+      )
+    ) %>%
+  filter(Location %in% country_keep_lev2) %>%
+  mutate(iso = countrycode(Location, origin = "country.name", destination = "iso3c", warn = F)) %>%
+  # filter(iso %in% country_iso_keep) %>%
   select(
     country = Location, iso, variant = Variant
     , year = Time, age = AgeGrpStart, interval = AgeGrpSpan
