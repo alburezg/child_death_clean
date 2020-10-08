@@ -38,6 +38,7 @@ if(re_estimate_matrix_of_survival_probs){
   process_mortality_robust_top(
     lt_per = lt_median
     , numCores = numCores
+    , export_LTC = T
   )
   
   # 2. Lower95 LT ----
@@ -45,6 +46,7 @@ if(re_estimate_matrix_of_survival_probs){
   process_mortality_robust_top(
     lt_per = lt_lower95
     , numCores = numCores
+    , export_LTC = T
   )
   
   # 3. Upper95 LT ----
@@ -52,6 +54,7 @@ if(re_estimate_matrix_of_survival_probs){
   process_mortality_robust_top(
     lt_per = lt_upper95
     , numCores = numCores
+    , export_LTC = T
   )
   
   # 4. Constant LT ----
@@ -59,6 +62,7 @@ if(re_estimate_matrix_of_survival_probs){
   process_mortality_robust_top(
     lt_per = lt_constant
     , numCores = numCores
+    , export_LTC = T
   )
 }
 

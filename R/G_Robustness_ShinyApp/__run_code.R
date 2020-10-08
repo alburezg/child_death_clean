@@ -23,6 +23,7 @@
 # constant/constant is stable population
 
 library(parallel)
+library(countrycode)
 
 # country_keep <- c("Guatemala", "Zimbabwe")
 baseline_year_constant_rates <- "2000-2005"

@@ -9,19 +9,10 @@ print("Running script: 3 - ungroup_fertility_ASFR.R")
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # The files created with this script can be loaded with:
 
-# 1. Read all into a uique file (recommended)
-# fert_per_1_1 <- read.csv(file = paste0("../../Data/derived/","fert_per_1_1.csv"), stringsAsFactors = F)
-
-# 2. Load separately by type of region
-# fil <- list.files("output/")
-# fil <- fil[grepl("^fert_per_1_1_", fil)]
-#  
-# for(f in fil) {
-#   obj <- read.csv(file = paste0("output/",f), stringsAsFactors = F)
-#   new_name <- gsub(".csv", "", f)
-#   assign(new_name, obj)
-#   print(paste(new_name, "loaded."))
-# }
+ASFRC_low <- read.csv(paste0("../../Data/derived/", "ASFRC_","low",".csv"), stringsAsFactors = F)
+ASFRC_medium <- read.csv(paste0("../../Data/derived/", "ASFRC_","medium",".csv"), stringsAsFactors = F)
+ASFRC_high <- read.csv(paste0("../../Data/derived/", "ASFRC_","high",".csv"), stringsAsFactors = F)
+ASFRC_constant <- read.csv(paste0("../../Data/derived/", "ASFRC_","constant",".csv"), stringsAsFactors = F)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # visual_examination <- F

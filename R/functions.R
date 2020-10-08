@@ -289,14 +289,14 @@ expand_LT_age_by_mx_linear <- function(l_5_5, grouped_ages) {
   # In practice, this means that the nmx value for a given interval is assumed to be the value
   # of the mid-point full age range. For exampele, the value for 5M10 is assumed to be the same as
   # 1M12 and the linear interpolation is then carried out between 1M12 and 1M17
-  n=1
+  # n=1
   estimates_list <- lapply(l_5_5, function(df) {
     
     print(paste(unique(df$country), unique(df$year)))
     # if(df$country == "europe") browser()
-    n <<- n+1
-    if(n == 34) browser()
-    print(n)
+    # n <<- n+1
+    # if(n == 34) browser()
+    # print(n)
     
     mx_df <- 
       # a. expand df
@@ -2320,7 +2320,7 @@ worker_survival_probs <- function(life_table, xs, mas, cos) {
 
 # RIBUSTNESS FUNCTIONS -----------
 
-process_mortality_robust_top <- function(lt_per, numCores){
+process_mortality_robust_top <- function(lt_per, numCores, export_LTC){
   
   variant_current <- unique(lt_per$variant)
   
@@ -2345,6 +2345,11 @@ process_mortality_robust_top <- function(lt_per, numCores){
       , numCores = numCores
     ) %>% 
     mutate(variant = variant_current)
+  
+  if(export_LTC){
+    write.csv(paste0("../../Data/derived/LTC_",variant_current, ".csv"), row.names = F)
+    print(paste("LTC", variant_current, "exported!"))
+  }
   
   # Create Matix of survival probs
   
@@ -2420,7 +2425,7 @@ survival_probs_parallel_robust <- function(l, xs, mas, cos, numCores = 4) {
 
 
 worker_survival_probs_robust <- function(life_table, xs, mas, cos) {
-  browser()
+  # browser()
   
   pais <- unique(life_table$Country)
   var <- unique(life_table$variant)
