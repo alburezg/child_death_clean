@@ -81,3 +81,91 @@ lx_low %>%
   filter(!same) %>% 
   group_by(name) %>%
   slice(1)  
+
+# Mortality ---------------
+
+method = "spline"
+
+# Get LTC
+
+LTC_low <- 
+  ungroup_mortality_from_mx_robust(
+    lt_per = lt_lower95 %>% filter(country %in% "Guatemala")
+    , sex = "F"
+    , parallel = T
+    , numCores = numCores
+    , export = F
+  ) %>% 
+  # Convert to cohort
+  convert_period_LT_to_cohort_LT_robust(
+    lt_1_1 = .
+    , sex = "F"
+    , export = F
+    , years = 1950:2100
+    , ages = 1:100
+    , parallel = T
+    , numCores = numCores
+  ) %>% 
+  mutate(variant = "low")
+
+LTC_medium <- 
+  ungroup_mortality_from_mx_robust(
+    lt_per = lt_median %>% filter(country %in% "Guatemala")
+    , sex = "F"
+    , parallel = T
+    , numCores = numCores
+    , export = F
+  ) %>% 
+# Convert to cohort
+  convert_period_LT_to_cohort_LT_robust(
+    lt_1_1 = .
+    , sex = "F"
+    , export = F
+    , years = 1950:2100
+    , ages = 1:100
+    , parallel = T
+    , numCores = numCores
+  ) %>% 
+  mutate(variant = "medium")
+
+LTC_high <- 
+  ungroup_mortality_from_mx_robust(
+    lt_per = lt_upper95 %>% filter(country %in% "Guatemala")
+    , sex = "F"
+    , parallel = T
+    , numCores = numCores
+    , export = F
+  ) %>% 
+  # Convert to cohort
+  convert_period_LT_to_cohort_LT_robust(
+    lt_1_1 = .
+    , sex = "F"
+    , export = F
+    , years = 1950:2100
+    , ages = 1:100
+    , parallel = T
+    , numCores = numCores
+  ) %>% 
+  mutate(variant = "high")
+
+# Find difference ===============
+
+# df <- 
+  bind_cols(
+  LTC_low %>% select(cohort = Cohort, age = Age, low = mx)
+  , LTC_medium %>% select(medium = mx)
+  , LTC_high %>% select(high = mx)
+    ) %>% 
+  filter(cohort %in% cohort_keep) %>% 
+  mutate(
+    same = (abs(low-medium) < 1e-5) & (abs(high-medium) < 1e-5)
+  ) %>% 
+  mutate(period = cohort + age) %>% 
+  filter(period == 2010)
+
+  filter(!same) %>% 
+  group_by(cohort) %>% 
+  slice(1) 
+  
+
+
