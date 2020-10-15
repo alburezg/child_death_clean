@@ -163,7 +163,10 @@ country_keep <- c(
   # "zambia", "australia", "republic of korea"
   # , "cambodia", "vietnam", "thailand"
   "bolivia (plurinational state of)", "argentina", "paraguay", "chile", "brazil", "paraguay"
+  , "cambodia", "yemen", "rwanda"
 )
+
+# Create share_died in 11 - Fig8_heatmap.R
 
 share_died  %>% 
   filter(age == retirement_age) %>% 
@@ -396,7 +399,7 @@ cl_world <-
     # , high_iqr = quantile(value, quant_high, na.rm = T)
   ) %>% 
   ungroup() %>% 
-  mutate(source = sources[1]) %>% 
+  # mutate(source = sources[1]) %>% 
   arrange(cohort, age)
 
 # Decline in frequency at all ages ----

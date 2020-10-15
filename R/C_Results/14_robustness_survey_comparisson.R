@@ -23,12 +23,10 @@ regions_emily <- read.csv("../../Data/emily/regions.csv", stringsAsFactors = F)
 
 surv <- 
   read.csv("../../Data/emily/20200214_mothers.csv", stringsAsFactors = F) %>% 
-      # mutate(measure = "mothers") %>% 
   get_regions_iso(., regions_emily) %>% 
-  filter(region %in% "Africa") %>% 
+  filter(region %in% "Africa") %>%
   select(iso, starts_with("m")) %>% 
   pivot_longer(-c(iso), names_to = "variable", values_to = "surv") 
-  # mutate(variable = recode(variable, "mrom45" = "mom45"))
 
 # 1.2. Equivalent KC estimates ========
 # lpwj
@@ -77,3 +75,23 @@ both %>%
   arrange(desc(err)) %>% 
   slice(1) %>% 
   pull(err)
+
+# 2.4. ==================
+
+x <- 
+  both %>% 
+  mutate(err = abs(kc - surv)/surv) %>% 
+  pull(err) 
+
+seqs <- seq(0, 0.6, 0.02)
+y <- sapply(seqs, function(n) {sum(x <= n)/ length(x)})
+names(y) <- seqs
+y
+
+y <- sapply(seqs, function(n) {sum(x <= n)})
+names(y) <- seqs
+y
+
+sum(x<=0.1)
+
+# Out of the 31 countries, 
