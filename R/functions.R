@@ -2507,6 +2507,8 @@ worker_survival_probs_robust <- function(life_table, xs, mas, cos) {
 
 child_loss_robust <- function(countries, reference_years, ages_keep = 15:100, path = "../../Data/derived", ASFRC, variant_fert, variant_mort) {
   
+  # c <- countries[1]
+  
   df_l <- lapply(
     countries
     , worker_child_loss_robust
@@ -2539,7 +2541,7 @@ child_loss_robust <- function(countries, reference_years, ages_keep = 15:100, pa
 }
 
 worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep, ASFRC, path, variant_fert, variant_mort) {
-  # browser()
+  
   # 2.1. Get LT for chosen years
   
   lx_array_temp <- get_lx_array_robust(
