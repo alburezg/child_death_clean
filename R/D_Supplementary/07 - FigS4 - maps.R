@@ -243,12 +243,16 @@ viridis_direction <- -1
 
 # WORKING
 cohort_show <- 1955
-bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
-p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+bar_name <- paste0("Share of life-time\noffspring deaths\nexperienced after\nwoman's age 65")
+# p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+p_title <- paste0(
+  "Child deaths experienced after age ",retirement_age, " by women born in ", cohort_show
+  , " (i.e., currently aged ", retirement_age, ")"
+  )
 
-cohort_show <- 1975
-bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
-p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
+# cohort_show <- 1975
+# bar_name <- paste0("Share of lifetime\noffspring deaths\nexperienced after\nwoman's age 65")
+# p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
 
 # country_line_size <- 5e-1
 country_line_size <- 5e-04

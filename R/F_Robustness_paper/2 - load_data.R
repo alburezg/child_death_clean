@@ -14,9 +14,6 @@
 # UN fertility projections
 # These are groups in 5-age groups for every 5 calendar-year interva
 # 
-# list.files("../../Data/CSVProjectionFiles/")
-list.files("../../Data/wpp_data/")
-
 # 1. Fertility data: 2019 WPP ASFR ----
 
 asfr_obs <- readxl::read_xlsx(

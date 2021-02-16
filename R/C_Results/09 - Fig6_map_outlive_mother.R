@@ -38,7 +38,8 @@ cl_share <-
 
   world <- sf::st_as_sf(rworldmap::getMap(resolution = "low")) %>% 
     select(ID = ADMIN, country = ADM0_A3, geometry) %>% 
-    mutate(ID = as.character(ID), country = as.character(country))
+    mutate(ID = as.character(ID), country = as.character(country)) %>% 
+  assign_contested_iso3_countries(.)
 
 
 w <- left_join(
@@ -72,7 +73,7 @@ ggplot(data = w) +
     ) +
   guides(fill = guide_colourbar(barwidth = 1))
 
-ggsave(paste0("../../Output/fig6_map_outlive_",fertility_variant,".pdf"), height = 7, width = 16, units = "cm")
+ggsave(paste0("../../Output/figS4_map_outlive_",fertility_variant,".pdf"), height = 7, width = 16, units = "cm")
 
 # Text to add as label
 

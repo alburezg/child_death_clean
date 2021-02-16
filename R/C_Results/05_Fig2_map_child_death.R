@@ -1,5 +1,7 @@
 # Cumulative child death up to age 65
 
+# rcode s8gmlr
+
 # 0. Parameters
 
 retirement_age <- 65
@@ -12,7 +14,7 @@ country_line_size <- 0.0005
 
 p_title <- paste0("Cumulative numer of child deaths at age 65 for a woman born in ", cohort_show, " (i.e. aged 65 in 2020)")
 
-p_name <- paste0("../../Output/figx_map_child_death",".pdf")
+p_name <- paste0("../../Output/fig2_map_child_death",".pdf")
 
 
 # 0. Create world map ----
@@ -20,7 +22,8 @@ p_name <- paste0("../../Output/figx_map_child_death",".pdf")
 
 world <- sf::st_as_sf(rworldmap::getMap(resolution = "low")) %>% 
   select(ID = ADMIN, country = ADM0_A3, geometry) %>% 
-  mutate(ID = as.character(ID), country = as.character(country))
+  mutate(ID = as.character(ID), country = as.character(country)) %>% 
+  assign_contested_iso3_countries(.)
 
 
 p1 <- map_child_death(cohort_show = 1955)

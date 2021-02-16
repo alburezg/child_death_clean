@@ -50,6 +50,28 @@ apply_lt <- function(female_births, LTCF, numCores) {
   
 }
 
+assign_contested_iso3_countries <- function(df) {
+  df %>%  
+    mutate(
+      country = recode(country
+                       , GRL = "DNK"
+                       , "SDS" = "SSD"
+                       # Somaliland is part of Somalia
+                       , "SOL" = "SOM"
+                       # Kosovo is part of Serbia
+                       , "KOS" = "SRB"
+                       # Recode Gaza and West Bank as palestine
+                       , "GAZ" = "PSE"
+                       , "WEB" = "PSE"
+                       # Northern Cyprus is part of Cyprus
+                       , "CYN" = "CYP"
+                       # Western Sahara is part of Morocco
+                       , "SAH" = "MAR"
+      )
+    )
+  
+}
+
 # Change period labels
 # UN calendar year periods are non-exlusive; ie 1950-1955 and 1955-1960
 # The should actually be only 5 yers long: 1950-1954 and 1955-1959
@@ -1235,7 +1257,7 @@ map_child_death <- function(cohort_show, ...) {
   # in the legend colorbar
   # bar_br <- seq(shift_colors_by, 3 + shift_colors_by, 1)
   bar_br <- seq(0, 3, 1)
-  bar_lim <- c(0, 3.5)
+  bar_lim <- c(0, 3.6)
   
   bar_name <- paste0("Number of children\nlost by a woman\naged ", retirement_age ," years")
   # p_title <- paste0("Women born in ", cohort_show, " and retiring in ", cohort_show + 70)
@@ -1467,6 +1489,7 @@ map_share_child_deaths_in_age_range <- function(cohort_show, col, bar_name, ...)
       axis.line = element_blank(), axis.text = element_blank()
       , axis.ticks = element_blank(), axis.title = element_blank()
       , plot.title = element_text(size = title_size, face="bold")
+      # , legend.position = "left"
     ) +
     guides(fill = guide_colourbar(barwidth = 1))
 }

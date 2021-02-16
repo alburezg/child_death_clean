@@ -5,6 +5,8 @@
 # World map: children outliving their mothesr
 # for a woman aged 65 in 2020
 
+# rcode mlfm68
+
 # Data required: tally_share (created for fig 4)
 
 # 0. Parameters
@@ -20,7 +22,8 @@ country_line_size <- 0.0005
 
 world <- sf::st_as_sf(rworldmap::getMap(resolution = "low")) %>% 
   select(ID = ADMIN, country = ADM0_A3, geometry) %>% 
-  mutate(ID = as.character(ID), country = as.character(country))
+  mutate(ID = as.character(ID), country = as.character(country)) %>% 
+  assign_contested_iso3_countries(.)
 
 # 1. Child deaths after retirement ----
 # Get df of distributino of child deaths by woman's age
@@ -61,13 +64,9 @@ viridis_direction <- -1
 cohort_show <- 1955
 bar_name <- paste0("Share of life-time\noffspring deaths\nexperienced after\nwoman's age 65")
 
-# p_title <- paste0("Women born in ", cohort_show, " and reaching retirement age approximately in ", cohort_show + retirement_age)
-
-# p_title <- paste0("Child deaths experienced after age 65 by women born in ", cohort_show, " (i.e. retiring approximately in ", cohort_show + retirement_age, ")")
-
 p_title <- paste0("Child deaths experienced after age 65 by women born in ", cohort_show, " (i.e. aged 65 in 2020)")
 
-p_name <- paste0("../../Output/fig4_map-share-cd-in-retirement_",fertility_variant,".pdf")
+p_name <- paste0("../../Output/figS3_map-share-cd-in-retirement_",fertility_variant,".pdf")
 
 p1 <- map_share_child_deaths_in_age_range(
   cohort_show = cohort_show
@@ -77,7 +76,6 @@ p1 <- map_share_child_deaths_in_age_range(
 )
 
 ggsave(p_name, p1, height = 7, width = 16, units = "cm")
-
 
 # For map label - countries with highest and lowest values 
 
