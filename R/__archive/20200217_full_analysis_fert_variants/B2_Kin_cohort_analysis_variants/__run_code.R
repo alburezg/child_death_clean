@@ -40,6 +40,12 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# 0. Define fertility variant! ----------
+
+# rm(list=ls()); fertility_variant <- c("low")
+# rm(list=ls()); fertility_variant <- c("medium")
+rm(list=ls());  fertility_variant <- c("high")
+
 files <- list.files(pattern = ".R$")[-1]
 # 1. Load the functions and packages needed in the scripts ====
 

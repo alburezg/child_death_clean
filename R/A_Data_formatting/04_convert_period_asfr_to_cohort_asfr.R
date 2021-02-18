@@ -55,7 +55,8 @@ ASFRC <- merge(
   , comb
   , all = T
 ) %>% 
-  arrange(country, Cohort, Age)
+  arrange(country, Cohort, Age) %>% 
+  filter(Age < 50)
 
 # View(ASFRC_complete)
 

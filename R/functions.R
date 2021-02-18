@@ -165,7 +165,8 @@ convert_period_asfr_to_cohort_asfr <- function(fert_per_1_1,variant_name,export 
     , comb
     , all = T
   ) %>% 
-    arrange(country, Cohort, Age)
+    arrange(country, Cohort, Age) %>% 
+    data.frame()
   
   
   # 4. Export 
@@ -445,6 +446,7 @@ expand_LT_age_by_mx_linear <- function(l_5_5, grouped_ages) {
 
 expand_LT_year_by_mx <- function(df_5_1, method = "linear", parallel = T, numCores = 4) {
   # browser()
+  df_5_1 <- data.frame(df_5_1)
   ages_old <- as.character(df_5_1$year)
   df_5_1$year <- ages_old
   df_l <- split(df_5_1, df_5_1[c("country", "age")])  
@@ -2102,6 +2104,7 @@ worker_child_loss <- function(country_keep, reference_years, sex_keep = F, ages_
     ASFRC %>% 
     filter(country %in% country_keep) %>% 
     filter(Cohort %in% reference_years)
+    
   
   # 2.3. Expected child loss and child survival
   
@@ -2545,7 +2548,7 @@ worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep
   # 2.1. Get LT for chosen years
   
   lx_array_temp <- get_lx_array_robust(
-    c = c
+    c = countrycode(c, "country.name", "iso3c")
     , reference_years = reference_years
     , sex_keep = sex_keep
     , path = path
@@ -2557,6 +2560,7 @@ worker_child_loss_robust <- function(c, reference_years, sex_keep = F, ages_keep
   ASFR_df <- 
     ASFRC %>% 
     filter(country %in% c) %>% 
+    filter(Age < 50) %>% 
     filter(Cohort %in% reference_years)
   
   # 2.3. Expected child loss and child survival

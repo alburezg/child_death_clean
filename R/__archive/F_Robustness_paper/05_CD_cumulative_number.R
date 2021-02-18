@@ -8,14 +8,13 @@ variant_mort_all <- c("Lower 95 PI", "Median PI", "Upper 95 PI", "constant")
 
 # Parameters for the function
 cos <- c(1950:2100) # cohorts
+# cos <- c(1950:2099) # cohorts
 xs <- c(15:49) # reproductive ages
 mas <- c(15:100) # woman ages
 
 
-  # Get for all four combinations of mortality and fert variants
 
-# m <- variant_mort_all[1]
-# f <- variant_fert_all[1]
+  # Get for all four combinations of mortality and fert variants
 
   for(m in variant_mort_all){
     for(f in variant_fert_all){

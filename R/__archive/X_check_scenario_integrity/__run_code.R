@@ -27,7 +27,7 @@ library(parallel)
 country_keep <- c("Guatemala")
 baseline_year_constant_rates <- "2000-2005"
 numCores <- ifelse(detectCores() > 8, 25, 3)
-re_estimate_matrix_of_survival_probs <- F
+re_estimate_matrix_of_survival_probs <- T
 
 (files <- list.files(pattern = ".R$")[-1])
 
@@ -57,7 +57,7 @@ source(files[4])
 # B. Analysis -------------
 
 # Estimate child death
-source(files[4])
+source(files[5])
 
 # Plot comparisson
-source(files[5])
+source(files[6])

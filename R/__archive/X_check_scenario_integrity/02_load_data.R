@@ -85,7 +85,7 @@ lt_per_obs_B <- readxl::read_xlsx(
   path= "../../Data/wpp_data/WPP2019_MORT_F17_1_ABRIDGED_LIFE_TABLE_BOTH_SEXES.xlsx"
   , sheet = "ESTIMATES"
   , skip = 16
-)
+  )
 
 lt_per_obs_B[lt_per_obs_B == "…"] <- NA
 
@@ -132,10 +132,10 @@ lt_per_pred_B <-
 
 lt_median_B <-
   bind_rows(
-    lt_per_obs_B2
-    , lt_per_pred_B %>%
-      filter(variant == "Median PI")
-  ) %>%
+  lt_per_obs_B2
+  , lt_per_pred_B %>%
+    filter(variant == "Median PI")
+) %>%
   mutate(variant = "Median PI")
 
 lt_upper95_B <-
@@ -155,7 +155,6 @@ lt_lower95_B <-
   mutate(variant = "Lower 95 PI")
 
 # Constant fert measnt that baseline are repeated every year
-
 years_project <- unique(lt_per_pred_B$year)
 times_years <- length(years_project)
 times_new_years <- length(unique(lt_per_obs_B2$age))

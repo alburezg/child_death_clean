@@ -1,4 +1,17 @@
 
+# DIAGNOSIS 20210216
+# something weird is going on with the function that creates the 
+# lx.kids.arr
+# Basically, the lx.kids.arr that I create in this script for Guatemala 
+# (medium scenario) are different from the ones that I created 
+# for the main paper, which doesn't make any sense
+# I checked and the two functions that I used are equivalent:
+# worker_survival_probs_robust and worker_survival_probs
+# and should, therefore, give the same results. 
+
+# TREATMENT:  
+# Re-run main analysis in Hydar from scratch and see if you get same results
+
 # Compare 'variant' estiamtes to old code --------
 
 # OK: Cohort ASFR ======
@@ -16,7 +29,7 @@ old <-
   select(Cohort, Age, old = ASFR)
 
 
-  var %>% 
+var %>% 
   filter(Cohort %in% 1950:2000) %>% 
   left_join(old) %>% 
   mutate(
@@ -25,8 +38,6 @@ old <-
   filter(!same)
 
 # If this returns an empty table, then both methods are equivalent
-
-# LTC_var <-   read.csv(paste0("../../Data/derived/LTC_","Median PI", ".csv"), stringsAsFactors = F)
   
 # OK: Period aggregated female life table ===========
 
@@ -95,14 +106,14 @@ left_join(lt_var, lt_old) %>%
 
 # Get new variant-based lt
 
-lt_per = lt_median
+lt_per = lt_median_B
 
 variant_current <- unique(lt_per$variant)
 
 lt_1_1 <- 
   ungroup_mortality_from_mx_robust(
     lt_per = lt_per
-    , sex = "F"
+    , sex = "B"
     , parallel = T
     , numCores = numCores
     , export = F
@@ -112,7 +123,7 @@ lt_1_1 <-
 LTC_var_temp <- 
   convert_period_LT_to_cohort_LT_robust(
     lt_1_1 = lt_1_1
-    , sex = "F"
+    , sex = "B"
     , export = F
     , years = 1950:2100
     , ages = 1:100
@@ -127,7 +138,7 @@ LTC_var <-
 
 # Get old estiamtes
 LTC_old <- 
-  data.table::fread(file = paste0("../../Data/derived/","LTCF.csv"), stringsAsFactors = F) %>% 
+  data.table::fread(file = paste0("../../Data/derived/","LTCB.csv"), stringsAsFactors = F) %>% 
   data.frame %>% 
   filter(Country == "guatemala") %>% 
   select(Cohort, Age, old = mx)
@@ -155,10 +166,10 @@ mas<-c(15:100) # mother ages
 # Scenario-based
 
 worker_survival_probs_robust(life_table = LTC_var_temp, cos = cos, xs = xs, mas = mas)
-file_var <- paste0(paste0("../../Data/derived", "/lx.kids.arr_", "GTM","_","Median PI", ".RDS"))
+file_var <- paste0(paste0("../../Data/derived", "/lx.kids.arr_", "guatemala","_","Median PI", ".RDS"))
 
 # worker_survival_probs(LTC_var_temp, cos = cos, xs = xs, mas = mas)
-# file_var <- paste0(paste0("../../Data/derived", "/lx.kids.arr_", "GTM",".RDS"))
+# file_var <- paste0(paste0("../../Data/derived", "/lx.kids.arr_", "guatemala",".RDS"))
 
 lx.kids.arr_var <- readRDS(file_var)
 lx_array_var <- lx.kids.arr_var[ , , paste(y_small)]
@@ -176,6 +187,3 @@ lapply(1:35, function(a){
 }) %>% 
   unlist() %>% 
   plot()
-
-# DIAGNOSIS: something weird is going on with the function that creates the 
-# lx.kids.arr

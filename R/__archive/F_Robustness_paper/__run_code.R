@@ -22,14 +22,11 @@
 # constant/constant is stable population
 
 library(parallel)
-library(countrycode)
 
-# country_keep <- c("Guatemala", "Zimbabwe")
-country_keep <- c("Guatemala")
+country_keep <- c("Guatemala", "Zimbabwe")
 baseline_year_constant_rates <- "2000-2005"
-# baseline_year_constant_rates <- "2015-2020"
 numCores <- ifelse(detectCores() > 8, 25, 3)
-re_estimate_matrix_of_survival_probs <- T
+re_estimate_matrix_of_survival_probs <- F
 
 (files <- list.files(pattern = ".R$")[-1])
 
@@ -59,7 +56,7 @@ source(files[4])
 # B. Analysis -------------
 
 # Estimate child death
-source(files[5])
+source(files[4])
 
 # Plot comparisson
-source(files[6])
+source(files[5])

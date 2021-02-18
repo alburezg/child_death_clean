@@ -1,7 +1,12 @@
 
 # Evaluate findings under different assumptions of fertility
 
+# 1. Table of differences --------------
+# Is there an eventual convergence in the experience of 
+# maternal bereavement between women in the Global North 
+# and South, on average
 country_plot <- "guatemala"
+# country_plot <- "zimbabwe"
 
 width <- 16
 height <- 12
@@ -108,7 +113,7 @@ cl_robust %>%
     "Cumulative child death"
     , position = "left"
     , sec.axis = dup_axis()
-    # , breaks = c(0, 0.33, 0.66, 1)
+    , breaks = c(0, 0.33, 0.66, 1)
     # , breaks = scales::pretty_breaks(n=3)
   ) +
   scale_color_discrete("Reference variants", labels = c("Medium", "Stable")) +
@@ -137,3 +142,58 @@ cl_robust %>%
   )
 
 ggsave(paste0("../../Output/robust_cd_",country_plot,".pdf"), width = width, height = height-1, units = "cm")
+
+
+# cl_robust %>%
+#   filter(variant_fert != "medium") %>% 
+#   filter(variant_mort != "medium") %>% 
+#   filter(variant_fert == "stable/constant") %>% 
+#   filter(variant_mort == "stable/constant") %>% 
+#   mutate(type = "alternative") %>% 
+#   ggplot(aes(x = age, y = value, linetype = type)) +
+#   # Plot different scenarios
+#   geom_line(
+#     size = region_line_size
+#     , show.legend = FALSE
+#   ) +
+#   # Medium variant as reference
+#   geom_line(
+#     size = region_line_size
+#     , data = cl_reference_medium 
+#   ) +
+#   # Stable variant as reference
+#   # geom_line(
+#   #   size = region_line_size
+#   #   , data = cl_reference_stable 
+#   # ) +
+#   # # SCALES
+#   scale_x_continuous("Woman's life course (age in years)") +
+#   scale_y_continuous(
+#     "Cumulative number of children lost"
+#     , position = "left"
+#     , sec.axis = dup_axis()
+#     # , breaks = seq(0, 1, 0.5)
+#   ) +
+#   scale_linetype_discrete("", breaks = "reference_medium", labels = "Medium scenario (reference)") +
+#   facet_grid(variant_fert ~ variant_mort, scales = 'fixed', switch = "y") +
+#   # Use with four measures
+#   theme_bw(base_size = base_size) +
+#   theme(
+#     legend.position = "bottom"
+#     # Remove space over legend
+#     , legend.margin=margin(t=-0.25, r=0, b=0, l=0, unit="cm")
+#     # Remove space between legends
+#     , legend.key.size = unit(1, "cm")
+#     # Remove title on left
+#     , axis.text.y.left = element_blank()
+#     , axis.ticks.y.left = element_blank()
+#     , axis.title.y.right = element_blank()
+#     # get rid of facet boxes
+#     , strip.background = element_blank()
+#     # , strip.text.y = element_blank()
+#     # Move y axis closer to the plot
+#     , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+#     # Remove spacing between facets
+#     # , panel.spacing.x=unit(0.07, "cm")
+#     # , panel.spacing.y=unit(0.07, "cm")
+#   )
