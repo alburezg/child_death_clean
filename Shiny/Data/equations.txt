@@ -1,0 +1,6 @@
+$$\underbrace{CD(a,c,n)}_{\text{Child deaths}}= \underbrace{\sum_{x=15}^{x=a} {_1F_{x}(c,n)}}_{\text{Children born}}-\underbrace{\sum_{x=15}^{x=a} {_1F_{x}(c,n)} l_{a-x}(c+x,n)}_{\text{Children surviving or } CS(a,c,n) }$$
+$$\underbrace{CS(a,c,n)}_{\text{Children surviving}}=\sum_{x=15}^{x=a} {_1F_{x}(c,n)} l_{a-x}(c+x,n)$$
+$$\Delta CD(a,c,n) = CD(a+1,c,n) - CD(a,c,n)$$
+$$BCD(a, c,n) = \underbrace{ w(a, c,n)}_{\text{Age distribution of women}} * \underbrace{\Delta CD(a, c,n) }_{\text{First Difference of Child Death}}$$
+$$E[CS(-,c,n)] = CS(e_0,c,n)$$
+$$FOM(-, c,n) = \frac{ CS(e_0,c,n) }{CTFR(-, c,n)}$$

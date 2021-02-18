@@ -1,0 +1,12 @@
+name: child_death_paa
+title: child_death_paa
+username:
+account: research-app
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2121265
+bundleId: 3712054
+url: https://research-app.shinyapps.io/child_death_paa/
+when: 1602061633.15017
+asMultiple: FALSE
+asStatic: FALSE

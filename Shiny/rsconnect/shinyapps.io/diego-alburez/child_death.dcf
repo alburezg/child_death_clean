@@ -1,0 +1,13 @@
+name: child_death
+title: child_death
+username:
+account: diego-alburez
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1356177
+bundleId: 2520481
+url: https://diego-alburez.shinyapps.io/child_death/
+when: 1571656597.96031
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: x.txt

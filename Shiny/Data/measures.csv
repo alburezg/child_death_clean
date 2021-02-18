@@ -1,0 +1,7 @@
+original,pretty
+child_death,Cumulative Child Death
+child_survival,Children currently alive
+first_difference_of_child_death,First Difference of Child Death
+burden_of_child_death,Burden of Child Death
+outlive_mother_expected,Children outlive mother
+outlive_mother_fraction,Fraction of children outlive mother

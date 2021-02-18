@@ -1,0 +1,12 @@
+name: cd_app
+title: cd_app
+username:
+account: diego-alburez
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1607176
+bundleId: 2675768
+url: https://diego-alburez.shinyapps.io/cd_app/
+when: 1576598738.40727
+asMultiple: FALSE
+asStatic: FALSE

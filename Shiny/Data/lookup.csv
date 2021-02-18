@@ -1,0 +1,239 @@
+original,pretty,type,country
+sub-saharan africa,Sub-Saharan Africa,un_sdg_groups,NA
+eastern and south-eastern asia,East & SE Asia,un_sdg_groups,NA
+northern africa and western asia,North Africa & West Asia,un_sdg_groups,NA
+latin america and the caribbean,LATAM & Caribbean,un_sdg_groups,NA
+central and southern asia,Central & South Asia,un_sdg_groups,NA
+europe and northern america,Europe & N America,un_sdg_groups,NA
+australia_new zealand,AUS & NZ,un_sdg_groups,NA
+oceania (excluding australia and new zealand),Oceania (other),un_sdg_groups,NA
+eastern africa,Eastern Africa,un_sdg_subregions,NA
+middle africa,Middle Africa,un_sdg_subregions,NA
+southern africa,Southern Africa,un_sdg_subregions,NA
+western africa,Western Africa,un_sdg_subregions,NA
+northern africa,Northern Africa,un_sdg_subregions,NA
+western asia,Western Asia,un_sdg_subregions,NA
+central asia,Central Asia,un_sdg_subregions,NA
+southern asia,Southern Asia,un_sdg_subregions,NA
+eastern asia,Eastern Asia,un_sdg_subregions,NA
+south-eastern asia,South-Eastern Asia,un_sdg_subregions,NA
+caribbean,Caribbean,un_sdg_subregions,NA
+central america,Central America,un_sdg_subregions,NA
+south america,South America,un_sdg_subregions,NA
+melanesia,Melanesia,un_sdg_subregions,NA
+micronesia,Micronesia,un_sdg_subregions,NA
+polynesia,Polynesia,un_sdg_subregions,NA
+eastern europe,Eastern Europe,un_sdg_subregions,NA
+northern europe,Northern Europe,un_sdg_subregions,NA
+southern europe,Southern Europe,un_sdg_subregions,NA
+western europe,Western Europe,un_sdg_subregions,NA
+africa,Africa,geographic_regions,NA
+asia,Asia,geographic_regions,NA
+europe,Europe,geographic_regions,NA
+latin america and the caribbean,Latin America and the Caribbean,geographic_regions,NA
+northern america,Northern America,geographic_regions,NA
+oceania,Oceania,geographic_regions,NA
+burundi,Burundi,country,NA
+comoros,Comoros,country,NA
+djibouti,Djibouti,country,NA
+eritrea,Eritrea,country,NA
+ethiopia,Ethiopia,country,NA
+kenya,Kenya,country,NA
+madagascar,Madagascar,country,NA
+malawi,Malawi,country,NA
+mauritius,Mauritius,country,NA
+mayotte,Mayotte,country,NA
+mozambique,Mozambique,country,NA
+réunion,Reunion,country,NA
+rwanda,Rwanda,country,NA
+seychelles,Seychelles,country,NA
+somalia,Somalia,country,NA
+south sudan,South Sudan,country,NA
+uganda,Uganda,country,NA
+united republic of tanzania,United Republic of Tanzania,country,NA
+zambia,Zambia,country,NA
+zimbabwe,Zimbabwe,country,NA
+angola,Angola,country,NA
+cameroon,Cameroon,country,NA
+central african republic,Central African Republic,country,NA
+chad,Chad,country,NA
+congo,Congo,country,NA
+democratic republic of the congo,Democratic Republic of the Congo,country,NA
+equatorial guinea,Equatorial Guinea,country,NA
+gabon,Gabon,country,NA
+sao tome and principe,Sao Tome and Principe,country,NA
+botswana,Botswana,country,NA
+eswatini,Eswatini,country,NA
+lesotho,Lesotho,country,NA
+namibia,Namibia,country,NA
+south africa,South Africa,country,NA
+benin,Benin,country,NA
+burkina faso,Burkina Faso,country,NA
+cabo verde,Cabo Verde,country,NA
+côte d'ivoire,Cote d'Ivoire,country,NA
+gambia,Gambia,country,NA
+ghana,Ghana,country,NA
+guinea,Guinea,country,NA
+guinea-bissau,Guinea-Bissau,country,NA
+liberia,Liberia,country,NA
+mali,Mali,country,NA
+mauritania,Mauritania,country,NA
+niger,Niger,country,NA
+nigeria,Nigeria,country,NA
+senegal,Senegal,country,NA
+sierra leone,Sierra Leone,country,NA
+togo,Togo,country,NA
+algeria,Algeria,country,NA
+egypt,Egypt,country,NA
+libya,Libya,country,NA
+morocco,Morocco,country,NA
+sudan,Sudan,country,NA
+tunisia,Tunisia,country,NA
+western sahara,Western Sahara,country,NA
+armenia,Armenia,country,NA
+azerbaijan,Azerbaijan,country,NA
+bahrain,Bahrain,country,NA
+cyprus,Cyprus,country,NA
+georgia,Georgia,country,NA
+iraq,Iraq,country,NA
+israel,Israel,country,NA
+jordan,Jordan,country,NA
+kuwait,Kuwait,country,NA
+lebanon,Lebanon,country,NA
+oman,Oman,country,NA
+qatar,Qatar,country,NA
+saudi arabia,Saudi Arabia,country,NA
+state of palestine,State of Palestine,country,NA
+syrian arab republic,Syrian Arab Republic,country,NA
+turkey,Turkey,country,NA
+united arab emirates,United Arab Emirates,country,NA
+yemen,Yemen,country,NA
+kazakhstan,Kazakhstan,country,NA
+kyrgyzstan,Kyrgyzstan,country,NA
+tajikistan,Tajikistan,country,NA
+turkmenistan,Turkmenistan,country,NA
+uzbekistan,Uzbekistan,country,NA
+afghanistan,Afghanistan,country,NA
+bangladesh,Bangladesh,country,NA
+bhutan,Bhutan,country,NA
+india,India,country,NA
+iran (islamic republic of),Iran (Islamic Republic of),country,NA
+maldives,Maldives,country,NA
+nepal,Nepal,country,NA
+pakistan,Pakistan,country,NA
+sri lanka,Sri Lanka,country,NA
+china,China,country,NA
+"china, hong kong sar","China, Hong Kong SAR",country,NA
+"china, macao sar","China, Macao SAR",country,NA
+"china, taiwan province of china","China, Taiwan Province of China",country,NA
+dem people's republic of korea,Dem. People's Republic of Korea,country,NA
+japan,Japan,country,NA
+mongolia,Mongolia,country,NA
+republic of korea,Republic of Korea,country,NA
+brunei darussalam,Brunei Darussalam,country,NA
+cambodia,Cambodia,country,NA
+indonesia,Indonesia,country,NA
+lao people's democratic republic,Lao People's Democratic Republic,country,NA
+malaysia,Malaysia,country,NA
+myanmar,Myanmar,country,NA
+philippines,Philippines,country,NA
+singapore,Singapore,country,NA
+thailand,Thailand,country,NA
+timor-leste,Timor-Leste,country,NA
+viet nam,Viet Nam,country,NA
+antigua and barbuda,Antigua and Barbuda,country,NA
+aruba,Aruba,country,NA
+bahamas,Bahamas,country,NA
+barbados,Barbados,country,NA
+cuba,Cuba,country,NA
+curaçao,Curacao,country,NA
+dominican republic,Dominican Republic,country,NA
+grenada,Grenada,country,NA
+guadeloupe,Guadeloupe,country,NA
+haiti,Haiti,country,NA
+jamaica,Jamaica,country,NA
+martinique,Martinique,country,NA
+puerto rico,Puerto Rico,country,NA
+saint lucia,Saint Lucia,country,NA
+saint vincent and the grenadines,Saint Vincent and the Grenadines,country,NA
+trinidad and tobago,Trinidad and Tobago,country,NA
+united states virgin islands,United States Virgin Islands,country,NA
+belize,Belize,country,NA
+costa rica,Costa Rica,country,NA
+el salvador,El Salvador,country,NA
+guatemala,Guatemala,country,NA
+honduras,Honduras,country,NA
+mexico,Mexico,country,NA
+nicaragua,Nicaragua,country,NA
+panama,Panama,country,NA
+argentina,Argentina,country,NA
+bolivia (plurinational state of),Bolivia (Plurinational State of),country,NA
+brazil,Brazil,country,NA
+chile,Chile,country,NA
+colombia,Colombia,country,NA
+ecuador,Ecuador,country,NA
+french guiana,French Guiana,country,NA
+guyana,Guyana,country,NA
+paraguay,Paraguay,country,NA
+peru,Peru,country,NA
+suriname,Suriname,country,NA
+uruguay,Uruguay,country,NA
+venezuela (bolivarian republic of),Venezuela (Bolivarian Republic of),country,NA
+australia,Australia,country,NA
+new zealand,New Zealand,country,NA
+fiji,Fiji,country,NA
+new caledonia,New Caledonia,country,NA
+papua new guinea,Papua New Guinea,country,NA
+solomon islands,Solomon Islands,country,NA
+vanuatu,Vanuatu,country,NA
+guam,Guam,country,NA
+kiribati,Kiribati,country,NA
+micronesia (fed states of),Micronesia (Fed. States of),country,NA
+french polynesia,French Polynesia,country,NA
+samoa,Samoa,country,NA
+tonga,Tonga,country,NA
+belarus,Belarus,country,NA
+bulgaria,Bulgaria,country,NA
+czechia,Czechia,country,NA
+hungary,Hungary,country,NA
+poland,Poland,country,NA
+republic of moldova,Republic of Moldova,country,NA
+romania,Romania,country,NA
+russian federation,Russian Federation,country,NA
+slovakia,Slovakia,country,NA
+ukraine,Ukraine,country,NA
+channel islands,Channel Islands,country,NA
+denmark,Denmark,country,NA
+estonia,Estonia,country,NA
+finland,Finland,country,NA
+iceland,Iceland,country,NA
+ireland,Ireland,country,NA
+latvia,Latvia,country,NA
+lithuania,Lithuania,country,NA
+norway,Norway,country,NA
+sweden,Sweden,country,NA
+united kingdom,United Kingdom,country,NA
+albania,Albania,country,NA
+bosnia and herzegovina,Bosnia and Herzegovina,country,NA
+croatia,Croatia,country,NA
+greece,Greece,country,NA
+italy,Italy,country,NA
+malta,Malta,country,NA
+montenegro,Montenegro,country,NA
+north macedonia,North Macedonia,country,NA
+portugal,Portugal,country,NA
+serbia,Serbia,country,NA
+slovenia,Slovenia,country,NA
+spain,Spain,country,NA
+austria,Austria,country,NA
+belgium,Belgium,country,NA
+france,France,country,NA
+germany,Germany,country,NA
+luxembourg,Luxembourg,country,NA
+netherlands,Netherlands,country,NA
+switzerland,Switzerland,country,NA
+canada,Canada,country,NA
+united states of america,United States of America,country,NA
+geographic_regions,Geographic Regions,region_type,NA
+un_sdg_groups,UN SDG Regions,region_type,NA
+un_sdg_subregions,UN SDG Subregions,region_type,NA
