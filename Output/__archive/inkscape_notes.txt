@@ -1,0 +1,8 @@
+INKSCAPE
+Drawing arrows: 
+https://graphicdesign.stackexchange.com/questions/54517/how-to-draw-an-arrow-in-inkscape
+Adding Text: F8
+
+BY HAND
+1. Add annotation in Foxit
+2. Flatten using PDF-Tools
