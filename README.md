@@ -6,7 +6,7 @@ Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (2021). *Women's experience of ch
 
 ## A - Structure
 
-The directory `R` has four sub-directories, which are needed to transform the data to the right format, produce the model estimates
+The directory `R` has five sub-directories, which are needed to transform the data to the right format, produce the model estimates
 , produce the figures and tables from the main text, and create the resources for the SI Appendix. They are:
 
 [A_Data_formatting](R/A_Data_formatting)
@@ -30,12 +30,12 @@ Each directory in `R` has the same structure, which includes:
 
 In order to run the code, please do the following:
 
-1. Download this repository as a zip file (aprox 150MB) and extract its content
+1. Download this repository as a zip file and extract its content
 1. Open the `R/A_Data_formatting` directory in order to start with the data wrangling
 1. Open the `___A_Data_formatting.Rproj` R project in RStudio
 1. Open the `__run_code.R` script and run the code line by line to execute all the scripts in the directory
 1. When finished, exit RStudio
-1. Repeat for the other three directories in the `R` directory.
+1. Repeat for the other directories in `R`.
 
 The final results of the analysis are stored in the `Output` directory, including the figures as .pdf files and full country and regional estimates.
 
@@ -48,11 +48,11 @@ See the *Supporting Information* for more details about the data and estimation.
 ## D - A note on parallelisation
 
 If possible, the R scripts in the [A_Data_formatting](R/A_Data_formatting) directory (used to re-format the UN WPP data) should be run on a High Performance Computing (HPC) unit
-as they involve many calculations. These would take many hours in a normal PC, but under one hour on a HPC running 25 cores. 
+as they involve many calculations. These would take many hours in a normal PC, but under one hour on a HPC running multiple cores. 
 
 ## E - Shiny app
 
-The code to reproduce the Shiny app to visualize the results is in the directory [Shiny](Shiny). The app should always be accessible through [this link](https://osf.io/2pq3d/).
+The code to reproduce the Shiny app to visualize the results is in the directory [Shiny](Shiny). The app can be accessed using [this link](https://osf.io/2pq3d/).
 
 ## System info
 
