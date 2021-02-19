@@ -1,6 +1,8 @@
 # Reproducible analysis
 
-Scripts to reproduce figures and tables of paper "Women's experience of child death over the life course: a global demographic perspective".
+Scripts to reproduce figures and tables of paper: 
+
+Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (2021). *Women's experience of child death: A global demographic perspective.* Demography (Forthcoming). Temporary DOI:[10.31235/osf.io/s69fz](https://osf.io/preprints/socarxiv/s69fz/).
 
 ## A - Structure
 
