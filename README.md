@@ -9,11 +9,13 @@ The directory `R` has four sub-directories, which are needed to transform the da
 
 [A_Data_formatting](R/A_Data_formatting)
 
-[B_Analysis](R/B_Analysis)
+[B_Kin_cohort_analysis](R/B_Kin_cohort_analysis)
 
 [C_Results](R/C_Results)
 
-[D_Supplementary](R/D_Supplementary)
+[D_Sensitivity](R/D_Sensitivity)
+
+[E_Supplementary](R/E_Supplementary)
 
 Each directory in `R` has the same structure, which includes:
 
@@ -46,7 +48,13 @@ See the *Supporting Information* for more details about the data and estimation.
 If possible, the R scripts in the [A_Data_formatting](R/A_Data_formatting) directory (used to re-format the UN WPP data) should be run on a High Performance Computing (HPC) unit
 as they involve many calculations. These would take many hours in a normal PC, but under one hour on a HPC running 25 cores. 
 
-We ran the scripts on a Windows server:
+## E - Shiny app
+
+The code to reproduce the Shiny app to visualize the results is in the directory [Shiny](Shiny). The app should always be accessible through [this link](https://osf.io/2pq3d/).
+
+## System info
+
+I ran the scripts on a Windows server:
 
 `> sessionInfo()`
 
