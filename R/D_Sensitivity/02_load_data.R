@@ -64,12 +64,6 @@ asfr_constant <-
   ungroup() %>% 
   arrange(`Region, subregion, country or area *`, Period)
 
-# asfr_constant <- 
-#   bind_rows(
-#     asfr_obs
-#     , asfr_expanded
-#   ) %>% 
-#   arrange(`Region, subregion, country or area *`, Period)
 
 print("WPP 2019 ASFR data loaded (low, med, high variants)")
 
@@ -116,6 +110,15 @@ lt_per_obs_B2 <-
     , ax = as.numeric(ax)
   ) %>%
   select(country, variant, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex)
+
+# This large dataset needs to be downloaded from the interweb:
+
+if(!file.exists("../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv")){
+  download.file(
+    "https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/CSV_FILES/WPP2019_Life_Table_OtherVariants.csv"
+    , "../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv"
+    )
+}
 
 lt_per_pred_B <-
   data.table::fread("../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv", stringsAsFactors = F) %>%
@@ -170,7 +173,6 @@ lt_baseline <-
 
 lt_expanded <-
   lt_baseline[ rep(row.names(lt_baseline), times_years), ] %>%
-  # arrange(country) %>%
   group_by(country) %>%
   mutate(year = new_years) %>%
   ungroup()
@@ -181,113 +183,6 @@ lt_constant_B <-
     , lt_expanded
   ) %>%
   mutate(variant = "constant")
-
-# # 2.1. LT women 
-# # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-# mort_variants <- c("Median PI", "Upper 80 PI", "Lower 80 PI", "Upper 95 PI", "Lower 95 PI")
-# 
-# lt_per_obs_F <- readxl::read_xlsx(
-#   path= "../../Data/wpp_data/WPP2019_MORT_F17_3_ABRIDGED_LIFE_TABLE_FEMALE.xlsx"
-#   , sheet = "ESTIMATES"
-#   , skip = 16
-#   )
-# 
-# lt_per_obs_F[lt_per_obs_F == "…"] <- NA
-# 
-# # Change column names of life tables
-# 
-# old_names <- colnames(lt_per_obs_F)
-# 
-# new_names <- c("id", "variant", "country" , "notes", "country_code", "type", "parent_code",
-#                "year", "age", "interval"
-#                , "mx", "qx", "px", "lx", "dx", "Lx", "Sx", "Tx", "ex", "ax")
-# 
-# 
-# 
-# # Change colnames
-# colnames(lt_per_obs_F) <- new_names
-# 
-# lt_per_obs_F2 <-
-#   lt_per_obs_F %>%
-#   filter(country %in% country_keep) %>%
-#   mutate(
-#     mx = as.numeric(mx)
-#     , qx = as.numeric(qx)
-#     , px = as.numeric(px)
-#     , lx = as.numeric(lx)
-#     , dx = as.numeric(dx)
-#     , Lx = as.numeric(Lx)
-#     , Sx = as.numeric(Sx)
-#     , Tx = as.numeric(Tx)
-#     , ex = as.numeric(ex)
-#     , ax = as.numeric(ax)
-#   ) %>%
-#   select(country, variant, year, age, interval, mx, qx, ax, lx, dx, Lx, Tx, ex)
-# 
-# lt_per_pred_F <-
-#   data.table::fread("../../Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv", stringsAsFactors = F) %>%
-#   data.frame() %>%
-#   filter(Sex == "Female") %>%
-#   filter(Location %in% country_keep) %>%
-#   select(
-#     country = Location, variant = Variant
-#     , year = Time, age = AgeGrpStart, interval = AgeGrpSpan
-#     , mx, qx, ax, lx, dx, Lx, Tx, ex
-#   )
-# 
-# # Create full dfs with historical and projected by type of scenario
-# 
-# lt_median <-
-#   bind_rows(
-#   lt_per_obs_F2
-#   , lt_per_pred_F %>%
-#     filter(variant == "Median PI")
-# ) %>%
-#   mutate(variant = "Median PI")
-# 
-# lt_upper95 <-
-#   bind_rows(
-#     lt_per_obs_F2
-#     , lt_per_pred_F %>%
-#       filter(variant == "Upper 95 PI")
-#   )  %>%
-#   mutate(variant = "Upper 95 PI")
-# 
-# lt_lower95 <-
-#   bind_rows(
-#     lt_per_obs_F2
-#     , lt_per_pred_F %>%
-#       filter(variant == "Lower 95 PI")
-#   )  %>%
-#   mutate(variant = "Lower 95 PI")
-# 
-# # Constant fert measnt that baseline are repeated every year
-# years_project <- unique(lt_per_pred_F$year)
-# times_years <- length(years_project)
-# times_new_years <- length(unique(lt_per_obs_F2$age))
-# 
-# new_years <- sort(rep(years_project, times_new_years))
-# 
-# lt_baseline <-
-#   lt_per_obs_F2 %>%
-#   filter(year == baseline_year_constant_rates)
-# 
-# # Now, repeat this times:
-# 
-# lt_expanded <-
-#   lt_baseline[ rep(row.names(lt_baseline), times_years), ] %>%
-#   # arrange(country) %>%
-#   group_by(country) %>%
-#   mutate(year = new_years) %>%
-#   ungroup()
-# 
-# lt_constant <-
-#   bind_rows(
-#     lt_per_obs_F2
-#     , lt_expanded
-#   ) %>%
-#   mutate(variant = "constant")
 
 
 print("WPP data loaded")
