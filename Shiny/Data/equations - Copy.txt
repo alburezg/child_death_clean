@@ -1,6 +1,0 @@
-$$\underbrace{CD_{(a,c, n)}}_{\text{Child deaths}}= \underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,n)}}}_{\text{Children born}}-\underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,n)}} l_{(a-x,c+x,n)}}_{\text{Children surviving or } CS_{(a,c,n)} }$$
-$$\underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,n)}} l_{(a-x,c+x,n)}}_{\text{Children surviving or } CS_{(a,c,n)} } = \underbrace{\sum_{x=15}^{x=a} {_1F_{(x,c,n)}}}_{\text{Children born}} - \underbrace{CD_{(a,c,n)}}_{\text{Child deaths}}$$
-$$\Delta CD_{(a,c,n)} = CD_{(a+1,c,n)} - CD_{(a,c,n)}$$
-$$BCD_{(a, c,n)} = w_{(a, c,n)} \underbrace{  (CD_{(a+1,c,n)} - CD_{(a,c,n)})  }_{\text{First Difference of Child Death}}$$
-$$E[CS_{(-,c,n)}] = CS_{(e,c,n)}$$
-$$FOM_{(-, c,n)} = \frac{E[CS_{(-,c,n)}]}{CTFR_{(-, c,n)}}$$
