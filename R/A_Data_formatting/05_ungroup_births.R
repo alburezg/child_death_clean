@@ -25,7 +25,8 @@ births_5 <- bind_rows(
     # UN values are given in thousands
     , value = value*1000
     ) %>% 
-  arrange(country, year)
+  arrange(country, year) %>% 
+  distinct(country, year, .keep_all = T)
 
 # 0.2. Sex ratio at birth df
 
@@ -35,7 +36,8 @@ sex_ratio_5 <- bind_rows(
 ) %>% 
   # Fix UN overlapping periods
   mutate(year = change_period_labels(year)) %>% 
-  arrange(country, year)
+  arrange(country, year) %>% 
+  distinct(country, year, .keep_all = T)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A. Women only ----
@@ -56,9 +58,10 @@ births_f_5 <-
 # Interpolate female births for every calendar year
 
 births_f_1 <- 
-  interpolate_births_calendar_years(
+  ungroup_births_calendar_years(
+  # interpolate_births_calendar_years(
   df_5 = births_f_5
-  , method = "linear"
+  # , method = "linear"
   ) %>% 
   mutate(
     country = as.character(country)
@@ -109,9 +112,10 @@ if(export) {
 # Interpolate female births for every calendar year
 
 births_1 <- 
-  interpolate_births_calendar_years(
+  ungroup_births_calendar_years(
+  # interpolate_births_calendar_years(
     df_5 = births_5
-    , method = "linear"
+    # , method = "linear"
   ) %>% 
   mutate(
     country = as.character(country)

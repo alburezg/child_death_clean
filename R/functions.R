@@ -2602,3 +2602,45 @@ get_lx_array_robust <- function(c, reference_years, sex_keep, path = "../../Data
   return(lx_array_temp)
 }
 
+
+# New ------- 
+
+ungroup_births_calendar_years <- function(df_5) {
+  # browser()
+  df_5$year <- as.character(df_5$year)
+  df_l <- split(df_5, df_5[c("country")])  
+  names(df_l) <- paste0(names(df_l), ".")
+  
+  print("ungrouping...")
+  # Use a linear regression to interpolate the value for each age groups separately
+  estimates_list <- lapply(df_l, function(df) {
+    
+    years <- unique(sort(unlist(lapply(df$year, function(d) {
+      n <- as.numeric(unlist(strsplit(d, "-")))
+      min(n):max(n)
+    }))))
+    
+    y_range_length <- length(years)
+    
+    # Get this to make sure that they are ordered proberly by year
+    y <- as.numeric(str_extract(df$year, "^[0-9]{4}"))
+    # val <- approx(df[order(y) , 'value'], method = method, n = y_range_length)$y
+    # val <-
+    rows <- rep(seq_along(df$value), 5)
+    val <- rep(df$value, 5)[order(rows)]/5
+    
+    data.frame(
+      country = unique(df$country)
+      , year = years
+      , value = val
+    )
+  })
+  
+  # Save as data frame
+  
+  print("Saving as data.table...")
+  
+  rbindlist(estimates_list, use.names = T) %>% 
+    data.frame %>% 
+    dplyr::arrange(country, year)
+}
