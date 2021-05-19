@@ -1,0 +1,287 @@
+,old,new
+1,Afghanistan,afghanistan
+2,Africa,africa
+3,Albania,albania
+4,Algeria,algeria
+5,American Samoa,american samoa
+6,Andorra,andorra
+7,Angola,angola
+8,Anguilla,anguilla
+9,Antigua and Barbuda,antigua and barbuda
+10,Argentina,argentina
+11,Armenia,armenia
+12,Aruba,aruba
+13,Asia,asia
+14,Australia,australia
+15,Australia/New Zealand,australia_new zealand
+16,Austria,austria
+17,Azerbaijan,azerbaijan
+18,Bahamas,bahamas
+19,Bahrain,bahrain
+20,Bangladesh,bangladesh
+21,Barbados,barbados
+22,Belarus,belarus
+23,Belgium,belgium
+24,Belize,belize
+25,Benin,benin
+26,Bermuda,bermuda
+27,Bhutan,bhutan
+28,Bolivia (Plurinational State of),bolivia (plurinational state of)
+29,"Bonaire, Sint Eustatius and Saba","bonaire, sint eustatius and saba"
+30,Bosnia and Herzegovina,bosnia and herzegovina
+31,Botswana,botswana
+32,Brazil,brazil
+33,British Virgin Islands,british virgin islands
+34,Brunei Darussalam,brunei darussalam
+35,Bulgaria,bulgaria
+36,Burkina Faso,burkina faso
+37,Burundi,burundi
+38,Cabo Verde,cabo verde
+39,Cambodia,cambodia
+40,Cameroon,cameroon
+41,Canada,canada
+42,Caribbean,caribbean
+43,Cayman Islands,cayman islands
+44,Central African Republic,central african republic
+45,Central America,central america
+46,Central and Southern Asia,central and southern asia
+47,Central Asia,central asia
+48,Chad,chad
+49,Channel Islands,channel islands
+50,Chile,chile
+51,China,china
+52,"China, Hong Kong SAR","china, hong kong sar"
+53,"China, Macao SAR","china, macao sar"
+54,"China, Taiwan Province of China","china, taiwan province of china"
+55,Colombia,colombia
+56,Comoros,comoros
+57,Congo,congo
+58,Cook Islands,cook islands
+59,Costa Rica,costa rica
+60,Côte d'Ivoire,côte d'ivoire
+61,Croatia,croatia
+62,Cuba,cuba
+63,Curaçao,curaçao
+64,Cyprus,cyprus
+65,Czechia,czechia
+66,Dem. People's Republic of Korea,dem people's republic of korea
+67,Democratic Republic of the Congo,democratic republic of the congo
+68,Denmark,denmark
+69,Djibouti,djibouti
+70,Dominica,dominica
+71,Dominican Republic,dominican republic
+72,Eastern Africa,eastern africa
+73,Eastern and South-Eastern Asia,eastern and south-eastern asia
+74,Eastern Asia,eastern asia
+75,Eastern Europe,eastern europe
+76,Ecuador,ecuador
+77,Egypt,egypt
+78,El Salvador,el salvador
+79,Equatorial Guinea,equatorial guinea
+80,Eritrea,eritrea
+81,Estonia,estonia
+82,Eswatini,eswatini
+83,Ethiopia,ethiopia
+84,Europe,europe
+85,Europe and Northern America,europe and northern america
+86,Falkland Islands (Malvinas),falkland islands (malvinas)
+87,Faroe Islands,faroe islands
+88,Fiji,fiji
+89,Finland,finland
+90,France,france
+91,French Guiana,french guiana
+92,French Polynesia,french polynesia
+93,Gabon,gabon
+94,Gambia,gambia
+95,Geographic regions,geographic regions
+96,Georgia,georgia
+97,Germany,germany
+98,Ghana,ghana
+99,Gibraltar,gibraltar
+100,Greece,greece
+101,Greenland,greenland
+102,Grenada,grenada
+103,Guadeloupe,guadeloupe
+104,Guam,guam
+105,Guatemala,guatemala
+106,Guinea,guinea
+107,Guinea-Bissau,guinea-bissau
+108,Guyana,guyana
+109,Haiti,haiti
+110,High-income countries,high-income countries
+111,Holy See,holy see
+112,Honduras,honduras
+113,Hungary,hungary
+114,Iceland,iceland
+115,India,india
+116,Indonesia,indonesia
+117,Iran (Islamic Republic of),iran (islamic republic of)
+118,Iraq,iraq
+119,Ireland,ireland
+120,Isle of Man,isle of man
+121,Israel,israel
+122,Italy,italy
+123,Jamaica,jamaica
+124,Japan,japan
+125,Jordan,jordan
+126,Kazakhstan,kazakhstan
+127,Kenya,kenya
+128,Kiribati,kiribati
+129,Kuwait,kuwait
+130,Kyrgyzstan,kyrgyzstan
+131,Land-locked Developing Countries (LLDC),land-locked developing countries (lldc)
+132,Lao People's Democratic Republic,lao people's democratic republic
+133,Latin America and the Caribbean,latin america and the caribbean
+134,Latvia,latvia
+135,Least developed countries,least developed countries
+136,Lebanon,lebanon
+137,Lesotho,lesotho
+138,Less developed regions,less developed regions
+139,"Less developed regions, excluding China","less developed regions, excluding china"
+140,"Less developed regions, excluding least developed countries","less developed regions, excluding least developed countries"
+141,Liberia,liberia
+142,Libya,libya
+143,Liechtenstein,liechtenstein
+144,Lithuania,lithuania
+145,Low-income countries,low-income countries
+146,Lower-middle-income countries,lower-middle-income countries
+147,Luxembourg,luxembourg
+148,Madagascar,madagascar
+149,Malawi,malawi
+150,Malaysia,malaysia
+151,Maldives,maldives
+152,Mali,mali
+153,Malta,malta
+154,Marshall Islands,marshall islands
+155,Martinique,martinique
+156,Mauritania,mauritania
+157,Mauritius,mauritius
+158,Mayotte,mayotte
+159,Melanesia,melanesia
+160,Mexico,mexico
+161,Micronesia,micronesia
+162,Micronesia (Fed. States of),micronesia (fed states of)
+163,Middle Africa,middle africa
+164,Middle-income countries,middle-income countries
+165,Monaco,monaco
+166,Mongolia,mongolia
+167,Montenegro,montenegro
+168,Montserrat,montserrat
+169,More developed regions,more developed regions
+170,Morocco,morocco
+171,Mozambique,mozambique
+172,Myanmar,myanmar
+173,Namibia,namibia
+174,Nauru,nauru
+175,Nepal,nepal
+176,Netherlands,netherlands
+177,New Caledonia,new caledonia
+178,New Zealand,new zealand
+179,Nicaragua,nicaragua
+180,Niger,niger
+181,Nigeria,nigeria
+182,Niue,niue
+183,No income group available,no income group available
+184,North Macedonia,north macedonia
+185,Northern Africa,northern africa
+186,Northern Africa and Western Asia,northern africa and western asia
+187,Northern America,northern america
+188,Northern Europe,northern europe
+189,Northern Mariana Islands,northern mariana islands
+190,Norway,norway
+191,Oceania,oceania
+192,Oceania (exc. AUS and NZ),oceania (excluding australia and new zealand)
+193,Oman,oman
+194,Pakistan,pakistan
+195,Palau,palau
+196,Panama,panama
+197,Papua New Guinea,papua new guinea
+198,Paraguay,paraguay
+199,Peru,peru
+200,Philippines,philippines
+201,Poland,poland
+202,Polynesia,polynesia
+203,Portugal,portugal
+204,Puerto Rico,puerto rico
+205,Qatar,qatar
+206,Republic of Korea,republic of korea
+207,Republic of Moldova,republic of moldova
+208,Réunion,réunion
+209,Romania,romania
+210,Russian Federation,russian federation
+211,Rwanda,rwanda
+212,Saint Helena,saint helena
+213,Saint Kitts and Nevis,saint kitts and nevis
+214,Saint Lucia,saint lucia
+215,Saint Pierre and Miquelon,saint pierre and miquelon
+216,Saint Vincent and the Grenadines,saint vincent and the grenadines
+217,Saint-Barthélemy,saint-barthélemy
+218,Saint-Martin (French part),saint-martin (french part)
+219,Samoa,samoa
+220,San Marino,san marino
+221,Sao Tome and Principe,sao tome and principe
+222,Saudi Arabia,saudi arabia
+223,Senegal,senegal
+224,Serbia,serbia
+225,Seychelles,seychelles
+226,Sierra Leone,sierra leone
+227,Singapore,singapore
+228,Sint Maarten (Dutch part),sint maarten (dutch part)
+229,Slovakia,slovakia
+230,Slovenia,slovenia
+231,Small Island Developing States (SIDS),small island developing states (sids)
+232,Solomon Islands,solomon islands
+233,Somalia,somalia
+234,South Africa,south africa
+235,South America,south america
+236,South Sudan,south sudan
+237,South-Eastern Asia,south-eastern asia
+238,Southern Africa,southern africa
+239,Southern Asia,southern asia
+240,Southern Europe,southern europe
+241,Spain,spain
+242,Sri Lanka,sri lanka
+243,State of Palestine,state of palestine
+244,Sub-Saharan Africa,sub-saharan africa
+245,Sudan,sudan
+246,Suriname,suriname
+247,Sustainable Development Goal (SDG) regions,sustainable development goal (sdg) regions
+248,Sweden,sweden
+249,Switzerland,switzerland
+250,Syrian Arab Republic,syrian arab republic
+251,Tajikistan,tajikistan
+252,Thailand,thailand
+253,Timor-Leste,timor-leste
+254,Togo,togo
+255,Tokelau,tokelau
+256,Tonga,tonga
+257,Trinidad and Tobago,trinidad and tobago
+258,Tunisia,tunisia
+259,Turkey,turkey
+260,Turkmenistan,turkmenistan
+261,Turks and Caicos Islands,turks and caicos islands
+262,Tuvalu,tuvalu
+263,Uganda,uganda
+264,Ukraine,ukraine
+265,UN development groups,un development groups
+266,United Arab Emirates,united arab emirates
+267,United Kingdom,united kingdom
+268,United Republic of Tanzania,united republic of tanzania
+269,United States of America,united states of america
+270,United States Virgin Islands,united states virgin islands
+271,Upper-middle-income countries,upper-middle-income countries
+272,Uruguay,uruguay
+273,Uzbekistan,uzbekistan
+274,Vanuatu,vanuatu
+275,Venezuela (Bolivarian Republic of),venezuela (bolivarian republic of)
+276,Viet Nam,viet nam
+277,Wallis and Futuna Islands,wallis and futuna islands
+278,Western Africa,western africa
+279,Western Asia,western asia
+280,Western Europe,western europe
+281,Western Sahara,western sahara
+282,World,world
+283,World Bank income groups,world bank income groups
+284,Yemen,yemen
+285,Zambia,zambia
+286,Zimbabwe,zimbabwe
