@@ -22,7 +22,6 @@
 
 # 0. Plotting params ----
 
-# lower_year <- 1950
 lower_year <- 1955
 upper_year <- 2000
 
@@ -56,12 +55,9 @@ point_size <- 3.5
 
 # 1. Merge dfs ----
 
-sources <- c("died (cumulative)", "surviving")
+sources <- c("Died (cumulative)", "Surviving")
 sources <- factor(sources, levels = sources)
 ylab <- "Number of children"
-
-# sources <- c("died", "survived")
-# ylab <- "Number of children who"
 
 sum_cl2 <- sum_cl %>% filter(cohort %in% c(lower_year, upper_year)) 
 sum_cs2 <- sum_cs %>% filter(cohort %in% c(lower_year, upper_year)) 
@@ -83,13 +79,11 @@ cl_cs <-
       )
     # died/Survived
     , sum_cs2 %>%
-      # select(region, cohort) %>%
       mutate(
         median = sum_cl2$median/sum_cs2$median
         , low_iqr = NA
         , high_iqr = NA
         , source = 'Died/Survived'
-        # , region = factor(plyr::mapvalues(region, from = new_sdg8, to = new_sdg8_short), levels = new_sdg8_short)
       )
   ) %>% 
   mutate(
@@ -117,8 +111,8 @@ if(lower_year == 1950) {
 if(lower_year == 1955) {
   f_lab <- data.frame(
     x = rep(20, 4)
-    , y = rep(4.8, 4)
-    , label = c("A", "C", "B", "D")
+    , y = rep(5.1, 4.3)
+    , label = letters[c(1,3,2,4)]
     , source = rep(sources, 2)
     , cohort2 = sort(rep(coh, 2))
   )  
@@ -126,14 +120,6 @@ if(lower_year == 1955) {
 
 
 # For highlithgint reprodctive and retirement age
-
-# rect_df <- data.frame(
-#   xmin = c(15)
-#   , xmax = c(49)
-#   , ymin = c(0)
-#   , ymax = c(4)
-#   , fill = "zz"
-# )
 
 p_cl_cs_facet <-
   cl_cs %>% 
@@ -171,7 +157,7 @@ p_cl_cs_facet <-
     , data = data.frame(
       x = c(30, 85), y = 3.2
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = "died (cumulative)"
+      , source = "Died (cumulative)"
       # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
       , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
@@ -184,14 +170,14 @@ p_cl_cs_facet <-
       x = c(16, 75), xend = c(45, 95)
       , y = 4, yend = 4
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = "died (cumulative)"
+      , source = "Died (cumulative)"
       # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
       , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
   ) +
   # SCALES
-  scale_x_continuous("Woman's life course (age in years)") +
+  scale_x_continuous("Woman's Life Course (age in years)") +
   scale_y_continuous(
     ylab
     , position = "left"
@@ -214,11 +200,15 @@ p_cl_cs_facet <-
     , axis.text.y.left = element_blank()
     , axis.ticks.y.left = element_blank()
     , axis.title.y.right = element_blank()
+    # Make axis labels bold
+    , axis.title.x = element_text(face="bold")
+    # , axis.title.y = element_text()
     # get rid of facet boxes
     , strip.background = element_blank()
+    , strip.text = element_text(face="bold")
     # , strip.text.y = element_blank()
     # Move y axis closer to the plot
-    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0), face="bold")
     # Remove spacing between facets
     # , panel.spacing.x=unit(0.07, "cm")
     # , panel.spacing.y=unit(0.07, "cm")

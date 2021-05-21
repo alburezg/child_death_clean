@@ -37,7 +37,7 @@ col_lab <- ""
 scale_by <- 1e6
 
 # Facet labels eventually in the plot
-sources <- c("individual-level", "population-level")
+sources <- c("Individual Level", "Population (millions)")
 sources <- factor(sources, levels = sources)
 
 # Choose size options depending on whether image is intended for small format.
@@ -115,19 +115,18 @@ coh <- paste0(c(lower_year, upper_year), " birth cohort")
 
 f_lab <- data.frame(
   x = rep(90, 4)
-  , y = c(0.1, 2.25, 0.1, 2.25)
-  , label = c("A", "C", "B", "D")
+  , y = c(0.1, 0.45, 0.1, 0.45)
+  , label = letters[c(1,3,2,4)]
   , source = rep(sources, 2)
   , cohort2 = sort(rep(coh, 2))
 )
 
 p_diff_abs <-
   diff_abs %>% 
-  # na.omit() %>% 
   filter(cohort %in% c(lower_year, upper_year)) %>% 
   filter(!region %in% regions_to_remove) %>% 
   filter(source %in% sources) %>% 
-  mutate(region = factor(as.character(region), levels = regions_long)) %>% 
+  mutate(region = factor(as.character(region), levels = regions_long)) %>%
   ggplot() +
   geom_line(
     aes(x = age, y = value, group = region, colour = region)
@@ -156,10 +155,9 @@ p_diff_abs <-
   geom_text(
     aes(x = x, y = y, label = label)
     , data = data.frame(
-      x = c(30, 85), y = c(0.095, 1.3)
+      x = c(30, 85), y = c(0.095, 0.25)
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = c("individual-level", "population-level")
-      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , source = c("Individual Level", "Population (millions)")
       , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , size = 3
@@ -169,25 +167,22 @@ p_diff_abs <-
     aes(x = x, xend = xend, yend = yend, y = y)
     , data = data.frame(
       x = c(16, 75), xend = c(45, 95)
-      , y = c(0.113, 1.7), yend = c(0.113, 1.7)
+      , y = c(0.113, 0.35), yend = c(0.113, 0.35)
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = c("individual-level", "population-level")
-      # , cohort2 = c("1950 birth cohort", "2000 birth cohort")
+      , source = c("Individual Level", "Population (millions)")
       , cohort2 = c(paste(lower_year, "birth cohort"), paste(upper_year, "birth cohort"))
     )
     , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
   ) +
-  scale_x_continuous("Woman's age") +
-  scale_y_continuous(
-    # expression(Delta*"(child death)")
-    # "First difference of child death"
-    "Number of child deaths at each age"
+  scale_x_continuous("Woman's Life Course (age in years)") +
+  scale_y_continuous("Number of Child Deaths at Each Age"
     , position = "left"
     , sec.axis = dup_axis()
     , breaks = scales::pretty_breaks(n = 3)
-    # Make sure the lower facet shows labels in millions
-    # but the upper does does not
-    , labels = function(x) ifelse(x < 1, x, paste0(x, "M"))
+    , labels = function(x) gsub("^0", "", as.character(x))
+  # Make sure the lower facet shows labels in millions
+  # but the upper does does not
+  # , labels = function(x) ifelse(x > 1, x, paste0(x/10, "M"))
   ) +
   scale_color_discrete(col_lab, br = regions_long, labels = regions_short) +
   scale_fill_discrete(col_lab, br = regions_long, labels = regions_short) +
@@ -205,18 +200,16 @@ p_diff_abs <-
     , axis.text.y.left = element_blank()
     , axis.ticks.y.left = element_blank()
     , axis.title.y.right = element_blank()
+    , axis.title.x = element_text(face="bold")
     # get rid of facet boxes
     , strip.background = element_blank()
-    # Remove spacing between facets
-    # , panel.spacing.x=unit(0.07, "cm")
-    # , panel.spacing.y=unit(0.07, "cm")
-    # Move y axis closer to the plot
-    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+    , strip.text = element_text(face="bold")
+    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0), face="bold")
     )
 
 p_diff_abs
 
-ggsave(paste0("../../Output/fig3_delta_cd.pdf"), p_diff_abs, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/fig3_delta_cd.pdf"), p_diff_abs, width = width, height = height+1, units = "cm")
 
 print("Figure 3 saved to ../../Output")
 
