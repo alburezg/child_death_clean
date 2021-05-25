@@ -1,10 +1,13 @@
 # TO DO
 # Fix encoding of Curacao, reunion and cote divore
+# - Add logo
+# - Make video
 
 library(shiny)
 library(data.table)
 library(dplyr)
 library(ggplot2)
+# library(plotly)
 
 
 # Read data ----
@@ -113,7 +116,6 @@ plotme <- function(
     regions_choice <- find_region(regions_choice, type = region_type_choice)
     countries_pretty <- countries_choice
     countries_choice <- find_region(countries_choice, type = "country")
-    variant_choice <- ifelse(!length(variant_choice), "", variant_choice)
     variant_choice <- find_variant(variant_choice)
     
     # If in dataset1
@@ -380,18 +382,43 @@ ui <- navbarPage(
   title = "Global experience of child death"
   , tabPanel(
     "Cover page"
-    # , h1("Women's experience of child death over the life course: a global demographic perspective")
-    , h2("Companion web application for paper")
-    , h3("Women’s experience of child death: A global demographic perspective.")
+    , h1("Women's experience of child death over the life course: a global demographic perspective")
+    , h4("Companion web application")
     , h4(tags$a(href="https://www.demogr.mpg.de/en/about_us_6113/staff_directory_1899/diego_alburez_gutierrez_3783", "Diego Alburez-Gutierrez*"), tags$sup(1)
          , "-", tags$a(href="https://www.su.se/profiles/mkolk-1.187699", "Martin Kolk"), tags$sup(2)
          , "-", tags$a(href="https://www.demogr.mpg.de/en/about_us_6113/staff_directory_1899/emilio_zagheni_2243","Emilio Zagheni"), tags$sup(1)
          )
     , h4(tags$sup("1"),"Lab of Digital and Computational Demography, Max Planck Institute for Demographic Research")
-    , h5(tags$sup("2"),"Stockholm University Demography Unit, Stockholm University")
-    , h5("* Correspondence: alburezgutierrez[at]demogr.mpg.de", "-", tags$a(href="https://twitter.com/d_alburez", "@d_alburez"))
+    , h4(tags$sup("2"),"Stockholm University Demography Unit, Stockholm University")
+    , h4("* Correspondence: alburezgutierrez[at]demogr.mpg.de", "-", tags$a(href="https://twitter.com/d_alburez", "@d_alburez"))
     , h3("Citation:")
-    , h4("Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (2021). Women’s experience of child death: A global demographic perspective. Demography (Forthcoming). Temporary DOI:", tags$a(href="https://osf.io/preprints/socarxiv/s69fz/","10.31235/osf.io/s69fz"))
+    , h3("Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (Forthcoming). Women's experience of child death: A global demographic perspective. Demography. Temporary DOI:", tags$a(href="https://doi.org/10.31235/osf.io/s69fz", "https://doi.org/10.31235/osf.io/s69fz"))
+    # , h4("Access the full paper here: https://doi.org/10.31235/osf.io/s69fz")
+    , h3("Supplementary Materials:", tags$a(href="https://osf.io/jdvhw/", "https://osf.io/jdvhw/"))
+    # , tags$hr()
+    # , h3("Summary")
+    # , h5(paste(text$introduction))
+    # , h1("")
+    # , HTML('<iframe width="840" height="473" src="https://www.youtube.com/embed/-8PQ-EQSBek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+    # , h1("")
+    # , tags$hr()
+    # , h4("Research question")
+    # , h5(paste(text$question))
+    # , tags$hr()
+    # , h4("Methods")
+    # , h5(paste(text$methods1))
+    # , withMathJax()
+    # , paste(equations[1])
+    # , h5(paste(text$methods2))
+    # , h5(paste(text$methods3))
+    # , h4("Findings")
+    # , h5(paste(text$findings))
+    # , img(src='fig4.PNG', height = "45%", width = "45%", style="text-align: center;")
+    # , tags$h4("Figure 1.", em("(A) Expected number of children expected to outlive an average woman. (B) Children outliving a woman as a fraction of her cohort's TFR."))
+    # , tags$hr()
+    # , h4("Interpretation")
+    # , h5(paste(text$interpretation))
+    # , img(src='MPIDR-EN.png', height = "25%", width = "25%", align = "right")
     )
   # UI main panel =============
   , tabPanel(

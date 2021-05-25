@@ -1,2212 +1,2212 @@
-"country","cohort","outlive_mother_expected","outlive_mother_fraction"
-"afghanistan",1950,3.656,0.762
-"afghanistan",1955,4.469,0.755
-"afghanistan",1960,4.98,0.769
-"afghanistan",1965,5.265,0.789
-"afghanistan",1970,5.332,0.811
-"afghanistan",1975,5.22,0.831
-"afghanistan",1980,4.914,0.848
-"afghanistan",1985,4.445,0.864
-"afghanistan",1990,3.959,0.88
-"afghanistan",1995,3.474,0.893
-"afghanistan",2000,3.042,0.902
-"albania",1950,3.322,0.894
-"albania",1955,2.914,0.906
-"albania",1960,2.67,0.913
-"albania",1965,2.395,0.915
-"albania",1970,2.177,0.921
-"albania",1975,1.951,0.926
-"albania",1980,1.708,0.931
-"albania",1985,1.563,0.939
-"albania",1990,1.529,0.944
-"albania",1995,1.489,0.947
-"albania",2000,1.43,0.949
-"algeria",1950,5.285,0.81
-"algeria",1955,4.924,0.844
-"algeria",1960,4.282,0.877
-"algeria",1965,3.467,0.904
-"algeria",1970,2.917,0.921
-"algeria",1975,2.684,0.932
-"algeria",1980,2.604,0.935
-"algeria",1985,2.629,0.936
-"algeria",1990,2.639,0.939
-"algeria",1995,2.539,0.94
-"algeria",2000,2.392,0.944
-"angola",1950,4.514,0.7
-"angola",1955,4.646,0.706
-"angola",1960,4.723,0.704
-"angola",1965,4.748,0.709
-"angola",1970,4.709,0.724
-"angola",1975,4.672,0.751
-"angola",1980,4.638,0.784
-"angola",1985,4.617,0.821
-"angola",1990,4.537,0.853
-"angola",1995,4.392,0.877
-"angola",2000,4.188,0.889
-"antigua and barbuda",1950,2.201,0.898
-"antigua and barbuda",1955,1.979,0.902
-"antigua and barbuda",1960,1.919,0.908
-"antigua and barbuda",1965,1.907,0.912
-"antigua and barbuda",1970,1.894,0.915
-"antigua and barbuda",1975,1.881,0.921
-"antigua and barbuda",1980,1.848,0.925
-"antigua and barbuda",1985,1.816,0.928
-"antigua and barbuda",1990,1.798,0.931
-"antigua and barbuda",1995,1.789,0.933
-"antigua and barbuda",2000,1.771,0.935
-"argentina",1950,2.645,0.886
-"argentina",1955,2.677,0.893
-"argentina",1960,2.637,0.899
-"argentina",1965,2.495,0.905
-"argentina",1970,2.366,0.909
-"argentina",1975,2.24,0.91
-"argentina",1980,2.162,0.916
-"argentina",1985,2.099,0.921
-"argentina",1990,2.049,0.925
-"argentina",1995,2.004,0.928
-"argentina",2000,1.952,0.931
-"armenia",1950,2.146,0.871
-"armenia",1955,2.078,0.875
-"armenia",1960,2.021,0.879
-"armenia",1965,1.899,0.875
-"armenia",1970,1.755,0.877
-"armenia",1975,1.662,0.885
-"armenia",1980,1.629,0.899
-"armenia",1985,1.679,0.914
-"armenia",1990,1.731,0.922
-"armenia",1995,1.764,0.93
-"armenia",2000,1.764,0.931
-"aruba",1950,2.258,0.921
-"aruba",1955,2.098,0.922
-"aruba",1960,2.003,0.923
-"aruba",1965,1.908,0.924
-"aruba",1970,1.745,0.921
-"aruba",1975,1.656,0.922
-"aruba",1980,1.687,0.925
-"aruba",1985,1.782,0.93
-"aruba",1990,1.936,0.939
-"aruba",1995,2.036,0.942
-"aruba",2000,1.982,0.948
-"australia",1950,2.062,0.914
-"australia",1955,1.991,0.923
-"australia",1960,1.952,0.935
-"australia",1965,1.915,0.942
-"australia",1970,1.882,0.947
-"australia",1975,1.882,0.951
-"australia",1980,1.887,0.955
-"australia",1985,1.865,0.957
-"australia",1990,1.831,0.962
-"australia",1995,1.79,0.965
-"australia",2000,1.761,0.968
-"austria",1950,1.61,0.914
-"austria",1955,1.532,0.919
-"austria",1960,1.492,0.925
-"austria",1965,1.478,0.933
-"austria",1970,1.478,0.94
-"austria",1975,1.496,0.945
-"austria",1980,1.506,0.949
-"austria",1985,1.537,0.953
-"austria",1990,1.58,0.956
-"austria",1995,1.62,0.958
-"austria",2000,1.647,0.961
-"azerbaijan",1950,2.908,0.828
-"azerbaijan",1955,2.604,0.834
-"azerbaijan",1960,2.404,0.842
-"azerbaijan",1965,2.224,0.85
-"azerbaijan",1970,2.026,0.86
-"azerbaijan",1975,1.796,0.873
-"azerbaijan",1980,1.664,0.89
-"azerbaijan",1985,1.638,0.905
-"azerbaijan",1990,1.687,0.913
-"azerbaijan",1995,1.719,0.919
-"azerbaijan",2000,1.684,0.919
-"bahamas",1950,2.509,0.877
-"bahamas",1955,2.464,0.88
-"bahamas",1960,2.403,0.882
-"bahamas",1965,2.182,0.88
-"bahamas",1970,2.041,0.89
-"bahamas",1975,1.926,0.894
-"bahamas",1980,1.774,0.905
-"bahamas",1985,1.656,0.91
-"bahamas",1990,1.635,0.914
-"bahamas",1995,1.609,0.917
-"bahamas",2000,1.579,0.919
-"bahrain",1950,4.535,0.922
-"bahrain",1955,4.098,0.942
-"bahrain",1960,3.698,0.952
-"bahrain",1965,3.228,0.952
-"bahrain",1970,2.736,0.95
-"bahrain",1975,2.389,0.951
-"bahrain",1980,2.164,0.951
-"bahrain",1985,1.989,0.952
-"bahrain",1990,1.865,0.953
-"bahrain",1995,1.776,0.954
-"bahrain",2000,1.699,0.954
-"bangladesh",1950,4.085,0.726
-"bangladesh",1955,3.744,0.745
-"bangladesh",1960,3.399,0.772
-"bangladesh",1965,3.057,0.802
-"bangladesh",1970,2.735,0.833
-"bangladesh",1975,2.425,0.859
-"bangladesh",1980,2.158,0.883
-"bangladesh",1985,1.946,0.901
-"bangladesh",1990,1.787,0.912
-"bangladesh",1995,1.681,0.919
-"bangladesh",2000,1.598,0.921
-"barbados",1950,2.021,0.915
-"barbados",1955,1.75,0.911
-"barbados",1960,1.698,0.911
-"barbados",1965,1.632,0.909
-"barbados",1970,1.544,0.914
-"barbados",1975,1.562,0.913
-"barbados",1980,1.588,0.916
-"barbados",1985,1.577,0.918
-"barbados",1990,1.578,0.922
-"barbados",1995,1.661,0.931
-"barbados",2000,1.715,0.935
-"belarus",1950,1.708,0.892
-"belarus",1955,1.655,0.872
-"belarus",1960,1.574,0.863
-"belarus",1965,1.462,0.86
-"belarus",1970,1.376,0.867
-"belarus",1975,1.346,0.879
-"belarus",1980,1.431,0.899
-"belarus",1985,1.584,0.91
-"belarus",1990,1.713,0.915
-"belarus",1995,1.783,0.919
-"belarus",2000,1.792,0.923
-"belgium",1950,1.642,0.913
-"belgium",1955,1.616,0.917
-"belgium",1960,1.647,0.925
-"belgium",1965,1.664,0.933
-"belgium",1970,1.694,0.939
-"belgium",1975,1.761,0.944
-"belgium",1980,1.835,0.947
-"belgium",1985,1.847,0.949
-"belgium",1990,1.776,0.951
-"belgium",1995,1.695,0.954
-"belgium",2000,1.667,0.959
-"belize",1950,4.732,0.856
-"belize",1955,4.422,0.859
-"belize",1960,4.003,0.862
-"belize",1965,3.562,0.865
-"belize",1970,3.216,0.871
-"belize",1975,2.885,0.874
-"belize",1980,2.552,0.877
-"belize",1985,2.272,0.883
-"belize",1990,2.06,0.89
-"belize",1995,1.915,0.895
-"belize",2000,1.82,0.9
-"benin",1950,4.315,0.724
-"benin",1955,4.489,0.739
-"benin",1960,4.514,0.748
-"benin",1965,4.416,0.763
-"benin",1970,4.298,0.778
-"benin",1975,4.173,0.791
-"benin",1980,4.07,0.807
-"benin",1985,3.975,0.821
-"benin",1990,3.845,0.833
-"benin",1995,3.682,0.843
-"benin",2000,3.521,0.852
-"bhutan",1950,4.098,0.729
-"bhutan",1955,4.091,0.752
-"bhutan",1960,3.895,0.776
-"bhutan",1965,3.54,0.805
-"bhutan",1970,3.134,0.833
-"bhutan",1975,2.739,0.862
-"bhutan",1980,2.397,0.883
-"bhutan",1985,2.129,0.899
-"bhutan",1990,1.921,0.909
-"bhutan",1995,1.77,0.911
-"bhutan",2000,1.667,0.908
-"bolivia (plurinational state of)",1950,3.659,0.712
-"bolivia (plurinational state of)",1955,3.604,0.737
-"bolivia (plurinational state of)",1960,3.513,0.764
-"bolivia (plurinational state of)",1965,3.365,0.792
-"bolivia (plurinational state of)",1970,3.17,0.816
-"bolivia (plurinational state of)",1975,2.973,0.84
-"bolivia (plurinational state of)",1980,2.785,0.86
-"bolivia (plurinational state of)",1985,2.592,0.874
-"bolivia (plurinational state of)",1990,2.403,0.881
-"bolivia (plurinational state of)",1995,2.253,0.888
-"bolivia (plurinational state of)",2000,2.132,0.891
-"bosnia and herzegovina",1950,1.994,0.907
-"bosnia and herzegovina",1955,1.855,0.923
-"bosnia and herzegovina",1960,1.758,0.929
-"bosnia and herzegovina",1965,1.636,0.932
-"bosnia and herzegovina",1970,1.542,0.932
-"bosnia and herzegovina",1975,1.472,0.934
-"bosnia and herzegovina",1980,1.413,0.936
-"bosnia and herzegovina",1985,1.367,0.938
-"bosnia and herzegovina",1990,1.336,0.946
-"bosnia and herzegovina",1995,1.295,0.95
-"bosnia and herzegovina",2000,1.28,0.953
-"botswana",1950,4.485,0.836
-"botswana",1955,4.011,0.829
-"botswana",1960,3.569,0.844
-"botswana",1965,3.217,0.865
-"botswana",1970,2.928,0.87
-"botswana",1975,2.736,0.864
-"botswana",1980,2.596,0.857
-"botswana",1985,2.498,0.863
-"botswana",1990,2.436,0.875
-"botswana",1995,2.371,0.891
-"botswana",2000,2.257,0.896
-"brazil",1950,3.043,0.833
-"brazil",1955,2.691,0.844
-"brazil",1960,2.392,0.853
-"brazil",1965,2.158,0.865
-"brazil",1970,1.976,0.873
-"brazil",1975,1.842,0.882
-"brazil",1980,1.742,0.894
-"brazil",1985,1.642,0.899
-"brazil",1990,1.571,0.906
-"brazil",1995,1.537,0.914
-"brazil",2000,1.51,0.92
-"brunei darussalam",1950,4.068,0.919
-"brunei darussalam",1955,3.559,0.933
-"brunei darussalam",1960,3.23,0.935
-"brunei darussalam",1965,2.796,0.93
-"brunei darussalam",1970,2.361,0.927
-"brunei darussalam",1975,2.039,0.925
-"brunei darussalam",1980,1.913,0.924
-"brunei darussalam",1985,1.86,0.926
-"brunei darussalam",1990,1.78,0.928
-"brunei darussalam",1995,1.706,0.93
-"brunei darussalam",2000,1.632,0.933
-"bulgaria",1950,1.737,0.904
-"bulgaria",1955,1.698,0.895
-"bulgaria",1960,1.595,0.877
-"bulgaria",1965,1.496,0.878
-"bulgaria",1970,1.394,0.883
-"bulgaria",1975,1.355,0.894
-"bulgaria",1980,1.385,0.905
-"bulgaria",1985,1.447,0.911
-"bulgaria",1990,1.514,0.922
-"bulgaria",1995,1.576,0.926
-"bulgaria",2000,1.629,0.93
-"burkina faso",1950,3.724,0.742
-"burkina faso",1955,4.249,0.735
-"burkina faso",1960,4.47,0.736
-"burkina faso",1965,4.551,0.737
-"burkina faso",1970,4.521,0.752
-"burkina faso",1975,4.461,0.775
-"burkina faso",1980,4.403,0.8
-"burkina faso",1985,4.344,0.83
-"burkina faso",1990,4.223,0.857
-"burkina faso",1995,4.039,0.877
-"burkina faso",2000,3.83,0.89
-"burundi",1950,5.06,0.737
-"burundi",1955,5.194,0.736
-"burundi",1960,5.238,0.746
-"burundi",1965,5.2,0.758
-"burundi",1970,5.133,0.773
-"burundi",1975,5.063,0.795
-"burundi",1980,4.937,0.821
-"burundi",1985,4.75,0.844
-"burundi",1990,4.534,0.869
-"burundi",1995,4.278,0.885
-"burundi",2000,4.007,0.892
-"cabo verde",1950,4.885,0.845
-"cabo verde",1955,4.596,0.867
-"cabo verde",1960,4.2,0.885
-"cabo verde",1965,3.714,0.893
-"cabo verde",1970,3.218,0.899
-"cabo verde",1975,2.746,0.902
-"cabo verde",1980,2.389,0.906
-"cabo verde",1985,2.16,0.915
-"cabo verde",1990,1.998,0.916
-"cabo verde",1995,1.878,0.917
-"cabo verde",2000,1.791,0.918
-"cambodia",1950,3.607,0.633
-"cambodia",1955,3.68,0.679
-"cambodia",1960,3.726,0.733
-"cambodia",1965,3.662,0.804
-"cambodia",1970,3.268,0.84
-"cambodia",1975,2.808,0.874
-"cambodia",1980,2.442,0.886
-"cambodia",1985,2.2,0.888
-"cambodia",1990,2.086,0.906
-"cambodia",1995,2,0.913
-"cambodia",2000,1.926,0.913
-"cameroon",1950,4.388,0.76
-"cameroon",1955,4.539,0.766
-"cameroon",1960,4.525,0.768
-"cameroon",1965,4.41,0.769
-"cameroon",1970,4.259,0.773
-"cameroon",1975,4.132,0.782
-"cameroon",1980,4.058,0.798
-"cameroon",1985,3.936,0.818
-"cameroon",1990,3.796,0.84
-"cameroon",1995,3.64,0.857
-"cameroon",2000,3.449,0.868
-"canada",1950,1.724,0.917
-"canada",1955,1.65,0.926
-"canada",1960,1.63,0.934
-"canada",1965,1.616,0.939
-"canada",1970,1.62,0.943
-"canada",1975,1.637,0.947
-"canada",1980,1.626,0.95
-"canada",1985,1.6,0.953
-"canada",1990,1.57,0.958
-"canada",1995,1.538,0.961
-"canada",2000,1.523,0.964
-"central african republic",1950,3.571,0.762
-"central african republic",1955,3.842,0.772
-"central african republic",1960,3.909,0.778
-"central african republic",1965,3.917,0.768
-"central african republic",1970,3.888,0.755
-"central african republic",1975,3.801,0.754
-"central african republic",1980,3.717,0.762
-"central african republic",1985,3.618,0.775
-"central african republic",1990,3.5,0.793
-"central african republic",1995,3.353,0.814
-"central african republic",2000,3.153,0.829
-"chad",1950,4.272,0.693
-"chad",1955,4.498,0.709
-"chad",1960,4.713,0.718
-"chad",1965,4.886,0.725
-"chad",1970,5.008,0.734
-"chad",1975,5,0.741
-"chad",1980,4.898,0.755
-"chad",1985,4.686,0.768
-"chad",1990,4.442,0.786
-"chad",1995,4.154,0.8
-"chad",2000,3.882,0.813
-"channel islands",1950,1.511,0.928
-"channel islands",1955,1.47,0.936
-"channel islands",1960,1.508,0.942
-"channel islands",1965,1.491,0.947
-"channel islands",1970,1.484,0.951
-"channel islands",1975,1.503,0.957
-"channel islands",1980,1.518,0.959
-"channel islands",1985,1.521,0.961
-"channel islands",1990,1.522,0.965
-"channel islands",1995,1.527,0.966
-"channel islands",2000,1.545,0.967
-"chile",1950,2.493,0.884
-"chile",1955,2.444,0.907
-"chile",1960,2.337,0.924
-"chile",1965,2.176,0.932
-"chile",1970,2.041,0.933
-"chile",1975,1.912,0.932
-"chile",1980,1.794,0.931
-"chile",1985,1.716,0.935
-"chile",1990,1.66,0.938
-"chile",1995,1.602,0.941
-"chile",2000,1.545,0.945
-"china",1950,2.658,0.86
-"china",1955,2.24,0.892
-"china",1960,2.027,0.909
-"china",1965,1.937,0.911
-"china",1970,1.76,0.911
-"china",1975,1.632,0.918
-"china",1980,1.613,0.928
-"china",1985,1.629,0.939
-"china",1990,1.666,0.947
-"china",1995,1.705,0.952
-"china",2000,1.725,0.952
-"china, hong kong sar",1950,2.205,0.937
-"china, hong kong sar",1955,1.791,0.94
-"china, hong kong sar",1960,1.467,0.941
-"china, hong kong sar",1965,1.228,0.947
-"china, hong kong sar",1970,1.104,0.948
-"china, hong kong sar",1975,1.112,0.952
-"china, hong kong sar",1980,1.206,0.956
-"china, hong kong sar",1985,1.331,0.958
-"china, hong kong sar",1990,1.437,0.96
-"china, hong kong sar",1995,1.513,0.964
-"china, hong kong sar",2000,1.557,0.965
-"china, macao sar",1950,1.421,0.936
-"china, macao sar",1955,1.732,0.946
-"china, macao sar",1960,1.793,0.944
-"china, macao sar",1965,1.436,0.944
-"china, macao sar",1970,1.125,0.95
-"china, macao sar",1975,0.996,0.953
-"china, macao sar",1980,1.004,0.957
-"china, macao sar",1985,1.083,0.959
-"china, macao sar",1990,1.172,0.96
-"china, macao sar",1995,1.246,0.96
-"china, macao sar",2000,1.313,0.96
-"china, taiwan province of china",1950,2.468,0.904
-"china, taiwan province of china",1955,2.202,0.908
-"china, taiwan province of china",1960,2.003,0.914
-"china, taiwan province of china",1965,1.805,0.919
-"china, taiwan province of china",1970,1.621,0.921
-"china, taiwan province of china",1975,1.45,0.921
-"china, taiwan province of china",1980,1.336,0.927
-"china, taiwan province of china",1985,1.311,0.938
-"china, taiwan province of china",1990,1.336,0.945
-"china, taiwan province of china",1995,1.383,0.949
-"china, taiwan province of china",2000,1.424,0.955
-"colombia",1950,3.157,0.852
-"colombia",1955,2.826,0.867
-"colombia",1960,2.569,0.878
-"colombia",1965,2.358,0.889
-"colombia",1970,2.193,0.895
-"colombia",1975,2.029,0.895
-"colombia",1980,1.876,0.897
-"colombia",1985,1.75,0.904
-"colombia",1990,1.643,0.91
-"colombia",1995,1.567,0.916
-"colombia",2000,1.514,0.921
-"comoros",1950,5.031,0.772
-"comoros",1955,5.031,0.791
-"comoros",1960,4.899,0.811
-"comoros",1965,4.605,0.828
-"comoros",1970,4.274,0.839
-"comoros",1975,4.077,0.85
-"comoros",1980,3.862,0.857
-"comoros",1985,3.655,0.865
-"comoros",1990,3.456,0.873
-"comoros",1995,3.259,0.88
-"comoros",2000,3.081,0.887
-"congo",1950,4.544,0.816
-"congo",1955,4.32,0.814
-"congo",1960,4.1,0.82
-"congo",1965,3.937,0.825
-"congo",1970,3.857,0.831
-"congo",1975,3.804,0.839
-"congo",1980,3.761,0.847
-"congo",1985,3.721,0.861
-"congo",1990,3.668,0.88
-"congo",1995,3.56,0.894
-"congo",2000,3.397,0.898
-"costa rica",1950,3.09,0.894
-"costa rica",1955,2.919,0.909
-"costa rica",1960,2.768,0.92
-"costa rica",1965,2.557,0.922
-"costa rica",1970,2.31,0.919
-"costa rica",1975,2.056,0.919
-"costa rica",1980,1.829,0.919
-"costa rica",1985,1.676,0.919
-"costa rica",1990,1.61,0.927
-"costa rica",1995,1.56,0.93
-"costa rica",2000,1.517,0.933
-"cÃ´te d'ivoire",1950,3.924,0.814
-"cÃ´te d'ivoire",1955,4.603,0.808
-"cÃ´te d'ivoire",1960,4.861,0.794
-"cÃ´te d'ivoire",1965,4.647,0.787
-"cÃ´te d'ivoire",1970,4.351,0.784
-"cÃ´te d'ivoire",1975,4.153,0.793
-"cÃ´te d'ivoire",1980,3.971,0.803
-"cÃ´te d'ivoire",1985,3.836,0.821
-"cÃ´te d'ivoire",1990,3.701,0.838
-"cÃ´te d'ivoire",1995,3.554,0.851
-"cÃ´te d'ivoire",2000,3.388,0.857
-"croatia",1950,1.63,0.919
-"croatia",1955,1.639,0.92
-"croatia",1960,1.688,0.922
-"croatia",1965,1.672,0.921
-"croatia",1970,1.597,0.929
-"croatia",1975,1.576,0.933
-"croatia",1980,1.58,0.938
-"croatia",1985,1.567,0.943
-"croatia",1990,1.547,0.946
-"croatia",1995,1.51,0.949
-"croatia",2000,1.493,0.956
-"cuba",1950,2.061,0.893
-"cuba",1955,1.773,0.902
-"cuba",1960,1.608,0.912
-"cuba",1965,1.539,0.918
-"cuba",1970,1.501,0.919
-"cuba",1975,1.449,0.921
-"cuba",1980,1.418,0.919
-"cuba",1985,1.423,0.927
-"cuba",1990,1.433,0.928
-"cuba",1995,1.42,0.927
-"cuba",2000,1.394,0.928
-"curaÃ§ao",1950,2.293,0.9
-"curaÃ§ao",1955,2.085,0.906
-"curaÃ§ao",1960,2.019,0.91
-"curaÃ§ao",1965,2.022,0.91
-"curaÃ§ao",1970,2.001,0.912
-"curaÃ§ao",1975,1.949,0.911
-"curaÃ§ao",1980,1.921,0.913
-"curaÃ§ao",1985,1.856,0.919
-"curaÃ§ao",1990,1.746,0.923
-"curaÃ§ao",1995,1.65,0.927
-"curaÃ§ao",2000,1.605,0.935
-"cyprus",1950,2.146,0.938
-"cyprus",1955,2.162,0.943
-"cyprus",1960,2.281,0.945
-"cyprus",1965,2.241,0.945
-"cyprus",1970,2.062,0.948
-"cyprus",1975,1.778,0.952
-"cyprus",1980,1.517,0.956
-"cyprus",1985,1.381,0.959
-"cyprus",1990,1.324,0.961
-"cyprus",1995,1.295,0.962
-"cyprus",2000,1.294,0.963
-"czechia",1950,1.821,0.908
-"czechia",1955,1.788,0.899
-"czechia",1960,1.72,0.902
-"czechia",1965,1.65,0.908
-"czechia",1970,1.613,0.921
-"czechia",1975,1.561,0.932
-"czechia",1980,1.53,0.944
-"czechia",1985,1.561,0.949
-"czechia",1990,1.627,0.951
-"czechia",1995,1.686,0.952
-"czechia",2000,1.723,0.956
-"dem people's republic of korea",1950,2.384,0.889
-"dem people's republic of korea",1955,2.231,0.894
-"dem people's republic of korea",1960,2.279,0.896
-"dem people's republic of korea",1965,2.181,0.887
-"dem people's republic of korea",1970,1.926,0.872
-"dem people's republic of korea",1975,1.808,0.88
-"dem people's republic of korea",1980,1.796,0.897
-"dem people's republic of korea",1985,1.813,0.908
-"dem people's republic of korea",1990,1.82,0.923
-"dem people's republic of korea",1995,1.808,0.938
-"dem people's republic of korea",2000,1.769,0.935
-"democratic republic of the congo",1950,4.568,0.713
-"democratic republic of the congo",1955,4.665,0.715
-"democratic republic of the congo",1960,4.638,0.725
-"democratic republic of the congo",1965,4.621,0.735
-"democratic republic of the congo",1970,4.711,0.752
-"democratic republic of the congo",1975,4.762,0.769
-"democratic republic of the congo",1980,4.687,0.787
-"democratic republic of the congo",1985,4.624,0.809
-"democratic republic of the congo",1990,4.49,0.824
-"democratic republic of the congo",1995,4.266,0.838
-"democratic republic of the congo",2000,3.99,0.846
-"denmark",1950,1.704,0.916
-"denmark",1955,1.656,0.925
-"denmark",1960,1.7,0.934
-"denmark",1965,1.77,0.94
-"denmark",1970,1.817,0.945
-"denmark",1975,1.826,0.948
-"denmark",1980,1.8,0.95
-"denmark",1985,1.771,0.955
-"denmark",1990,1.737,0.957
-"denmark",1995,1.705,0.958
-"denmark",2000,1.7,0.962
-"djibouti",1950,4.802,0.783
-"djibouti",1955,4.662,0.793
-"djibouti",1960,4.475,0.802
-"djibouti",1965,4.196,0.812
-"djibouti",1970,3.794,0.822
-"djibouti",1975,3.324,0.836
-"djibouti",1980,2.901,0.851
-"djibouti",1985,2.595,0.87
-"djibouti",1990,2.371,0.888
-"djibouti",1995,2.2,0.901
-"djibouti",2000,2.064,0.912
-"dominican republic",1950,3.534,0.828
-"dominican republic",1955,3.116,0.843
-"dominican republic",1960,2.789,0.855
-"dominican republic",1965,2.548,0.861
-"dominican republic",1970,2.38,0.867
-"dominican republic",1975,2.247,0.871
-"dominican republic",1980,2.145,0.876
-"dominican republic",1985,2.051,0.879
-"dominican republic",1990,1.968,0.88
-"dominican republic",1995,1.896,0.885
-"dominican republic",2000,1.828,0.891
-"ecuador",1950,3.792,0.825
-"ecuador",1955,3.42,0.842
-"ecuador",1960,3.108,0.86
-"ecuador",1965,2.854,0.874
-"ecuador",1970,2.644,0.886
-"ecuador",1975,2.469,0.897
-"ecuador",1980,2.306,0.903
-"ecuador",1985,2.178,0.91
-"ecuador",1990,2.081,0.915
-"ecuador",1995,2.003,0.917
-"ecuador",2000,1.932,0.922
-"egypt",1950,4.014,0.768
-"egypt",1955,3.918,0.799
-"egypt",1960,3.745,0.835
-"egypt",1965,3.475,0.87
-"egypt",1970,3.214,0.9
-"egypt",1975,3.03,0.921
-"egypt",1980,2.911,0.933
-"egypt",1985,2.849,0.933
-"egypt",1990,2.886,0.931
-"egypt",1995,2.836,0.926
-"egypt",2000,2.694,0.925
-"el salvador",1950,3.656,0.769
-"el salvador",1955,3.392,0.793
-"el salvador",1960,3.113,0.818
-"el salvador",1965,2.822,0.839
-"el salvador",1970,2.57,0.862
-"el salvador",1975,2.315,0.877
-"el salvador",1980,2.066,0.883
-"el salvador",1985,1.878,0.883
-"el salvador",1990,1.755,0.884
-"el salvador",1995,1.664,0.885
-"el salvador",2000,1.617,0.892
-"equatorial guinea",1950,3.343,0.713
-"equatorial guinea",1955,3.624,0.731
-"equatorial guinea",1960,3.939,0.745
-"equatorial guinea",1965,4.076,0.761
-"equatorial guinea",1970,4.047,0.775
-"equatorial guinea",1975,3.944,0.791
-"equatorial guinea",1980,3.8,0.806
-"equatorial guinea",1985,3.625,0.821
-"equatorial guinea",1990,3.442,0.836
-"equatorial guinea",1995,3.233,0.845
-"equatorial guinea",2000,3.025,0.854
-"eritrea",1950,4.169,0.755
-"eritrea",1955,4.328,0.76
-"eritrea",1960,4.382,0.771
-"eritrea",1965,4.333,0.799
-"eritrea",1970,4.241,0.832
-"eritrea",1975,4.112,0.864
-"eritrea",1980,3.946,0.888
-"eritrea",1985,3.751,0.903
-"eritrea",1990,3.54,0.908
-"eritrea",1995,3.321,0.911
-"eritrea",2000,3.111,0.909
-"estonia",1950,1.716,0.9
-"estonia",1955,1.722,0.888
-"estonia",1960,1.692,0.881
-"estonia",1965,1.619,0.88
-"estonia",1970,1.571,0.893
-"estonia",1975,1.581,0.907
-"estonia",1980,1.632,0.919
-"estonia",1985,1.689,0.926
-"estonia",1990,1.731,0.935
-"estonia",1995,1.738,0.939
-"estonia",2000,1.725,0.942
-"eswatini",1950,4.713,0.807
-"eswatini",1955,4.577,0.824
-"eswatini",1960,4.224,0.83
-"eswatini",1965,3.768,0.837
-"eswatini",1970,3.342,0.844
-"eswatini",1975,2.954,0.835
-"eswatini",1980,2.644,0.823
-"eswatini",1985,2.457,0.821
-"eswatini",1990,2.33,0.835
-"eswatini",1995,2.258,0.861
-"eswatini",2000,2.205,0.881
-"ethiopia",1950,4.361,0.724
-"ethiopia",1955,4.625,0.714
-"ethiopia",1960,4.748,0.721
-"ethiopia",1965,4.766,0.747
-"ethiopia",1970,4.7,0.779
-"ethiopia",1975,4.538,0.812
-"ethiopia",1980,4.294,0.844
-"ethiopia",1985,3.974,0.869
-"ethiopia",1990,3.632,0.889
-"ethiopia",1995,3.308,0.898
-"ethiopia",2000,3.008,0.903
-"fiji",1950,3.26,0.875
-"fiji",1955,3.112,0.871
-"fiji",1960,3.021,0.877
-"fiji",1965,2.881,0.881
-"fiji",1970,2.878,0.89
-"fiji",1975,2.749,0.894
-"fiji",1980,2.598,0.898
-"fiji",1985,2.518,0.896
-"fiji",1990,2.479,0.897
-"fiji",1995,2.424,0.899
-"fiji",2000,2.344,0.901
-"finland",1950,1.627,0.917
-"finland",1955,1.673,0.925
-"finland",1960,1.729,0.926
-"finland",1965,1.754,0.931
-"finland",1970,1.752,0.935
-"finland",1975,1.745,0.938
-"finland",1980,1.71,0.94
-"finland",1985,1.642,0.945
-"finland",1990,1.537,0.947
-"finland",1995,1.449,0.95
-"finland",2000,1.418,0.956
-"france",1950,1.884,0.905
-"france",1955,1.879,0.914
-"france",1960,1.874,0.917
-"france",1965,1.853,0.925
-"france",1970,1.842,0.931
-"france",1975,1.869,0.935
-"france",1980,1.901,0.937
-"france",1985,1.897,0.939
-"france",1990,1.842,0.94
-"france",1995,1.78,0.946
-"france",2000,1.743,0.948
-"french guiana",1950,3.244,0.907
-"french guiana",1955,3.291,0.918
-"french guiana",1960,3.362,0.928
-"french guiana",1965,3.424,0.931
-"french guiana",1970,3.465,0.936
-"french guiana",1975,3.5,0.941
-"french guiana",1980,3.456,0.941
-"french guiana",1985,3.384,0.945
-"french guiana",1990,3.255,0.948
-"french guiana",1995,3.131,0.95
-"french guiana",2000,3.007,0.955
-"french polynesia",1950,3.714,0.885
-"french polynesia",1955,3.419,0.899
-"french polynesia",1960,3.18,0.915
-"french polynesia",1965,2.962,0.929
-"french polynesia",1970,2.632,0.936
-"french polynesia",1975,2.309,0.943
-"french polynesia",1980,2.093,0.942
-"french polynesia",1985,1.946,0.937
-"french polynesia",1990,1.843,0.939
-"french polynesia",1995,1.771,0.941
-"french polynesia",2000,1.715,0.942
-"gabon",1950,3.904,0.787
-"gabon",1955,4.163,0.814
-"gabon",1960,4.214,0.827
-"gabon",1965,4.123,0.84
-"gabon",1970,3.958,0.848
-"gabon",1975,3.774,0.856
-"gabon",1980,3.597,0.861
-"gabon",1985,3.475,0.869
-"gabon",1990,3.384,0.882
-"gabon",1995,3.259,0.891
-"gabon",2000,3.089,0.895
-"gambia",1950,3.396,0.736
-"gambia",1955,3.819,0.758
-"gambia",1960,4.251,0.775
-"gambia",1965,4.64,0.789
-"gambia",1970,4.773,0.81
-"gambia",1975,4.746,0.828
-"gambia",1980,4.697,0.847
-"gambia",1985,4.606,0.862
-"gambia",1990,4.46,0.875
-"gambia",1995,4.234,0.883
-"gambia",2000,3.971,0.891
-"georgia",1950,1.838,0.863
-"georgia",1955,1.824,0.866
-"georgia",1960,1.849,0.863
-"georgia",1965,1.784,0.863
-"georgia",1970,1.601,0.865
-"georgia",1975,1.52,0.872
-"georgia",1980,1.557,0.886
-"georgia",1985,1.683,0.898
-"georgia",1990,1.825,0.909
-"georgia",1995,1.88,0.914
-"georgia",2000,1.875,0.919
-"germany",1950,1.483,0.912
-"germany",1955,1.46,0.921
-"germany",1960,1.45,0.926
-"germany",1965,1.412,0.934
-"germany",1970,1.391,0.94
-"germany",1975,1.436,0.945
-"germany",1980,1.502,0.949
-"germany",1985,1.572,0.952
-"germany",1990,1.63,0.955
-"germany",1995,1.671,0.958
-"germany",2000,1.691,0.962
-"ghana",1950,4.692,0.776
-"ghana",1955,4.496,0.784
-"ghana",1960,4.281,0.796
-"ghana",1965,4.049,0.808
-"ghana",1970,3.823,0.822
-"ghana",1975,3.65,0.837
-"ghana",1980,3.514,0.852
-"ghana",1985,3.382,0.867
-"ghana",1990,3.252,0.88
-"ghana",1995,3.118,0.891
-"ghana",2000,2.984,0.9
-"greece",1950,1.881,0.908
-"greece",1955,1.805,0.909
-"greece",1960,1.707,0.915
-"greece",1965,1.593,0.924
-"greece",1970,1.495,0.931
-"greece",1975,1.435,0.939
-"greece",1980,1.4,0.945
-"greece",1985,1.388,0.948
-"greece",1990,1.36,0.95
-"greece",1995,1.334,0.957
-"greece",2000,1.334,0.96
-"grenada",1950,3.717,0.9
-"grenada",1955,3.513,0.907
-"grenada",1960,3.284,0.91
-"grenada",1965,2.986,0.91
-"grenada",1970,2.614,0.908
-"grenada",1975,2.267,0.91
-"grenada",1980,2.021,0.908
-"grenada",1985,1.907,0.908
-"grenada",1990,1.831,0.908
-"grenada",1995,1.766,0.908
-"grenada",2000,1.713,0.909
-"guadeloupe",1950,2.921,0.907
-"guadeloupe",1955,2.49,0.913
-"guadeloupe",1960,2.228,0.92
-"guadeloupe",1965,2.115,0.924
-"guadeloupe",1970,2.088,0.927
-"guadeloupe",1975,2.08,0.929
-"guadeloupe",1980,2.062,0.933
-"guadeloupe",1985,2.04,0.932
-"guadeloupe",1990,2.014,0.935
-"guadeloupe",1995,1.966,0.937
-"guadeloupe",2000,1.929,0.943
-"guam",1950,3.12,0.907
-"guam",1955,2.883,0.916
-"guam",1960,2.743,0.926
-"guam",1965,2.72,0.929
-"guam",1970,2.697,0.932
-"guam",1975,2.616,0.938
-"guam",1980,2.499,0.939
-"guam",1985,2.385,0.943
-"guam",1990,2.287,0.946
-"guam",1995,2.201,0.949
-"guam",2000,2.124,0.951
-"guatemala",1950,4.691,0.793
-"guatemala",1955,4.566,0.817
-"guatemala",1960,4.364,0.837
-"guatemala",1965,4.118,0.854
-"guatemala",1970,3.842,0.868
-"guatemala",1975,3.529,0.876
-"guatemala",1980,3.181,0.884
-"guatemala",1985,2.838,0.891
-"guatemala",1990,2.564,0.899
-"guatemala",1995,2.368,0.905
-"guatemala",2000,2.222,0.911
-"guinea",1950,3.427,0.687
-"guinea",1955,3.752,0.695
-"guinea",1960,3.957,0.714
-"guinea",1965,4.134,0.727
-"guinea",1970,4.215,0.752
-"guinea",1975,4.24,0.778
-"guinea",1980,4.142,0.806
-"guinea",1985,4.006,0.834
-"guinea",1990,3.826,0.858
-"guinea",1995,3.612,0.873
-"guinea",2000,3.395,0.884
-"guinea-bissau",1950,4.043,0.709
-"guinea-bissau",1955,4.323,0.712
-"guinea-bissau",1960,4.386,0.723
-"guinea-bissau",1965,4.345,0.735
-"guinea-bissau",1970,4.237,0.756
-"guinea-bissau",1975,4.094,0.778
-"guinea-bissau",1980,3.951,0.803
-"guinea-bissau",1985,3.818,0.828
-"guinea-bissau",1990,3.654,0.849
-"guinea-bissau",1995,3.446,0.865
-"guinea-bissau",2000,3.242,0.872
-"guyana",1950,3.246,0.817
-"guyana",1955,2.885,0.816
-"guyana",1960,2.584,0.817
-"guyana",1965,2.389,0.82
-"guyana",1970,2.271,0.83
-"guyana",1975,2.211,0.833
-"guyana",1980,2.166,0.841
-"guyana",1985,2.104,0.843
-"guyana",1990,2.021,0.847
-"guyana",1995,1.955,0.851
-"guyana",2000,1.901,0.855
-"haiti",1950,4.039,0.767
-"haiti",1955,4.031,0.772
-"haiti",1960,3.838,0.781
-"haiti",1965,3.601,0.793
-"haiti",1970,3.333,0.807
-"haiti",1975,3.06,0.814
-"haiti",1980,2.83,0.828
-"haiti",1985,2.609,0.838
-"haiti",1990,2.412,0.844
-"haiti",1995,2.259,0.852
-"haiti",2000,2.137,0.86
-"honduras",1950,4.707,0.807
-"honduras",1955,4.436,0.833
-"honduras",1960,4.15,0.854
-"honduras",1965,3.867,0.871
-"honduras",1970,3.555,0.881
-"honduras",1975,3.203,0.884
-"honduras",1980,2.833,0.885
-"honduras",1985,2.502,0.893
-"honduras",1990,2.236,0.899
-"honduras",1995,2.052,0.905
-"honduras",2000,1.944,0.912
-"hungary",1950,1.666,0.894
-"hungary",1955,1.696,0.897
-"hungary",1960,1.696,0.899
-"hungary",1965,1.658,0.901
-"hungary",1970,1.61,0.908
-"hungary",1975,1.52,0.918
-"hungary",1980,1.414,0.923
-"hungary",1985,1.377,0.931
-"hungary",1990,1.422,0.94
-"hungary",1995,1.483,0.941
-"hungary",2000,1.526,0.941
-"iceland",1950,2.359,0.93
-"iceland",1955,2.258,0.937
-"iceland",1960,2.215,0.943
-"iceland",1965,2.16,0.948
-"iceland",1970,2.106,0.953
-"iceland",1975,2.096,0.96
-"iceland",1980,2.063,0.963
-"iceland",1985,1.988,0.965
-"iceland",1990,1.882,0.967
-"iceland",1995,1.79,0.972
-"iceland",2000,1.737,0.974
-"india",1950,3.3,0.757
-"india",1955,3.167,0.775
-"india",1960,3.049,0.798
-"india",1965,2.925,0.819
-"india",1970,2.773,0.838
-"india",1975,2.613,0.858
-"india",1980,2.459,0.874
-"india",1985,2.343,0.89
-"india",1990,2.234,0.901
-"india",1995,2.11,0.912
-"india",2000,2,0.918
-"indonesia",1950,3.531,0.807
-"indonesia",1955,3.26,0.828
-"indonesia",1960,2.913,0.847
-"indonesia",1965,2.57,0.864
-"indonesia",1970,2.327,0.882
-"indonesia",1975,2.182,0.896
-"indonesia",1980,2.127,0.907
-"indonesia",1985,2.112,0.913
-"indonesia",1990,2.052,0.913
-"indonesia",1995,1.981,0.915
-"indonesia",2000,1.91,0.916
-"iran (islamic republic of)",1950,4.651,0.807
-"iran (islamic republic of)",1955,4.436,0.846
-"iran (islamic republic of)",1960,3.912,0.874
-"iran (islamic republic of)",1965,3.193,0.899
-"iran (islamic republic of)",1970,2.519,0.92
-"iran (islamic republic of)",1975,2.097,0.936
-"iran (islamic republic of)",1980,1.919,0.945
-"iran (islamic republic of)",1985,1.905,0.952
-"iran (islamic republic of)",1990,1.951,0.954
-"iran (islamic republic of)",1995,1.986,0.958
-"iran (islamic republic of)",2000,1.972,0.958
-"iraq",1950,5.835,0.873
-"iraq",1955,5.478,0.893
-"iraq",1960,5.044,0.901
-"iraq",1965,4.577,0.902
-"iraq",1970,4.124,0.9
-"iraq",1975,3.774,0.901
-"iraq",1980,3.531,0.902
-"iraq",1985,3.367,0.901
-"iraq",1990,3.214,0.903
-"iraq",1995,2.999,0.906
-"iraq",2000,2.798,0.91
-"ireland",1950,2.81,0.935
-"ireland",1955,2.525,0.938
-"ireland",1960,2.272,0.945
-"ireland",1965,2.105,0.952
-"ireland",1970,2.018,0.958
-"ireland",1975,1.975,0.962
-"ireland",1980,1.94,0.964
-"ireland",1985,1.915,0.966
-"ireland",1990,1.868,0.968
-"ireland",1995,1.797,0.97
-"ireland",2000,1.745,0.974
-"israel",1950,3.124,0.93
-"israel",1955,3.078,0.936
-"israel",1960,3.054,0.939
-"israel",1965,3.013,0.945
-"israel",1970,2.967,0.95
-"israel",1975,2.95,0.955
-"israel",1980,2.964,0.958
-"israel",1985,2.99,0.963
-"israel",1990,2.975,0.964
-"israel",1995,2.905,0.966
-"israel",2000,2.805,0.967
-"italy",1950,1.719,0.926
-"italy",1955,1.617,0.933
-"italy",1960,1.523,0.941
-"italy",1965,1.448,0.95
-"italy",1970,1.411,0.957
-"italy",1975,1.393,0.96
-"italy",1980,1.396,0.963
-"italy",1985,1.397,0.965
-"italy",1990,1.377,0.967
-"italy",1995,1.363,0.969
-"italy",2000,1.376,0.974
-"jamaica",1950,3.444,0.898
-"jamaica",1955,3.037,0.895
-"jamaica",1960,2.699,0.894
-"jamaica",1965,2.458,0.897
-"jamaica",1970,2.27,0.895
-"jamaica",1975,2.131,0.897
-"jamaica",1980,2.009,0.899
-"jamaica",1985,1.9,0.903
-"jamaica",1990,1.813,0.906
-"jamaica",1995,1.745,0.91
-"jamaica",2000,1.711,0.918
-"japan",1950,1.868,0.937
-"japan",1955,1.819,0.933
-"japan",1960,1.708,0.935
-"japan",1965,1.543,0.935
-"japan",1970,1.409,0.94
-"japan",1975,1.356,0.944
-"japan",1980,1.39,0.95
-"japan",1985,1.435,0.952
-"japan",1990,1.445,0.955
-"japan",1995,1.456,0.96
-"japan",2000,1.473,0.963
-"jordan",1950,6.035,0.903
-"jordan",1955,5.606,0.916
-"jordan",1960,5.042,0.922
-"jordan",1965,4.463,0.927
-"jordan",1970,3.977,0.929
-"jordan",1975,3.629,0.932
-"jordan",1980,3.344,0.929
-"jordan",1985,3.048,0.932
-"jordan",1990,2.703,0.932
-"jordan",1995,2.424,0.935
-"jordan",2000,2.239,0.938
-"kazakhstan",1950,2.434,0.823
-"kazakhstan",1955,2.313,0.833
-"kazakhstan",1960,2.226,0.844
-"kazakhstan",1965,2.149,0.855
-"kazakhstan",1970,2.125,0.872
-"kazakhstan",1975,2.141,0.883
-"kazakhstan",1980,2.237,0.9
-"kazakhstan",1985,2.345,0.908
-"kazakhstan",1990,2.407,0.915
-"kazakhstan",1995,2.407,0.92
-"kazakhstan",2000,2.332,0.919
-"kenya",1950,5.604,0.8
-"kenya",1955,5.217,0.797
-"kenya",1960,4.836,0.807
-"kenya",1965,4.462,0.819
-"kenya",1970,4.132,0.828
-"kenya",1975,3.826,0.838
-"kenya",1980,3.557,0.85
-"kenya",1985,3.298,0.866
-"kenya",1990,3.042,0.882
-"kenya",1995,2.801,0.894
-"kenya",2000,2.609,0.898
-"kiribati",1950,4.014,0.822
-"kiribati",1955,3.902,0.832
-"kiribati",1960,3.763,0.839
-"kiribati",1965,3.602,0.848
-"kiribati",1970,3.491,0.857
-"kiribati",1975,3.458,0.869
-"kiribati",1980,3.41,0.877
-"kiribati",1985,3.321,0.882
-"kiribati",1990,3.21,0.887
-"kiribati",1995,3.085,0.893
-"kiribati",2000,2.961,0.899
-"kuwait",1950,5.123,0.923
-"kuwait",1955,4.475,0.937
-"kuwait",1960,3.681,0.947
-"kuwait",1965,2.944,0.952
-"kuwait",1970,2.554,0.957
-"kuwait",1975,2.459,0.957
-"kuwait",1980,2.31,0.956
-"kuwait",1985,2.152,0.955
-"kuwait",1990,2.056,0.957
-"kuwait",1995,1.992,0.962
-"kuwait",2000,1.947,0.963
-"kyrgyzstan",1950,3.367,0.833
-"kyrgyzstan",1955,3.203,0.842
-"kyrgyzstan",1960,3.088,0.853
-"kyrgyzstan",1965,2.967,0.864
-"kyrgyzstan",1970,2.815,0.878
-"kyrgyzstan",1975,2.664,0.889
-"kyrgyzstan",1980,2.61,0.902
-"kyrgyzstan",1985,2.639,0.914
-"kyrgyzstan",1990,2.664,0.917
-"kyrgyzstan",1995,2.63,0.921
-"kyrgyzstan",2000,2.494,0.92
-"lao people's democratic republic",1950,4.336,0.743
-"lao people's democratic republic",1955,4.383,0.761
-"lao people's democratic republic",1960,4.271,0.777
-"lao people's democratic republic",1965,3.979,0.797
-"lao people's democratic republic",1970,3.537,0.819
-"lao people's democratic republic",1975,3.081,0.842
-"lao people's democratic republic",1980,2.72,0.866
-"lao people's democratic republic",1985,2.464,0.885
-"lao people's democratic republic",1990,2.278,0.9
-"lao people's democratic republic",1995,2.135,0.909
-"lao people's democratic republic",2000,2.018,0.914
-"latvia",1950,1.576,0.885
-"latvia",1955,1.588,0.87
-"latvia",1960,1.569,0.857
-"latvia",1965,1.51,0.851
-"latvia",1970,1.433,0.859
-"latvia",1975,1.402,0.879
-"latvia",1980,1.441,0.893
-"latvia",1985,1.523,0.9
-"latvia",1990,1.597,0.911
-"latvia",1995,1.663,0.913
-"latvia",2000,1.703,0.915
-"lebanon",1950,3.55,0.908
-"lebanon",1955,3.246,0.916
-"lebanon",1960,3.011,0.922
-"lebanon",1965,2.798,0.929
-"lebanon",1970,2.528,0.935
-"lebanon",1975,2.246,0.943
-"lebanon",1980,2.037,0.951
-"lebanon",1985,1.948,0.953
-"lebanon",1990,1.944,0.955
-"lebanon",1995,1.927,0.956
-"lebanon",2000,1.875,0.957
-"lesotho",1950,4.067,0.793
-"lesotho",1955,3.824,0.797
-"lesotho",1960,3.553,0.807
-"lesotho",1965,3.269,0.819
-"lesotho",1970,3.005,0.826
-"lesotho",1975,2.768,0.822
-"lesotho",1980,2.57,0.809
-"lesotho",1985,2.423,0.803
-"lesotho",1990,2.337,0.815
-"lesotho",1995,2.299,0.837
-"lesotho",2000,2.247,0.855
-"liberia",1950,4.053,0.695
-"liberia",1955,4.13,0.699
-"liberia",1960,4.158,0.7
-"liberia",1965,4.065,0.71
-"liberia",1970,3.903,0.731
-"liberia",1975,3.835,0.767
-"liberia",1980,3.785,0.81
-"liberia",1985,3.701,0.85
-"liberia",1990,3.551,0.878
-"liberia",1995,3.331,0.888
-"liberia",2000,3.114,0.89
-"libya",1950,6.56,0.876
-"libya",1955,5.888,0.903
-"libya",1960,4.819,0.916
-"libya",1965,3.785,0.919
-"libya",1970,3.003,0.923
-"libya",1975,2.536,0.925
-"libya",1980,2.278,0.931
-"libya",1985,2.126,0.934
-"libya",1990,2.009,0.935
-"libya",1995,1.907,0.938
-"libya",2000,1.824,0.941
-"lithuania",1950,1.762,0.894
-"lithuania",1955,1.676,0.87
-"lithuania",1960,1.563,0.852
-"lithuania",1965,1.485,0.855
-"lithuania",1970,1.437,0.853
-"lithuania",1975,1.457,0.871
-"lithuania",1980,1.502,0.886
-"lithuania",1985,1.593,0.897
-"lithuania",1990,1.674,0.902
-"lithuania",1995,1.717,0.912
-"lithuania",2000,1.721,0.915
-"luxembourg",1950,1.54,0.921
-"luxembourg",1955,1.518,0.929
-"luxembourg",1960,1.578,0.939
-"luxembourg",1965,1.658,0.943
-"luxembourg",1970,1.717,0.948
-"luxembourg",1975,1.728,0.952
-"luxembourg",1980,1.69,0.955
-"luxembourg",1985,1.6,0.958
-"luxembourg",1990,1.492,0.964
-"luxembourg",1995,1.424,0.967
-"luxembourg",2000,1.416,0.969
-"madagascar",1950,4.599,0.736
-"madagascar",1955,4.577,0.747
-"madagascar",1960,4.415,0.764
-"madagascar",1965,4.237,0.785
-"madagascar",1970,4.051,0.808
-"madagascar",1975,3.922,0.836
-"madagascar",1980,3.82,0.864
-"madagascar",1985,3.667,0.884
-"madagascar",1990,3.491,0.9
-"madagascar",1995,3.312,0.908
-"madagascar",2000,3.153,0.911
-"malawi",1950,3.717,0.717
-"malawi",1955,3.938,0.723
-"malawi",1960,4.035,0.736
-"malawi",1965,4.103,0.749
-"malawi",1970,4.225,0.769
-"malawi",1975,4.22,0.801
-"malawi",1980,4.073,0.832
-"malawi",1985,3.836,0.861
-"malawi",1990,3.562,0.884
-"malawi",1995,3.274,0.898
-"malawi",2000,3.035,0.905
-"malaysia",1950,3.913,0.92
-"malaysia",1955,3.673,0.924
-"malaysia",1960,3.394,0.924
-"malaysia",1965,3.058,0.923
-"malaysia",1970,2.772,0.928
-"malaysia",1975,2.454,0.927
-"malaysia",1980,2.161,0.927
-"malaysia",1985,1.998,0.931
-"malaysia",1990,1.898,0.933
-"malaysia",1995,1.815,0.935
-"malaysia",2000,1.747,0.936
-"maldives",1950,4.937,0.758
-"maldives",1955,5.046,0.805
-"maldives",1960,4.784,0.844
-"maldives",1965,4.211,0.875
-"maldives",1970,3.417,0.901
-"maldives",1975,2.677,0.926
-"maldives",1980,2.206,0.948
-"maldives",1985,1.998,0.961
-"maldives",1990,1.874,0.965
-"maldives",1995,1.759,0.965
-"maldives",2000,1.679,0.963
-"mali",1950,2.578,0.735
-"mali",1955,3.056,0.73
-"mali",1960,3.377,0.741
-"mali",1965,3.786,0.738
-"mali",1970,4.238,0.738
-"mali",1975,4.52,0.754
-"mali",1980,4.665,0.779
-"mali",1985,4.645,0.806
-"mali",1990,4.514,0.831
-"mali",1995,4.297,0.848
-"mali",2000,4.018,0.857
-"malta",1950,1.899,0.945
-"malta",1955,1.884,0.942
-"malta",1960,1.873,0.942
-"malta",1965,1.792,0.944
-"malta",1970,1.67,0.946
-"malta",1975,1.571,0.949
-"malta",1980,1.522,0.951
-"malta",1985,1.509,0.954
-"malta",1990,1.539,0.957
-"malta",1995,1.579,0.961
-"malta",2000,1.607,0.963
-"martinique",1950,2.504,0.905
-"martinique",1955,2.137,0.916
-"martinique",1960,1.957,0.923
-"martinique",1965,1.894,0.929
-"martinique",1970,1.874,0.932
-"martinique",1975,1.908,0.937
-"martinique",1980,1.903,0.939
-"martinique",1985,1.875,0.942
-"martinique",1990,1.838,0.945
-"martinique",1995,1.792,0.948
-"martinique",2000,1.758,0.951
-"mauritania",1950,4.903,0.788
-"mauritania",1955,4.77,0.804
-"mauritania",1960,4.582,0.816
-"mauritania",1965,4.399,0.826
-"mauritania",1970,4.269,0.837
-"mauritania",1975,4.162,0.843
-"mauritania",1980,4.054,0.849
-"mauritania",1985,3.916,0.855
-"mauritania",1990,3.783,0.865
-"mauritania",1995,3.638,0.875
-"mauritania",2000,3.487,0.883
-"mauritius",1950,2.48,0.887
-"mauritius",1955,2.158,0.891
-"mauritius",1960,2.022,0.895
-"mauritius",1965,1.913,0.9
-"mauritius",1970,1.851,0.907
-"mauritius",1975,1.725,0.901
-"mauritius",1980,1.591,0.9
-"mauritius",1985,1.466,0.9
-"mauritius",1990,1.365,0.906
-"mauritius",1995,1.31,0.917
-"mauritius",2000,1.3,0.923
-"mayotte",1950,6.634,0.915
-"mayotte",1955,6.324,0.917
-"mayotte",1960,5.844,0.922
-"mayotte",1965,5.249,0.925
-"mayotte",1970,4.688,0.927
-"mayotte",1975,4.27,0.929
-"mayotte",1980,3.958,0.928
-"mayotte",1985,3.675,0.93
-"mayotte",1990,3.375,0.928
-"mayotte",1995,3.111,0.929
-"mayotte",2000,2.908,0.934
-"mexico",1950,4.028,0.866
-"mexico",1955,3.535,0.876
-"mexico",1960,3.097,0.883
-"mexico",1965,2.742,0.89
-"mexico",1970,2.447,0.891
-"mexico",1975,2.232,0.896
-"mexico",1980,2.089,0.899
-"mexico",1985,1.975,0.9
-"mexico",1990,1.884,0.905
-"mexico",1995,1.803,0.909
-"mexico",2000,1.734,0.913
-"micronesia (fed states of)",1950,5.259,0.882
-"micronesia (fed states of)",1955,4.904,0.891
-"micronesia (fed states of)",1960,4.476,0.894
-"micronesia (fed states of)",1965,4.073,0.895
-"micronesia (fed states of)",1970,3.774,0.895
-"micronesia (fed states of)",1975,3.567,0.899
-"micronesia (fed states of)",1980,3.317,0.901
-"micronesia (fed states of)",1985,3.078,0.911
-"micronesia (fed states of)",1990,2.87,0.918
-"micronesia (fed states of)",1995,2.694,0.923
-"micronesia (fed states of)",2000,2.552,0.929
-"mongolia",1950,4.08,0.798
-"mongolia",1955,3.708,0.805
-"mongolia",1960,3.241,0.812
-"mongolia",1965,2.695,0.83
-"mongolia",1970,2.374,0.863
-"mongolia",1975,2.292,0.892
-"mongolia",1980,2.36,0.915
-"mongolia",1985,2.491,0.926
-"mongolia",1990,2.56,0.923
-"mongolia",1995,2.534,0.919
-"mongolia",2000,2.429,0.92
-"montenegro",1950,2.164,0.922
-"montenegro",1955,2.034,0.933
-"montenegro",1960,1.961,0.934
-"montenegro",1965,1.913,0.928
-"montenegro",1970,1.876,0.929
-"montenegro",1975,1.819,0.931
-"montenegro",1980,1.827,0.94
-"montenegro",1985,1.819,0.945
-"montenegro",1990,1.824,0.95
-"montenegro",1995,1.805,0.95
-"montenegro",2000,1.778,0.956
-"morocco",1950,4.557,0.805
-"morocco",1955,4.133,0.834
-"morocco",1960,3.607,0.863
-"morocco",1965,3.068,0.891
-"morocco",1970,2.678,0.914
-"morocco",1975,2.461,0.929
-"morocco",1980,2.34,0.938
-"morocco",1985,2.271,0.944
-"morocco",1990,2.2,0.948
-"morocco",1995,2.117,0.951
-"morocco",2000,2.032,0.955
-"mozambique",1950,3.675,0.688
-"mozambique",1955,3.727,0.683
-"mozambique",1960,3.764,0.696
-"mozambique",1965,3.871,0.717
-"mozambique",1970,3.947,0.75
-"mozambique",1975,4.068,0.784
-"mozambique",1980,4.117,0.821
-"mozambique",1985,4.092,0.851
-"mozambique",1990,3.976,0.875
-"mozambique",1995,3.796,0.889
-"mozambique",2000,3.575,0.894
-"myanmar",1950,3.817,0.795
-"myanmar",1955,3.432,0.805
-"myanmar",1960,3.017,0.819
-"myanmar",1965,2.638,0.832
-"myanmar",1970,2.394,0.849
-"myanmar",1975,2.22,0.861
-"myanmar",1980,2.085,0.873
-"myanmar",1985,1.961,0.883
-"myanmar",1990,1.861,0.892
-"myanmar",1995,1.797,0.9
-"myanmar",2000,1.745,0.904
-"namibia",1950,4.759,0.834
-"namibia",1955,4.47,0.831
-"namibia",1960,4.029,0.831
-"namibia",1965,3.672,0.851
-"namibia",1970,3.326,0.864
-"namibia",1975,3.062,0.867
-"namibia",1980,2.946,0.872
-"namibia",1985,2.897,0.878
-"namibia",1990,2.846,0.882
-"namibia",1995,2.769,0.891
-"namibia",2000,2.644,0.9
-"nepal",1950,3.563,0.72
-"nepal",1955,3.614,0.75
-"nepal",1960,3.582,0.779
-"nepal",1965,3.416,0.81
-"nepal",1970,3.177,0.84
-"nepal",1975,2.868,0.868
-"nepal",1980,2.489,0.891
-"nepal",1985,2.117,0.906
-"nepal",1990,1.83,0.916
-"nepal",1995,1.622,0.921
-"nepal",2000,1.498,0.923
-"netherlands",1950,1.749,0.931
-"netherlands",1955,1.715,0.939
-"netherlands",1960,1.715,0.945
-"netherlands",1965,1.696,0.95
-"netherlands",1970,1.675,0.954
-"netherlands",1975,1.67,0.957
-"netherlands",1980,1.683,0.958
-"netherlands",1985,1.683,0.962
-"netherlands",1990,1.658,0.964
-"netherlands",1995,1.656,0.966
-"netherlands",2000,1.67,0.97
-"new caledonia",1950,3.4,0.895
-"new caledonia",1955,3.088,0.909
-"new caledonia",1960,2.966,0.918
-"new caledonia",1965,2.791,0.926
-"new caledonia",1970,2.574,0.933
-"new caledonia",1975,2.387,0.935
-"new caledonia",1980,2.244,0.942
-"new caledonia",1985,2.106,0.944
-"new caledonia",1990,1.995,0.947
-"new caledonia",1995,1.904,0.95
-"new caledonia",2000,1.835,0.952
-"new zealand",1950,2.295,0.911
-"new zealand",1955,2.179,0.92
-"new zealand",1960,2.096,0.93
-"new zealand",1965,2.048,0.936
-"new zealand",1970,2.011,0.944
-"new zealand",1975,1.978,0.948
-"new zealand",1980,1.941,0.952
-"new zealand",1985,1.915,0.954
-"new zealand",1990,1.875,0.956
-"new zealand",1995,1.815,0.961
-"new zealand",2000,1.775,0.963
-"nicaragua",1950,4.464,0.796
-"nicaragua",1955,4.162,0.816
-"nicaragua",1960,3.746,0.833
-"nicaragua",1965,3.31,0.85
-"nicaragua",1970,2.907,0.869
-"nicaragua",1975,2.588,0.887
-"nicaragua",1980,2.346,0.897
-"nicaragua",1985,2.194,0.902
-"nicaragua",1990,2.087,0.903
-"nicaragua",1995,1.999,0.906
-"nicaragua",2000,1.914,0.908
-"niger",1950,3.939,0.637
-"niger",1955,4.016,0.644
-"niger",1960,4.21,0.65
-"niger",1965,4.441,0.669
-"niger",1970,4.724,0.7
-"niger",1975,5.061,0.745
-"niger",1980,5.386,0.79
-"niger",1985,5.548,0.832
-"niger",1990,5.521,0.863
-"niger",1995,5.333,0.88
-"niger",2000,5.056,0.89
-"nigeria",1950,3.845,0.738
-"nigeria",1955,4.118,0.732
-"nigeria",1960,4.24,0.725
-"nigeria",1965,4.274,0.72
-"nigeria",1970,4.268,0.73
-"nigeria",1975,4.256,0.744
-"nigeria",1980,4.244,0.769
-"nigeria",1985,4.203,0.794
-"nigeria",1990,4.121,0.815
-"nigeria",1995,3.987,0.832
-"nigeria",2000,3.787,0.84
-"north macedonia",1950,2.129,0.894
-"north macedonia",1955,2.019,0.902
-"north macedonia",1960,1.995,0.908
-"north macedonia",1965,1.944,0.916
-"north macedonia",1970,1.864,0.926
-"north macedonia",1975,1.763,0.934
-"north macedonia",1980,1.679,0.942
-"north macedonia",1985,1.605,0.945
-"north macedonia",1990,1.588,0.949
-"north macedonia",1995,1.575,0.948
-"north macedonia",2000,1.558,0.952
-"norway",1950,1.865,0.922
-"norway",1955,1.788,0.929
-"norway",1960,1.813,0.935
-"norway",1965,1.873,0.94
-"norway",1970,1.909,0.947
-"norway",1975,1.9,0.951
-"norway",1980,1.863,0.954
-"norway",1985,1.81,0.956
-"norway",1990,1.752,0.961
-"norway",1995,1.694,0.963
-"norway",2000,1.66,0.965
-"oman",1950,5.879,0.843
-"oman",1955,6.012,0.872
-"oman",1960,5.71,0.898
-"oman",1965,4.984,0.919
-"oman",1970,4.141,0.934
-"oman",1975,3.507,0.944
-"oman",1980,3.106,0.952
-"oman",1985,2.815,0.954
-"oman",1990,2.649,0.955
-"oman",1995,2.491,0.954
-"oman",2000,2.288,0.955
-"pakistan",1950,4.795,0.798
-"pakistan",1955,4.797,0.806
-"pakistan",1960,4.633,0.814
-"pakistan",1965,4.409,0.825
-"pakistan",1970,4.096,0.835
-"pakistan",1975,3.736,0.846
-"pakistan",1980,3.403,0.859
-"pakistan",1985,3.127,0.868
-"pakistan",1990,2.932,0.878
-"pakistan",1995,2.77,0.883
-"pakistan",2000,2.608,0.887
-"panama",1950,3.32,0.863
-"panama",1955,3.006,0.872
-"panama",1960,2.76,0.879
-"panama",1965,2.546,0.883
-"panama",1970,2.385,0.886
-"panama",1975,2.285,0.889
-"panama",1980,2.223,0.894
-"panama",1985,2.173,0.899
-"panama",1990,2.123,0.904
-"panama",1995,2.062,0.908
-"panama",2000,1.994,0.911
-"papua new guinea",1950,4.349,0.836
-"papua new guinea",1955,4.206,0.845
-"papua new guinea",1960,4.004,0.852
-"papua new guinea",1965,3.835,0.858
-"papua new guinea",1970,3.703,0.863
-"papua new guinea",1975,3.582,0.868
-"papua new guinea",1980,3.431,0.874
-"papua new guinea",1985,3.251,0.88
-"papua new guinea",1990,3.085,0.89
-"papua new guinea",1995,2.934,0.898
-"papua new guinea",2000,2.801,0.906
-"paraguay",1950,4.099,0.855
-"paraguay",1955,3.881,0.86
-"paraguay",1960,3.659,0.867
-"paraguay",1965,3.392,0.873
-"paraguay",1970,3.094,0.883
-"paraguay",1975,2.772,0.888
-"paraguay",1980,2.476,0.893
-"paraguay",1985,2.249,0.893
-"paraguay",1990,2.097,0.898
-"paraguay",1995,1.986,0.902
-"paraguay",2000,1.909,0.905
-"peru",1950,3.876,0.809
-"peru",1955,3.539,0.832
-"peru",1960,3.191,0.85
-"peru",1965,2.893,0.87
-"peru",1970,2.636,0.888
-"peru",1975,2.434,0.905
-"peru",1980,2.289,0.92
-"peru",1985,2.172,0.927
-"peru",1990,2.063,0.929
-"peru",1995,1.961,0.933
-"peru",2000,1.884,0.934
-"philippines",1950,4.188,0.853
-"philippines",1955,3.819,0.853
-"philippines",1960,3.562,0.855
-"philippines",1965,3.353,0.863
-"philippines",1970,3.183,0.871
-"philippines",1975,3.043,0.881
-"philippines",1980,2.844,0.884
-"philippines",1985,2.601,0.886
-"philippines",1990,2.351,0.884
-"philippines",1995,2.159,0.888
-"philippines",2000,2.016,0.892
-"poland",1950,1.91,0.897
-"poland",1955,1.858,0.893
-"poland",1960,1.843,0.891
-"poland",1965,1.784,0.889
-"poland",1970,1.652,0.896
-"poland",1975,1.496,0.906
-"poland",1980,1.367,0.917
-"poland",1985,1.35,0.924
-"poland",1990,1.4,0.927
-"poland",1995,1.447,0.93
-"poland",2000,1.481,0.932
-"portugal",1950,1.915,0.896
-"portugal",1955,1.751,0.913
-"portugal",1960,1.667,0.928
-"portugal",1965,1.61,0.936
-"portugal",1970,1.539,0.942
-"portugal",1975,1.467,0.946
-"portugal",1980,1.409,0.949
-"portugal",1985,1.394,0.953
-"portugal",1990,1.4,0.955
-"portugal",1995,1.426,0.959
-"portugal",2000,1.461,0.963
-"puerto rico",1950,2.246,0.88
-"puerto rico",1955,2.091,0.889
-"puerto rico",1960,1.982,0.89
-"puerto rico",1965,1.849,0.894
-"puerto rico",1970,1.715,0.892
-"puerto rico",1975,1.617,0.894
-"puerto rico",1980,1.526,0.896
-"puerto rico",1985,1.384,0.898
-"puerto rico",1990,1.245,0.902
-"puerto rico",1995,1.158,0.911
-"puerto rico",2000,1.1,0.915
-"qatar",1950,5.407,0.921
-"qatar",1955,4.951,0.934
-"qatar",1960,4.396,0.943
-"qatar",1965,3.857,0.948
-"qatar",1970,3.434,0.951
-"qatar",1975,2.947,0.955
-"qatar",1980,2.33,0.954
-"qatar",1985,1.922,0.957
-"qatar",1990,1.746,0.958
-"qatar",1995,1.649,0.957
-"qatar",2000,1.577,0.956
-"republic of korea",1950,2.446,0.914
-"republic of korea",1955,2.018,0.918
-"republic of korea",1960,1.835,0.924
-"republic of korea",1965,1.758,0.936
-"republic of korea",1970,1.654,0.943
-"republic of korea",1975,1.513,0.95
-"republic of korea",1980,1.415,0.957
-"republic of korea",1985,1.331,0.96
-"republic of korea",1990,1.257,0.962
-"republic of korea",1995,1.221,0.965
-"republic of korea",2000,1.228,0.968
-"republic of moldova",1950,1.95,0.874
-"republic of moldova",1955,1.986,0.873
-"republic of moldova",1960,1.947,0.869
-"republic of moldova",1965,1.768,0.872
-"republic of moldova",1970,1.62,0.874
-"republic of moldova",1975,1.428,0.878
-"republic of moldova",1980,1.265,0.887
-"republic of moldova",1985,1.197,0.898
-"republic of moldova",1990,1.208,0.904
-"republic of moldova",1995,1.239,0.908
-"republic of moldova",2000,1.277,0.913
-"rÃ©union",1950,2.804,0.908
-"rÃ©union",1955,2.505,0.916
-"rÃ©union",1960,2.405,0.923
-"rÃ©union",1965,2.33,0.926
-"rÃ©union",1970,2.267,0.928
-"rÃ©union",1975,2.235,0.93
-"rÃ©union",1980,2.133,0.93
-"rÃ©union",1985,2.062,0.933
-"rÃ©union",1990,2.015,0.934
-"rÃ©union",1995,1.938,0.934
-"rÃ©union",2000,1.869,0.935
-"romania",1950,2.006,0.89
-"romania",1955,1.937,0.896
-"romania",1960,1.812,0.89
-"romania",1965,1.599,0.886
-"romania",1970,1.422,0.892
-"romania",1975,1.351,0.9
-"romania",1980,1.387,0.912
-"romania",1985,1.437,0.92
-"romania",1990,1.515,0.925
-"romania",1995,1.576,0.929
-"romania",2000,1.614,0.932
-"russian federation",1950,1.582,0.865
-"russian federation",1955,1.541,0.837
-"russian federation",1960,1.468,0.822
-"russian federation",1965,1.349,0.82
-"russian federation",1970,1.282,0.832
-"russian federation",1975,1.311,0.854
-"russian federation",1980,1.399,0.869
-"russian federation",1985,1.545,0.88
-"russian federation",1990,1.69,0.887
-"russian federation",1995,1.782,0.897
-"russian federation",2000,1.798,0.902
-"rwanda",1950,5.111,0.684
-"rwanda",1955,4.585,0.638
-"rwanda",1960,4.235,0.63
-"rwanda",1965,3.947,0.644
-"rwanda",1970,3.779,0.686
-"rwanda",1975,3.833,0.77
-"rwanda",1980,3.877,0.852
-"rwanda",1985,3.754,0.902
-"rwanda",1990,3.556,0.939
-"rwanda",1995,3.322,0.934
-"rwanda",2000,3.078,0.93
-"saint lucia",1950,3.959,0.897
-"saint lucia",1955,3.566,0.912
-"saint lucia",1960,3.29,0.914
-"saint lucia",1965,2.92,0.913
-"saint lucia",1970,2.391,0.902
-"saint lucia",1975,1.904,0.899
-"saint lucia",1980,1.516,0.898
-"saint lucia",1985,1.319,0.903
-"saint lucia",1990,1.248,0.905
-"saint lucia",1995,1.211,0.908
-"saint lucia",2000,1.196,0.916
-"saint vincent and the grenadines",1950,3.73,0.872
-"saint vincent and the grenadines",1955,3.174,0.884
-"saint vincent and the grenadines",1960,2.749,0.896
-"saint vincent and the grenadines",1965,2.47,0.901
-"saint vincent and the grenadines",1970,2.232,0.898
-"saint vincent and the grenadines",1975,2.001,0.894
-"saint vincent and the grenadines",1980,1.824,0.89
-"saint vincent and the grenadines",1985,1.708,0.885
-"saint vincent and the grenadines",1990,1.634,0.887
-"saint vincent and the grenadines",1995,1.573,0.889
-"saint vincent and the grenadines",2000,1.533,0.897
-"samoa",1950,5.497,0.888
-"samoa",1955,5.045,0.905
-"samoa",1960,4.582,0.92
-"samoa",1965,4.24,0.93
-"samoa",1970,4.088,0.936
-"samoa",1975,4.124,0.937
-"samoa",1980,4.081,0.936
-"samoa",1985,3.868,0.934
-"samoa",1990,3.658,0.936
-"samoa",1995,3.451,0.935
-"samoa",2000,3.27,0.937
-"sao tome and principe",1950,5.01,0.822
-"sao tome and principe",1955,4.968,0.833
-"sao tome and principe",1960,4.818,0.841
-"sao tome and principe",1965,4.634,0.846
-"sao tome and principe",1970,4.461,0.855
-"sao tome and principe",1975,4.301,0.867
-"sao tome and principe",1980,4.168,0.884
-"sao tome and principe",1985,4.049,0.903
-"sao tome and principe",1990,3.887,0.915
-"sao tome and principe",1995,3.694,0.92
-"sao tome and principe",2000,3.496,0.922
-"saudi arabia",1950,5.528,0.848
-"saudi arabia",1955,5.443,0.882
-"saudi arabia",1960,5.156,0.908
-"saudi arabia",1965,4.673,0.926
-"saudi arabia",1970,4.04,0.938
-"saudi arabia",1975,3.468,0.945
-"saudi arabia",1980,2.985,0.949
-"saudi arabia",1985,2.579,0.951
-"saudi arabia",1990,2.264,0.954
-"saudi arabia",1995,2.061,0.957
-"saudi arabia",2000,1.913,0.957
-"senegal",1950,4.64,0.719
-"senegal",1955,4.839,0.751
-"senegal",1960,4.806,0.778
-"senegal",1965,4.648,0.804
-"senegal",1970,4.479,0.827
-"senegal",1975,4.35,0.846
-"senegal",1980,4.275,0.87
-"senegal",1985,4.206,0.891
-"senegal",1990,4.092,0.909
-"senegal",1995,3.913,0.921
-"senegal",2000,3.686,0.924
-"serbia",1950,1.988,0.899
-"serbia",1955,1.987,0.907
-"serbia",1960,2,0.913
-"serbia",1965,1.927,0.917
-"serbia",1970,1.809,0.922
-"serbia",1975,1.725,0.925
-"serbia",1980,1.666,0.932
-"serbia",1985,1.595,0.939
-"serbia",1990,1.53,0.94
-"serbia",1995,1.5,0.944
-"serbia",2000,1.484,0.948
-"seychelles",1950,3.624,0.871
-"seychelles",1955,3.097,0.887
-"seychelles",1960,2.604,0.9
-"seychelles",1965,2.252,0.905
-"seychelles",1970,2.07,0.906
-"seychelles",1975,1.994,0.899
-"seychelles",1980,1.973,0.897
-"seychelles",1985,1.994,0.899
-"seychelles",1990,2.022,0.899
-"seychelles",1995,2.015,0.9
-"seychelles",2000,1.977,0.908
-"sierra leone",1950,2.628,0.76
-"sierra leone",1955,2.928,0.765
-"sierra leone",1960,3.29,0.748
-"sierra leone",1965,3.498,0.724
-"sierra leone",1970,3.582,0.716
-"sierra leone",1975,3.58,0.729
-"sierra leone",1980,3.514,0.754
-"sierra leone",1985,3.403,0.783
-"sierra leone",1990,3.236,0.811
-"sierra leone",1995,3.018,0.835
-"sierra leone",2000,2.802,0.848
-"singapore",1950,2.079,0.942
-"singapore",1955,1.843,0.945
-"singapore",1960,1.745,0.947
-"singapore",1965,1.661,0.948
-"singapore",1970,1.529,0.951
-"singapore",1975,1.391,0.954
-"singapore",1980,1.3,0.956
-"singapore",1985,1.255,0.958
-"singapore",1990,1.217,0.96
-"singapore",1995,1.205,0.961
-"singapore",2000,1.227,0.964
-"slovakia",1950,2.031,0.908
-"slovakia",1955,1.937,0.896
-"slovakia",1960,1.865,0.893
-"slovakia",1965,1.774,0.897
-"slovakia",1970,1.663,0.903
-"slovakia",1975,1.528,0.912
-"slovakia",1980,1.416,0.924
-"slovakia",1985,1.394,0.931
-"slovakia",1990,1.45,0.94
-"slovakia",1995,1.511,0.942
-"slovakia",2000,1.555,0.943
-"slovenia",1950,1.681,0.908
-"slovenia",1955,1.668,0.905
-"slovenia",1960,1.612,0.909
-"slovenia",1965,1.547,0.917
-"slovenia",1970,1.521,0.928
-"slovenia",1975,1.524,0.94
-"slovenia",1980,1.533,0.951
-"slovenia",1985,1.563,0.955
-"slovenia",1990,1.622,0.957
-"slovenia",1995,1.66,0.959
-"slovenia",2000,1.677,0.96
-"solomon islands",1950,5.172,0.883
-"solomon islands",1955,5.258,0.894
-"solomon islands",1960,5.072,0.906
-"solomon islands",1965,4.786,0.914
-"solomon islands",1970,4.45,0.915
-"solomon islands",1975,4.197,0.916
-"solomon islands",1980,3.958,0.914
-"solomon islands",1985,3.758,0.914
-"solomon islands",1990,3.672,0.916
-"solomon islands",1995,3.587,0.917
-"solomon islands",2000,3.404,0.919
-"somalia",1950,4.123,0.749
-"somalia",1955,4.411,0.741
-"somalia",1960,4.717,0.74
-"somalia",1965,4.84,0.742
-"somalia",1970,4.794,0.75
-"somalia",1975,4.692,0.763
-"somalia",1980,4.673,0.78
-"somalia",1985,4.605,0.792
-"somalia",1990,4.498,0.809
-"somalia",1995,4.296,0.819
-"somalia",2000,4.09,0.826
-"south africa",1950,3.652,0.827
-"south africa",1955,3.372,0.827
-"south africa",1960,3.102,0.837
-"south africa",1965,2.774,0.848
-"south africa",1970,2.443,0.855
-"south africa",1975,2.202,0.854
-"south africa",1980,2.077,0.854
-"south africa",1985,2.007,0.857
-"south africa",1990,1.959,0.865
-"south africa",1995,1.927,0.881
-"south africa",2000,1.876,0.892
-"south sudan",1950,3.134,0.735
-"south sudan",1955,3.543,0.715
-"south sudan",1960,3.807,0.718
-"south sudan",1965,4.025,0.728
-"south sudan",1970,4.108,0.748
-"south sudan",1975,4.065,0.774
-"south sudan",1980,3.992,0.802
-"south sudan",1985,3.892,0.821
-"south sudan",1990,3.725,0.835
-"south sudan",1995,3.515,0.841
-"south sudan",2000,3.303,0.843
-"spain",1950,2.014,0.924
-"spain",1955,1.797,0.929
-"spain",1960,1.624,0.935
-"spain",1965,1.497,0.942
-"spain",1970,1.407,0.95
-"spain",1975,1.345,0.954
-"spain",1980,1.35,0.957
-"spain",1985,1.4,0.959
-"spain",1990,1.449,0.964
-"spain",1995,1.474,0.967
-"spain",2000,1.5,0.969
-"sri lanka",1950,2.939,0.885
-"sri lanka",1955,2.663,0.898
-"sri lanka",1960,2.475,0.907
-"sri lanka",1965,2.27,0.917
-"sri lanka",1970,2.083,0.925
-"sri lanka",1975,2.005,0.928
-"sri lanka",1980,2.04,0.933
-"sri lanka",1985,2.02,0.934
-"sri lanka",1990,1.973,0.937
-"sri lanka",1995,1.941,0.939
-"sri lanka",2000,1.897,0.941
-"state of palestine",1950,5.996,0.866
-"state of palestine",1955,5.766,0.891
-"state of palestine",1960,5.509,0.909
-"state of palestine",1965,5.291,0.92
-"state of palestine",1970,5.026,0.927
-"state of palestine",1975,4.675,0.931
-"state of palestine",1980,4.241,0.932
-"state of palestine",1985,3.804,0.931
-"state of palestine",1990,3.463,0.933
-"state of palestine",1995,3.146,0.933
-"state of palestine",2000,2.895,0.936
-"sudan",1950,5.144,0.772
-"sudan",1955,5.016,0.776
-"sudan",1960,4.618,0.784
-"sudan",1965,4.23,0.795
-"sudan",1970,4.036,0.809
-"sudan",1975,4.013,0.827
-"sudan",1980,4.067,0.845
-"sudan",1985,4.072,0.86
-"sudan",1990,3.952,0.871
-"sudan",1995,3.757,0.88
-"sudan",2000,3.564,0.888
-"suriname",1950,3.537,0.851
-"suriname",1955,3.093,0.856
-"suriname",1960,2.78,0.861
-"suriname",1965,2.618,0.868
-"suriname",1970,2.546,0.875
-"suriname",1975,2.487,0.878
-"suriname",1980,2.405,0.885
-"suriname",1985,2.287,0.891
-"suriname",1990,2.168,0.897
-"suriname",1995,2.082,0.902
-"suriname",2000,2.013,0.906
-"sweden",1950,1.79,0.934
-"sweden",1955,1.822,0.941
-"sweden",1960,1.864,0.945
-"sweden",1965,1.875,0.948
-"sweden",1970,1.861,0.951
-"sweden",1975,1.838,0.955
-"sweden",1980,1.833,0.961
-"sweden",1985,1.838,0.963
-"sweden",1990,1.819,0.964
-"sweden",1995,1.787,0.965
-"sweden",2000,1.774,0.969
-"switzerland",1950,1.634,0.928
-"switzerland",1955,1.607,0.938
-"switzerland",1960,1.618,0.945
-"switzerland",1965,1.595,0.951
-"switzerland",1970,1.556,0.952
-"switzerland",1975,1.546,0.956
-"switzerland",1980,1.566,0.962
-"switzerland",1985,1.594,0.965
-"switzerland",1990,1.613,0.967
-"switzerland",1995,1.622,0.97
-"switzerland",2000,1.627,0.974
-"syrian arab republic",1950,5.958,0.887
-"syrian arab republic",1955,5.368,0.888
-"syrian arab republic",1960,4.723,0.894
-"syrian arab republic",1965,4.143,0.905
-"syrian arab republic",1970,3.716,0.917
-"syrian arab republic",1975,3.448,0.929
-"syrian arab republic",1980,3.217,0.938
-"syrian arab republic",1985,2.945,0.943
-"syrian arab republic",1990,2.679,0.946
-"syrian arab republic",1995,2.473,0.95
-"syrian arab republic",2000,2.325,0.954
-"tajikistan",1950,4.609,0.791
-"tajikistan",1955,4.498,0.809
-"tajikistan",1960,4.378,0.826
-"tajikistan",1965,4.054,0.84
-"tajikistan",1970,3.585,0.853
-"tajikistan",1975,3.21,0.87
-"tajikistan",1980,2.949,0.892
-"tajikistan",1985,2.834,0.912
-"tajikistan",1990,2.847,0.925
-"tajikistan",1995,2.862,0.927
-"tajikistan",2000,2.806,0.923
-"thailand",1950,2.726,0.841
-"thailand",1955,2.281,0.854
-"thailand",1960,1.954,0.867
-"thailand",1965,1.737,0.883
-"thailand",1970,1.587,0.892
-"thailand",1975,1.486,0.897
-"thailand",1980,1.413,0.904
-"thailand",1985,1.348,0.909
-"thailand",1990,1.308,0.912
-"thailand",1995,1.318,0.916
-"thailand",2000,1.301,0.92
-"timor-leste",1950,2.772,0.701
-"timor-leste",1955,3.287,0.698
-"timor-leste",1960,3.888,0.738
-"timor-leste",1965,4.528,0.79
-"timor-leste",1970,4.637,0.834
-"timor-leste",1975,4.536,0.872
-"timor-leste",1980,4.27,0.896
-"timor-leste",1985,3.917,0.907
-"timor-leste",1990,3.542,0.916
-"timor-leste",1995,3.203,0.918
-"timor-leste",2000,2.921,0.918
-"togo",1950,4.628,0.773
-"togo",1955,4.662,0.777
-"togo",1960,4.475,0.776
-"togo",1965,4.24,0.78
-"togo",1970,4.055,0.791
-"togo",1975,3.895,0.805
-"togo",1980,3.753,0.821
-"togo",1985,3.619,0.84
-"togo",1990,3.461,0.854
-"togo",1995,3.302,0.866
-"togo",2000,3.143,0.874
-"tonga",1950,4.843,0.919
-"tonga",1955,4.679,0.924
-"tonga",1960,4.448,0.925
-"tonga",1965,4.135,0.925
-"tonga",1970,3.914,0.92
-"tonga",1975,3.756,0.921
-"tonga",1980,3.563,0.916
-"tonga",1985,3.391,0.916
-"tonga",1990,3.221,0.916
-"tonga",1995,3.083,0.922
-"tonga",2000,2.948,0.923
-"trinidad and tobago",1950,2.76,0.881
-"trinidad and tobago",1955,2.567,0.882
-"trinidad and tobago",1960,2.328,0.881
-"trinidad and tobago",1965,2.028,0.883
-"trinidad and tobago",1970,1.748,0.886
-"trinidad and tobago",1975,1.583,0.889
-"trinidad and tobago",1980,1.551,0.887
-"trinidad and tobago",1985,1.537,0.888
-"trinidad and tobago",1990,1.535,0.896
-"trinidad and tobago",1995,1.515,0.9
-"trinidad and tobago",2000,1.486,0.905
-"tunisia",1950,4.202,0.838
-"tunisia",1955,3.851,0.878
-"tunisia",1960,3.321,0.908
-"tunisia",1965,2.825,0.928
-"tunisia",1970,2.435,0.941
-"tunisia",1975,2.181,0.948
-"tunisia",1980,2.051,0.951
-"tunisia",1985,2.023,0.953
-"tunisia",1990,2.012,0.953
-"tunisia",1995,1.964,0.955
-"tunisia",2000,1.903,0.957
-"turkey",1950,3.353,0.761
-"turkey",1955,3.09,0.793
-"turkey",1960,2.785,0.823
-"turkey",1965,2.521,0.853
-"turkey",1970,2.336,0.88
-"turkey",1975,2.242,0.905
-"turkey",1980,2.195,0.923
-"turkey",1985,2.13,0.934
-"turkey",1990,2.071,0.94
-"turkey",1995,2.014,0.946
-"turkey",2000,1.94,0.947
-"turkmenistan",1950,3.968,0.819
-"turkmenistan",1955,3.688,0.83
-"turkmenistan",1960,3.367,0.837
-"turkmenistan",1965,3.01,0.842
-"turkmenistan",1970,2.698,0.85
-"turkmenistan",1975,2.496,0.861
-"turkmenistan",1980,2.439,0.87
-"turkmenistan",1985,2.459,0.879
-"turkmenistan",1990,2.466,0.885
-"turkmenistan",1995,2.4,0.889
-"turkmenistan",2000,2.281,0.892
-"uganda",1950,4.838,0.752
-"uganda",1955,4.837,0.746
-"uganda",1960,4.856,0.745
-"uganda",1965,4.908,0.756
-"uganda",1970,4.985,0.778
-"uganda",1975,4.975,0.804
-"uganda",1980,4.819,0.83
-"uganda",1985,4.559,0.855
-"uganda",1990,4.203,0.874
-"uganda",1995,3.795,0.886
-"uganda",2000,3.414,0.891
-"ukraine",1950,1.57,0.875
-"ukraine",1955,1.493,0.851
-"ukraine",1960,1.426,0.836
-"ukraine",1965,1.364,0.837
-"ukraine",1970,1.272,0.842
-"ukraine",1975,1.226,0.86
-"ukraine",1980,1.253,0.872
-"ukraine",1985,1.307,0.88
-"ukraine",1990,1.359,0.886
-"ukraine",1995,1.4,0.897
-"ukraine",2000,1.425,0.903
-"united arab emirates",1950,5.002,0.906
-"united arab emirates",1955,4.729,0.933
-"united arab emirates",1960,4.225,0.948
-"united arab emirates",1965,3.495,0.954
-"united arab emirates",1970,2.697,0.952
-"united arab emirates",1975,2.169,0.951
-"united arab emirates",1980,1.997,0.949
-"united arab emirates",1985,1.944,0.951
-"united arab emirates",1990,1.813,0.954
-"united arab emirates",1995,1.634,0.96
-"united arab emirates",2000,1.505,0.965
-"united kingdom",1950,1.837,0.915
-"united kingdom",1955,1.758,0.923
-"united kingdom",1960,1.758,0.93
-"united kingdom",1965,1.75,0.935
-"united kingdom",1970,1.731,0.939
-"united kingdom",1975,1.731,0.942
-"united kingdom",1980,1.765,0.945
-"united kingdom",1985,1.797,0.95
-"united kingdom",1990,1.78,0.951
-"united kingdom",1995,1.745,0.953
-"united kingdom",2000,1.732,0.958
-"united republic of tanzania",1950,4.611,0.744
-"united republic of tanzania",1955,4.561,0.752
-"united republic of tanzania",1960,4.444,0.76
-"united republic of tanzania",1965,4.383,0.779
-"united republic of tanzania",1970,4.323,0.801
-"united republic of tanzania",1975,4.276,0.825
-"united republic of tanzania",1980,4.254,0.852
-"united republic of tanzania",1985,4.179,0.873
-"united republic of tanzania",1990,4.067,0.89
-"united republic of tanzania",1995,3.899,0.899
-"united republic of tanzania",2000,3.718,0.901
-"united states of america",1950,1.706,0.883
-"united states of america",1955,1.657,0.89
-"united states of america",1960,1.685,0.894
-"united states of america",1965,1.754,0.901
-"united states of america",1970,1.817,0.902
-"united states of america",1975,1.87,0.903
-"united states of america",1980,1.867,0.905
-"united states of america",1985,1.843,0.907
-"united states of america",1990,1.83,0.915
-"united states of america",1995,1.816,0.918
-"united states of america",2000,1.795,0.925
-"united states virgin islands",1950,3.373,0.915
-"united states virgin islands",1955,3.046,0.922
-"united states virgin islands",1960,2.72,0.929
-"united states virgin islands",1965,2.484,0.934
-"united states virgin islands",1970,2.273,0.935
-"united states virgin islands",1975,2.119,0.939
-"united states virgin islands",1980,2.184,0.943
-"united states virgin islands",1985,2.215,0.946
-"united states virgin islands",1990,2.2,0.947
-"united states virgin islands",1995,2.133,0.953
-"united states virgin islands",2000,2.003,0.956
-"uruguay",1950,2.319,0.881
-"uruguay",1955,2.269,0.884
-"uruguay",1960,2.184,0.891
-"uruguay",1965,2.078,0.899
-"uruguay",1970,2,0.904
-"uruguay",1975,1.934,0.912
-"uruguay",1980,1.841,0.916
-"uruguay",1985,1.764,0.916
-"uruguay",1990,1.727,0.919
-"uruguay",1995,1.706,0.922
-"uruguay",2000,1.694,0.928
-"uzbekistan",1950,3.89,0.838
-"uzbekistan",1955,3.57,0.848
-"uzbekistan",1960,3.282,0.856
-"uzbekistan",1965,3.051,0.867
-"uzbekistan",1970,2.836,0.876
-"uzbekistan",1975,2.608,0.882
-"uzbekistan",1980,2.331,0.893
-"uzbekistan",1985,2.136,0.901
-"uzbekistan",1990,2.103,0.91
-"uzbekistan",1995,2.077,0.916
-"uzbekistan",2000,2.003,0.919
-"vanuatu",1950,4.69,0.873
-"vanuatu",1955,4.542,0.894
-"vanuatu",1960,4.375,0.912
-"vanuatu",1965,4.199,0.924
-"vanuatu",1970,4.062,0.93
-"vanuatu",1975,3.932,0.931
-"vanuatu",1980,3.76,0.928
-"vanuatu",1985,3.582,0.925
-"vanuatu",1990,3.411,0.923
-"vanuatu",1995,3.266,0.924
-"vanuatu",2000,3.131,0.926
-"venezuela (bolivarian republic of)",1950,3.574,0.88
-"venezuela (bolivarian republic of)",1955,3.203,0.883
-"venezuela (bolivarian republic of)",1960,2.913,0.885
-"venezuela (bolivarian republic of)",1965,2.659,0.885
-"venezuela (bolivarian republic of)",1970,2.43,0.884
-"venezuela (bolivarian republic of)",1975,2.235,0.882
-"venezuela (bolivarian republic of)",1980,2.098,0.884
-"venezuela (bolivarian republic of)",1985,1.984,0.884
-"venezuela (bolivarian republic of)",1990,1.885,0.883
-"venezuela (bolivarian republic of)",1995,1.8,0.881
-"venezuela (bolivarian republic of)",2000,1.73,0.881
-"viet nam",1950,3.902,0.872
-"viet nam",1955,3.274,0.875
-"viet nam",1960,2.752,0.875
-"viet nam",1965,2.355,0.876
-"viet nam",1970,2.044,0.877
-"viet nam",1975,1.81,0.88
-"viet nam",1980,1.725,0.89
-"viet nam",1985,1.801,0.898
-"viet nam",1990,1.998,0.905
-"viet nam",1995,2.181,0.906
-"viet nam",2000,2.143,0.91
-"western sahara",1950,4.125,0.742
-"western sahara",1955,3.933,0.775
-"western sahara",1960,3.599,0.813
-"western sahara",1965,3.218,0.846
-"western sahara",1970,2.886,0.873
-"western sahara",1975,2.609,0.892
-"western sahara",1980,2.409,0.91
-"western sahara",1985,2.28,0.922
-"western sahara",1990,2.186,0.93
-"western sahara",1995,2.087,0.934
-"western sahara",2000,1.985,0.938
-"yemen",1950,3.829,0.773
-"yemen",1955,4.738,0.797
-"yemen",1960,5.286,0.825
-"yemen",1965,5.621,0.841
-"yemen",1970,5.406,0.859
-"yemen",1975,4.885,0.871
-"yemen",1980,4.247,0.881
-"yemen",1985,3.711,0.89
-"yemen",1990,3.303,0.894
-"yemen",1995,2.967,0.896
-"yemen",2000,2.689,0.898
-"zambia",1950,4.944,0.764
-"zambia",1955,4.735,0.753
-"zambia",1960,4.535,0.747
-"zambia",1965,4.411,0.755
-"zambia",1970,4.327,0.77
-"zambia",1975,4.285,0.794
-"zambia",1980,4.253,0.825
-"zambia",1985,4.168,0.857
-"zambia",1990,4.004,0.882
-"zambia",1995,3.788,0.895
-"zambia",2000,3.562,0.896
-"zimbabwe",1950,5.021,0.814
-"zimbabwe",1955,4.494,0.8
-"zimbabwe",1960,3.959,0.808
-"zimbabwe",1965,3.44,0.827
-"zimbabwe",1970,3.11,0.836
-"zimbabwe",1975,2.99,0.839
-"zimbabwe",1980,2.971,0.838
-"zimbabwe",1985,3.023,0.842
-"zimbabwe",1990,3.058,0.858
-"zimbabwe",1995,2.954,0.877
-"zimbabwe",2000,2.767,0.889
+"country","cohort","outlive_mother_expected","outlive_mother_fraction","generational_burden"
+"afghanistan",1950,3.888,0.817,263020.632
+"afghanistan",1955,4.818,0.805,106794.796
+"afghanistan",1960,5.497,0.811,42684.681
+"afghanistan",1965,5.932,0.822,28992.775
+"afghanistan",1970,6.087,0.837,85061.845
+"afghanistan",1975,5.962,0.853,25285.683
+"afghanistan",1980,5.561,0.868,131661.324
+"afghanistan",1985,5.008,0.882,53344.833
+"afghanistan",1990,4.46,0.896,188467.111
+"afghanistan",1995,3.922,0.908,10085.879
+"afghanistan",2000,3.451,0.916,49200.87
+"albania",1950,3.729,0.909,487335.176
+"albania",1955,3.31,0.919,470835.135
+"albania",1960,3.031,0.925,10825.368
+"albania",1965,2.713,0.929,222.262
+"albania",1970,2.481,0.935,106585.315
+"albania",1975,2.223,0.94,425.96
+"albania",1980,1.972,0.945,84510.273
+"albania",1985,1.83,0.952,1261474.776
+"albania",1990,1.788,0.956,76371.559
+"albania",1995,1.736,0.958,251116.796
+"albania",2000,1.679,0.96,5487.061
+"algeria",1950,6.051,0.841,13330.897
+"algeria",1955,5.497,0.871,393.882
+"algeria",1960,4.696,0.899,175419.745
+"algeria",1965,3.885,0.921,305.788
+"algeria",1970,3.398,0.934,215960.409
+"algeria",1975,3.165,0.944,19208.193
+"algeria",1980,3.064,0.946,1356214.915
+"algeria",1985,3.07,0.948,12980.429
+"algeria",1990,3.033,0.95,126215.28
+"algeria",1995,2.903,0.951,15062.359
+"algeria",2000,2.742,0.955,1257.32
+"angola",1950,5.056,0.745,1299.495
+"angola",1955,5.224,0.746,31040.525
+"angola",1960,5.374,0.738,3600.86
+"angola",1965,5.477,0.741,60717.955
+"angola",1970,5.575,0.757,9069.331
+"angola",1975,5.573,0.785,10191.09
+"angola",1980,5.501,0.818,490113.595
+"angola",1985,5.437,0.851,86640.041
+"angola",1990,5.295,0.876,114834.616
+"angola",1995,5.094,0.895,147810.234
+"angola",2000,4.845,0.904,215578.687
+"antigua and barbuda",1950,2.561,0.914,205861.913
+"antigua and barbuda",1955,2.355,0.919,22443.838
+"antigua and barbuda",1960,2.282,0.925,1071949.924
+"antigua and barbuda",1965,2.263,0.929,63445.267
+"antigua and barbuda",1970,2.243,0.932,863250.35
+"antigua and barbuda",1975,2.216,0.937,4034.951
+"antigua and barbuda",1980,2.18,0.941,109004.795
+"antigua and barbuda",1985,2.147,0.944,463.675
+"antigua and barbuda",1990,2.126,0.946,10066.627
+"antigua and barbuda",1995,2.113,0.948,1435.12
+"antigua and barbuda",2000,2.093,0.949,1624.069
+"argentina",1950,3.126,0.905,55829.538
+"argentina",1955,3.144,0.911,24747.508
+"argentina",1960,3.073,0.916,8623.385
+"argentina",1965,2.899,0.921,9318.036
+"argentina",1970,2.763,0.926,913.76
+"argentina",1975,2.634,0.928,20600.927
+"argentina",1980,2.546,0.933,459.004
+"argentina",1985,2.469,0.937,7341.905
+"argentina",1990,2.408,0.941,9522.31
+"argentina",1995,2.351,0.944,24392.608
+"argentina",2000,2.289,0.946,34897.861
+"armenia",1950,2.504,0.887,24927.11
+"armenia",1955,2.428,0.892,71353.879
+"armenia",1960,2.336,0.895,18989.994
+"armenia",1965,2.192,0.893,16251.711
+"armenia",1970,2.068,0.898,13670.377
+"armenia",1975,2.006,0.908,41565.017
+"armenia",1980,1.986,0.92,9267.882
+"armenia",1985,2.044,0.933,160243.695
+"armenia",1990,2.098,0.941,445.991
+"armenia",1995,2.124,0.946,555226.637
+"armenia",2000,2.118,0.947,1615.058
+"aruba",1950,2.611,0.934,62731.342
+"aruba",1955,2.436,0.935,5105.995
+"aruba",1960,2.322,0.936,293860.458
+"aruba",1965,2.187,0.937,213815.907
+"aruba",1970,2.02,0.935,40695.201
+"aruba",1975,1.98,0.938,7310.2
+"aruba",1980,2.067,0.941,171722.283
+"aruba",1985,2.216,0.946,209.311
+"aruba",1990,2.375,0.952,356603.418
+"aruba",1995,2.413,0.955,259597.656
+"aruba",2000,2.298,0.959,105348.253
+"australia",1950,2.459,0.932,10506.753
+"australia",1955,2.394,0.94,656.727
+"australia",1960,2.339,0.95,14740.437
+"australia",1965,2.291,0.955,13878.209
+"australia",1970,2.253,0.959,147343.07
+"australia",1975,2.242,0.963,37089.45
+"australia",1980,2.225,0.965,4759097.624
+"australia",1985,2.186,0.968,4622.611
+"australia",1990,2.147,0.971,32858.929
+"australia",1995,2.099,0.974,483008.317
+"australia",2000,2.063,0.976,462997.033
+"austria",1950,1.901,0.932,54772.986
+"austria",1955,1.83,0.937,709508.516
+"austria",1960,1.795,0.943,840.889
+"austria",1965,1.787,0.95,146205.038
+"austria",1970,1.794,0.955,97104.956
+"austria",1975,1.815,0.959,42851.099
+"austria",1980,1.826,0.963,328570.345
+"austria",1985,1.864,0.966,14125.937
+"austria",1990,1.907,0.968,740.848
+"austria",1995,1.944,0.97,12476.114
+"austria",2000,1.964,0.972,367.398
+"azerbaijan",1950,3.29,0.839,145244.372
+"azerbaijan",1955,2.973,0.846,722.495
+"azerbaijan",1960,2.74,0.857,516873.279
+"azerbaijan",1965,2.522,0.866,228332.915
+"azerbaijan",1970,2.309,0.878,542.83
+"azerbaijan",1975,2.082,0.893,7807.815
+"azerbaijan",1980,1.968,0.909,34671.108
+"azerbaijan",1985,1.943,0.923,24314.543
+"azerbaijan",1990,1.99,0.929,2410.163
+"azerbaijan",1995,2.013,0.934,1194.062
+"azerbaijan",2000,1.973,0.934,30143.913
+"bahamas",1950,2.966,0.896,492.578
+"bahamas",1955,2.902,0.899,1406.148
+"bahamas",1960,2.776,0.902,66526.182
+"bahamas",1965,2.546,0.901,6099.435
+"bahamas",1970,2.406,0.911,44237.184
+"bahamas",1975,2.25,0.915,25288.406
+"bahamas",1980,2.076,0.924,282860.02
+"bahamas",1985,1.961,0.929,830.152
+"bahamas",1990,1.936,0.932,96790.168
+"bahamas",1995,1.897,0.934,204748.15
+"bahamas",2000,1.864,0.936,21017.767
+"bahrain",1950,5.116,0.939,9872.286
+"bahrain",1955,4.629,0.954,1057.865
+"bahrain",1960,4.15,0.96,4874.497
+"bahrain",1965,3.591,0.96,610.51
+"bahrain",1970,3.059,0.96,147201.5
+"bahrain",1975,2.709,0.961,104.822
+"bahrain",1980,2.47,0.962,62448.215
+"bahrain",1985,2.281,0.963,102269.629
+"bahrain",1990,2.152,0.965,24030.468
+"bahrain",1995,2.054,0.965,52534.776
+"bahrain",2000,1.972,0.966,24094.53
+"bangladesh",1950,4.612,0.749,2897.654
+"bangladesh",1955,4.248,0.77,96829.563
+"bangladesh",1960,3.861,0.798,16497.922
+"bangladesh",1965,3.473,0.826,1621.52
+"bangladesh",1970,3.109,0.856,9040.33
+"bangladesh",1975,2.761,0.88,7326652.935
+"bangladesh",1980,2.467,0.901,6981.332
+"bangladesh",1985,2.239,0.917,74635.286
+"bangladesh",1990,2.067,0.926,49182.648
+"bangladesh",1995,1.951,0.932,23000.427
+"bangladesh",2000,1.864,0.935,68124.105
+"barbados",1950,2.307,0.929,1424.469
+"barbados",1955,2.096,0.929,4776.1
+"barbados",1960,2.018,0.928,1697.343
+"barbados",1965,1.908,0.926,193500.671
+"barbados",1970,1.846,0.931,149996.716
+"barbados",1975,1.866,0.93,828552.563
+"barbados",1980,1.883,0.932,443139.694
+"barbados",1985,1.881,0.934,99609.312
+"barbados",1990,1.923,0.939,129855.888
+"barbados",1995,2.025,0.946,58728.062
+"barbados",2000,2.035,0.949,4636.563
+"belarus",1950,1.999,0.91,15718.401
+"belarus",1955,1.932,0.895,93902.365
+"belarus",1960,1.834,0.889,4065.468
+"belarus",1965,1.736,0.889,237515.854
+"belarus",1970,1.682,0.897,46543.136
+"belarus",1975,1.692,0.908,894.915
+"belarus",1980,1.818,0.925,10333.069
+"belarus",1985,1.981,0.933,404.673
+"belarus",1990,2.108,0.937,10056.862
+"belarus",1995,2.166,0.94,10282.814
+"belarus",2000,2.162,0.943,647.004
+"belgium",1950,1.963,0.932,1013.849
+"belgium",1955,1.967,0.936,1930.575
+"belgium",1960,2.009,0.944,9491.805
+"belgium",1965,2.032,0.95,101562.648
+"belgium",1970,2.076,0.955,37615.662
+"belgium",1975,2.148,0.959,7009.482
+"belgium",1980,2.2,0.961,19614.872
+"belgium",1985,2.172,0.962,626.651
+"belgium",1990,2.075,0.964,6971.411
+"belgium",1995,1.991,0.967,50796.627
+"belgium",2000,1.966,0.97,703139.03
+"belize",1950,5.459,0.874,4467.017
+"belize",1955,5.068,0.878,6948.598
+"belize",1960,4.576,0.881,18071.6
+"belize",1965,4.079,0.884,104015.784
+"belize",1970,3.685,0.89,30647.185
+"belize",1975,3.305,0.894,125061.989
+"belize",1980,2.931,0.897,174197.777
+"belize",1985,2.621,0.903,1449.255
+"belize",1990,2.39,0.909,21436.601
+"belize",1995,2.235,0.914,141069.108
+"belize",2000,2.133,0.918,712.017
+"benin",1950,4.766,0.772,1332.711
+"benin",1955,5.021,0.778,628.213
+"benin",1960,5.133,0.78,355708.988
+"benin",1965,5.1,0.79,6204.087
+"benin",1970,5.014,0.802,5507.384
+"benin",1975,4.868,0.814,27988.395
+"benin",1980,4.748,0.828,14812.298
+"benin",1985,4.628,0.84,76805.55
+"benin",1990,4.466,0.851,1476.966
+"benin",1995,4.277,0.861,444.613
+"benin",2000,4.091,0.869,1414.292
+"bhutan",1950,4.531,0.775,90494.805
+"bhutan",1955,4.518,0.789,17912.854
+"bhutan",1960,4.338,0.807,72685.833
+"bhutan",1965,3.99,0.834,691.678
+"bhutan",1970,3.551,0.861,221280.816
+"bhutan",1975,3.131,0.888,542811.848
+"bhutan",1980,2.765,0.906,87861.236
+"bhutan",1985,2.468,0.918,97797.227
+"bhutan",1990,2.24,0.926,271.769
+"bhutan",1995,2.074,0.927,10848.66
+"bhutan",2000,1.959,0.925,967.723
+"bolivia (plurinational state of)",1950,4.286,0.745,32610.083
+"bolivia (plurinational state of)",1955,4.239,0.769,82925.293
+"bolivia (plurinational state of)",1960,4.092,0.794,22795.147
+"bolivia (plurinational state of)",1965,3.884,0.82,143928.883
+"bolivia (plurinational state of)",1970,3.653,0.842,47708.012
+"bolivia (plurinational state of)",1975,3.436,0.864,182428.039
+"bolivia (plurinational state of)",1980,3.217,0.88,8792.14
+"bolivia (plurinational state of)",1985,2.99,0.892,81268.386
+"bolivia (plurinational state of)",1990,2.789,0.898,66058.803
+"bolivia (plurinational state of)",1995,2.623,0.904,3019.735
+"bolivia (plurinational state of)",2000,2.49,0.908,92659.737
+"bosnia and herzegovina",1950,2.307,0.925,207.077
+"bosnia and herzegovina",1955,2.163,0.939,101013.326
+"bosnia and herzegovina",1960,2.041,0.944,427.133
+"bosnia and herzegovina",1965,1.904,0.947,88195.213
+"bosnia and herzegovina",1970,1.82,0.947,1293865.947
+"bosnia and herzegovina",1975,1.754,0.95,64108.975
+"bosnia and herzegovina",1980,1.692,0.952,262210.456
+"bosnia and herzegovina",1985,1.635,0.954,6035.038
+"bosnia and herzegovina",1990,1.589,0.961,11124.346
+"bosnia and herzegovina",1995,1.549,0.964,1782.451
+"bosnia and herzegovina",2000,1.541,0.967,5191.014
+"botswana",1950,5.092,0.862,378.294
+"botswana",1955,4.513,0.857,198648.511
+"botswana",1960,4.032,0.868,16937.422
+"botswana",1965,3.689,0.882,1521562.656
+"botswana",1970,3.41,0.884,12955.125
+"botswana",1975,3.22,0.882,119860.185
+"botswana",1980,3.067,0.881,17086.556
+"botswana",1985,2.946,0.888,1209.439
+"botswana",1990,2.855,0.897,93984.835
+"botswana",1995,2.762,0.909,14927.415
+"botswana",2000,2.631,0.914,104142.006
+"brazil",1950,3.414,0.854,55874.073
+"brazil",1955,3.026,0.864,7883.464
+"brazil",1960,2.714,0.873,10688.112
+"brazil",1965,2.478,0.885,425317.2
+"brazil",1970,2.292,0.893,80025.78
+"brazil",1975,2.154,0.902,131749.335
+"brazil",1980,2.048,0.913,147271.565
+"brazil",1985,1.938,0.918,187655.594
+"brazil",1990,1.862,0.924,243.3
+"brazil",1995,1.823,0.931,1142.318
+"brazil",2000,1.792,0.936,1947.327
+"brunei darussalam",1950,4.616,0.936,67696.123
+"brunei darussalam",1955,4.082,0.947,826545.737
+"brunei darussalam",1960,3.644,0.948,3646.963
+"brunei darussalam",1965,3.106,0.942,118910.695
+"brunei darussalam",1970,2.666,0.941,429.232
+"brunei darussalam",1975,2.367,0.94,10890.493
+"brunei darussalam",1980,2.262,0.939,1374.908
+"brunei darussalam",1985,2.18,0.941,1833.922
+"brunei darussalam",1990,2.088,0.943,6600.898
+"brunei darussalam",1995,2,0.946,5213.855
+"brunei darussalam",2000,1.918,0.948,7274.587
+"bulgaria",1950,2.039,0.921,9745.653
+"bulgaria",1955,1.99,0.915,1033.924
+"bulgaria",1960,1.878,0.901,20124.693
+"bulgaria",1965,1.788,0.903,441.711
+"bulgaria",1970,1.715,0.909,5692.425
+"bulgaria",1975,1.687,0.919,12724.427
+"bulgaria",1980,1.711,0.928,29756.468
+"bulgaria",1985,1.776,0.934,37724.764
+"bulgaria",1990,1.853,0.942,127155.84
+"bulgaria",1995,1.92,0.945,1285.87
+"bulgaria",2000,1.969,0.948,664.623
+"burkina faso",1950,3.995,0.797,17899.567
+"burkina faso",1955,4.604,0.784,13136.118
+"burkina faso",1960,4.896,0.778,42034.645
+"burkina faso",1965,5.123,0.772,9684.922
+"burkina faso",1970,5.19,0.786,151741.07
+"burkina faso",1975,5.205,0.807,479.646
+"burkina faso",1980,5.172,0.83,608337.902
+"burkina faso",1985,5.071,0.856,1610.62
+"burkina faso",1990,4.896,0.879,78756.165
+"burkina faso",1995,4.664,0.895,97329.6
+"burkina faso",2000,4.417,0.906,18689.814
+"burundi",1950,5.633,0.783,229294.462
+"burundi",1955,5.874,0.775,48254.048
+"burundi",1960,5.977,0.782,7241.927
+"burundi",1965,6.082,0.791,177235.577
+"burundi",1970,6.076,0.806,200.384
+"burundi",1975,5.956,0.829,372246.747
+"burundi",1980,5.767,0.852,271970.548
+"burundi",1985,5.509,0.872,105308.884
+"burundi",1990,5.224,0.891,46366.339
+"burundi",1995,4.91,0.903,32485.029
+"burundi",2000,4.595,0.909,79290.589
+"cabo verde",1950,5.569,0.869,11706.071
+"cabo verde",1955,5.161,0.887,154272.87
+"cabo verde",1960,4.657,0.901,36123.461
+"cabo verde",1965,4.099,0.908,3396916.868
+"cabo verde",1970,3.568,0.915,4938.476
+"cabo verde",1975,3.091,0.919,26205.084
+"cabo verde",1980,2.726,0.923,524172.853
+"cabo verde",1985,2.48,0.93,457286.097
+"cabo verde",1990,2.313,0.931,9542.243
+"cabo verde",1995,2.187,0.933,198.246
+"cabo verde",2000,2.097,0.934,95924.299
+"cambodia",1950,4.285,0.693,162342.155
+"cambodia",1955,4.329,0.733,95388.001
+"cambodia",1960,4.348,0.787,41816.114
+"cambodia",1965,4.132,0.839,286993.596
+"cambodia",1970,3.628,0.861,15170.652
+"cambodia",1975,3.095,0.895,817.817
+"cambodia",1980,2.779,0.908,12078.968
+"cambodia",1985,2.531,0.909,355.419
+"cambodia",1990,2.407,0.922,173180.055
+"cambodia",1995,2.314,0.927,362.84
+"cambodia",2000,2.237,0.926,177491.646
+"cameroon",1950,5.024,0.793,237364.668
+"cameroon",1955,5.21,0.792,504.588
+"cameroon",1960,5.231,0.789,6832.523
+"cameroon",1965,5.159,0.79,35274.399
+"cameroon",1970,5.025,0.795,20522.659
+"cameroon",1975,4.895,0.807,2229.839
+"cameroon",1980,4.791,0.824,1047.891
+"cameroon",1985,4.609,0.842,23906.138
+"cameroon",1990,4.433,0.861,3149.33
+"cameroon",1995,4.231,0.876,51668.398
+"cameroon",2000,4.006,0.885,7557.534
+"canada",1950,2.046,0.935,5596.287
+"canada",1955,1.977,0.943,45353.01
+"canada",1960,1.951,0.949,29220.716
+"canada",1965,1.938,0.953,300683.733
+"canada",1970,1.95,0.957,812.934
+"canada",1975,1.956,0.959,107351.739
+"canada",1980,1.927,0.962,226499.47
+"canada",1985,1.889,0.964,19357.647
+"canada",1990,1.854,0.968,1056327.586
+"canada",1995,1.822,0.971,66669.838
+"canada",2000,1.808,0.973,776693.06
+"central african republic",1950,3.926,0.809,646.004
+"central african republic",1955,4.225,0.81,129859.575
+"central african republic",1960,4.289,0.811,99.352
+"central african republic",1965,4.343,0.798,57565.385
+"central african republic",1970,4.397,0.783,118234.548
+"central african republic",1975,4.421,0.782,18866.484
+"central african republic",1980,4.373,0.79,52745.167
+"central african republic",1985,4.234,0.803,25422.873
+"central african republic",1990,4.071,0.819,7164.348
+"central african republic",1995,3.877,0.837,9586.669
+"central african republic",2000,3.633,0.85,995.628
+"chad",1950,4.957,0.738,1433.062
+"chad",1955,5.204,0.751,9360.202
+"chad",1960,5.471,0.754,7165420.047
+"chad",1965,5.672,0.759,6622.126
+"chad",1970,5.792,0.766,87297.387
+"chad",1975,5.816,0.772,48996.838
+"chad",1980,5.697,0.785,21234.626
+"chad",1985,5.484,0.796,69201.29
+"chad",1990,5.169,0.812,20596.821
+"chad",1995,4.814,0.823,17114.086
+"chad",2000,4.487,0.835,12267.985
+"channel islands",1950,1.792,0.943,177017.983
+"channel islands",1955,1.783,0.95,168066.591
+"channel islands",1960,1.796,0.955,948619.642
+"channel islands",1965,1.763,0.96,449986.811
+"channel islands",1970,1.764,0.963,110585.976
+"channel islands",1975,1.786,0.968,139371.458
+"channel islands",1980,1.797,0.969,56521.99
+"channel islands",1985,1.797,0.971,4370.969
+"channel islands",1990,1.803,0.974,268006.707
+"channel islands",1995,1.814,0.975,218549.702
+"channel islands",2000,1.834,0.976,46341.463
+"chile",1950,2.95,0.908,220721.748
+"chile",1955,2.858,0.927,37046.031
+"chile",1960,2.702,0.94,847.259
+"chile",1965,2.514,0.945,10271.897
+"chile",1970,2.37,0.947,524.697
+"chile",1975,2.239,0.946,10479.943
+"chile",1980,2.113,0.946,13508.181
+"chile",1985,2.02,0.949,733.805
+"chile",1990,1.955,0.952,13454.615
+"chile",1995,1.893,0.955,11196.658
+"chile",2000,1.835,0.958,152133.653
+"china",1950,2.985,0.884,104318.891
+"china",1955,2.544,0.908,40503.932
+"china",1960,2.318,0.92,5978.549
+"china",1965,2.249,0.922,20491.218
+"china",1970,2.07,0.925,612.417
+"china",1975,1.95,0.934,6046.486
+"china",1980,1.936,0.944,47893.61
+"china",1985,1.958,0.954,728070.858
+"china",1990,2,0.959,686.673
+"china",1995,2.039,0.963,156535.43
+"china",2000,2.058,0.963,90733.446
+"china, hong kong sar",1950,2.465,0.951,105596.694
+"china, hong kong sar",1955,2.012,0.954,24892.658
+"china, hong kong sar",1960,1.654,0.955,105928.042
+"china, hong kong sar",1965,1.415,0.96,123350.93
+"china, hong kong sar",1970,1.337,0.962,1427.976
+"china, hong kong sar",1975,1.396,0.966,19524.458
+"china, hong kong sar",1980,1.522,0.968,143304.982
+"china, hong kong sar",1985,1.658,0.97,609.295
+"china, hong kong sar",1990,1.76,0.971,467945.351
+"china, hong kong sar",1995,1.83,0.974,230714.94
+"china, hong kong sar",2000,1.868,0.975,482.173
+"china, macao sar",1950,1.811,0.951,5879.861
+"china, macao sar",1955,2.074,0.957,4920.135
+"china, macao sar",1960,1.958,0.955,27777.948
+"china, macao sar",1965,1.568,0.957,12733.107
+"china, macao sar",1970,1.289,0.962,68872.993
+"china, macao sar",1975,1.193,0.965,1320.483
+"china, macao sar",1980,1.223,0.968,352.772
+"china, macao sar",1985,1.319,0.97,1580.86
+"china, macao sar",1990,1.418,0.97,61260.533
+"china, macao sar",1995,1.501,0.97,5286.899
+"china, macao sar",2000,1.578,0.971,44517.202
+"china, taiwan province of china",1950,2.845,0.925,744.367
+"china, taiwan province of china",1955,2.573,0.927,240169.13
+"china, taiwan province of china",1960,2.351,0.932,548993.305
+"china, taiwan province of china",1965,2.109,0.935,95627.417
+"china, taiwan province of china",1970,1.889,0.937,90296.539
+"china, taiwan province of china",1975,1.718,0.939,252.035
+"china, taiwan province of china",1980,1.629,0.945,10269.193
+"china, taiwan province of china",1985,1.624,0.954,824.381
+"china, taiwan province of china",1990,1.65,0.959,5310.61
+"china, taiwan province of china",1995,1.689,0.963,709.692
+"china, taiwan province of china",2000,1.719,0.967,128000.444
+"colombia",1950,3.585,0.873,162651.943
+"colombia",1955,3.223,0.887,41674.556
+"colombia",1960,2.934,0.896,175568.455
+"colombia",1965,2.698,0.905,7710.936
+"colombia",1970,2.511,0.91,76382.606
+"colombia",1975,2.333,0.91,61776.93
+"colombia",1980,2.172,0.913,2941.6
+"colombia",1985,2.038,0.919,88141.625
+"colombia",1990,1.922,0.926,20238.341
+"colombia",1995,1.839,0.931,1399.094
+"colombia",2000,1.784,0.936,9349.232
+"comoros",1950,5.694,0.808,89507.279
+"comoros",1955,5.796,0.821,1210912.86
+"comoros",1960,5.609,0.834,56542.783
+"comoros",1965,5.235,0.847,272092.041
+"comoros",1970,4.909,0.857,5972.046
+"comoros",1975,4.683,0.867,10224.411
+"comoros",1980,4.415,0.873,1748.539
+"comoros",1985,4.188,0.881,5460.652
+"comoros",1990,3.955,0.888,1579.229
+"comoros",1995,3.735,0.895,174619.006
+"comoros",2000,3.536,0.901,190880.131
+"congo",1950,5.198,0.843,1684531.156
+"congo",1955,5.029,0.836,12833.13
+"congo",1960,4.789,0.84,90503.912
+"congo",1965,4.63,0.845,16527.78
+"congo",1970,4.552,0.853,1043.033
+"congo",1975,4.492,0.862,94103.889
+"congo",1980,4.433,0.872,12933.139
+"congo",1985,4.365,0.885,111205.715
+"congo",1990,4.274,0.9,4155.11
+"congo",1995,4.13,0.91,230659.737
+"congo",2000,3.942,0.913,35428.506
+"costa rica",1950,3.57,0.914,354567.922
+"costa rica",1955,3.354,0.926,81447.943
+"costa rica",1960,3.155,0.934,139451.442
+"costa rica",1965,2.906,0.935,147301.695
+"costa rica",1970,2.632,0.933,155993.716
+"costa rica",1975,2.357,0.933,222.705
+"costa rica",1980,2.12,0.934,1186.726
+"costa rica",1985,1.963,0.935,1816.67
+"costa rica",1990,1.891,0.942,8741.501
+"costa rica",1995,1.837,0.945,111651.204
+"costa rica",2000,1.796,0.948,43803.756
+"côte d'ivoire",1950,4.157,0.856,129011.868
+"côte d'ivoire",1955,4.907,0.844,303.832
+"côte d'ivoire",1960,5.352,0.822,11081.105
+"côte d'ivoire",1965,5.223,0.812,1359.109
+"côte d'ivoire",1970,5.062,0.808,2251.088
+"côte d'ivoire",1975,4.865,0.818,6701.63
+"côte d'ivoire",1980,4.646,0.829,5090.367
+"côte d'ivoire",1985,4.481,0.845,7905.899
+"côte d'ivoire",1990,4.309,0.859,15166.507
+"côte d'ivoire",1995,4.127,0.87,109672.898
+"côte d'ivoire",2000,3.933,0.874,18497.537
+"croatia",1950,1.935,0.935,386.212
+"croatia",1955,1.974,0.937,4709.632
+"croatia",1960,2.03,0.94,15988.837
+"croatia",1965,1.999,0.94,31088.456
+"croatia",1970,1.93,0.948,39772.276
+"croatia",1975,1.916,0.951,129421.566
+"croatia",1980,1.905,0.955,1105.906
+"croatia",1985,1.881,0.959,677.844
+"croatia",1990,1.849,0.961,319052.343
+"croatia",1995,1.807,0.964,5676.842
+"croatia",2000,1.788,0.969,4742.209
+"cuba",1950,2.34,0.913,9395.571
+"cuba",1955,2.07,0.922,141454.268
+"cuba",1960,1.905,0.931,533.611
+"cuba",1965,1.829,0.935,518479.393
+"cuba",1970,1.78,0.937,1595.778
+"cuba",1975,1.718,0.938,83880.534
+"cuba",1980,1.686,0.937,103682.692
+"cuba",1985,1.69,0.943,19900.521
+"cuba",1990,1.691,0.944,71414.701
+"cuba",1995,1.678,0.944,808.565
+"cuba",2000,1.657,0.945,272239.094
+"curaçao",1950,2.658,0.917,137893.147
+"curaçao",1955,2.457,0.922,245.431
+"curaçao",1960,2.404,0.925,351867.708
+"curaçao",1965,2.395,0.925,285492.796
+"curaçao",1970,2.346,0.928,99012.561
+"curaçao",1975,2.288,0.927,49099.347
+"curaçao",1980,2.242,0.93,28644.564
+"curaçao",1985,2.156,0.935,76296.901
+"curaçao",1990,2.04,0.939,20219.692
+"curaçao",1995,1.946,0.943,161122.548
+"curaçao",2000,1.903,0.949,38925.722
+"cyprus",1950,2.534,0.951,3639725.549
+"cyprus",1955,2.593,0.956,4804.058
+"cyprus",1960,2.683,0.958,30731.098
+"cyprus",1965,2.582,0.958,573747.217
+"cyprus",1970,2.355,0.961,411521.113
+"cyprus",1975,2.021,0.964,8604.941
+"cyprus",1980,1.746,0.968,203.16
+"cyprus",1985,1.612,0.97,91910.791
+"cyprus",1990,1.556,0.972,432.166
+"cyprus",1995,1.535,0.973,86538.745
+"cyprus",2000,1.545,0.973,1121188.374
+"czechia",1950,2.139,0.926,241946.325
+"czechia",1955,2.107,0.92,14807.112
+"czechia",1960,2.046,0.924,820.354
+"czechia",1965,1.994,0.93,11548.138
+"czechia",1970,1.982,0.942,340.091
+"czechia",1975,1.929,0.951,175542.894
+"czechia",1980,1.876,0.96,415.39
+"czechia",1985,1.904,0.964,145292.308
+"czechia",1990,1.974,0.965,14425.09
+"czechia",1995,2.027,0.966,1670294.551
+"czechia",2000,2.057,0.969,12172.304
+"dem people's republic of korea",1950,2.726,0.906,36463.141
+"dem people's republic of korea",1955,2.651,0.907,17325.051
+"dem people's republic of korea",1960,2.678,0.903,2226.44
+"dem people's republic of korea",1965,2.5,0.89,894.684
+"dem people's republic of korea",1970,2.239,0.888,20766.102
+"dem people's republic of korea",1975,2.155,0.906,2737.115
+"dem people's republic of korea",1980,2.144,0.917,42205.745
+"dem people's republic of korea",1985,2.16,0.927,7331.445
+"dem people's republic of korea",1990,2.15,0.938,10279.702
+"dem people's republic of korea",1995,2.129,0.949,322546.67
+"dem people's republic of korea",2000,2.086,0.948,78239.682
+"democratic republic of the congo",1950,5.191,0.756,314287.319
+"democratic republic of the congo",1955,5.336,0.751,806.839
+"democratic republic of the congo",1960,5.361,0.756,117587.734
+"democratic republic of the congo",1965,5.502,0.764,226836.065
+"democratic republic of the congo",1970,5.647,0.781,17205.669
+"democratic republic of the congo",1975,5.615,0.797,990458.877
+"democratic republic of the congo",1980,5.487,0.814,71533.145
+"democratic republic of the congo",1985,5.387,0.832,743479.364
+"democratic republic of the congo",1990,5.177,0.844,3101.067
+"democratic republic of the congo",1995,4.899,0.856,128468.131
+"democratic republic of the congo",2000,4.576,0.863,275.359
+"denmark",1950,2.053,0.936,49315.69
+"denmark",1955,2.041,0.945,133145.925
+"denmark",1960,2.096,0.952,15763.24
+"denmark",1965,2.156,0.957,50944.03
+"denmark",1970,2.186,0.96,25573.309
+"denmark",1975,2.172,0.963,6409.194
+"denmark",1980,2.129,0.965,10220.355
+"denmark",1985,2.088,0.968,869.27
+"denmark",1990,2.042,0.969,19024.708
+"denmark",1995,2.008,0.97,362.648
+"denmark",2000,2.006,0.973,4301.505
+"djibouti",1950,5.523,0.811,6596.567
+"djibouti",1955,5.417,0.818,91537.632
+"djibouti",1960,5.142,0.823,47376.165
+"djibouti",1965,4.757,0.832,19874.897
+"djibouti",1970,4.259,0.843,68157.325
+"djibouti",1975,3.738,0.859,22065.039
+"djibouti",1980,3.293,0.876,17854.185
+"djibouti",1985,2.964,0.894,11386.602
+"djibouti",1990,2.717,0.909,35264.917
+"djibouti",1995,2.525,0.919,8661.606
+"djibouti",2000,2.373,0.927,130650.065
+"dominican republic",1950,4.003,0.851,448096.162
+"dominican republic",1955,3.551,0.864,92031.893
+"dominican republic",1960,3.203,0.875,131810.107
+"dominican republic",1965,2.948,0.88,55104.805
+"dominican republic",1970,2.764,0.886,3573.38
+"dominican republic",1975,2.62,0.889,252813.438
+"dominican republic",1980,2.509,0.894,223418.804
+"dominican republic",1985,2.4,0.896,48211.245
+"dominican republic",1990,2.306,0.898,6402.903
+"dominican republic",1995,2.222,0.903,135074.636
+"dominican republic",2000,2.145,0.908,230.297
+"ecuador",1950,4.313,0.848,9568.418
+"ecuador",1955,3.891,0.864,649.959
+"ecuador",1960,3.553,0.881,9929.959
+"ecuador",1965,3.27,0.894,13164.346
+"ecuador",1970,3.038,0.904,814.519
+"ecuador",1975,2.842,0.914,12375.447
+"ecuador",1980,2.663,0.919,9945.264
+"ecuador",1985,2.522,0.925,154439.811
+"ecuador",1990,2.416,0.929,30991.288
+"ecuador",1995,2.328,0.931,3687347.857
+"ecuador",2000,2.248,0.935,4592.295
+"egypt",1950,4.515,0.803,22113.142
+"egypt",1955,4.515,0.831,534.402
+"egypt",1960,4.305,0.864,5819.387
+"egypt",1965,3.998,0.895,44514.449
+"egypt",1970,3.742,0.92,751931.951
+"egypt",1975,3.554,0.937,583.691
+"egypt",1980,3.415,0.946,167564.216
+"egypt",1985,3.345,0.946,86660.793
+"egypt",1990,3.369,0.945,38580.233
+"egypt",1995,3.284,0.941,215439.496
+"egypt",2000,3.127,0.941,14141.455
+"el salvador",1950,4.213,0.8,102864.051
+"el salvador",1955,3.892,0.823,1860.999
+"el salvador",1960,3.565,0.848,17553.148
+"el salvador",1965,3.237,0.867,141601.997
+"el salvador",1970,2.94,0.885,473.768
+"el salvador",1975,2.646,0.897,449173.384
+"el salvador",1980,2.38,0.901,236258.154
+"el salvador",1985,2.184,0.9,475.837
+"el salvador",1990,2.053,0.902,5733.367
+"el salvador",1995,1.957,0.904,35834.375
+"el salvador",2000,1.907,0.911,16138.636
+"equatorial guinea",1950,3.726,0.763,11389.049
+"equatorial guinea",1955,4.034,0.776,46713.1
+"equatorial guinea",1960,4.391,0.784,1275.28
+"equatorial guinea",1965,4.562,0.793,322.135
+"equatorial guinea",1970,4.581,0.803,1731.371
+"equatorial guinea",1975,4.541,0.817,52651.672
+"equatorial guinea",1980,4.399,0.829,5356.507
+"equatorial guinea",1985,4.182,0.843,45463.454
+"equatorial guinea",1990,3.968,0.856,28935.461
+"equatorial guinea",1995,3.726,0.864,301873.134
+"equatorial guinea",2000,3.489,0.872,778.19
+"eritrea",1950,4.507,0.802,97955.218
+"eritrea",1955,4.776,0.801,83852.456
+"eritrea",1960,4.963,0.809,235.893
+"eritrea",1965,5.02,0.833,8602.566
+"eritrea",1970,4.941,0.862,614.42
+"eritrea",1975,4.769,0.888,5281.034
+"eritrea",1980,4.556,0.908,673.123
+"eritrea",1985,4.323,0.92,103624.099
+"eritrea",1990,4.083,0.924,97.908
+"eritrea",1995,3.839,0.928,43270.102
+"eritrea",2000,3.606,0.927,153444.53
+"estonia",1950,2.025,0.916,6267.312
+"estonia",1955,2.025,0.907,103333.543
+"estonia",1960,2,0.903,58371.081
+"estonia",1965,1.961,0.907,2785.401
+"estonia",1970,1.947,0.919,76502.522
+"estonia",1975,1.965,0.931,17980.052
+"estonia",1980,2.015,0.94,1226.392
+"estonia",1985,2.062,0.946,8597.525
+"estonia",1990,2.099,0.953,7095593.122
+"estonia",1995,2.09,0.956,7215.307
+"estonia",2000,2.06,0.958,77856.157
+"eswatini",1950,5.378,0.838,284708.077
+"eswatini",1955,5.189,0.85,5480.469
+"eswatini",1960,4.772,0.854,8953.486
+"eswatini",1965,4.256,0.856,1540.891
+"eswatini",1970,3.777,0.858,4087.959
+"eswatini",1975,3.371,0.852,1272.197
+"eswatini",1980,3.071,0.849,162758.798
+"eswatini",1985,2.889,0.853,201564.189
+"eswatini",1990,2.742,0.867,1131348.243
+"eswatini",1995,2.648,0.886,469641.754
+"eswatini",2000,2.573,0.902,78692.419
+"ethiopia",1950,4.746,0.773,12972.778
+"ethiopia",1955,5.177,0.756,892.331
+"ethiopia",1960,5.459,0.76,93140.301
+"ethiopia",1965,5.541,0.784,10725.952
+"ethiopia",1970,5.469,0.813,114465.394
+"ethiopia",1975,5.23,0.842,3786.45
+"ethiopia",1980,4.914,0.87,209507.369
+"ethiopia",1985,4.527,0.892,28910.345
+"ethiopia",1990,4.129,0.907,1244.546
+"ethiopia",1995,3.764,0.915,8929.824
+"ethiopia",2000,3.434,0.919,864.268
+"fiji",1950,3.801,0.892,155395.533
+"fiji",1955,3.655,0.891,121793.208
+"fiji",1960,3.562,0.897,171.139
+"fiji",1965,3.409,0.9,1054.268
+"fiji",1970,3.383,0.908,1732.718
+"fiji",1975,3.23,0.911,8473.252
+"fiji",1980,3.074,0.915,115222.932
+"fiji",1985,2.984,0.913,47288.515
+"fiji",1990,2.929,0.915,3250.07
+"fiji",1995,2.854,0.917,25160.988
+"fiji",2000,2.754,0.919,501.929
+"finland",1950,1.976,0.936,1047.126
+"finland",1955,2.045,0.942,2819.207
+"finland",1960,2.099,0.944,6942.715
+"finland",1965,2.103,0.948,4504.197
+"finland",1970,2.09,0.951,8785.169
+"finland",1975,2.06,0.953,12322.649
+"finland",1980,1.987,0.955,109798.028
+"finland",1985,1.898,0.958,18660.893
+"finland",1990,1.787,0.96,139218.527
+"finland",1995,1.706,0.963,102868.13
+"finland",2000,1.683,0.967,2985.414
+"france",1950,2.275,0.926,27569.886
+"france",1955,2.279,0.934,40951.095
+"france",1960,2.27,0.937,129907.033
+"france",1965,2.245,0.943,969.514
+"france",1970,2.233,0.949,715.211
+"france",1975,2.247,0.952,291600.82
+"france",1980,2.257,0.953,4913.23
+"france",1985,2.23,0.954,4563.677
+"france",1990,2.155,0.955,28025.88
+"france",1995,2.09,0.96,9675.976
+"france",2000,2.054,0.961,59634.821
+"french guiana",1950,3.873,0.923,345268.005
+"french guiana",1955,3.95,0.933,1464.526
+"french guiana",1960,4.004,0.942,85908.894
+"french guiana",1965,4.055,0.946,110977.124
+"french guiana",1970,4.104,0.95,18418.276
+"french guiana",1975,4.134,0.954,65654.369
+"french guiana",1980,4.076,0.955,780.286
+"french guiana",1985,3.974,0.958,303337.093
+"french guiana",1990,3.81,0.96,454294.174
+"french guiana",1995,3.658,0.962,102866.058
+"french guiana",2000,3.506,0.966,90967.947
+"french polynesia",1950,4.282,0.905,299930.087
+"french polynesia",1955,3.955,0.92,92655.275
+"french polynesia",1960,3.681,0.935,40013.275
+"french polynesia",1965,3.394,0.945,21100.919
+"french polynesia",1970,3,0.95,72137.869
+"french polynesia",1975,2.652,0.956,17817.331
+"french polynesia",1980,2.43,0.955,178642.347
+"french polynesia",1985,2.273,0.952,33344.373
+"french polynesia",1990,2.156,0.954,147989.698
+"french polynesia",1995,2.078,0.955,5893.966
+"french polynesia",2000,2.015,0.957,100498.28
+"gabon",1950,4.565,0.824,637300.206
+"gabon",1955,4.863,0.843,360985.313
+"gabon",1960,4.949,0.851,8180.647
+"gabon",1965,4.826,0.859,241.343
+"gabon",1970,4.638,0.867,73682.336
+"gabon",1975,4.436,0.874,379.915
+"gabon",1980,4.235,0.881,79590.244
+"gabon",1985,4.081,0.889,998507.417
+"gabon",1990,3.951,0.9,40601.644
+"gabon",1995,3.787,0.907,272485.578
+"gabon",2000,3.588,0.911,5261.668
+"gambia",1950,3.755,0.794,9958.942
+"gambia",1955,4.236,0.808,283.735
+"gambia",1960,4.778,0.817,184228.189
+"gambia",1965,5.326,0.825,446.533
+"gambia",1970,5.573,0.84,108165.015
+"gambia",1975,5.629,0.854,12106.845
+"gambia",1980,5.528,0.87,1774655.205
+"gambia",1985,5.376,0.882,11847.808
+"gambia",1990,5.162,0.893,71536.598
+"gambia",1995,4.873,0.899,12466.583
+"gambia",2000,4.552,0.906,834.929
+"georgia",1950,2.17,0.883,759.897
+"georgia",1955,2.179,0.886,17981.341
+"georgia",1960,2.181,0.883,2239.131
+"georgia",1965,2.069,0.884,32553.129
+"georgia",1970,1.896,0.888,6893.674
+"georgia",1975,1.859,0.899,9616.302
+"georgia",1980,1.927,0.912,267066.587
+"georgia",1985,2.066,0.921,67608.773
+"georgia",1990,2.2,0.93,125742.728
+"georgia",1995,2.247,0.934,152848.025
+"georgia",2000,2.233,0.937,108693.929
+"germany",1950,1.776,0.931,228584.904
+"germany",1955,1.762,0.94,15362.71
+"germany",1960,1.745,0.944,900324.73
+"germany",1965,1.704,0.951,75930.587
+"germany",1970,1.701,0.956,657946.481
+"germany",1975,1.769,0.96,2842.556
+"germany",1980,1.849,0.963,140850.463
+"germany",1985,1.921,0.966,133.029
+"germany",1990,1.971,0.968,9244.686
+"germany",1995,2.001,0.97,988.965
+"germany",2000,2.01,0.973,2670.979
+"ghana",1950,5.34,0.804,48081.225
+"ghana",1955,5.196,0.81,25209.793
+"ghana",1960,4.953,0.819,5194.141
+"ghana",1965,4.673,0.831,11201.455
+"ghana",1970,4.433,0.845,557.403
+"ghana",1975,4.252,0.859,18489.082
+"ghana",1980,4.092,0.874,282.927
+"ghana",1985,3.931,0.887,3484.433
+"ghana",1990,3.774,0.899,17571.8
+"ghana",1995,3.615,0.907,26176.07
+"ghana",2000,3.458,0.915,39270.501
+"greece",1950,2.179,0.926,18724.739
+"greece",1955,2.114,0.928,57144.199
+"greece",1960,2.028,0.934,23478.698
+"greece",1965,1.916,0.943,14694.341
+"greece",1970,1.799,0.948,10993.03
+"greece",1975,1.717,0.955,31255.931
+"greece",1980,1.667,0.959,7746.623
+"greece",1985,1.646,0.962,116215.362
+"greece",1990,1.612,0.964,578.954
+"greece",1995,1.59,0.969,328974.514
+"greece",2000,1.594,0.971,1412.097
+"grenada",1950,4.276,0.917,52838.094
+"grenada",1955,4.025,0.923,2580.081
+"grenada",1960,3.739,0.926,236389.31
+"grenada",1965,3.371,0.926,235360.803
+"grenada",1970,2.959,0.924,43957.424
+"grenada",1975,2.591,0.926,4402.675
+"grenada",1980,2.347,0.924,110223.847
+"grenada",1985,2.226,0.925,311.816
+"grenada",1990,2.144,0.925,306993.492
+"grenada",1995,2.075,0.926,292445.705
+"grenada",2000,2.02,0.928,88969.109
+"guadeloupe",1950,3.274,0.923,9809.106
+"guadeloupe",1955,2.862,0.929,693.641
+"guadeloupe",1960,2.622,0.936,10077.56
+"guadeloupe",1965,2.519,0.94,7993.337
+"guadeloupe",1970,2.491,0.943,155691.586
+"guadeloupe",1975,2.461,0.945,22919.162
+"guadeloupe",1980,2.429,0.948,3881012.165
+"guadeloupe",1985,2.406,0.948,4430.647
+"guadeloupe",1990,2.363,0.95,25925.454
+"guadeloupe",1995,2.308,0.952,629160.039
+"guadeloupe",2000,2.263,0.956,331033.276
+"guam",1950,3.606,0.922,39678.471
+"guam",1955,3.359,0.931,735000.736
+"guam",1960,3.245,0.939,525.225
+"guam",1965,3.219,0.943,168648.632
+"guam",1970,3.168,0.946,84657.695
+"guam",1975,3.061,0.951,38793.249
+"guam",1980,2.928,0.953,164946.496
+"guam",1985,2.797,0.956,12682.148
+"guam",1990,2.684,0.959,705.893
+"guam",1995,2.583,0.961,9218.218
+"guam",2000,2.493,0.963,273.101
+"guatemala",1950,5.497,0.822,139848.72
+"guatemala",1955,5.313,0.844,308.187
+"guatemala",1960,5.053,0.862,442551.553
+"guatemala",1965,4.737,0.877,233681.323
+"guatemala",1970,4.391,0.888,478.811
+"guatemala",1975,4.018,0.894,5048.066
+"guatemala",1980,3.622,0.901,37464.062
+"guatemala",1985,3.246,0.907,12261.463
+"guatemala",1990,2.948,0.915,1927.736
+"guatemala",1995,2.735,0.921,727.465
+"guatemala",2000,2.574,0.926,16945.388
+"guinea",1950,3.763,0.743,299.798
+"guinea",1955,4.171,0.745,1947.377
+"guinea",1960,4.423,0.759,45671.36
+"guinea",1965,4.676,0.768,4623.682
+"guinea",1970,4.777,0.79,49084.191
+"guinea",1975,4.833,0.813,25963.49
+"guinea",1980,4.808,0.835,313629.83
+"guinea",1985,4.642,0.859,779.771
+"guinea",1990,4.405,0.878,119951.416
+"guinea",1995,4.146,0.89,253595.704
+"guinea",2000,3.893,0.899,15369.538
+"guinea-bissau",1950,4.531,0.757,6135.744
+"guinea-bissau",1955,4.829,0.753,489.071
+"guinea-bissau",1960,4.893,0.761,5002.623
+"guinea-bissau",1965,4.913,0.77,709.038
+"guinea-bissau",1970,4.837,0.791,88492.189
+"guinea-bissau",1975,4.76,0.811,78.495
+"guinea-bissau",1980,4.633,0.833,33970.402
+"guinea-bissau",1985,4.457,0.854,178629.028
+"guinea-bissau",1990,4.232,0.871,15788.098
+"guinea-bissau",1995,3.982,0.884,47508.395
+"guinea-bissau",2000,3.745,0.89,26626.369
+"guyana",1950,3.731,0.835,2613.508
+"guyana",1955,3.325,0.836,65629.381
+"guyana",1960,3,0.839,14817.101
+"guyana",1965,2.801,0.842,1012.548
+"guyana",1970,2.663,0.852,7821.664
+"guyana",1975,2.595,0.855,6797142.086
+"guyana",1980,2.55,0.862,7832.642
+"guyana",1985,2.476,0.865,75578.088
+"guyana",1990,2.384,0.868,46575.243
+"guyana",1995,2.312,0.872,19670.887
+"guyana",2000,2.248,0.876,56049.571
+"haiti",1950,4.469,0.805,1207.808
+"haiti",1955,4.588,0.803,3288.591
+"haiti",1960,4.415,0.807,1084.723
+"haiti",1965,4.124,0.818,152021.015
+"haiti",1970,3.811,0.829,202773.517
+"haiti",1975,3.502,0.835,1146925.397
+"haiti",1980,3.243,0.847,465032.535
+"haiti",1985,2.999,0.856,60898.743
+"haiti",1990,2.785,0.862,127042.58
+"haiti",1995,2.619,0.87,59411.969
+"haiti",2000,2.484,0.878,2304.577
+"honduras",1950,5.43,0.836,10246.409
+"honduras",1955,5.099,0.86,112897.309
+"honduras",1960,4.754,0.877,3225.295
+"honduras",1965,4.405,0.89,175893.482
+"honduras",1970,4.028,0.897,22386.618
+"honduras",1975,3.625,0.9,1584.425
+"honduras",1980,3.219,0.902,8541.229
+"honduras",1985,2.862,0.909,727.003
+"honduras",1990,2.577,0.915,8047.117
+"honduras",1995,2.382,0.921,9760.616
+"honduras",2000,2.264,0.926,789.683
+"hungary",1950,1.989,0.918,878.001
+"hungary",1955,2.036,0.922,1663.504
+"hungary",1960,2.046,0.924,9074.087
+"hungary",1965,2.008,0.926,113733.753
+"hungary",1970,1.954,0.933,50572.374
+"hungary",1975,1.835,0.942,2699.27
+"hungary",1980,1.709,0.946,27883.693
+"hungary",1985,1.684,0.952,407.164
+"hungary",1990,1.736,0.958,4575.739
+"hungary",1995,1.794,0.959,39807.645
+"hungary",2000,1.835,0.959,803663.098
+"iceland",1950,2.786,0.945,4436.275
+"iceland",1955,2.69,0.951,9352.287
+"iceland",1960,2.631,0.957,9298.248
+"iceland",1965,2.565,0.961,110391.083
+"iceland",1970,2.506,0.965,17410.23
+"iceland",1975,2.473,0.97,140791.405
+"iceland",1980,2.407,0.973,96859.203
+"iceland",1985,2.308,0.974,3494.794
+"iceland",1990,2.189,0.976,18887.836
+"iceland",1995,2.093,0.98,150986.393
+"iceland",2000,2.033,0.982,306.978
+"india",1950,3.789,0.782,746.857
+"india",1955,3.669,0.799,687.374
+"india",1960,3.525,0.82,265405.012
+"india",1965,3.375,0.84,4316.358
+"india",1970,3.203,0.858,3931.428
+"india",1975,3.03,0.877,24891.362
+"india",1980,2.877,0.894,8730.973
+"india",1985,2.758,0.908,48380.888
+"india",1990,2.627,0.918,1190.461
+"india",1995,2.478,0.927,299.199
+"india",2000,2.353,0.933,2548.965
+"indonesia",1950,4.08,0.831,117086.622
+"indonesia",1955,3.701,0.849,16958.625
+"indonesia",1960,3.317,0.867,62453.819
+"indonesia",1965,2.973,0.885,669.022
+"indonesia",1970,2.713,0.902,320859.786
+"indonesia",1975,2.558,0.914,419838.116
+"indonesia",1980,2.494,0.923,97546.389
+"indonesia",1985,2.465,0.928,98766.823
+"indonesia",1990,2.393,0.928,180.393
+"indonesia",1995,2.313,0.93,5876.9
+"indonesia",2000,2.235,0.931,481.057
+"iran (islamic republic of)",1950,5.315,0.842,18210.949
+"iran (islamic republic of)",1955,4.901,0.873,68186.444
+"iran (islamic republic of)",1960,4.245,0.895,16115.718
+"iran (islamic republic of)",1965,3.502,0.916,194901.341
+"iran (islamic republic of)",1970,2.855,0.935,28983.791
+"iran (islamic republic of)",1975,2.454,0.948,127226.341
+"iran (islamic republic of)",1980,2.29,0.956,5084.679
+"iran (islamic republic of)",1985,2.278,0.962,82047.747
+"iran (islamic republic of)",1990,2.313,0.964,51257.524
+"iran (islamic republic of)",1995,2.334,0.967,2440.519
+"iran (islamic republic of)",2000,2.311,0.967,63201.33
+"iraq",1950,6.558,0.899,255.861
+"iraq",1955,6.248,0.91,47209.578
+"iraq",1960,5.685,0.914,372.675
+"iraq",1965,5.139,0.914,73436.084
+"iraq",1970,4.663,0.913,876419.462
+"iraq",1975,4.305,0.915,31342.042
+"iraq",1980,4.052,0.916,292586.229
+"iraq",1985,3.872,0.917,4874.882
+"iraq",1990,3.69,0.92,8062.02
+"iraq",1995,3.454,0.923,1036.977
+"iraq",2000,3.238,0.926,3190.779
+"ireland",1950,3.171,0.948,468.454
+"ireland",1955,2.885,0.952,83896.397
+"ireland",1960,2.659,0.958,9320.297
+"ireland",1965,2.501,0.964,1915364.645
+"ireland",1970,2.385,0.969,11562.514
+"ireland",1975,2.312,0.972,64626.219
+"ireland",1980,2.268,0.974,11419.686
+"ireland",1985,2.237,0.975,648.61
+"ireland",1990,2.171,0.977,92584
+"ireland",1995,2.091,0.979,9455.119
+"ireland",2000,2.031,0.981,107706.775
+"israel",1950,3.674,0.945,26228.692
+"israel",1955,3.659,0.95,5697.388
+"israel",1960,3.639,0.953,8375.16
+"israel",1965,3.588,0.959,231560.365
+"israel",1970,3.533,0.963,49959.66
+"israel",1975,3.512,0.966,125313.597
+"israel",1980,3.52,0.969,157107.68
+"israel",1985,3.522,0.972,98064.04
+"israel",1990,3.475,0.974,135.472
+"israel",1995,3.379,0.975,818.342
+"israel",2000,3.258,0.976,1563.389
+"italy",1950,2.004,0.942,80386.4
+"italy",1955,1.916,0.949,581470.088
+"italy",1960,1.824,0.956,2451.054
+"italy",1965,1.745,0.963,159504.272
+"italy",1970,1.691,0.969,83.418
+"italy",1975,1.655,0.971,7691.643
+"italy",1980,1.649,0.973,794.719
+"italy",1985,1.644,0.975,3123.079
+"italy",1990,1.627,0.976,6181.436
+"italy",1995,1.62,0.978,4299.09
+"italy",2000,1.635,0.981,9114.22
+"jamaica",1950,3.916,0.913,11949.367
+"jamaica",1955,3.474,0.91,473.673
+"jamaica",1960,3.102,0.91,18409.351
+"jamaica",1965,2.843,0.913,244.746
+"jamaica",1970,2.637,0.912,3362.65
+"jamaica",1975,2.481,0.915,18870.224
+"jamaica",1980,2.349,0.917,24586.059
+"jamaica",1985,2.231,0.921,38977.964
+"jamaica",1990,2.137,0.924,124547.722
+"jamaica",1995,2.063,0.928,727.084
+"jamaica",2000,2.024,0.935,666.175
+"japan",1950,2.227,0.952,12917.935
+"japan",1955,2.152,0.949,11825.741
+"japan",1960,1.989,0.95,29191.825
+"japan",1965,1.796,0.951,7029.266
+"japan",1970,1.668,0.955,101418.349
+"japan",1975,1.637,0.959,635.669
+"japan",1980,1.684,0.963,309311.324
+"japan",1985,1.724,0.965,1364.517
+"japan",1990,1.735,0.967,81218.096
+"japan",1995,1.749,0.971,114987.343
+"japan",2000,1.765,0.973,16332.063
+"jordan",1950,6.846,0.919,253468.008
+"jordan",1955,6.305,0.929,40477.595
+"jordan",1960,5.657,0.935,3819.455
+"jordan",1965,5.034,0.939,101760.578
+"jordan",1970,4.521,0.941,295.351
+"jordan",1975,4.138,0.943,283712.133
+"jordan",1980,3.804,0.942,305733.936
+"jordan",1985,3.45,0.945,89844.437
+"jordan",1990,3.075,0.945,28022.384
+"jordan",1995,2.784,0.949,17251.453
+"jordan",2000,2.585,0.952,64346.542
+"kazakhstan",1950,2.809,0.845,6754.801
+"kazakhstan",1955,2.693,0.856,155178.525
+"kazakhstan",1960,2.622,0.868,19242.573
+"kazakhstan",1965,2.583,0.881,2909248.612
+"kazakhstan",1970,2.595,0.896,4465.99
+"kazakhstan",1975,2.631,0.908,21593.563
+"kazakhstan",1980,2.728,0.922,674725.526
+"kazakhstan",1985,2.811,0.929,296047.979
+"kazakhstan",1990,2.848,0.934,8645.98
+"kazakhstan",1995,2.828,0.938,250.09
+"kazakhstan",2000,2.733,0.937,45928.586
+"kenya",1950,6.418,0.824,163470.243
+"kenya",1955,5.992,0.82,83690.548
+"kenya",1960,5.534,0.828,38146.827
+"kenya",1965,5.119,0.839,131246.528
+"kenya",1970,4.743,0.849,10556.157
+"kenya",1975,4.383,0.861,610.796
+"kenya",1980,4.077,0.874,7621.872
+"kenya",1985,3.781,0.888,208.015
+"kenya",1990,3.489,0.901,189237.863
+"kenya",1995,3.226,0.91,440.586
+"kenya",2000,3.019,0.914,77272.129
+"kiribati",1950,4.687,0.841,229844.778
+"kiribati",1955,4.52,0.851,501.038
+"kiribati",1960,4.349,0.859,3920.749
+"kiribati",1965,4.198,0.867,39711.971
+"kiribati",1970,4.112,0.875,9218.381
+"kiribati",1975,4.078,0.885,1450.176
+"kiribati",1980,4.009,0.893,624.294
+"kiribati",1985,3.896,0.899,15338.91
+"kiribati",1990,3.762,0.905,1679.846
+"kiribati",1995,3.615,0.911,24197.849
+"kiribati",2000,3.471,0.917,5360.011
+"kuwait",1950,5.737,0.937,3452.314
+"kuwait",1955,4.962,0.949,52843.609
+"kuwait",1960,4.065,0.957,24695.544
+"kuwait",1965,3.309,0.961,322753.15
+"kuwait",1970,2.945,0.964,828.168
+"kuwait",1975,2.826,0.965,128832.07
+"kuwait",1980,2.655,0.965,263695.946
+"kuwait",1985,2.507,0.965,12072.001
+"kuwait",1990,2.401,0.967,755538.825
+"kuwait",1995,2.33,0.971,89330.15
+"kuwait",2000,2.278,0.972,599719.06
+"kyrgyzstan",1950,3.868,0.851,674.213
+"kyrgyzstan",1955,3.723,0.861,53331.37
+"kyrgyzstan",1960,3.612,0.874,65.524
+"kyrgyzstan",1965,3.477,0.885,30002.655
+"kyrgyzstan",1970,3.313,0.899,207083.268
+"kyrgyzstan",1975,3.178,0.911,13309.37
+"kyrgyzstan",1980,3.13,0.922,44663.415
+"kyrgyzstan",1985,3.126,0.932,25918.495
+"kyrgyzstan",1990,3.125,0.934,4030.307
+"kyrgyzstan",1995,3.068,0.937,13711.988
+"kyrgyzstan",2000,2.916,0.937,441.91
+"lao people's democratic republic",1950,5.086,0.771,787.431
+"lao people's democratic republic",1955,5.075,0.787,6950.363
+"lao people's democratic republic",1960,4.86,0.8,6393402.581
+"lao people's democratic republic",1965,4.459,0.82,7622.996
+"lao people's democratic republic",1970,3.952,0.841,69787.789
+"lao people's democratic republic",1975,3.47,0.864,40492.878
+"lao people's democratic republic",1980,3.091,0.886,16708.761
+"lao people's democratic republic",1985,2.816,0.902,51585.921
+"lao people's democratic republic",1990,2.617,0.915,27786.806
+"lao people's democratic republic",1995,2.463,0.923,12644.272
+"lao people's democratic republic",2000,2.338,0.928,12646.886
+"latvia",1950,1.876,0.905,140881.259
+"latvia",1955,1.879,0.893,203338.03
+"latvia",1960,1.857,0.884,1157537.617
+"latvia",1965,1.82,0.881,472736.105
+"latvia",1970,1.767,0.889,41318.518
+"latvia",1975,1.752,0.907,107613.244
+"latvia",1980,1.8,0.919,59033.626
+"latvia",1985,1.878,0.925,1594.925
+"latvia",1990,1.955,0.933,240817.993
+"latvia",1995,2.018,0.935,286637.74
+"latvia",2000,2.05,0.936,41101.016
+"lebanon",1950,4.033,0.922,145557.963
+"lebanon",1955,3.701,0.929,18956.217
+"lebanon",1960,3.43,0.935,2177.297
+"lebanon",1965,3.176,0.942,7551.19
+"lebanon",1970,2.879,0.948,886.152
+"lebanon",1975,2.587,0.955,6734.558
+"lebanon",1980,2.382,0.962,9708.007
+"lebanon",1985,2.296,0.963,703.811
+"lebanon",1990,2.278,0.965,7501.307
+"lebanon",1995,2.247,0.966,5826.875
+"lebanon",2000,2.188,0.967,169507.44
+"lesotho",1950,4.717,0.821,115099.306
+"lesotho",1955,4.409,0.825,54035.153
+"lesotho",1960,4.061,0.832,2510.57
+"lesotho",1965,3.719,0.841,30203.753
+"lesotho",1970,3.436,0.844,362.482
+"lesotho",1975,3.215,0.841,3602.11
+"lesotho",1980,3.016,0.834,35246.874
+"lesotho",1985,2.858,0.834,750385.341
+"lesotho",1990,2.762,0.846,478.644
+"lesotho",1995,2.705,0.864,167641.263
+"lesotho",2000,2.637,0.879,88686.891
+"liberia",1950,4.478,0.741,110656.458
+"liberia",1955,4.549,0.736,15552.728
+"liberia",1960,4.638,0.733,143508.671
+"liberia",1965,4.63,0.744,72801.793
+"liberia",1970,4.595,0.767,3726.733
+"liberia",1975,4.532,0.805,20292.808
+"liberia",1980,4.431,0.842,148818.667
+"liberia",1985,4.298,0.874,298.325
+"liberia",1990,4.087,0.895,413464.865
+"liberia",1995,3.832,0.903,246433.801
+"liberia",2000,3.592,0.904,430.206
+"libya",1950,7.313,0.9,3279.221
+"libya",1955,6.467,0.92,2890.165
+"libya",1960,5.246,0.93,24711.552
+"libya",1965,4.152,0.933,8198.196
+"libya",1970,3.352,0.937,41210.305
+"libya",1975,2.875,0.94,1176.127
+"libya",1980,2.602,0.945,281.766
+"libya",1985,2.435,0.948,2713.191
+"libya",1990,2.306,0.949,40586.787
+"libya",1995,2.197,0.952,2719.848
+"libya",2000,2.11,0.954,56796.107
+"lithuania",1950,2.06,0.912,683.665
+"lithuania",1955,1.961,0.892,330162.505
+"lithuania",1960,1.839,0.879,407172.013
+"lithuania",1965,1.777,0.884,98388.933
+"lithuania",1970,1.77,0.885,114724.569
+"lithuania",1975,1.83,0.902,122.765
+"lithuania",1980,1.897,0.914,4440.831
+"lithuania",1985,1.986,0.922,425.185
+"lithuania",1990,2.054,0.927,4103.446
+"lithuania",1995,2.083,0.934,642.894
+"lithuania",2000,2.075,0.936,48416.789
+"luxembourg",1950,1.854,0.939,209968.692
+"luxembourg",1955,1.863,0.947,25305.831
+"luxembourg",1960,1.942,0.955,122308.125
+"luxembourg",1965,2.018,0.958,4462.666
+"luxembourg",1970,2.061,0.962,48547.565
+"luxembourg",1975,2.05,0.965,46664.633
+"luxembourg",1980,1.972,0.967,2094.268
+"luxembourg",1985,1.848,0.97,52174.838
+"luxembourg",1990,1.736,0.974,12567.705
+"luxembourg",1995,1.68,0.976,762.345
+"luxembourg",2000,1.681,0.978,6817.455
+"madagascar",1950,5.167,0.773,76175.564
+"madagascar",1955,5.232,0.779,791430.853
+"madagascar",1960,5.127,0.793,22705.907
+"madagascar",1965,4.911,0.814,305869.135
+"madagascar",1970,4.699,0.836,4072.751
+"madagascar",1975,4.559,0.863,6937.923
+"madagascar",1980,4.431,0.886,735.857
+"madagascar",1985,4.243,0.903,3122.644
+"madagascar",1990,4.039,0.917,886.388
+"madagascar",1995,3.839,0.923,130062.485
+"madagascar",2000,3.661,0.926,192891.188
+"malawi",1950,4.056,0.77,2019233.909
+"malawi",1955,4.272,0.771,10941.829
+"malawi",1960,4.359,0.78,57031.252
+"malawi",1965,4.514,0.79,10053.828
+"malawi",1970,4.792,0.806,543.192
+"malawi",1975,4.851,0.834,94143.32
+"malawi",1980,4.694,0.861,8110.247
+"malawi",1985,4.408,0.886,106555.871
+"malawi",1990,4.085,0.905,2466.672
+"malawi",1995,3.764,0.916,138246.906
+"malawi",2000,3.502,0.921,17690.916
+"malaysia",1950,4.538,0.936,197665.65
+"malaysia",1955,4.229,0.94,41165.447
+"malaysia",1960,3.883,0.94,120638.56
+"malaysia",1965,3.493,0.94,155178.462
+"malaysia",1970,3.155,0.944,95847.521
+"malaysia",1975,2.803,0.943,127.411
+"malaysia",1980,2.503,0.944,867.672
+"malaysia",1985,2.332,0.947,1450.145
+"malaysia",1990,2.217,0.949,10321.815
+"malaysia",1995,2.124,0.951,108942.891
+"malaysia",2000,2.047,0.952,53043.321
+"maldives",1950,5.671,0.799,171576.577
+"maldives",1955,5.711,0.836,71.336
+"maldives",1960,5.325,0.868,7496.519
+"maldives",1965,4.636,0.895,633.82
+"maldives",1970,3.782,0.919,3575.227
+"maldives",1975,3.013,0.942,5355.322
+"maldives",1980,2.525,0.961,4378.698
+"maldives",1985,2.3,0.97,9577.535
+"maldives",1990,2.163,0.974,7324.867
+"maldives",1995,2.045,0.974,105271.687
+"maldives",2000,1.969,0.973,14171.982
+"mali",1950,2.827,0.802,208.297
+"mali",1955,3.316,0.794,3085.796
+"mali",1960,3.645,0.799,17263.065
+"mali",1965,4.087,0.791,22827.682
+"mali",1970,4.657,0.784,37635.786
+"mali",1975,5.075,0.795,126412.197
+"mali",1980,5.288,0.814,475.463
+"mali",1985,5.326,0.835,628.42
+"mali",1990,5.201,0.853,233945.485
+"mali",1995,4.917,0.867,3129.026
+"mali",2000,4.585,0.873,2748.102
+"malta",1950,2.232,0.956,7136.974
+"malta",1955,2.214,0.954,87969.401
+"malta",1960,2.175,0.955,711.735
+"malta",1965,2.061,0.957,296696.958
+"malta",1970,1.948,0.959,1370.219
+"malta",1975,1.865,0.961,78550.357
+"malta",1980,1.825,0.963,147176.22
+"malta",1985,1.827,0.966,16310.222
+"malta",1990,1.864,0.968,55980.443
+"malta",1995,1.898,0.971,668.994
+"malta",2000,1.921,0.973,312123.512
+"martinique",1950,2.829,0.921,90872.126
+"martinique",1955,2.473,0.931,240.073
+"martinique",1960,2.298,0.938,253420.32
+"martinique",1965,2.245,0.943,300243.169
+"martinique",1970,2.243,0.946,93917.877
+"martinique",1975,2.273,0.95,22727.206
+"martinique",1980,2.243,0.952,15855.319
+"martinique",1985,2.205,0.955,60161.206
+"martinique",1990,2.161,0.957,13234.008
+"martinique",1995,2.111,0.96,201971.572
+"martinique",2000,2.073,0.963,24069.888
+"mauritania",1950,5.491,0.819,1941497.763
+"mauritania",1955,5.5,0.827,4822.201
+"mauritania",1960,5.294,0.833,13938.346
+"mauritania",1965,5.097,0.842,707826.742
+"mauritania",1970,4.966,0.851,286713.861
+"mauritania",1975,4.846,0.858,9610.733
+"mauritania",1980,4.715,0.865,233.008
+"mauritania",1985,4.551,0.872,39167.112
+"mauritania",1990,4.389,0.882,333.917
+"mauritania",1995,4.218,0.89,72474.66
+"mauritania",2000,4.04,0.897,761591.577
+"mauritius",1950,2.819,0.907,123822.737
+"mauritius",1955,2.519,0.914,9222.157
+"mauritius",1960,2.378,0.915,665.062
+"mauritius",1965,2.231,0.918,6232.14
+"mauritius",1970,2.152,0.923,174.029
+"mauritius",1975,2.009,0.919,190512.51
+"mauritius",1980,1.856,0.92,491.904
+"mauritius",1985,1.723,0.92,70000.621
+"mauritius",1990,1.619,0.926,7085.8
+"mauritius",1995,1.57,0.935,1934681.879
+"mauritius",2000,1.567,0.94,10576.724
+"mayotte",1950,7.667,0.932,41201.751
+"mayotte",1955,7.248,0.934,7658.996
+"mayotte",1960,6.678,0.938,1194.733
+"mayotte",1965,6,0.941,511.277
+"mayotte",1970,5.368,0.942,13783.66
+"mayotte",1975,4.89,0.944,1446.948
+"mayotte",1980,4.526,0.944,20391.728
+"mayotte",1985,4.2,0.945,4104.159
+"mayotte",1990,3.866,0.943,5839.773
+"mayotte",1995,3.575,0.945,184461.311
+"mayotte",2000,3.345,0.949,40269.114
+"mexico",1950,4.52,0.886,330674.923
+"mexico",1955,3.981,0.895,912.968
+"mexico",1960,3.511,0.9,131437.891
+"mexico",1965,3.129,0.907,274097.445
+"mexico",1970,2.814,0.909,11347.284
+"mexico",1975,2.583,0.914,658600.736
+"mexico",1980,2.43,0.917,95462.864
+"mexico",1985,2.304,0.918,557647.752
+"mexico",1990,2.2,0.922,2168.693
+"mexico",1995,2.111,0.926,188161.138
+"mexico",2000,2.036,0.93,148.138
+"micronesia (fed states of)",1950,5.991,0.896,23316.093
+"micronesia (fed states of)",1955,5.542,0.903,220669.555
+"micronesia (fed states of)",1960,5.053,0.905,8064.204
+"micronesia (fed states of)",1965,4.638,0.906,42390.72
+"micronesia (fed states of)",1970,4.34,0.908,26161.336
+"micronesia (fed states of)",1975,4.109,0.913,3670.78
+"micronesia (fed states of)",1980,3.826,0.917,14516.306
+"micronesia (fed states of)",1985,3.558,0.926,439.56
+"micronesia (fed states of)",1990,3.322,0.931,19901.979
+"micronesia (fed states of)",1995,3.122,0.936,196.374
+"micronesia (fed states of)",2000,2.957,0.942,2854.394
+"mongolia",1950,4.508,0.813,6909.276
+"mongolia",1955,4.116,0.823,67652.222
+"mongolia",1960,3.605,0.836,35981.217
+"mongolia",1965,3.104,0.861,14111.834
+"mongolia",1970,2.857,0.893,47831.982
+"mongolia",1975,2.806,0.917,29442.098
+"mongolia",1980,2.883,0.934,12132.088
+"mongolia",1985,2.992,0.942,12946.538
+"mongolia",1990,3.029,0.94,28328.263
+"mongolia",1995,2.971,0.938,8065.671
+"mongolia",2000,2.842,0.938,86756.151
+"montenegro",1950,2.526,0.937,465122.457
+"montenegro",1955,2.382,0.945,30410.158
+"montenegro",1960,2.303,0.947,93114.475
+"montenegro",1965,2.261,0.945,60104.821
+"montenegro",1970,2.226,0.946,1502.371
+"montenegro",1975,2.178,0.949,256216.979
+"montenegro",1980,2.199,0.956,303682.504
+"montenegro",1985,2.18,0.961,40174.204
+"montenegro",1990,2.182,0.965,4314.834
+"montenegro",1995,2.144,0.965,89046.98
+"montenegro",2000,2.105,0.969,223.38
+"morocco",1950,5.174,0.831,6333.388
+"morocco",1955,4.612,0.857,991.772
+"morocco",1960,4.029,0.884,5667.184
+"morocco",1965,3.462,0.909,9582.728
+"morocco",1970,3.063,0.928,727.113
+"morocco",1975,2.835,0.941,6978.144
+"morocco",1980,2.703,0.949,4881.395
+"morocco",1985,2.619,0.954,170619.159
+"morocco",1990,2.532,0.957,17268.39
+"morocco",1995,2.437,0.96,1862058.965
+"morocco",2000,2.344,0.964,5552.13
+"mozambique",1950,4.026,0.734,30535.557
+"mozambique",1955,4.132,0.726,332.893
+"mozambique",1960,4.247,0.737,2761.394
+"mozambique",1965,4.414,0.758,29779.608
+"mozambique",1970,4.502,0.791,705888.133
+"mozambique",1975,4.698,0.821,466.668
+"mozambique",1980,4.814,0.852,164858.265
+"mozambique",1985,4.781,0.876,81779.969
+"mozambique",1990,4.614,0.895,38457.425
+"mozambique",1995,4.388,0.907,145007.917
+"mozambique",2000,4.132,0.911,9385.114
+"myanmar",1950,4.271,0.822,60500.872
+"myanmar",1955,3.893,0.828,4086.801
+"myanmar",1960,3.422,0.841,21462.943
+"myanmar",1965,3.013,0.853,144090.371
+"myanmar",1970,2.746,0.869,251.081
+"myanmar",1975,2.554,0.881,371377.166
+"myanmar",1980,2.404,0.891,239142.02
+"myanmar",1985,2.271,0.901,352.799
+"myanmar",1990,2.165,0.908,3034.59
+"myanmar",1995,2.096,0.916,43094.467
+"myanmar",2000,2.04,0.919,6115.208
+"namibia",1950,5.413,0.859,6803.955
+"namibia",1955,5.079,0.856,31317.079
+"namibia",1960,4.583,0.857,1121.108
+"namibia",1965,4.192,0.874,265.204
+"namibia",1970,3.833,0.883,2704.676
+"namibia",1975,3.578,0.887,39211.464
+"namibia",1980,3.464,0.893,2448.053
+"namibia",1985,3.403,0.899,57279.64
+"namibia",1990,3.331,0.903,27510.781
+"namibia",1995,3.231,0.911,357825.107
+"namibia",2000,3.084,0.919,990.31
+"nepal",1950,4.033,0.762,98032.154
+"nepal",1955,4.101,0.786,122380.812
+"nepal",1960,4.079,0.81,114.041
+"nepal",1965,3.883,0.837,4064.392
+"nepal",1970,3.581,0.863,409.437
+"nepal",1975,3.213,0.888,3628.288
+"nepal",1980,2.788,0.907,643.028
+"nepal",1985,2.388,0.921,67743.856
+"nepal",1990,2.084,0.93,59.522
+"nepal",1995,1.869,0.934,21716.615
+"nepal",2000,1.744,0.936,211930.209
+"netherlands",1950,2.111,0.947,3922.783
+"netherlands",1955,2.089,0.954,48653.171
+"netherlands",1960,2.067,0.96,43192.477
+"netherlands",1965,2.026,0.964,1952.128
+"netherlands",1970,1.987,0.967,51978.539
+"netherlands",1975,1.976,0.968,12114.864
+"netherlands",1980,1.987,0.97,599.246
+"netherlands",1985,1.978,0.973,6579.436
+"netherlands",1990,1.959,0.974,5765817.934
+"netherlands",1995,1.961,0.976,6671.23
+"netherlands",2000,1.973,0.978,65738.167
+"new caledonia",1950,3.887,0.912,312187.318
+"new caledonia",1955,3.608,0.924,4146.724
+"new caledonia",1960,3.476,0.933,6506.872
+"new caledonia",1965,3.246,0.94,644.701
+"new caledonia",1970,2.991,0.946,2228.53
+"new caledonia",1975,2.782,0.949,834.115
+"new caledonia",1980,2.609,0.954,115002.137
+"new caledonia",1985,2.446,0.956,192983.742
+"new caledonia",1990,2.329,0.959,1110589.267
+"new caledonia",1995,2.227,0.961,444857.387
+"new caledonia",2000,2.151,0.964,27717.773
+"new zealand",1950,2.735,0.928,9299.904
+"new zealand",1955,2.619,0.937,404.336
+"new zealand",1960,2.507,0.945,93480.904
+"new zealand",1965,2.435,0.95,6118.111
+"new zealand",1970,2.378,0.956,107846.588
+"new zealand",1975,2.325,0.96,2226.321
+"new zealand",1980,2.272,0.962,112403.481
+"new zealand",1985,2.236,0.964,15916.47
+"new zealand",1990,2.187,0.966,2802.256
+"new zealand",1995,2.123,0.97,6095.356
+"new zealand",2000,2.08,0.972,931.507
+"nicaragua",1950,5.121,0.822,157527.629
+"nicaragua",1955,4.725,0.84,96226.74
+"nicaragua",1960,4.244,0.857,124.425
+"nicaragua",1965,3.765,0.874,946.961
+"nicaragua",1970,3.326,0.891,1275.561
+"nicaragua",1975,2.982,0.906,11015.995
+"nicaragua",1980,2.723,0.914,111159.872
+"nicaragua",1985,2.556,0.918,57461.567
+"nicaragua",1990,2.435,0.919,2457.634
+"nicaragua",1995,2.335,0.923,29460.413
+"nicaragua",2000,2.239,0.925,321.186
+"niger",1950,4.373,0.696,565.967
+"niger",1955,4.453,0.702,3742.211
+"niger",1960,4.719,0.706,5907.267
+"niger",1965,5.042,0.723,4474.913
+"niger",1970,5.43,0.753,10075.246
+"niger",1975,5.839,0.793,5904.738
+"niger",1980,6.202,0.829,103560.466
+"niger",1985,6.328,0.862,8774.698
+"niger",1990,6.325,0.885,142326.684
+"niger",1995,6.133,0.897,59159.802
+"niger",2000,5.791,0.905,3891.559
+"nigeria",1950,4.214,0.787,23180.18
+"nigeria",1955,4.544,0.776,35533.011
+"nigeria",1960,4.732,0.764,125273.143
+"nigeria",1965,4.851,0.758,405.42
+"nigeria",1970,4.902,0.77,648.769
+"nigeria",1975,4.98,0.783,215630.026
+"nigeria",1980,4.979,0.805,2704.799
+"nigeria",1985,4.927,0.825,2360.251
+"nigeria",1990,4.818,0.841,23486.333
+"nigeria",1995,4.631,0.855,6413.607
+"nigeria",2000,4.385,0.861,30124.877
+"north macedonia",1950,2.45,0.908,314485.367
+"north macedonia",1955,2.363,0.917,1311.586
+"north macedonia",1960,2.342,0.924,76916.653
+"north macedonia",1965,2.287,0.934,180062.11
+"north macedonia",1970,2.204,0.944,15557.008
+"north macedonia",1975,2.102,0.95,52789.971
+"north macedonia",1980,2.011,0.956,670.354
+"north macedonia",1985,1.93,0.958,314614.833
+"north macedonia",1990,1.91,0.961,406706.211
+"north macedonia",1995,1.888,0.962,95354.873
+"north macedonia",2000,1.865,0.965,122563.823
+"norway",1950,2.215,0.939,251209.7
+"norway",1955,2.173,0.945,83546.515
+"norway",1960,2.206,0.951,22688.968
+"norway",1965,2.256,0.955,16517.64
+"norway",1970,2.281,0.961,54861.14
+"norway",1975,2.25,0.964,10906.99
+"norway",1980,2.188,0.966,211808.64
+"norway",1985,2.122,0.967,21118.109
+"norway",1990,2.053,0.971,107008.225
+"norway",1995,1.986,0.973,3743.747
+"norway",2000,1.95,0.975,46833.176
+"oman",1950,6.678,0.875,740742.957
+"oman",1955,6.835,0.898,302478.568
+"oman",1960,6.326,0.919,10505.048
+"oman",1965,5.474,0.936,294.484
+"oman",1970,4.651,0.948,37542.014
+"oman",1975,4.043,0.957,295.135
+"oman",1980,3.584,0.963,76573.067
+"oman",1985,3.231,0.965,733201.941
+"oman",1990,3.043,0.966,16905.602
+"oman",1995,2.842,0.965,292947.298
+"oman",2000,2.619,0.967,4073.347
+"pakistan",1950,5.333,0.825,4992.787
+"pakistan",1955,5.491,0.824,158.375
+"pakistan",1960,5.291,0.83,187368.553
+"pakistan",1965,4.995,0.84,529.742
+"pakistan",1970,4.632,0.85,66977.633
+"pakistan",1975,4.24,0.861,6545.343
+"pakistan",1980,3.881,0.873,1926621.811
+"pakistan",1985,3.583,0.882,9959.132
+"pakistan",1990,3.371,0.891,47554.283
+"pakistan",1995,3.188,0.897,8689.153
+"pakistan",2000,3.011,0.901,376.108
+"panama",1950,3.789,0.881,440.426
+"panama",1955,3.47,0.889,11409.307
+"panama",1960,3.199,0.895,1210.914
+"panama",1965,2.956,0.899,15570.273
+"panama",1970,2.786,0.902,3685.431
+"panama",1975,2.678,0.905,6489.406
+"panama",1980,2.606,0.911,159687.621
+"panama",1985,2.545,0.915,40909.788
+"panama",1990,2.484,0.919,106013.717
+"panama",1995,2.412,0.923,148243.937
+"panama",2000,2.335,0.927,94969.934
+"papua new guinea",1950,4.849,0.862,281902.167
+"papua new guinea",1955,4.833,0.865,10600.121
+"papua new guinea",1960,4.636,0.868,556931.252
+"papua new guinea",1965,4.444,0.874,101495.466
+"papua new guinea",1970,4.285,0.878,462360.045
+"papua new guinea",1975,4.133,0.884,2024.234
+"papua new guinea",1980,3.952,0.89,199206.251
+"papua new guinea",1985,3.746,0.897,186.273
+"papua new guinea",1990,3.558,0.906,7631.567
+"papua new guinea",1995,3.388,0.914,531.895
+"papua new guinea",2000,3.238,0.92,4346.279
+"paraguay",1950,4.705,0.872,39957.503
+"paraguay",1955,4.445,0.879,26422.979
+"paraguay",1960,4.176,0.885,3180.273
+"paraguay",1965,3.853,0.891,16516.965
+"paraguay",1970,3.503,0.9,409.44
+"paraguay",1975,3.146,0.904,18516.798
+"paraguay",1980,2.833,0.909,171.242
+"paraguay",1985,2.596,0.91,2113.184
+"paraguay",1990,2.432,0.914,17718.055
+"paraguay",1995,2.313,0.918,25034.954
+"paraguay",2000,2.228,0.921,33434.996
+"peru",1950,4.419,0.833,12634.722
+"peru",1955,4.02,0.855,44097.753
+"peru",1960,3.631,0.873,30648.919
+"peru",1965,3.311,0.892,12531.397
+"peru",1970,3.033,0.909,13858.579
+"peru",1975,2.812,0.923,25010.759
+"peru",1980,2.646,0.935,7208.706
+"peru",1985,2.512,0.94,79923.496
+"peru",1990,2.391,0.942,721.012
+"peru",1995,2.28,0.945,312603.106
+"peru",2000,2.196,0.947,1359.792
+"philippines",1950,4.761,0.87,54022.039
+"philippines",1955,4.403,0.873,1564.165
+"philippines",1960,4.123,0.878,249063.425
+"philippines",1965,3.876,0.885,315193.137
+"philippines",1970,3.694,0.892,41325.709
+"philippines",1975,3.51,0.9,3532.575
+"philippines",1980,3.257,0.902,77850.458
+"philippines",1985,2.98,0.905,207.53
+"philippines",1990,2.709,0.904,269645.743
+"philippines",1995,2.5,0.907,224076.336
+"philippines",2000,2.343,0.911,83701.374
+"poland",1950,2.248,0.917,8934.764
+"poland",1955,2.187,0.914,624.517
+"poland",1960,2.179,0.913,6309.986
+"poland",1965,2.105,0.913,3941.147
+"poland",1970,1.958,0.92,163347.538
+"poland",1975,1.786,0.93,15734.074
+"poland",1980,1.647,0.939,2078928.205
+"poland",1985,1.653,0.944,5697.29
+"poland",1990,1.706,0.947,13997.539
+"poland",1995,1.755,0.948,819242.306
+"poland",2000,1.788,0.95,319796.032
+"portugal",1950,2.18,0.918,26044.934
+"portugal",1955,2.044,0.934,683136.188
+"portugal",1960,1.988,0.946,476.521
+"portugal",1965,1.926,0.953,165127.106
+"portugal",1970,1.826,0.957,71531.628
+"portugal",1975,1.735,0.96,34713.631
+"portugal",1980,1.681,0.962,133966.572
+"portugal",1985,1.681,0.966,8195.145
+"portugal",1990,1.694,0.967,736.241
+"portugal",1995,1.722,0.971,4785.8
+"portugal",2000,1.753,0.973,153.852
+"puerto rico",1950,2.602,0.901,142376.134
+"puerto rico",1955,2.444,0.908,230.865
+"puerto rico",1960,2.31,0.909,342169.876
+"puerto rico",1965,2.149,0.912,217922.216
+"puerto rico",1970,1.998,0.911,318.835
+"puerto rico",1975,1.884,0.913,2389.144
+"puerto rico",1980,1.766,0.914,41094.889
+"puerto rico",1985,1.601,0.917,4492.537
+"puerto rico",1990,1.459,0.921,1286.165
+"puerto rico",1995,1.371,0.928,390.857
+"puerto rico",2000,1.324,0.933,10157.716
+"qatar",1950,6.163,0.934,243.121
+"qatar",1955,5.6,0.945,2828.209
+"qatar",1960,4.978,0.953,33157.201
+"qatar",1965,4.387,0.958,2325.599
+"qatar",1970,3.849,0.961,56268.289
+"qatar",1975,3.234,0.964,30181.086
+"qatar",1980,2.581,0.965,366890.054
+"qatar",1985,2.178,0.968,1023.18
+"qatar",1990,2.006,0.969,137664.345
+"qatar",1995,1.904,0.969,264852.364
+"qatar",2000,1.835,0.968,10115.074
+"republic of korea",1950,2.703,0.929,3576.896
+"republic of korea",1955,2.323,0.935,363.936
+"republic of korea",1960,2.183,0.942,3266.244
+"republic of korea",1965,2.095,0.952,654.649
+"republic of korea",1970,1.96,0.958,65383.3
+"republic of korea",1975,1.801,0.963,60.5
+"republic of korea",1980,1.682,0.969,15419.995
+"republic of korea",1985,1.567,0.972,218337.744
+"republic of korea",1990,1.495,0.973,6529.507
+"republic of korea",1995,1.47,0.976,38666.206
+"republic of korea",2000,1.487,0.978,25584.607
+"republic of moldova",1950,2.303,0.894,1884.925
+"republic of moldova",1955,2.319,0.894,47666.838
+"republic of moldova",1960,2.24,0.892,11824.922
+"republic of moldova",1965,2.049,0.895,639.8
+"republic of moldova",1970,1.894,0.898,5488.004
+"republic of moldova",1975,1.675,0.903,5219982.668
+"republic of moldova",1980,1.521,0.912,6412.304
+"republic of moldova",1985,1.455,0.922,65335.151
+"republic of moldova",1990,1.473,0.927,32730.03
+"republic of moldova",1995,1.512,0.931,12096.509
+"republic of moldova",2000,1.557,0.934,42187.18
+"réunion",1950,3.208,0.926,577.16
+"réunion",1955,2.944,0.935,2082.434
+"réunion",1960,2.843,0.94,697.853
+"réunion",1965,2.751,0.943,101139.828
+"réunion",1970,2.683,0.944,188983.846
+"réunion",1975,2.617,0.946,1152372.671
+"réunion",1980,2.486,0.946,430792.546
+"réunion",1985,2.405,0.948,17654.379
+"réunion",1990,2.342,0.949,57435.32
+"réunion",1995,2.257,0.949,49415.242
+"réunion",2000,2.184,0.95,1494.837
+"romania",1950,2.336,0.909,5041.524
+"romania",1955,2.238,0.913,111536.246
+"romania",1960,2.09,0.909,2018.453
+"romania",1965,1.874,0.908,92995.037
+"romania",1970,1.717,0.916,14858.651
+"romania",1975,1.668,0.924,3070.842
+"romania",1980,1.705,0.934,5756.999
+"romania",1985,1.756,0.941,864.038
+"romania",1990,1.849,0.945,5007.624
+"romania",1995,1.907,0.948,8622.55
+"romania",2000,1.945,0.95,608.334
+"russian federation",1950,1.873,0.884,943.562
+"russian federation",1955,1.801,0.859,1143.346
+"russian federation",1960,1.714,0.85,10300.512
+"russian federation",1965,1.621,0.852,108462.191
+"russian federation",1970,1.599,0.865,58778.399
+"russian federation",1975,1.661,0.885,2254.388
+"russian federation",1980,1.778,0.898,29080.143
+"russian federation",1985,1.94,0.907,288.197
+"russian federation",1990,2.084,0.912,2601.169
+"russian federation",1995,2.164,0.92,25086.176
+"russian federation",2000,2.166,0.924,639588.744
+"rwanda",1950,5.527,0.71,4121.202
+"rwanda",1955,4.989,0.662,10379.299
+"rwanda",1960,4.818,0.662,4219.533
+"rwanda",1965,4.663,0.689,102539.451
+"rwanda",1970,4.578,0.748,7500.758
+"rwanda",1975,4.633,0.832,148811.944
+"rwanda",1980,4.541,0.888,48375.261
+"rwanda",1985,4.327,0.925,3327.537
+"rwanda",1990,3.914,0.954,19981.072
+"rwanda",1995,3.796,0.947,135403.951
+"rwanda",2000,3.522,0.943,223.102
+"saint lucia",1950,4.492,0.917,408.346
+"saint lucia",1955,4.098,0.928,579.495
+"saint lucia",1960,3.753,0.929,183567.889
+"saint lucia",1965,3.259,0.926,2701.247
+"saint lucia",1970,2.659,0.917,2301.305
+"saint lucia",1975,2.131,0.915,22867.83
+"saint lucia",1980,1.732,0.915,5159.123
+"saint lucia",1985,1.537,0.92,29529.284
+"saint lucia",1990,1.465,0.923,951.454
+"saint lucia",1995,1.43,0.926,241.285
+"saint lucia",2000,1.422,0.933,2769.098
+"saint vincent and the grenadines",1950,4.197,0.892,188482.959
+"saint vincent and the grenadines",1955,3.603,0.903,16064.362
+"saint vincent and the grenadines",1960,3.161,0.915,47095.671
+"saint vincent and the grenadines",1965,2.842,0.918,567.448
+"saint vincent and the grenadines",1970,2.559,0.914,318945.921
+"saint vincent and the grenadines",1975,2.311,0.911,404993.531
+"saint vincent and the grenadines",1980,2.127,0.908,97090.609
+"saint vincent and the grenadines",1985,2.002,0.906,127326.707
+"saint vincent and the grenadines",1990,1.921,0.908,103.204
+"saint vincent and the grenadines",1995,1.856,0.91,3456.963
+"saint vincent and the grenadines",2000,1.814,0.916,354.846
+"samoa",1950,6.225,0.907,15879.747
+"samoa",1955,5.703,0.923,51528.328
+"samoa",1960,5.238,0.935,9699.19
+"samoa",1965,4.942,0.943,210996.41
+"samoa",1970,4.816,0.947,20261.452
+"samoa",1975,4.829,0.948,95338.239
+"samoa",1980,4.73,0.948,3034.978
+"samoa",1985,4.471,0.947,42327.518
+"samoa",1990,4.234,0.95,39267.919
+"samoa",1995,4,0.949,1826.506
+"samoa",2000,3.796,0.952,45701.364
+"sao tome and principe",1950,5.898,0.839,357.4
+"sao tome and principe",1955,5.799,0.848,35758.096
+"sao tome and principe",1960,5.613,0.855,288.889
+"sao tome and principe",1965,5.414,0.863,69860.003
+"sao tome and principe",1970,5.229,0.876,660684.839
+"sao tome and principe",1975,5.049,0.89,14004.459
+"sao tome and principe",1980,4.877,0.905,278092.367
+"sao tome and principe",1985,4.71,0.92,4145.311
+"sao tome and principe",1990,4.505,0.929,6326.044
+"sao tome and principe",1995,4.274,0.933,544.26
+"sao tome and principe",2000,4.046,0.935,1958.089
+"saudi arabia",1950,6.407,0.878,581.262
+"saudi arabia",1955,6.196,0.905,57519.265
+"saudi arabia",1960,5.795,0.925,6283.839
+"saudi arabia",1965,5.191,0.94,1875298.226
+"saudi arabia",1970,4.481,0.949,9549.338
+"saudi arabia",1975,3.872,0.955,39459.846
+"saudi arabia",1980,3.336,0.959,8056.325
+"saudi arabia",1985,2.889,0.961,328.554
+"saudi arabia",1990,2.564,0.964,83798.08
+"saudi arabia",1995,2.35,0.967,4943.78
+"saudi arabia",2000,2.192,0.967,108843.568
+"senegal",1950,5.195,0.77,12151.145
+"senegal",1955,5.444,0.791,3941.554
+"senegal",1960,5.448,0.809,6525.717
+"senegal",1965,5.333,0.832,129817.789
+"senegal",1970,5.276,0.853,41334.487
+"senegal",1975,5.121,0.872,108088.96
+"senegal",1980,5.012,0.894,155252.83
+"senegal",1985,4.892,0.912,84632.948
+"senegal",1990,4.722,0.925,111.507
+"senegal",1995,4.498,0.934,896.966
+"senegal",2000,4.238,0.937,1113.607
+"serbia",1950,2.342,0.917,107271.701
+"serbia",1955,2.362,0.925,389067.412
+"serbia",1960,2.361,0.931,1809.41
+"serbia",1965,2.265,0.936,209466.708
+"serbia",1970,2.147,0.941,152.754
+"serbia",1975,2.061,0.944,6779.64
+"serbia",1980,1.985,0.95,486.123
+"serbia",1985,1.902,0.955,4149.109
+"serbia",1990,1.834,0.956,7491.305
+"serbia",1995,1.8,0.96,4011.66
+"serbia",2000,1.782,0.963,11060.355
+"seychelles",1950,4.105,0.895,17938.191
+"seychelles",1955,3.481,0.908,299.546
+"seychelles",1960,2.966,0.919,17175.483
+"seychelles",1965,2.619,0.923,152.338
+"seychelles",1970,2.445,0.923,1637.072
+"seychelles",1975,2.381,0.918,18133.931
+"seychelles",1980,2.36,0.917,22764.689
+"seychelles",1985,2.372,0.918,26257.837
+"seychelles",1990,2.393,0.919,130362.12
+"seychelles",1995,2.372,0.92,372.203
+"seychelles",2000,2.323,0.927,568.316
+"sierra leone",1950,2.85,0.819,10317.256
+"sierra leone",1955,3.145,0.818,14231.223
+"sierra leone",1960,3.517,0.797,22418.906
+"sierra leone",1965,3.735,0.772,6029.967
+"sierra leone",1970,3.866,0.762,71051.716
+"sierra leone",1975,3.948,0.772,620.175
+"sierra leone",1980,3.96,0.793,213357.278
+"sierra leone",1985,3.873,0.817,1305.842
+"sierra leone",1990,3.686,0.84,72677.816
+"sierra leone",1995,3.459,0.858,203029.563
+"sierra leone",2000,3.229,0.867,18859.036
+"singapore",1950,2.401,0.956,332470.502
+"singapore",1955,2.175,0.959,38487.452
+"singapore",1960,2.045,0.961,2645.883
+"singapore",1965,1.923,0.962,60754.418
+"singapore",1970,1.762,0.964,175.48
+"singapore",1975,1.614,0.967,274074.339
+"singapore",1980,1.524,0.969,233319.402
+"singapore",1985,1.476,0.97,79232.648
+"singapore",1990,1.436,0.971,23477.979
+"singapore",1995,1.432,0.972,11971.254
+"singapore",2000,1.457,0.974,51087.629
+"slovakia",1950,2.373,0.926,2730.059
+"slovakia",1955,2.278,0.917,158816.23
+"slovakia",1960,2.199,0.916,14348.347
+"slovakia",1965,2.105,0.92,1419403.395
+"slovakia",1970,1.998,0.926,5533.356
+"slovakia",1975,1.847,0.934,11864.051
+"slovakia",1980,1.718,0.944,884593.264
+"slovakia",1985,1.705,0.95,304626.675
+"slovakia",1990,1.767,0.956,9287.456
+"slovakia",1995,1.828,0.958,445.395
+"slovakia",2000,1.869,0.959,31951.586
+"slovenia",1950,1.967,0.926,160437.482
+"slovenia",1955,1.964,0.925,66765.091
+"slovenia",1960,1.929,0.93,31515.73
+"slovenia",1965,1.893,0.939,100020.119
+"slovenia",1970,1.887,0.949,7137.905
+"slovenia",1975,1.874,0.957,699.779
+"slovenia",1980,1.857,0.966,5242.46
+"slovenia",1985,1.892,0.969,149.489
+"slovenia",1990,1.952,0.97,193440.693
+"slovenia",1995,1.985,0.971,587.509
+"slovenia",2000,2,0.972,53149.167
+"solomon islands",1950,6.029,0.906,218931.994
+"solomon islands",1955,6.088,0.914,310.316
+"solomon islands",1960,5.834,0.922,1935.67
+"solomon islands",1965,5.482,0.927,40342.827
+"solomon islands",1970,5.164,0.929,3692.739
+"solomon islands",1975,4.883,0.93,1217.848
+"solomon islands",1980,4.587,0.929,341.722
+"solomon islands",1985,4.374,0.929,7904.943
+"solomon islands",1990,4.27,0.931,793.661
+"solomon islands",1995,4.141,0.933,10750.618
+"solomon islands",2000,3.934,0.934,4075.963
+"somalia",1950,4.383,0.804,2189.681
+"somalia",1955,4.741,0.79,53609.181
+"somalia",1960,5.123,0.782,29566.298
+"somalia",1965,5.333,0.779,375749.924
+"somalia",1970,5.408,0.782,1059.853
+"somalia",1975,5.423,0.791,134139.684
+"somalia",1980,5.445,0.805,265151.009
+"somalia",1985,5.346,0.814,9304.052
+"somalia",1990,5.212,0.83,447497.825
+"somalia",1995,4.978,0.838,103812.476
+"somalia",2000,4.738,0.845,371455.078
+"south africa",1950,4.193,0.854,640.128
+"south africa",1955,3.855,0.854,56502.846
+"south africa",1960,3.52,0.862,61.452
+"south africa",1965,3.155,0.87,13503.566
+"south africa",1970,2.818,0.875,224426.506
+"south africa",1975,2.576,0.876,5785.756
+"south africa",1980,2.451,0.879,36940.85
+"south africa",1985,2.37,0.883,21758.168
+"south africa",1990,2.31,0.891,2732.915
+"south africa",1995,2.264,0.903,17314.425
+"south africa",2000,2.201,0.912,291.821
+"south sudan",1950,3.423,0.792,556.628
+"south sudan",1955,3.878,0.768,5057.561
+"south sudan",1960,4.185,0.766,4531531.132
+"south sudan",1965,4.432,0.771,6280.371
+"south sudan",1970,4.568,0.788,50024.147
+"south sudan",1975,4.594,0.809,31624.139
+"south sudan",1980,4.553,0.832,10066.628
+"south sudan",1985,4.498,0.846,40998.796
+"south sudan",1990,4.317,0.855,29448.148
+"south sudan",1995,4.071,0.859,10230.347
+"south sudan",2000,3.833,0.862,13805.948
+"spain",1950,2.271,0.942,90418.19
+"spain",1955,2.082,0.947,201268.682
+"spain",1960,1.931,0.952,1156386.714
+"spain",1965,1.795,0.958,403220.197
+"spain",1970,1.678,0.964,16399.198
+"spain",1975,1.607,0.967,42897.829
+"spain",1980,1.627,0.97,41893.825
+"spain",1985,1.694,0.971,1498.332
+"spain",1990,1.746,0.975,207942.163
+"spain",1995,1.767,0.977,317679.109
+"spain",2000,1.787,0.979,38206.458
+"sri lanka",1950,3.356,0.905,81563.981
+"sri lanka",1955,3.066,0.917,12394.142
+"sri lanka",1960,2.849,0.925,2626.299
+"sri lanka",1965,2.616,0.933,5503.297
+"sri lanka",1970,2.433,0.94,812.341
+"sri lanka",1975,2.372,0.943,4246.132
+"sri lanka",1980,2.402,0.947,6226.158
+"sri lanka",1985,2.362,0.948,612.232
+"sri lanka",1990,2.31,0.95,5252.292
+"sri lanka",1995,2.268,0.952,2582.161
+"sri lanka",2000,2.218,0.954,150523.861
+"state of palestine",1950,6.952,0.89,96915.804
+"state of palestine",1955,6.619,0.91,57233.993
+"state of palestine",1960,6.328,0.925,2164.977
+"state of palestine",1965,6.06,0.933,29451.048
+"state of palestine",1970,5.724,0.939,223.469
+"state of palestine",1975,5.313,0.942,2731.403
+"state of palestine",1980,4.819,0.943,22773.679
+"state of palestine",1985,4.33,0.943,632855.782
+"state of palestine",1990,3.951,0.946,389.867
+"state of palestine",1995,3.608,0.946,154108.509
+"state of palestine",2000,3.335,0.949,62891.029
+"sudan",1950,6.013,0.792,101659.698
+"sudan",1955,5.759,0.797,7034.646
+"sudan",1960,5.259,0.806,150694.444
+"sudan",1965,4.898,0.818,39260.019
+"sudan",1970,4.76,0.833,2078.204
+"sudan",1975,4.771,0.851,17915.304
+"sudan",1980,4.819,0.866,140482.119
+"sudan",1985,4.789,0.879,194.87
+"sudan",1990,4.627,0.889,296359.373
+"sudan",1995,4.388,0.898,211329.387
+"sudan",2000,4.158,0.905,294.827
+"suriname",1950,4.022,0.87,2518.428
+"suriname",1955,3.559,0.875,2135.596
+"suriname",1960,3.24,0.881,21308.872
+"suriname",1965,3.085,0.888,4377.571
+"suriname",1970,3.017,0.896,20096.728
+"suriname",1975,2.941,0.899,829.874
+"suriname",1980,2.829,0.905,223.139
+"suriname",1985,2.683,0.911,2898.887
+"suriname",1990,2.55,0.916,28928.645
+"suriname",1995,2.452,0.92,2088.312
+"suriname",2000,2.37,0.924,51648.994
+"sweden",1950,2.176,0.95,525.567
+"sweden",1955,2.211,0.955,323392.467
+"sweden",1960,2.234,0.958,384676.299
+"sweden",1965,2.243,0.961,93021.739
+"sweden",1970,2.234,0.964,112359.213
+"sweden",1975,2.193,0.967,105.655
+"sweden",1980,2.166,0.972,3386.694
+"sweden",1985,2.159,0.973,324.514
+"sweden",1990,2.128,0.974,2489.326
+"sweden",1995,2.096,0.975,613.173
+"sweden",2000,2.083,0.978,54681.832
+"switzerland",1950,1.961,0.945,203662.231
+"switzerland",1955,1.942,0.953,18558.304
+"switzerland",1960,1.94,0.959,88113.576
+"switzerland",1965,1.902,0.963,2218.278
+"switzerland",1970,1.863,0.965,39626.995
+"switzerland",1975,1.859,0.968,37270.469
+"switzerland",1980,1.883,0.973,1149.604
+"switzerland",1985,1.909,0.975,39011.459
+"switzerland",1990,1.922,0.977,9575.93
+"switzerland",1995,1.924,0.978,535.8
+"switzerland",2000,1.921,0.981,4920.19
+"syrian arab republic",1950,6.735,0.907,63367.596
+"syrian arab republic",1955,5.991,0.903,597594.22
+"syrian arab republic",1960,5.283,0.909,11843.269
+"syrian arab republic",1965,4.694,0.921,250863.307
+"syrian arab republic",1970,4.252,0.933,2874.064
+"syrian arab republic",1975,3.942,0.944,5138.943
+"syrian arab republic",1980,3.661,0.951,431.176
+"syrian arab republic",1985,3.354,0.956,1726.675
+"syrian arab republic",1990,3.068,0.958,553.821
+"syrian arab republic",1995,2.845,0.962,85185.675
+"syrian arab republic",2000,2.68,0.966,197183.761
+"tajikistan",1950,5.444,0.812,1867545.126
+"tajikistan",1955,5.275,0.827,9055.121
+"tajikistan",1960,5.013,0.843,32844.767
+"tajikistan",1965,4.56,0.858,5756.96
+"tajikistan",1970,4.049,0.872,282.439
+"tajikistan",1975,3.674,0.892,79998.782
+"tajikistan",1980,3.409,0.914,4174.273
+"tajikistan",1985,3.297,0.929,98905.726
+"tajikistan",1990,3.307,0.937,1789.788
+"tajikistan",1995,3.319,0.939,80254.955
+"tajikistan",2000,3.257,0.937,12082.08
+"thailand",1950,3.02,0.865,109576.212
+"thailand",1955,2.572,0.879,36322.326
+"thailand",1960,2.239,0.891,103364.178
+"thailand",1965,2.013,0.904,159877.475
+"thailand",1970,1.858,0.911,63819.437
+"thailand",1975,1.747,0.916,106.387
+"thailand",1980,1.658,0.922,830.794
+"thailand",1985,1.584,0.927,1025.659
+"thailand",1990,1.55,0.929,9394.736
+"thailand",1995,1.561,0.933,91455.197
+"thailand",2000,1.545,0.937,61798.208
+"timor-leste",1950,2.966,0.769,217836.031
+"timor-leste",1955,3.704,0.765,125.849
+"timor-leste",1960,4.51,0.796,5805.564
+"timor-leste",1965,5.224,0.832,395.931
+"timor-leste",1970,5.322,0.864,3307.826
+"timor-leste",1975,5.051,0.896,8171.924
+"timor-leste",1980,4.836,0.913,3672.11
+"timor-leste",1985,4.431,0.921,10671.14
+"timor-leste",1990,4.011,0.928,3399.812
+"timor-leste",1995,3.644,0.93,106162.311
+"timor-leste",2000,3.337,0.93,5749.434
+"togo",1950,5.025,0.811,119.634
+"togo",1955,5.175,0.808,1460.328
+"togo",1960,5.104,0.803,17016.377
+"togo",1965,4.946,0.804,18823.927
+"togo",1970,4.731,0.816,28691.579
+"togo",1975,4.537,0.83,120563.465
+"togo",1980,4.36,0.845,321.329
+"togo",1985,4.193,0.861,504.57
+"togo",1990,4.001,0.873,156593.673
+"togo",1995,3.818,0.883,2289.864
+"togo",2000,3.637,0.89,2009.61
+"tonga",1950,5.638,0.934,4840.815
+"tonga",1955,5.41,0.938,60263.946
+"tonga",1960,5.094,0.938,596.346
+"tonga",1965,4.772,0.938,168603.725
+"tonga",1970,4.551,0.935,1272.859
+"tonga",1975,4.344,0.935,63933.347
+"tonga",1980,4.129,0.932,215587.414
+"tonga",1985,3.933,0.933,18149.641
+"tonga",1990,3.744,0.934,41245.556
+"tonga",1995,3.585,0.938,467.433
+"tonga",2000,3.432,0.94,350861.726
+"trinidad and tobago",1950,3.183,0.897,43661.724
+"trinidad and tobago",1955,2.935,0.899,116.269
+"trinidad and tobago",1960,2.645,0.899,212641.024
+"trinidad and tobago",1965,2.314,0.901,246947.144
+"trinidad and tobago",1970,2.025,0.903,71189.079
+"trinidad and tobago",1975,1.87,0.906,17544.833
+"trinidad and tobago",1980,1.847,0.905,8652.057
+"trinidad and tobago",1985,1.82,0.908,46861.392
+"trinidad and tobago",1990,1.819,0.915,5236.663
+"trinidad and tobago",1995,1.793,0.918,212602.1
+"trinidad and tobago",2000,1.767,0.923,15909.87
+"tunisia",1950,4.801,0.869,1167447.195
+"tunisia",1955,4.294,0.902,5421.546
+"tunisia",1960,3.695,0.926,10872.594
+"tunisia",1965,3.206,0.942,925780.631
+"tunisia",1970,2.796,0.953,294036.995
+"tunisia",1975,2.542,0.959,7943.345
+"tunisia",1980,2.407,0.962,439.257
+"tunisia",1985,2.365,0.964,29035.806
+"tunisia",1990,2.334,0.964,250.942
+"tunisia",1995,2.277,0.966,61795.579
+"tunisia",2000,2.211,0.967,558154.013
+"turkey",1950,3.874,0.789,75541.403
+"turkey",1955,3.55,0.82,6287.021
+"turkey",1960,3.206,0.849,599.739
+"turkey",1965,2.926,0.878,5042.601
+"turkey",1970,2.746,0.903,135.362
+"turkey",1975,2.659,0.924,198327.307
+"turkey",1980,2.602,0.939,649.257
+"turkey",1985,2.519,0.947,43642.941
+"turkey",1990,2.446,0.952,5701.888
+"turkey",1995,2.369,0.957,2023041.51
+"turkey",2000,2.281,0.958,9253.836
+"turkmenistan",1950,4.512,0.836,41167.158
+"turkmenistan",1955,4.189,0.846,3309.107
+"turkmenistan",1960,3.804,0.853,1140.693
+"turkmenistan",1965,3.418,0.859,282.267
+"turkmenistan",1970,3.124,0.869,6427.035
+"turkmenistan",1975,2.958,0.881,672.265
+"turkmenistan",1980,2.918,0.889,9183.867
+"turkmenistan",1985,2.917,0.897,2870.651
+"turkmenistan",1990,2.899,0.902,6799.684
+"turkmenistan",1995,2.806,0.905,105259.946
+"turkmenistan",2000,2.673,0.909,33183.446
+"uganda",1950,5.473,0.782,387222.903
+"uganda",1955,5.53,0.776,1049.596
+"uganda",1960,5.69,0.776,137632.45
+"uganda",1965,5.867,0.787,272137.482
+"uganda",1970,5.896,0.809,7833.894
+"uganda",1975,5.806,0.833,398717.475
+"uganda",1980,5.558,0.856,107478.318
+"uganda",1985,5.221,0.878,333029.906
+"uganda",1990,4.785,0.893,1377.77
+"uganda",1995,4.32,0.904,207543.135
+"uganda",2000,3.897,0.908,125.67
+"ukraine",1950,1.834,0.894,11589.171
+"ukraine",1955,1.75,0.874,234579.17
+"ukraine",1960,1.68,0.864,4205.254
+"ukraine",1965,1.623,0.867,33276.364
+"ukraine",1970,1.55,0.873,16792.426
+"ukraine",1975,1.524,0.889,2149.125
+"ukraine",1980,1.555,0.899,17459.391
+"ukraine",1985,1.604,0.907,228.285
+"ukraine",1990,1.663,0.911,15262.938
+"ukraine",1995,1.709,0.921,111.562
+"ukraine",2000,1.736,0.925,1369.58
+"united arab emirates",1950,5.737,0.927,6417.091
+"united arab emirates",1955,5.276,0.947,35114.311
+"united arab emirates",1960,4.59,0.957,26794.317
+"united arab emirates",1965,3.763,0.961,8568
+"united arab emirates",1970,2.98,0.961,38523.101
+"united arab emirates",1975,2.527,0.963,29717.125
+"united arab emirates",1980,2.387,0.962,7804.569
+"united arab emirates",1985,2.296,0.964,12713.35
+"united arab emirates",1990,2.127,0.967,18455.225
+"united arab emirates",1995,1.919,0.971,4578.702
+"united arab emirates",2000,1.77,0.975,57947.848
+"united kingdom",1950,2.194,0.932,376923.865
+"united kingdom",1955,2.12,0.94,13025.829
+"united kingdom",1960,2.105,0.946,50655.641
+"united kingdom",1965,2.088,0.95,34013.637
+"united kingdom",1970,2.074,0.953,1328.326
+"united kingdom",1975,2.078,0.956,182134.884
+"united kingdom",1980,2.103,0.958,317542.464
+"united kingdom",1985,2.118,0.961,36050.885
+"united kingdom",1990,2.097,0.963,2000.877
+"united kingdom",1995,2.067,0.965,42485.759
+"united kingdom",2000,2.039,0.969,107.924
+"united republic of tanzania",1950,5.206,0.777,4954.033
+"united republic of tanzania",1955,5.19,0.783,760.664
+"united republic of tanzania",1960,5.192,0.791,3038.168
+"united republic of tanzania",1965,5.163,0.809,3616.829
+"united republic of tanzania",1970,5.099,0.83,520.085
+"united republic of tanzania",1975,5.036,0.853,4450.995
+"united republic of tanzania",1980,4.974,0.877,1921.376
+"united republic of tanzania",1985,4.854,0.893,151454.698
+"united republic of tanzania",1990,4.713,0.907,10576.406
+"united republic of tanzania",1995,4.514,0.914,1144797.895
+"united republic of tanzania",2000,4.309,0.917,5207.809
+"united states of america",1950,2.048,0.905,31338.866
+"united states of america",1955,2.009,0.91,152.626
+"united states of america",1960,2.045,0.914,2540.013
+"united states of america",1965,2.121,0.919,19637.813
+"united states of america",1970,2.189,0.92,640665.444
+"united states of america",1975,2.238,0.921,326.14
+"united states of america",1980,2.229,0.923,152570.664
+"united states of america",1985,2.21,0.925,57912.51
+"united states of america",1990,2.199,0.932,28392.905
+"united states of america",1995,2.17,0.935,74087.478
+"united states of america",2000,2.116,0.94,6061.96
+"united states virgin islands",1950,3.889,0.93,34317.148
+"united states virgin islands",1955,3.536,0.936,2222.203
+"united states virgin islands",1960,3.122,0.942,16345.536
+"united states virgin islands",1965,2.859,0.947,146311.446
+"united states virgin islands",1970,2.651,0.948,164.968
+"united states virgin islands",1975,2.56,0.953,266192.121
+"united states virgin islands",1980,2.645,0.957,227902.223
+"united states virgin islands",1985,2.612,0.959,264.275
+"united states virgin islands",1990,2.611,0.96,1405.805
+"united states virgin islands",1995,2.506,0.964,39636.043
+"united states virgin islands",2000,2.361,0.967,3169.333
+"uruguay",1950,2.728,0.9,3466.361
+"uruguay",1955,2.668,0.904,16607.524
+"uruguay",1960,2.557,0.911,755.221
+"uruguay",1965,2.428,0.918,192.64
+"uruguay",1970,2.341,0.922,2903.396
+"uruguay",1975,2.261,0.929,26355.052
+"uruguay",1980,2.154,0.933,1792.794
+"uruguay",1985,2.079,0.933,53252.837
+"uruguay",1990,2.038,0.936,22532.065
+"uruguay",1995,2.015,0.938,378710.948
+"uruguay",2000,2.001,0.944,1015.623
+"uzbekistan",1950,4.373,0.853,88544.367
+"uzbekistan",1955,4.042,0.863,97675.026
+"uzbekistan",1960,3.743,0.872,116.288
+"uzbekistan",1965,3.485,0.883,2842.576
+"uzbekistan",1970,3.264,0.892,283.654
+"uzbekistan",1975,3.024,0.899,2036.62
+"uzbekistan",1980,2.709,0.911,524.951
+"uzbekistan",1985,2.511,0.92,49380.752
+"uzbekistan",1990,2.47,0.928,57.152
+"uzbekistan",1995,2.424,0.932,11222.414
+"uzbekistan",2000,2.336,0.933,227696.293
+"vanuatu",1950,5.445,0.896,1935.831
+"vanuatu",1955,5.237,0.913,36006.105
+"vanuatu",1960,5.045,0.927,35493.108
+"vanuatu",1965,4.861,0.936,793.388
+"vanuatu",1970,4.702,0.94,35715.986
+"vanuatu",1975,4.546,0.941,6547.106
+"vanuatu",1980,4.344,0.938,475.869
+"vanuatu",1985,4.143,0.937,4409.868
+"vanuatu",1990,3.956,0.936,3769704.152
+"vanuatu",1995,3.793,0.938,6092.983
+"vanuatu",2000,3.642,0.941,34130.666
+"venezuela (bolivarian republic of)",1950,4.054,0.896,259878.521
+"venezuela (bolivarian republic of)",1955,3.645,0.899,1872.251
+"venezuela (bolivarian republic of)",1960,3.323,0.901,3634.241
+"venezuela (bolivarian republic of)",1965,3.042,0.901,304.854
+"venezuela (bolivarian republic of)",1970,2.794,0.901,1432.351
+"venezuela (bolivarian republic of)",1975,2.584,0.9,441.961
+"venezuela (bolivarian republic of)",1980,2.434,0.901,77492.388
+"venezuela (bolivarian republic of)",1985,2.306,0.901,220293.507
+"venezuela (bolivarian republic of)",1990,2.197,0.9,1069451.477
+"venezuela (bolivarian republic of)",1995,2.105,0.899,358990.346
+"venezuela (bolivarian republic of)",2000,2.033,0.9,12434.939
+"viet nam",1950,4.235,0.889,4463.102
+"viet nam",1955,3.555,0.891,231.186
+"viet nam",1960,3.019,0.892,78852.595
+"viet nam",1965,2.627,0.894,3174.001
+"viet nam",1970,2.336,0.897,94477.104
+"viet nam",1975,2.137,0.901,1598.515
+"viet nam",1980,2.105,0.911,67959.792
+"viet nam",1985,2.262,0.918,9918.854
+"viet nam",1990,2.504,0.923,1765.217
+"viet nam",1995,2.627,0.924,4816.447
+"viet nam",2000,2.489,0.928,727.943
+"western sahara",1950,4.666,0.781,144727.485
+"western sahara",1955,4.468,0.809,54024.404
+"western sahara",1960,4.086,0.842,89.929
+"western sahara",1965,3.66,0.87,860.722
+"western sahara",1970,3.293,0.893,982.971
+"western sahara",1975,3.001,0.911,9107.421
+"western sahara",1980,2.783,0.926,90273.351
+"western sahara",1985,2.634,0.936,61059.554
+"western sahara",1990,2.519,0.942,1523.517
+"western sahara",1995,2.404,0.946,35362.188
+"western sahara",2000,2.292,0.949,131.348
+"yemen",1950,4.097,0.828,338.895
+"yemen",1955,5.051,0.844,2921.018
+"yemen",1960,5.657,0.86,8909.034
+"yemen",1965,6.174,0.868,3300.334
+"yemen",1970,6.073,0.879,10386.253
+"yemen",1975,5.487,0.888,3057.322
+"yemen",1980,4.77,0.897,103219.549
+"yemen",1985,4.178,0.904,5391.045
+"yemen",1990,3.731,0.907,162541.606
+"yemen",1995,3.366,0.909,31357.959
+"yemen",2000,3.066,0.911,2205.252
+"zambia",1950,5.59,0.786,15659.112
+"zambia",1955,5.43,0.775,32748.779
+"zambia",1960,5.286,0.771,119884.377
+"zambia",1965,5.196,0.782,277.391
+"zambia",1970,5.131,0.802,402.08
+"zambia",1975,5.074,0.828,149185.643
+"zambia",1980,4.997,0.856,2035.648
+"zambia",1985,4.86,0.882,1710.048
+"zambia",1990,4.644,0.901,18295.797
+"zambia",1995,4.389,0.911,3048.231
+"zambia",2000,4.137,0.912,15278.421
+"zimbabwe",1950,5.724,0.838,169778.661
+"zimbabwe",1955,5.111,0.829,1283.322
+"zimbabwe",1960,4.496,0.834,64572.599
+"zimbabwe",1965,3.951,0.848,224074.736
+"zimbabwe",1970,3.66,0.855,16132.204
+"zimbabwe",1975,3.559,0.861,37233.914
+"zimbabwe",1980,3.551,0.865,445.068
+"zimbabwe",1985,3.604,0.87,350028.635
+"zimbabwe",1990,3.588,0.883,339669.637
+"zimbabwe",1995,3.446,0.898,87761.702
+"zimbabwe",2000,3.223,0.907,97354.924
