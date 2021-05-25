@@ -14,7 +14,7 @@ title_size <- 9
 # Use this for stacked maps
 country_line_size <- 0.0005
 
-p_title <- paste0("Cumulative numer of child deaths at age 65 for a woman born in ", cohort_show, " (i.e. aged 65 in 2020)")
+p_title <- paste0("Cumulative numer of child deaths at age 65 for a woman born in ", cohort_show, " (i.e., aged 65 in 2020)")
 
 # 0. Create world map ----
 # Can be reused for all maps
@@ -38,8 +38,9 @@ print("Figure 2 saved to ../../Output")
 # values <-
   df_cl_m_full %>%
   filter(cohort == cohort_show) %>% 
-  filter(age == retirement_age) %>% 
+  filter(age == retirement_age) %>%
+    filter(country %in% c("canada", "niger")) %>% 
     arrange(value) %>% 
-    slice(1, nrow(.)) %>% 
+    # slice(1, nrow(.)) %>% 
     select(country, value)
 

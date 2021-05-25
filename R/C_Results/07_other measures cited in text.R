@@ -133,10 +133,63 @@ sum_abs_temp %>%
 
 # 5. Share of offspring alive at retirement age ----
 
+# Cumulative child death up to age a
+
+enumerator <- 
+  df_cl_m_full %>%
+  arrange(country, cohort, age) %>% 
+  select(country, cohort, age, children_dead = value) 
+
+# Children born up to age 'a' by birth cohort
+
+# Add ages over 45 for ASFR 
+
+asfr_upper <- 
+  ASFRC %>% 
+  filter(dplyr::between(Cohort, 1950, 2000)) %>% 
+  select(country, cohort = Cohort) %>% 
+  distinct() %>% 
+  mutate(age = factor(46, levels = 46:100)) %>% 
+  tidyr::complete(age, country, cohort) %>% 
+  select(country, cohort, age) %>% 
+  arrange(country, cohort, age) %>% 
+  mutate(
+    age = as.numeric(as.character(age))
+    , ASFR = 0
+  )
+
+asfr_full <- bind_rows(
+  ASFRC %>% 
+    filter(dplyr::between(Cohort, 1950, 2000)) %>% 
+    select(country, cohort = Cohort, age = Age, ASFR) 
+  ,   asfr_upper 
+) %>% 
+  arrange(country, cohort, age)
+
+denominator <- 
+  asfr_full %>% 
+  group_by(country, cohort) %>% 
+  mutate(value = cumsum(ASFR)/1000) %>% 
+  ungroup %>% 
+  select(country, cohort, age, children_born = value) 
+
+# 1.3. DF with enumerator and denominator
+
+share_died <- merge(
+  enumerator
+  , denominator
+  , by = c("country", "cohort", "age")
+  , all.x = T
+  , all.y = F
+) %>% 
+  arrange(country, cohort, age) %>% 
+  mutate(value = children_dead/children_born)
+
 # worldwide
 # gjks54
 
-df %>% 
+# df %>%
+share_died %>%
   group_by(cohort, age) %>% 
   summarise(value = mean(value)) %>% 
   ungroup() %>% 
@@ -149,7 +202,7 @@ df %>%
 # By region
 # rcode sdlk36
 
-df %>% 
+share_died %>% 
   filter(age == retirement_age) %>% 
   filter(cohort %in% two_cohorts) %>% 
   mutate(value = (1 - value)*100) %>% 
@@ -249,6 +302,7 @@ sum_abs_temp %>%
     , share_more_in_retirement = share_ret/share_rep
   ) %>% 
   select(cohort, starts_with("share")) %>% 
+  filter(cohort %in% c(1955, 2000)) %>% 
   data.frame()
 
 # Burden by region
@@ -291,7 +345,7 @@ sum_burden %>%
 
 tally_share %>% 
   filter(cohort %in% two_cohorts) %>% 
-  filter(level == "Expected number of children") %>% 
+  filter(level == "a. Expected number of children") %>% 
   filter(measure == "Child survival") %>% 
   group_by(cohort) %>% 
   summarise(value = mean(value)) %>% 
@@ -304,7 +358,7 @@ tally_share %>%
 
 tally_share %>% 
   filter(cohort %in% two_cohorts) %>% 
-  filter(level == "Expected number of children") %>% 
+  filter(level == "a. Expected number of children") %>% 
   filter(measure == "Child survival") %>% 
   group_by(region) %>% 
   arrange(region, cohort) %>% 
@@ -317,7 +371,7 @@ tally_share %>%
 # rcode k847z
 
 tally_share %>% 
-  filter(level == "Expected number as fraction of TFR") %>% 
+  filter(level == "b. Expected number as fraction of TFR") %>% 
   filter(measure == "Child survival") %>% 
   filter(cohort %in% two_cohorts) %>% 
   group_by(cohort) %>% 
@@ -330,7 +384,7 @@ tally_share %>%
 # rcode sl27k
 
 tally_share %>% 
-  filter(level == "Expected number as fraction of TFR") %>% 
+  filter(level == "b. Expected number as fraction of TFR") %>% 
   filter(measure == "Child survival") %>% 
   filter(cohort %in% two_cohorts) %>% 
   group_by(region) %>% 

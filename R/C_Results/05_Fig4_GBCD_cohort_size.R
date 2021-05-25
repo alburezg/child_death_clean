@@ -79,7 +79,7 @@ fig4 <-
       , labels = function(br) paste0(br/1e6)
                      ) +
   scale_y_continuous(
-    "Generational Burden of Child Death (in millions)"
+    "Cohort Burden of Child Death (in millions)"
     # , breaks = seq(0, 100e6, 25e6)
     , labels = function(br) paste0(br/1e6)
     ) +

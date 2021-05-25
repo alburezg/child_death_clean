@@ -57,7 +57,7 @@ point_size <- 3.5
 
 sources <- c("Died (cumulative)", "Surviving")
 sources <- factor(sources, levels = sources)
-ylab <- "Number of children"
+ylab <- "Number of Children"
 
 sum_cl2 <- sum_cl %>% filter(cohort %in% c(lower_year, upper_year)) 
 sum_cs2 <- sum_cs %>% filter(cohort %in% c(lower_year, upper_year)) 
