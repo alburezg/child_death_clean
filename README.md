@@ -2,7 +2,7 @@
 
 Scripts to reproduce figures and tables of paper: 
 
-Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (2021). *Women's experience of child death: A global demographic perspective.* Demography (2021). DOI:[10.1215/00703370-9420770](https://doi.org/10.1215/00703370-9420770).
+Alburez-Gutierrez, D., Kolk, M. and Zagheni E. (2021). *Women's experience of child death: A global demographic perspective.* Demography. DOI:[10.1215/00703370-9420770](https://doi.org/10.1215/00703370-9420770).
 
 ## A - Structure
 
