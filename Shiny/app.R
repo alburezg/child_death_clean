@@ -564,13 +564,26 @@ server <- function(input, output, session) {
       paste0("exported_data_",format(Sys.time(), "%Y%m%d_%H.%M.%S"), ".csv")
     },
     content = function(file) {
-      df_out <-  plotme(
+      # browser()
+      # df_out <-  plotme(
+      #   region_type_choice = input$region_type
+      #   , measure_choice = input$measure
+      #   , regions_choice = input$region
+      #   , countries_choice = input$country
+      #   , cohorts_choice = input$cohort
+      #   , variant_choice = input$variant
+      #   , quant_low = min(as.numeric(input$spread))
+      #   , quant_high = max(as.numeric(input$spread))
+      #   , y_lab_caption = input$measure
+      #   , export_df = T
+      # )
+      df_out <- plotme(
         region_type_choice = input$region_type
         , measure_choice = input$measure
         , regions_choice = input$region
         , countries_choice = input$country
         , cohorts_choice = input$cohort
-        , variant_choice = input$variant
+        , variant_choice = ""
         , quant_low = min(as.numeric(input$spread))
         , quant_high = max(as.numeric(input$spread))
         , y_lab_caption = input$measure

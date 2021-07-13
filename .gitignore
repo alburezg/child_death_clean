@@ -9,6 +9,7 @@ Data/estimates/*.RDS
 Data/est2
 Data/emily
 Data/wpp_data/WPP2019_Life_Table_OtherVariants.csv
+Shiny/__archive
 # For presentation
 presentation/
 #other materials, including full functions

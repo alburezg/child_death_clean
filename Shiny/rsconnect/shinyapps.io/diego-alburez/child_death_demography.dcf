@@ -5,10 +5,10 @@ account: diego-alburez
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4181626
-bundleId: 4637629
+bundleId: 4665576
 url: https://diego-alburez.shinyapps.io/child_death_demography/
-when: 1621948462.87978
-lastSyncTime: 1621948462.87978
+when: 1622570170.7638
+lastSyncTime: 1622570170.7638
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: __archive

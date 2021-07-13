@@ -109,9 +109,9 @@ world2 <-
 
 f_lab <- data.frame(
   x = 1955
-  , y = c(4, 0.942)
-  , label = LETTERS[1:2]
-  , source = sources[1:2]
+  , y = c(4.4, 0.947)
+  , label = letters[1:2]
+  , source = factor(sources[1:2], levels = sources)
 )
 
 p_world2 <-
@@ -129,15 +129,6 @@ p_world2 <-
   ) +
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
-  # geom_point(
-  #   aes(x = cohort, y = median, group = cohort, colour = cohort
-  #       , shape = cohort
-  #   )
-  #   , size = point_size
-  #   , data = . %>% filter(age %in% age_br)
-  # ) +
-  # Add facet numbers
-  # geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   scale_x_continuous(
     "Woman's birth cohort"
     , breaks = seq(1950, 2000, 10)

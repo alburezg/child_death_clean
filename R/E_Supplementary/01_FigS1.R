@@ -233,20 +233,22 @@ world1 <-
 
 f_lab <- data.frame(
   x = rep(20, 4)
-  , y = c(2.3, 4, 0.08, 7.7e6)
-  , label = c("A", "B", "C", "D")
-  , source = sources[1:4]
-)
+  , y = c(2.3, 4.5, 0.08, 1.3e6)
+  # , label = letters[c(1,3,2,4)]
+  , label = letters[1:4]
+  , source = factor(sources[1:4], levels = sources)
+) %>% 
+  arrange(label)
 
 # To fix y-axis limit of panel D
 dummy <- data.frame(
   x = c(20)
-  , y = c(8e6)
+  , y = c(1.6e6)
   , label = c("")
-  , source = sources[4]
+  , source = factor(sources[4], levels = sources)
 )
 
-p_world1 <- 
+# p_world1 <- 
   world1 %>% 
   filter(cohort %in% c(1950, 1975, 2000)) %>% 
   mutate(cohort = as.character(cohort)) %>% 
@@ -271,15 +273,15 @@ p_world1 <-
   # Add facet numbers
   geom_text(aes(x = x, y = y, label = label), data = f_lab, size = 6) +
   # Dummy point to fix axis
-  geom_text(aes(x = x, y = y, label = label), data = dummy) +
+  # geom_text(aes(x = x, y = y, label = label), data = dummy) +
   # Show reproductive and retirenemt age ~~~~~~
   geom_vline(xintercept = c(49, 65), linetype = "dashed", show.legend = F) +
   geom_text(
     aes(x = x, y = y, label = label)
     , data = data.frame(
-      x = c(30, 85), y = c(1.6, 6e6)
+      x = c(30, 85), y = c(1.6, 1.2e6)
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = c("Child Death (CD)", "Burden of child death")
+      , source = factor(c("Child Death (CD)", "Burden of child death"), levels = sources)
     )
     , size = 3
   ) +
@@ -288,16 +290,16 @@ p_world1 <-
     aes(x = x, xend = xend, yend = yend, y = y)
     , data = data.frame(
       x = c(16, 75), xend = c(45, 95)
-      , y = c(1.9, 6.9e6), yend = c(1.9, 6.9e6)
+      , y = c(1.9, 1.4e6), yend = c(1.9, 1.4e6)
       , label = c("Reproductive\nage", "Retirement\nage")
-      , source = c("Child Death (CD)", "Burden of child death")
+      , source = factor(c("Child Death (CD)", "Burden of child death"), levels = sources)
     )
     , arrow = arrow(length = unit(0.2, "cm"), ends = "both")
   ) +
   scale_x_continuous("Woman's life course (age in years)") +
   scale_y_continuous(
     ""
-    , labels = function(x) ifelse(x > 1e6, paste0(round(x/1e6, 0), "M"), x)
+    , labels = function(x) ifelse(x > 1e5, paste0(round(x/1e6, 1), "M"), x)
     , position = "left"
     , sec.axis = dup_axis()
   ) +
@@ -320,14 +322,11 @@ theme_bw(base_size = base_size) +
     , axis.title.y.right = element_blank()
     # get rid of facet boxes
     , strip.background = element_blank()
-    # , strip.text.y = element_blank()
     # Move y axis closer to the plot
     , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
     # Remove spacing between facets
-    # , panel.spacing.x=unit(0.07, "cm")
-    # , panel.spacing.y=unit(0.07, "cm")
   )
 
-p_world1
+# p_world1
 
-ggsave(paste0("../../Output/figS1.pdf"), p_world1, width = width, height = height, units = "cm")
+ggsave(paste0("../../Output/figS1.pdf"), width = width, height = height, units = "cm")

@@ -1,4 +1,5 @@
 
+library(tidyverse)
 # Evaluate findings under different assumptions of fertility
 
 country_plot <- "guatemala"
@@ -13,9 +14,9 @@ age_br <- c(seq(5, 100, 20), 100)
 mort_old <- c("Lower 95 PI", "Upper 95 PI", "constant", "Median PI")
 fert_old <- c("low", "high", "constant", "medium")
 
-# mort_levs <- c("lower 95 pi", "upper 95 pi", "constant/stable", "median pi")
-mort_levs <- c("low mortality", "high mortality", "stable/constant", "medium")
-fert_levs <- c("low fertility", "high fertility", "stable/constant", "medium")
+
+mort_levs <- c("Low Mortality", "High Mortality", "stable/constant", "medium")
+fert_levs <- c("Low Fertility", "High Fertility", "stable/constant", "medium")
 
 
 readme <- list.files(
@@ -103,9 +104,9 @@ cl_robust %>%
       filter(variant_mort != "medium")
   ) +
   # # SCALES
-  scale_x_continuous("Woman's life course (age in years)") +
+  scale_x_continuous("Woman's Life Course (age in years)") +
   scale_y_continuous(
-    "Cumulative child death"
+    "Cumulative Child Death"
     , position = "left"
     , sec.axis = dup_axis()
     # , breaks = c(0, 0.33, 0.66, 1)
@@ -128,12 +129,14 @@ cl_robust %>%
     , axis.title.y.right = element_blank()
     # get rid of facet boxes
     , strip.background = element_blank()
+    , strip.text = element_text(face="bold")
     # , strip.text.y = element_blank()
     # Move y axis closer to the plot
-    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0))
+    , axis.title.y = element_text(margin = margin(t = 0, r = -2, b = 0, l = 0), face="bold")
+    , axis.title.x = element_text(face="bold")
     # Remove spacing between facets
     # , panel.spacing.x=unit(0.07, "cm")
     # , panel.spacing.y=unit(0.07, "cm")
   )
 
-ggsave(paste0("../../Output/robust_cd_",country_plot,".pdf"), width = width, height = height-1, units = "cm")
+ggsave(paste0("../../Output/fig6_robust_cd_",country_plot,".pdf"), width = width, height = height-1, units = "cm")
